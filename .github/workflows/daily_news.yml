@@ -1,0 +1,30 @@
+name: Daily RSS Fetcher
+
+on:
+  schedule:
+    # 国际标准时间每天 22:00 (即北京时间每天清晨 6:00 自动运行)
+    - cron: '0 22 * * *'
+  workflow_dispatch: # 允许你在 GitHub 网页上随时手动点击测试运行
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库代码
+        uses: actions/checkout@v3
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 执行抓取脚本
+        run: python fetch_news.py
+
+      - name: 将更新后的 news.json 提交回仓库
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add news.json
+          git diff-index --quiet HEAD || git commit -m "chore: 自动同步每日科技短讯"
+          git push
