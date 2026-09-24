@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Memorize - Ebbinghaus & AI Assistant</title>
+  <title>Memorize - 艾宾浩斯智能记忆与英语训练</title>
   <style>
     :root {
       --bg: #090d16;
@@ -23,12 +23,12 @@
     body { background-color: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
     
     .navbar { background: #0b111e; border-bottom: 1px solid var(--border); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 50; }
-    .navbar h1 { font-size: 16px; font-weight: 700; color: var(--accent); }
+    .navbar h1 { font-size: 17px; font-weight: 800; color: var(--accent); letter-spacing: 0.5px; }
     .navbar .stats-pill { background: #151e2e; border: 1px solid var(--border); padding: 4px 10px; border-radius: 20px; font-size: 12px; color: #a5f3fc; }
 
     .container { flex: 1; padding: 14px; max-width: 480px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; }
 
-    /* 5-Column Navigation */
+    /* 顶部 5 列导航 */
     .tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 14px; background: #0b111e; padding: 4px; border-radius: 12px; border: 1px solid var(--border); }
     .tab-btn { background: none; border: none; padding: 8px 2px; color: var(--text-dim); font-size: 11px; font-weight: 600; border-radius: 8px; cursor: pointer; text-align: center; }
     .tab-btn.active { background: var(--primary); color: white; }
@@ -36,7 +36,7 @@
     .view-section { display: none; flex-direction: column; flex: 1; }
     .view-section.active { display: flex; }
 
-    /* Review Card */
+    /* 复习大卡片 */
     .quiz-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; }
     .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
     .mode-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: var(--accent); }
@@ -63,7 +63,7 @@
     .btn-fail { background: var(--danger); color: white; }
     .btn-success { background: var(--success); color: white; }
 
-    /* Forms */
+    /* 通用表单与按钮 */
     .form-group { margin-bottom: 12px; }
     .form-group label { display: block; font-size: 12px; color: var(--text-dim); margin-bottom: 5px; font-weight: 600; }
     .form-control { width: 100%; background: var(--card-inner); border: 1px solid var(--border); padding: 10px; border-radius: 10px; color: #fff; font-size: 14px; }
@@ -79,25 +79,47 @@
     .record-btn.recording { animation: pulse 1s infinite; background: #dc2626; }
     @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
-    /* Sub-tabs */
+    /* 子选项卡 */
     .sub-tabs { display: flex; gap: 8px; margin-bottom: 12px; background: var(--card-inner); padding: 4px; border-radius: 10px; }
     .sub-tab-btn { flex: 1; background: none; border: none; padding: 7px; font-size: 12px; color: var(--text-dim); border-radius: 8px; cursor: pointer; font-weight: bold; }
     .sub-tab-btn.active { background: #334155; color: var(--accent); }
 
     .score-badge-box { text-align: center; margin: 12px 0; padding: 12px; background: var(--card-inner); border-radius: 12px; border: 1px solid var(--border); }
     .score-number { font-size: 32px; font-weight: 900; color: #34d399; }
-    .diff-display { font-size: 15px; line-height: 1.8; text-align: left; padding: 10px; background: var(--card-inner); border-radius: 10px; margin-top: 10px; word-break: break-word; }
+    .diff-display { font-size: 14px; line-height: 1.8; text-align: left; padding: 10px; background: var(--card-inner); border-radius: 10px; margin-top: 10px; word-break: break-word; }
     .diff-word-correct { color: #34d399; font-weight: bold; }
     .diff-word-wrong { color: #f87171; text-decoration: line-through; margin-right: 4px; }
     .diff-word-missing { color: #fbbf24; font-weight: bold; text-decoration: underline; }
 
-    /* AI Tutor Card & Messages */
-    .ai-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
-    .ai-chat-output { background: var(--card-inner); border: 1px solid var(--border); border-radius: 12px; padding: 14px; font-size: 13px; line-height: 1.7; max-height: 340px; overflow-y: auto; white-space: pre-wrap; word-break: break-word; }
-    .card-preview-box { background: rgba(56, 189, 248, 0.08); border: 1px dashed var(--accent); border-radius: 10px; padding: 12px; margin-top: 10px; text-align: left; }
-    .card-preview-title { font-size: 12px; font-weight: bold; color: var(--accent); margin-bottom: 6px; }
+    /* 短讯与点词交互 */
+    .news-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+    .news-title { font-size: 15px; font-weight: 800; color: #38bdf8; line-height: 1.4; margin-bottom: 8px; }
+    .news-body { font-size: 13.5px; color: #cbd5e1; line-height: 1.7; word-break: break-word; }
+    .clickable-word { cursor: pointer; padding: 1px 2px; border-radius: 3px; transition: background 0.15s; border-bottom: 1px dotted rgba(56, 189, 248, 0.4); }
+    .clickable-word:active { background: rgba(56, 189, 248, 0.3); color: #fff; }
 
-    /* Card List */
+    /* 点词弹窗 (Modal) */
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 100; justify-content: center; align-items: flex-end; }
+    .modal-sheet { background: #151e2e; border-top: 1px solid var(--border); width: 100%; max-width: 480px; border-radius: 20px 20px 0 0; padding: 20px; box-shadow: 0 -10px 30px rgba(0,0,0,0.5); animation: slideUp 0.25s ease-out; }
+    @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .modal-word { font-size: 20px; font-weight: 900; color: #fff; }
+    .modal-close { background: none; border: none; color: var(--text-dim); font-size: 20px; cursor: pointer; padding: 4px; }
+
+    /* AI 助教卡片看板 */
+    .ai-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+    .structured-board { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+    .board-section { background: var(--card-inner); border: 1px solid var(--border); border-radius: 12px; padding: 12px; text-align: left; }
+    .board-header { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
+    .board-content { font-size: 13.5px; color: #e2e8f0; line-height: 1.6; white-space: pre-wrap; }
+    .part-badge { display: inline-block; background: rgba(99, 102, 241, 0.2); color: #818cf8; font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
+
+    /* 服务商快捷预设按钮 */
+    .preset-btns { display: flex; gap: 8px; margin-bottom: 10px; }
+    .btn-preset { flex: 1; background: #1e293b; border: 1px solid var(--border); color: #94a3b8; padding: 7px 4px; border-radius: 8px; font-size: 11px; font-weight: bold; cursor: pointer; }
+    .btn-preset.active { background: rgba(56, 189, 248, 0.15); border-color: var(--accent); color: var(--accent); }
+
+    /* 列表管理 */
     .card-list { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; max-height: calc(100vh - 220px); }
     .item-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
     .item-header { display: flex; justify-content: space-between; align-items: flex-start; }
@@ -105,7 +127,7 @@
     .item-ipa { font-size: 12px; color: var(--accent); font-family: monospace; }
     .item-meaning { font-size: 13px; color: var(--text-dim); }
     .item-actions { display: flex; gap: 6px; justify-content: flex-end; border-top: 1px dashed #1e293b; padding-top: 8px; margin-top: 4px; flex-wrap: wrap; align-items: center; }
-    .btn-small { background: #334155; color: #cbd5e1; border: none; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; }
+    .btn-small { background: #334155; color: #cbd5e1; border: none; padding: 5px 9px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; }
     .btn-small:hover { color: #fff; }
     
     .item-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
@@ -122,18 +144,17 @@
   </div>
 
   <div class="container">
-    <!-- 5 Top Tabs -->
+    <!-- 顶部 5 列导航 (已将“训练”合并并更名为“短讯”) -->
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('review')">📖 复习</button>
-      <button class="tab-btn" onclick="switchTab('train')">🎯 训练</button>
+      <button class="tab-btn" onclick="switchTab('news')">📰 短讯</button>
       <button class="tab-btn" onclick="switchTab('add')">➕ 录入</button>
       <button class="tab-btn" onclick="switchTab('ai')">🤖 AI 助教</button>
       <button class="tab-btn" onclick="switchTab('list')">📚 词库</button>
     </div>
 
-    <!-- 1. REVIEW VIEW -->
+    <!-- 1. REVIEW VIEW (艾宾浩斯核心复习) -->
     <div id="view-review" class="view-section active">
-      <!-- 核心复习卡片 -->
       <div class="quiz-card" id="quiz-card-box">
         <div>
           <div class="quiz-header">
@@ -169,41 +190,45 @@
           </div>
         </div>
       </div>
-
-      <!-- 📰 今日科技精选短讯 (位于卡片下方，防被清空) -->
-      <div style="margin-top: 18px;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <h3 style="color: var(--accent); font-size: 14px;">📰 今日科技精选短讯</h3>
-          <button onclick="loadDailyNews()" style="background: none; border: none; color: var(--text-dim); font-size: 11px; cursor: pointer;">🔄 刷新短讯</button>
-        </div>
-        <div id="news-container">
-          <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 12px;">正在加载今日短讯...</div>
-        </div>
-      </div>
     </div>
 
-    <!-- 2. TRAINING VIEW (跟读打分 & 听写) -->
-    <div id="view-train" class="view-section">
-      <div style="background: var(--card-bg); padding: 16px; border-radius: 16px; border: 1px solid var(--border);">
+    <!-- 2. NEWS VIEW (每日 3~5 行短讯 + 开箱即练跟读/听写 + 点词即查) -->
+    <div id="view-news" class="view-section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+        <span style="font-size: 13px; color: var(--text-dim);">📰 每日精选短讯 (点击单词即可在应用内查词)</span>
+        <button onclick="loadDailyNews()" style="background: none; border: none; color: var(--accent); font-size: 12px; cursor: pointer; font-weight: bold;">🔄 刷新</button>
+      </div>
+
+      <!-- 短讯列表容器 -->
+      <div id="news-container">
+        <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 20px;">正在加载今日科技短讯...</div>
+      </div>
+
+      <!-- 嵌入式训练工具台 -->
+      <div id="news-train-workspace" style="display: none; margin-top: 14px; background: var(--card-bg); padding: 14px; border-radius: 14px; border: 1px solid var(--border);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span style="font-size: 13px; font-weight: bold; color: var(--accent);" id="workspace-mode-title">🎯 专项训练台</span>
+          <button onclick="closeTrainWorkspace()" style="background:none; border:none; color:var(--text-dim); font-size:12px; cursor:pointer;">关闭训练 ✖</button>
+        </div>
+
         <div class="sub-tabs">
           <button class="sub-tab-btn active" id="subtab-btn-shadow" onclick="switchTrainMode('shadow')">🗣️ 口语跟读打分</button>
           <button class="sub-tab-btn" id="subtab-btn-dict" onclick="switchTrainMode('dict')">🎧 听写练习检测</button>
         </div>
 
         <div class="form-group">
-          <label>目标跟读/听写文本 (支持单词、例句或从短讯/作文一键导入):</label>
-          <textarea id="train-target-text" class="form-control" style="min-height: 80px;" placeholder="在此输入或从外部一键导入内容..."></textarea>
+          <textarea id="train-target-text" class="form-control" style="min-height: 70px; font-size: 13px;" placeholder="训练文本..."></textarea>
         </div>
 
-        <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <div style="display: flex; gap: 8px; margin-bottom: 12px;">
           <button class="btn-audio" onclick="playAudioStream(document.getElementById('train-target-text').value, 1.0)">🔊 原速播放 (1.0x)</button>
-          <button class="btn-audio" style="background: #0369a1;" onclick="playAudioStream(document.getElementById('train-target-text').value, 0.8)">🐢 慢速播放 (0.8x)</button>
+          <button class="btn-audio" style="background: #0369a1;" onclick="playAudioStream(document.getElementById('train-target-text').value, 0.8)">🐢 慢速精听 (0.8x)</button>
         </div>
 
-        <!-- Mode A: 跟读打分 -->
+        <!-- 跟读面板 (带方案 A 高容错语义纠偏) -->
         <div id="train-mode-shadow">
-          <button id="btn-start-shadow" class="btn-submit" style="background:#8b5cf6;" onclick="toggleShadowRecognition()">🎙️ 点击开始跟读识别</button>
-          <div id="shadow-status" style="font-size:12px; color:var(--text-dim); margin-top:6px; text-align:center;">等待录音...</div>
+          <button id="btn-start-shadow" class="btn-submit" style="background:#8b5cf6;" onclick="toggleShadowRecognition()">🎙️ 点击开始跟读识别 (智能容错纠偏)</button>
+          <div id="shadow-status" style="font-size:12px; color:var(--text-dim); margin-top:6px; text-align:center;">读完后稍停，AI 将结合语境自动修正发音偏差</div>
 
           <div id="shadow-result-panel" style="display: none;">
             <div class="score-badge-box">
@@ -211,16 +236,15 @@
               <div class="score-number" id="shadow-score-num">0</div>
               <div style="font-size: 12px;" id="shadow-score-desc">待测试</div>
             </div>
-            <div style="font-size: 12px; color: var(--text-dim); margin-top: 8px;">逐词比对反馈 (🟢准 🔴错/漏):</div>
+            <div style="font-size: 12px; color: var(--text-dim); margin-top: 8px;">逐词比对反馈:</div>
             <div class="diff-display" id="shadow-diff-box"></div>
           </div>
         </div>
 
-        <!-- Mode B: 听写检测 -->
+        <!-- 听写面板 -->
         <div id="train-mode-dict" style="display: none;">
           <div class="form-group">
-            <label>听写输入框 (请盲听音频输入单词或句子):</label>
-            <textarea id="dictation-user-input" class="form-control" style="min-height: 90px;" placeholder="听音频后，在此敲入你听到的内容..."></textarea>
+            <textarea id="dictation-user-input" class="form-control" style="min-height: 80px;" placeholder="请盲听上方音频，在此敲入听到的英文..."></textarea>
           </div>
           <button class="btn-submit" style="background:#059669;" onclick="gradeDictation()">✍️ 提交听写比对</button>
 
@@ -229,11 +253,9 @@
               <div style="font-size: 12px; color: var(--text-dim);">听写正确率</div>
               <div class="score-number" id="dict-score-num">0%</div>
             </div>
-            <div style="font-size: 12px; color: var(--text-dim); margin-top: 8px;">听写逐词核对反馈:</div>
             <div class="diff-display" id="dict-diff-box"></div>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -247,7 +269,10 @@
         
         <div class="form-group">
           <label>知识点 / 英文生词 / 代码词汇 *</label>
-          <input type="text" id="input-word" class="form-control" placeholder="输入单词或短语">
+          <div class="input-with-btn">
+            <input type="text" id="input-word" class="form-control" placeholder="输入单词或短语">
+            <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputToField('input-word')">🎙️ 语音输入</button>
+          </div>
         </div>
 
         <div class="form-group">
@@ -296,7 +321,7 @@
       </div>
     </div>
 
-    <!-- 4. AI TUTOR VIEW -->
+    <!-- 4. AI TUTOR VIEW (条例清晰卡片化呈现 + 快捷服务商预设) -->
     <div id="view-ai" class="view-section">
       <div class="ai-card">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -304,8 +329,14 @@
           <button onclick="toggleApiSettings()" style="background: #26334d; border: none; color: #38bdf8; font-size: 11px; padding: 4px 8px; border-radius: 6px; cursor: pointer;">⚙️ API 配置</button>
         </div>
 
-        <!-- API 配置面板 -->
-        <div id="api-config-panel" style="display: none; background: var(--card-inner); padding: 12px; border-radius: 10px; border: 1px solid var(--border);">
+        <!-- API 配置面板 (含一键切换预设) -->
+        <div id="api-config-panel" style="display: none; background: var(--card-inner); padding: 12px; border-radius: 12px; border: 1px solid var(--border);">
+          <div style="font-size: 11px; color: var(--text-dim); margin-bottom: 6px;">服务商快速预设：</div>
+          <div class="preset-btns">
+            <button type="button" class="btn-preset active" id="preset-deepseek" onclick="applyApiPreset('deepseek')">DeepSeek 官方</button>
+            <button type="button" class="btn-preset" id="preset-silicon" onclick="applyApiPreset('silicon')">硅基流动 (SiliconFlow)</button>
+          </div>
+
           <div class="form-group">
             <label>API 端点 (Base URL)</label>
             <input type="text" id="llm-base-url" class="form-control" value="https://api.deepseek.com/v1">
@@ -316,36 +347,66 @@
           </div>
           <div class="form-group">
             <label>API Key (密钥)</label>
-            <input type="password" id="llm-api-key" class="form-control" placeholder="填入国内平台 API Key (DeepSeek / 硅基流动)">
+            <input type="password" id="llm-api-key" class="form-control" placeholder="填入对应平台的 API 密钥 (sk-...)">
           </div>
           <button type="button" class="btn-submit" style="padding: 8px; font-size: 12px;" onclick="saveApiConfig()">保存配置</button>
         </div>
 
         <!-- 助教子导航 -->
         <div class="sub-tabs">
-          <button class="sub-tab-btn active" id="subtab-ai-ask" onclick="switchAiMode('ask')">💬 查词 / 短语解惑</button>
+          <button class="sub-tab-btn active" id="subtab-ai-ask" onclick="switchAiMode('ask')">💬 查词 / 短语深度剖析</button>
           <button class="sub-tab-btn" id="subtab-ai-essay" onclick="switchAiMode('essay')">✍️ 作文批改润色</button>
         </div>
 
-        <!-- 模式 1: 查词问答 & 一键入库 -->
+        <!-- 模式 1: 查词剖析 (条理化卡片呈现) -->
         <div id="ai-panel-ask">
           <div class="form-group">
-            <textarea id="ai-ask-input" class="form-control" style="min-height: 80px;" placeholder="输入生词、短语、长句或任何疑问 (例如: ephemeral 或 take for granted)..."></textarea>
+            <div class="input-with-btn">
+              <input type="text" id="ai-ask-input" class="form-control" placeholder="输入生词、短语或句子 (如 ephemeral 或 catch-22)">
+              <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputToField('ai-ask-input')">🎙️ 语音</button>
+            </div>
           </div>
-          <button class="btn-submit" style="background:#0284c7;" onclick="askAiForExplanation()">🔍 发送提问 / 深度剖析</button>
+          <button class="btn-submit" style="background:#0284c7;" onclick="askAiForExplanation()">🔍 发送提问 / 结构化剖析</button>
 
           <div id="ai-ask-result-wrapper" style="display: none; margin-top: 14px;">
-            <div style="font-size: 12px; color: var(--accent); font-weight: bold; margin-bottom: 6px;">💡 助教解析与学习笔记:</div>
-            <div class="ai-chat-output" id="ai-ask-chat-box"></div>
+            <div id="ai-loading-text" style="font-size: 12px; color: var(--accent); text-align: center; padding: 12px; display: none;">🤖 助教正在结构化拆解中...</div>
             
-            <div id="card-preview-zone" class="card-preview-box" style="display:none;">
-              <div class="card-preview-title">📌 提取卡片预览</div>
-              <div style="font-size: 14px; font-weight: bold; color: #fff;" id="prev-word"></div>
-              <div style="font-size: 12px; color: var(--accent); font-family: monospace;" id="prev-ipa"></div>
-              <div style="font-size: 13px; color: #cbd5e1; margin-top: 2px;" id="prev-meaning"></div>
-              <div style="font-size: 12px; color: #94a3b8; font-style: italic; margin-top: 2px;" id="prev-sentence"></div>
-              
-              <button class="btn-submit" style="background:#10b981; margin-top:10px; padding:10px;" onclick="saveAiCardToDeck()">📥 一键加入艾宾浩斯复习库</button>
+            <!-- 结构化看板 -->
+            <div id="ai-structured-board" class="structured-board" style="display: none;">
+              <!-- 顶部核心词条卡 -->
+              <div class="board-section" style="border-left: 3px solid var(--accent);">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <span id="board-word" style="font-size: 20px; font-weight: 900; color: #fff;">Word</span>
+                    <span id="board-ipa" style="font-size: 13px; color: #a5f3fc; font-family: monospace; margin-left: 8px;">/ipa/</span>
+                  </div>
+                  <button class="btn-audio" onclick="playAudioStream(document.getElementById('board-word').innerText, 1.0)">🔊 发音</button>
+                </div>
+              </div>
+
+              <!-- 核心释义 -->
+              <div class="board-section">
+                <div class="board-header">📖 核心释义与词性</div>
+                <div class="board-content" id="board-meanings"></div>
+              </div>
+
+              <!-- 地道例句 -->
+              <div class="board-section">
+                <div class="board-header">💬 场景例句与用法</div>
+                <div class="board-content" id="board-examples"></div>
+              </div>
+
+              <!-- 助记与搭配 -->
+              <div class="board-section">
+                <div class="board-header">💡 词根记忆与搭配辨析</div>
+                <div class="board-content" id="board-notes"></div>
+              </div>
+
+              <!-- 行动操作 -->
+              <div style="display: flex; gap: 8px; margin-top: 4px;">
+                <button class="btn-submit" style="background:#10b981; flex: 1; margin-top:0;" onclick="saveAiBoardCardToDeck()">📥 一键加入艾宾浩斯复习库</button>
+                <button class="btn-small" style="background:#8b5cf6; padding: 0 12px;" onclick="sendAiBoardToTrain()">🗣️ 练发音</button>
+              </div>
             </div>
           </div>
         </div>
@@ -357,20 +418,22 @@
 
           <div id="essay-result-wrapper" style="display: none; margin-top: 14px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span style="font-size: 12px; font-weight: bold; color: var(--accent);">批改反馈与地道润色:</span>
+              <span style="font-size: 12px; font-weight: bold; color: var(--accent);">批改反馈与润色范文:</span>
               <div style="display: flex; gap: 4px;">
-                <button class="btn-small" style="background: #8b5cf6;" onclick="sendEssayToTrain('shadow')">🗣️ 练跟读</button>
-                <button class="btn-small" style="background: #059669;" onclick="sendEssayToTrain('dict')">🎧 练听写</button>
+                <button class="btn-small" style="background: #8b5cf6;" onclick="sendEssayToNewsTrain('shadow')">🗣️ 练跟读</button>
+                <button class="btn-small" style="background: #059669;" onclick="sendEssayToNewsTrain('dict')">🎧 练听写</button>
               </div>
             </div>
-            <div class="ai-chat-output" id="essay-result-box"></div>
+            <div class="board-section">
+              <div class="board-content" id="essay-result-box"></div>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- 5. LIST VIEW -->
+    <!-- 5. LIST VIEW (词库管理与备份) -->
     <div id="view-list" class="view-section">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
         <span style="font-size: 13px; color: var(--text-dim);">知识库 (<span id="total-count-label">0</span>)</span>
@@ -382,6 +445,32 @@
         </div>
       </div>
       <div class="card-list" id="card-list-container"></div>
+    </div>
+  </div>
+
+  <!-- 点词即查底部弹出浮层 (Word Lookup Modal) -->
+  <div class="modal-overlay" id="word-lookup-modal" onclick="closeWordModal(event)">
+    <div class="modal-sheet" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <span class="modal-word" id="m-word">Loading...</span>
+          <span id="m-ipa" style="font-size: 13px; color: #a5f3fc; font-family: monospace; margin-left: 8px;">/--/</span>
+        </div>
+        <button class="modal-close" onclick="hideWordModal()">✕</button>
+      </div>
+
+      <div style="margin: 8px 0 14px 0; display:flex; gap:8px;">
+        <button class="btn-audio" onclick="playAudioStream(document.getElementById('m-word').innerText, 1.0)">🔊 朗读示范</button>
+        <button class="btn-audio" style="background:#8b5cf6;" onclick="trainModalWord()">🗣️ 跟读此词</button>
+      </div>
+
+      <div style="background: var(--card-inner); border: 1px solid var(--border); padding: 12px; border-radius: 10px; margin-bottom: 14px;">
+        <div style="font-size: 11px; color: var(--text-dim); margin-bottom: 4px;">释义解析：</div>
+        <div id="m-meaning" style="font-size: 14px; color: #e2e8f0; line-height: 1.5;">查询中...</div>
+        <div id="m-context" style="font-size: 12px; color: #94a3b8; font-style: italic; margin-top: 6px; border-top: 1px dashed var(--border); padding-top: 6px;"></div>
+      </div>
+
+      <button class="btn-submit" style="background:#10b981; margin-top:0;" onclick="saveModalWordToDeck()">📥 一键加入艾宾浩斯复习库</button>
     </div>
   </div>
 
@@ -415,7 +504,8 @@
     let speechRecognizer = null;
     let isRecognizing = false;
 
-    let pendingAiCard = null;
+    let pendingBoardData = null;
+    let currentModalCardData = null;
 
     function initData() {
       const saved = localStorage.getItem("ebbinghaus_v6_cards") || localStorage.getItem("ebbinghaus_v5_cards") || localStorage.getItem("ebbinghaus_v4_cards");
@@ -426,15 +516,18 @@
         saveToStorage();
       }
 
-      document.getElementById('llm-base-url').value = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      document.getElementById('llm-model').value = localStorage.getItem('llm_model') || 'deepseek-chat';
+      // 初始化 API 配置
+      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
+      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
+      document.getElementById('llm-base-url').value = baseUrl;
+      document.getElementById('llm-model').value = model;
       document.getElementById('llm-api-key').value = localStorage.getItem('llm_api_key') || '';
+
+      updatePresetActiveUI(baseUrl.includes('siliconflow') ? 'silicon' : 'deepseek');
 
       updateDueCounter();
       pickNextCard();
       renderCardList();
-      
-      // 启动时自动拉取今日科技短讯
       loadDailyNews();
     }
 
@@ -444,7 +537,7 @@
     }
 
     function switchTab(tabId) {
-      const tabs = ['review', 'train', 'add', 'ai', 'list'];
+      const tabs = ['review', 'news', 'add', 'ai', 'list'];
       document.querySelectorAll('.tab-btn').forEach((b, i) => {
         b.classList.remove('active');
         if (tabs[i] === tabId) b.classList.add('active');
@@ -476,6 +569,543 @@
       document.getElementById('total-count-label').innerText = cards.length;
     }
 
+    /* 服务商预设切换 */
+    function applyApiPreset(type) {
+      if (type === 'deepseek') {
+        document.getElementById('llm-base-url').value = 'https://api.deepseek.com/v1';
+        document.getElementById('llm-model').value = 'deepseek-chat';
+      } else if (type === 'silicon') {
+        document.getElementById('llm-base-url').value = 'https://api.siliconflow.cn/v1';
+        document.getElementById('llm-model').value = 'deepseek-ai/DeepSeek-V3';
+      }
+      updatePresetActiveUI(type);
+    }
+
+    function updatePresetActiveUI(type) {
+      document.getElementById('preset-deepseek').classList.toggle('active', type === 'deepseek');
+      document.getElementById('preset-silicon').classList.toggle('active', type === 'silicon');
+    }
+
+    function toggleApiSettings() {
+      const p = document.getElementById('api-config-panel');
+      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function saveApiConfig() {
+      localStorage.setItem('llm_base_url', document.getElementById('llm-base-url').value.trim());
+      localStorage.setItem('llm_model', document.getElementById('llm-model').value.trim());
+      localStorage.setItem('llm_api_key', document.getElementById('llm-api-key').value.trim());
+      alert("✅ 大模型 API 配置已保存！");
+      toggleApiSettings();
+    }
+
+    /* 方案 A: 大模型高容错语义语音纠偏器 */
+    async function correctSpokenTextWithLLM(rawText, contextRef = "") {
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (!apiKey || !rawText.trim()) return rawText;
+
+      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
+      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
+
+      const systemPrompt = `你是一位高容错英语语音纠偏助手。
+用户是一位英语学习者，其发音可能存在口音、吞音或发音错误（如 l/r 混淆、辅音弱化等）。
+请根据用户发音初稿与上下文参考，推断出用户实际尝试朗读或输入的【标准英文单词或短句】。
+规则：
+1. 仅输出修正后的标准英文文本。
+2. 绝对不要包含任何解释、说明或标点符号。`;
+
+      try {
+        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: model,
+            messages: [
+              { role: "system", content: systemPrompt },
+              { role: "user", content: `参考语境: "${contextRef}"\n语音初稿: "${rawText}"` }
+            ],
+            temperature: 0.1
+          })
+        });
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || rawText;
+      } catch (err) {
+        console.warn("语音纠偏超时，使用原始识别:", err);
+        return rawText;
+      }
+    }
+
+    /* 语音输入到任意输入框 */
+    function voiceInputToField(fieldId) {
+      const inputEl = document.getElementById(fieldId);
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("浏览器未开放语音识别接口，请在 HTTPS 环境或 Chrome/Safari 下使用。");
+        return;
+      }
+
+      const recognizer = new SpeechRecognition();
+      recognizer.lang = 'en-US';
+      recognizer.onstart = () => { inputEl.placeholder = "🎙️ 正在倾听，请大声朗读..."; };
+      recognizer.onresult = async (e) => {
+        const raw = e.results[0][0].transcript;
+        inputEl.value = "🤖 AI 正在智能校正发音...";
+        const corrected = await correctSpokenTextWithLLM(raw, "");
+        inputEl.value = corrected;
+      };
+      recognizer.onerror = () => { inputEl.placeholder = "输入单词或短语"; };
+      recognizer.start();
+    }
+
+    /* 每日短讯抓取与点词即查渲染 */
+    async function loadDailyNews() {
+      const container = document.getElementById('news-container');
+      container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:15px;">🔄 正在拉取今日科技精选...</div>`;
+
+      try {
+        const res = await fetch(`./news.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error("news.json 等待生成");
+
+        const data = await res.json();
+        if (!data.articles || data.articles.length === 0) {
+          container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:15px;">今日暂无短讯推送</div>`;
+          return;
+        }
+
+        container.innerHTML = data.articles.map((art, idx) => {
+          // 将短讯正文分词，包裹为可点击的点词即查标签
+          const interactiveSummary = art.summary.replace(/\b([a-zA-Z\-']+)\b/g, (match) => {
+            const clean = match.replace(/['’]/g, '');
+            return `<span class="clickable-word" onclick="lookupWordModal('${clean}', '${encodeURIComponent(art.summary)}')">${match}</span>`;
+          });
+
+          const safeFullText = art.summary.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+
+          return `
+            <div class="news-card">
+              <div class="news-title">${art.title}</div>
+              <div class="news-body">${interactiveSummary}</div>
+              <div class="item-actions">
+                <button class="btn-small" style="background:#8b5cf6;" onclick="activateTrainWorkspace('${safeFullText}', 'shadow')">🗣️ 练这段跟读</button>
+                <button class="btn-small" style="background:#059669;" onclick="activateTrainWorkspace('${safeFullText}', 'dict')">🎧 练这段听写</button>
+                ${art.url ? `<a href="${art.url}" target="_blank" style="font-size:11px; color:#94a3b8; text-decoration:none; padding:4px 6px;">🔗 原文</a>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+      } catch (err) {
+        container.innerHTML = `
+          <div style="font-size:12px; color:var(--text-dim); text-align:center; padding:14px; border:1px dashed var(--border); border-radius:10px;">
+            📰 每日科技短讯等待 GitHub Action 首次生成中...<br>
+            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">(Action 任务每天清晨自动更新 news.json)</span>
+          </div>
+        `;
+      }
+    }
+
+    /* 启动短讯训练台 */
+    function activateTrainWorkspace(text, mode = 'shadow') {
+      const ws = document.getElementById('news-train-workspace');
+      document.getElementById('train-target-text').value = text;
+      ws.style.display = 'block';
+      switchTrainMode(mode);
+      ws.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function closeTrainWorkspace() {
+      document.getElementById('news-train-workspace').style.display = 'none';
+    }
+
+    /* 点词即查弹窗 (Modal) */
+    async function lookupWordModal(word, encodedSentence) {
+      const modal = document.getElementById('word-lookup-modal');
+      const mWord = document.getElementById('m-word');
+      const mIpa = document.getElementById('m-ipa');
+      const mMeaning = document.getElementById('m-meaning');
+      const mContext = document.getElementById('m-context');
+
+      modal.style.display = 'flex';
+      mWord.innerText = word;
+      mIpa.innerText = "/查询中.../";
+      mMeaning.innerText = "⏳ 正在查询中文释义...";
+      
+      const contextSentence = decodeURIComponent(encodedSentence || '');
+      mContext.innerText = contextSentence ? `短文原句: "${contextSentence.slice(0, 100)}..."` : '';
+
+      currentModalCardData = {
+        word: word,
+        ipa: "",
+        meaning: "",
+        sentence: contextSentence
+      };
+
+      // 1. 查音标
+      try {
+        const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
+        const data = await res.json();
+        let phonetic = data[0]?.phonetic || data[0]?.phonetics?.find(p => p.text)?.text;
+        if (phonetic) {
+          mIpa.innerText = phonetic;
+          currentModalCardData.ipa = phonetic;
+        } else {
+          mIpa.innerText = "";
+        }
+      } catch (e) { mIpa.innerText = ""; }
+
+      // 2. 查释义
+      try {
+        const res = await fetch(`https://dict.youdao.com/suggest?num=1&doctype=json&q=${encodeURIComponent(word)}`);
+        const data = await res.json();
+        if (data?.data?.entries?.[0]?.explain) {
+          const exp = data.data.entries[0].explain;
+          mMeaning.innerText = exp;
+          currentModalCardData.meaning = exp;
+          return;
+        }
+      } catch (e) {}
+
+      // 回退至大模型
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (apiKey) {
+        try {
+          const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
+          const model = localStorage.getItem('llm_model') || 'deepseek-chat';
+          const resp = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+            body: JSON.stringify({
+              model: model,
+              messages: [{ role: "user", content: `请给出英文单词 "${word}" 在语境 "${contextSentence.slice(0, 80)}" 下简练准确的中文释义（含词性），只输出释义本身。` }],
+              temperature: 0.1
+            })
+          });
+          const d = await resp.json();
+          const reply = d.choices?.[0]?.message?.content?.trim();
+          if (reply) {
+            mMeaning.innerText = reply;
+            currentModalCardData.meaning = reply;
+            return;
+          }
+        } catch (err) {}
+      }
+      mMeaning.innerText = "暂未自动获取到释义，可手动入库补充。";
+    }
+
+    function hideWordModal() {
+      document.getElementById('word-lookup-modal').style.display = 'none';
+    }
+
+    function closeWordModal(e) {
+      if (e.target.id === 'word-lookup-modal') hideWordModal();
+    }
+
+    function saveModalWordToDeck() {
+      if (!currentModalCardData || !currentModalCardData.word) return;
+
+      const exists = cards.some(c => c.word.toLowerCase() === currentModalCardData.word.toLowerCase());
+      if (exists) {
+        if (!confirm(`词库中已存在 "${currentModalCardData.word}"，是否依然重复录入？`)) return;
+      }
+
+      const newCard = {
+        id: "card_" + Date.now(),
+        word: currentModalCardData.word,
+        ipa: currentModalCardData.ipa || '',
+        meaning: currentModalCardData.meaning || '生词 (待补充释义)',
+        sentence: currentModalCardData.sentence || '',
+        category: "English",
+        userAudio: null,
+        streak: 0,
+        nextReviewTime: Date.now() - 1000
+      };
+
+      cards.unshift(newCard);
+      saveToStorage();
+      alert(`🎉 已成功将 "${currentModalCardData.word}" 排入艾宾浩斯复习流！`);
+      hideWordModal();
+    }
+
+    function trainModalWord() {
+      if (!currentModalCardData) return;
+      hideWordModal();
+      activateTrainWorkspace(currentModalCardData.word, 'shadow');
+    }
+
+    /* 跟读识别与方案 A 语音容错打分 */
+    function toggleShadowRecognition() {
+      const targetText = document.getElementById('train-target-text').value.trim();
+      const status = document.getElementById('shadow-status');
+      const btn = document.getElementById('btn-start-shadow');
+
+      if (!targetText) { alert("请先设置跟读内容！"); return; }
+
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("浏览器未开放语音接口，请在 HTTPS 或支持的环境下使用。");
+        return;
+      }
+
+      if (!isRecognizing) {
+        speechRecognizer = new SpeechRecognition();
+        speechRecognizer.lang = 'en-US';
+        speechRecognizer.continuous = false;
+        speechRecognizer.interimResults = false;
+
+        speechRecognizer.onstart = () => {
+          isRecognizing = true;
+          btn.innerText = "■ 正在倾听，请大声朗读...";
+          btn.style.background = "#ef4444";
+          status.innerText = "🎙️ 正在收音，读完后请稍停片刻...";
+        };
+
+        speechRecognizer.onresult = async (event) => {
+          const rawSpoken = event.results[0][0].transcript;
+          status.innerText = "🤖 正在结合上下文进行智能容错校正...";
+          
+          // 方案 A: 大模型智能纠偏
+          const correctedSpoken = await correctSpokenTextWithLLM(rawSpoken, targetText);
+          gradePronunciation(targetText, correctedSpoken, rawSpoken);
+        };
+
+        speechRecognizer.onerror = (event) => {
+          status.innerText = `⚠️ 识别未完成 (${event.error})，请靠近麦克风重试。`;
+          resetShadowBtn();
+        };
+
+        speechRecognizer.onend = () => { resetShadowBtn(); };
+
+        try { speechRecognizer.start(); } catch (e) {
+          alert("麦克风启动失败: " + e.message);
+          resetShadowBtn();
+        }
+      } else {
+        if (speechRecognizer) speechRecognizer.stop();
+        resetShadowBtn();
+      }
+    }
+
+    function resetShadowBtn() {
+      isRecognizing = false;
+      const btn = document.getElementById('btn-start-shadow');
+      btn.innerText = "🎙️ 点击开始跟读识别 (智能容错纠偏)";
+      btn.style.background = "#8b5cf6";
+    }
+
+    function gradePronunciation(target, spoken, rawSpoken) {
+      const cleanTargetWords = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+      const cleanSpokenWords = spoken.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+
+      let matchedCount = 0;
+      let diffHtml = "";
+
+      cleanTargetWords.forEach((word) => {
+        if (cleanSpokenWords.includes(word)) {
+          matchedCount++;
+          diffHtml += `<span class="diff-word-correct">${word}</span> `;
+        } else {
+          diffHtml += `<span class="diff-word-wrong">${word}</span> `;
+        }
+      });
+
+      const score = Math.round((matchedCount / Math.max(cleanTargetWords.length, 1)) * 100);
+
+      document.getElementById('shadow-result-panel').style.display = 'block';
+      document.getElementById('shadow-score-num').innerText = score;
+      document.getElementById('shadow-diff-box').innerHTML = `
+        <div><b>标准比对:</b> ${diffHtml}</div>
+        <div style="margin-top:6px; color:#38bdf8; font-size:12px;"><b>AI 容错校准识别:</b> "${spoken}"</div>
+        ${rawSpoken !== spoken ? `<div style="font-size:11px; color:#64748b;">(麦克风原音辨识为: "${rawSpoken}")</div>` : ''}
+      `;
+
+      const desc = document.getElementById('shadow-score-desc');
+      if (score >= 85) { desc.innerText = "🌟 绝妙发音！清晰流畅！"; desc.style.color = "#34d399"; }
+      else if (score >= 65) { desc.innerText = "👍 表现良好！注意红色单词的发音。"; desc.style.color = "#38bdf8"; }
+      else { desc.innerText = "💪 继续加油！建议调慢速度(0.8x)再次跟读。"; desc.style.color = "#f59e0b"; }
+      document.getElementById('shadow-status').innerText = "测评完成";
+    }
+
+    /* 听写评测 */
+    function gradeDictation() {
+      const target = document.getElementById('train-target-text').value.trim();
+      const userTyped = document.getElementById('dictation-user-input').value.trim();
+
+      if (!target) { alert("请先设置听写原文！"); return; }
+      if (!userTyped) { alert("请在文本框敲入听到的内容！"); return; }
+
+      const targetTokens = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+      const typedTokens = userTyped.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+
+      let correctCount = 0;
+      let resultHtml = "";
+
+      targetTokens.forEach((word, idx) => {
+        const userWord = typedTokens[idx] || "";
+        if (word === userWord) {
+          correctCount++;
+          resultHtml += `<span class="diff-word-correct">${word}</span> `;
+        } else {
+          resultHtml += `<span class="diff-word-wrong">${userWord || '[缺]'}</span><span class="diff-word-missing">(${word})</span> `;
+        }
+      });
+
+      const accuracy = Math.round((correctCount / Math.max(targetTokens.length, 1)) * 100);
+
+      document.getElementById('dict-result-panel').style.display = 'block';
+      document.getElementById('dict-score-num').innerText = `${accuracy}%`;
+      document.getElementById('dict-diff-box').innerHTML = `
+        <div><b>逐词批改 (绿色为正解，红色为你的拼写，括号内为标准单词):</b></div>
+        <div style="margin-top:6px;">${resultHtml}</div>
+      `;
+    }
+
+    /* AI 助教：条理清晰的卡片化剖析 */
+    async function askAiForExplanation() {
+      const query = document.getElementById('ai-ask-input').value.trim();
+      const apiKey = localStorage.getItem('llm_api_key');
+      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
+      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
+
+      const resultWrapper = document.getElementById('ai-ask-result-wrapper');
+      const loadingText = document.getElementById('ai-loading-text');
+      const board = document.getElementById('ai-structured-board');
+
+      if (!query) { alert("请先输入要剖析的内容！"); return; }
+      if (!apiKey) { alert("请点击右上角【⚙️ API 配置】填入 API Key！"); toggleApiSettings(); return; }
+
+      resultWrapper.style.display = 'block';
+      loadingText.style.display = 'block';
+      board.style.display = 'none';
+
+      const systemPrompt = `你是一位精通英语教学的名师。用户会输入一个单词、词组或句子。
+请【严格且仅】返回一段合法的 JSON 格式，严禁出现任何多余闲聊，格式结构如下：
+{
+  "word": "目标单词或词组",
+  "ipa": "/国际音标/",
+  "meanings": "核心词性与中文释义，分行或带标号清晰呈现",
+  "examples": "1~2个极其地道的英文例句并附带中文翻译",
+  "notes": "词根词源、核心搭配或易错辨析点"
+}`;
+
+      try {
+        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: model,
+            messages: [
+              { role: "system", content: systemPrompt },
+              { role: "user", content: query }
+            ],
+            temperature: 0.2
+          })
+        });
+
+        const data = await response.json();
+        loadingText.style.display = 'none';
+
+        if (data.choices && data.choices[0]) {
+          const raw = data.choices[0].message.content.trim();
+          const cleanJson = raw.replace(/^```json/i, '').replace(/```$/i, '').trim();
+          pendingBoardData = JSON.parse(cleanJson);
+
+          document.getElementById('board-word').innerText = pendingBoardData.word || query;
+          document.getElementById('board-ipa').innerText = pendingBoardData.ipa || '';
+          document.getElementById('board-meanings').innerText = pendingBoardData.meanings || '';
+          document.getElementById('board-examples').innerText = pendingBoardData.examples || '';
+          document.getElementById('board-notes').innerText = pendingBoardData.notes || '';
+          board.style.display = 'flex';
+        } else {
+          alert("API 返回格式异常: " + JSON.stringify(data));
+        }
+      } catch (err) {
+        loadingText.style.display = 'none';
+        alert("助教解析请求失败: " + err.message);
+      }
+    }
+
+    function saveAiBoardCardToDeck() {
+      if (!pendingBoardData) return;
+
+      const exists = cards.some(c => c.word.toLowerCase() === pendingBoardData.word.toLowerCase());
+      if (exists) {
+        if (!confirm(`词库中已存在 "${pendingBoardData.word}"，是否继续加入？`)) return;
+      }
+
+      const newCard = {
+        id: "card_" + Date.now(),
+        word: pendingBoardData.word,
+        ipa: pendingBoardData.ipa || '',
+        meaning: pendingBoardData.meanings || '',
+        sentence: pendingBoardData.examples ? pendingBoardData.examples.split('\n')[0] : '',
+        category: "English",
+        userAudio: null,
+        streak: 0,
+        nextReviewTime: Date.now() - 1000
+      };
+
+      cards.unshift(newCard);
+      saveToStorage();
+      alert(`🎉 已成功将 "${pendingBoardData.word}" 收入艾宾浩斯复习库！`);
+    }
+
+    function sendAiBoardToTrain() {
+      if (!pendingBoardData) return;
+      switchTab('news');
+      activateTrainWorkspace(pendingBoardData.word, 'shadow');
+    }
+
+    /* 作文批改 */
+    async function runDomesticLlmCheck() {
+      const text = document.getElementById('essay-input').value.trim();
+      const apiKey = localStorage.getItem('llm_api_key');
+      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
+      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
+
+      const resultWrapper = document.getElementById('essay-result-wrapper');
+      const resultBox = document.getElementById('essay-result-box');
+
+      if (!text) { alert("请先输入需要批改的内容！"); return; }
+      if (!apiKey) { alert("请先配置 API Key！"); toggleApiSettings(); return; }
+
+      resultWrapper.style.display = 'block';
+      resultBox.innerText = "🤖 正在进行语法硬伤定位与地道润色...";
+
+      try {
+        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: model,
+            messages: [
+              {
+                role: "system",
+                content: "你是一位双语名师。请批改英文短文：1. 列出拼写、语法与时态错误诊断；2. 提取难词及音标(/IPA/)；3. 给出地道高分润色范文。条理清晰。"
+              },
+              { role: "user", content: text }
+            ],
+            temperature: 0.3
+          })
+        });
+
+        const data = await response.json();
+        if (data.choices && data.choices[0]) {
+          resultBox.innerText = data.choices[0].message.content;
+        } else {
+          resultBox.innerText = `❌ API 报错: ${JSON.stringify(data)}`;
+        }
+      } catch (err) {
+        resultBox.innerText = `❌ 请求失败: ${err.message}`;
+      }
+    }
+
+    function sendEssayToNewsTrain(mode) {
+      const essayResult = document.getElementById('essay-result-box').innerText;
+      if (!essayResult) return;
+      switchTab('news');
+      activateTrainWorkspace(essayResult, mode);
+    }
+
+    /* 艾宾浩斯复习核心逻辑 */
     function pickNextCard() {
       const now = Date.now();
       const dueCards = cards.filter(c => c.nextReviewTime <= now);
@@ -603,150 +1233,21 @@
     }
 
     function playCurrentAudio() {
-      if (currentQuizCard && currentQuizCard.word) {
-        playAudioStream(currentQuizCard.word, 1.0);
-      }
+      if (currentQuizCard && currentQuizCard.word) playAudioStream(currentQuizCard.word, 1.0);
     }
 
     function playUserAudio() {
       if (currentQuizCard && currentQuizCard.userAudio) new Audio(currentQuizCard.userAudio).play();
     }
 
-    /* 跟读打分逻辑 */
-    function toggleShadowRecognition() {
-      const targetText = document.getElementById('train-target-text').value.trim();
-      const status = document.getElementById('shadow-status');
-      const btn = document.getElementById('btn-start-shadow');
-
-      if (!targetText) {
-        alert("请先输入或从下方导入要跟读的内容！");
-        return;
-      }
-
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechRecognition) {
-        alert("当前环境未开放 Web Speech API 接口，请使用 Chrome 或在 HTTPS 环境下运行。");
-        return;
-      }
-
-      if (!isRecognizing) {
-        speechRecognizer = new SpeechRecognition();
-        speechRecognizer.lang = 'en-US';
-        speechRecognizer.continuous = false;
-        speechRecognizer.interimResults = false;
-
-        speechRecognizer.onstart = () => {
-          isRecognizing = true;
-          btn.innerText = "■ 正在倾听，请大声朗读...";
-          btn.style.background = "#ef4444";
-          status.innerText = "🎙️ 正在录入发音，读完请稍停片刻...";
-        };
-
-        speechRecognizer.onresult = (event) => {
-          const spoken = event.results[0][0].transcript;
-          gradePronunciation(targetText, spoken);
-        };
-
-        speechRecognizer.onerror = (event) => {
-          status.innerText = `⚠️ 识别未成功 (${event.error})，请靠近麦克风重试。`;
-          resetShadowBtn();
-        };
-
-        speechRecognizer.onend = () => {
-          resetShadowBtn();
-        };
-
-        try {
-          speechRecognizer.start();
-        } catch (e) {
-          alert("麦克风启动失败: " + e.message);
-          resetShadowBtn();
-        }
-      } else {
-        if (speechRecognizer) speechRecognizer.stop();
-        resetShadowBtn();
-      }
-    }
-
-    function resetShadowBtn() {
-      isRecognizing = false;
-      const btn = document.getElementById('btn-start-shadow');
-      btn.innerText = "🎙️ 点击开始跟读识别";
-      btn.style.background = "#8b5cf6";
-    }
-
-    function gradePronunciation(target, spoken) {
-      const cleanTargetWords = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-      const cleanSpokenWords = spoken.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-
-      let matchedCount = 0;
-      let diffHtml = "";
-
-      cleanTargetWords.forEach((word) => {
-        if (cleanSpokenWords.includes(word)) {
-          matchedCount++;
-          diffHtml += `<span class="diff-word-correct">${word}</span> `;
-        } else {
-          diffHtml += `<span class="diff-word-wrong">${word}</span> `;
-        }
-      });
-
-      const score = Math.round((matchedCount / Math.max(cleanTargetWords.length, 1)) * 100);
-
-      document.getElementById('shadow-result-panel').style.display = 'block';
-      document.getElementById('shadow-score-num').innerText = score;
-      document.getElementById('shadow-diff-box').innerHTML = `
-        <div><b>原文对比:</b> ${diffHtml}</div>
-        <div style="margin-top:6px; color:#94a3b8; font-size:12px;"><b>你读到的内容:</b> "${spoken}"</div>
-      `;
-
-      const desc = document.getElementById('shadow-score-desc');
-      if (score >= 90) { desc.innerText = "🌟 绝妙发音！几乎与原声一致！"; desc.style.color = "#34d399"; }
-      else if (score >= 70) { desc.innerText = "👍 表现良好！请注意红色高亮词的发音重音。"; desc.style.color = "#38bdf8"; }
-      else { desc.innerText = "💪 继续加油！尝试调慢语速(0.8x)逐词跟读。"; desc.style.color = "#f59e0b"; }
-    }
-
-    /* 听写检测 */
-    function gradeDictation() {
-      const target = document.getElementById('train-target-text').value.trim();
-      const userTyped = document.getElementById('dictation-user-input').value.trim();
-
-      if (!target) { alert("请先设置听写原文！"); return; }
-      if (!userTyped) { alert("请在文本框输入你听到的内容！"); return; }
-
-      const targetTokens = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-      const typedTokens = userTyped.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-
-      let correctCount = 0;
-      let resultHtml = "";
-
-      targetTokens.forEach((word, idx) => {
-        const userWord = typedTokens[idx] || "";
-        if (word === userWord) {
-          correctCount++;
-          resultHtml += `<span class="diff-word-correct">${word}</span> `;
-        } else {
-          resultHtml += `<span class="diff-word-wrong">${userWord || '[缺]'}</span><span class="diff-word-missing">(${word})</span> `;
-        }
-      });
-
-      const accuracy = Math.round((correctCount / Math.max(targetTokens.length, 1)) * 100);
-
-      document.getElementById('dict-result-panel').style.display = 'block';
-      document.getElementById('dict-score-num').innerText = `${accuracy}%`;
-      document.getElementById('dict-diff-box').innerHTML = `
-        <div><b>逐词批改 (绿色为对，红色为你的拼写，括号内为正解):</b></div>
-        <div style="margin-top:6px;">${resultHtml}</div>
-      `;
-    }
-
+    /* 录音功能 */
     async function toggleRecording() {
       const btn = document.getElementById('btn-toggle-record');
       const statusText = document.getElementById('record-status-text');
 
       if (!isRecording) {
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-          alert("麦克风未授权或当前处于非安全网络环境中。");
+          alert("麦克风未授权或处于非安全网络环境中。");
           return;
         }
 
@@ -787,6 +1288,7 @@
       if (recordedBase64) new Audio(recordedBase64).play();
     }
 
+    /* 录入表单工具 */
     async function fetchIpaAuto() {
       const word = document.getElementById('input-word').value.trim();
       const ipaInput = document.getElementById('input-ipa');
@@ -806,32 +1308,8 @@
         }
       } catch (e) {}
 
-      const apiKey = localStorage.getItem('llm_api_key');
-      if (apiKey) {
-        try {
-          const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-          const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-          const resp = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-            body: JSON.stringify({
-              model: model,
-              messages: [{ role: "user", content: `请只输出英文单词 "${word}" 的国际音标，必须用斜杠包裹如 /.../，不要有任何多余文字。` }],
-              temperature: 0.1
-            })
-          });
-          const d = await resp.json();
-          const matchIpa = d.choices?.[0]?.message?.content?.match(/\/.*?\/|\[.*?\]/);
-          if (matchIpa) {
-            ipaInput.value = matchIpa[0];
-            btn.innerText = "⚡ 自动生成音标";
-            return;
-          }
-        } catch (err) {}
-      }
-
       btn.innerText = "⚡ 自动生成音标";
-      alert("未能自动获取，请手动输入或配置 API Key。");
+      alert("未能在开放词典中找到音标，可手动填写。");
     }
 
     async function fetchMeaningAuto() {
@@ -852,32 +1330,8 @@
         }
       } catch (e) {}
 
-      const apiKey = localStorage.getItem('llm_api_key');
-      if (apiKey) {
-        try {
-          const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-          const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-          const resp = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-            body: JSON.stringify({
-              model: model,
-              messages: [{ role: "user", content: `请给出单词或短语 "${word}" 准确精炼的中文释义（包含词性），不要多余废话。` }],
-              temperature: 0.1
-            })
-          });
-          const d = await resp.json();
-          const reply = d.choices?.[0]?.message?.content?.trim();
-          if (reply) {
-            meaningInput.value = reply;
-            btn.innerText = "⚡ 自动生成中文";
-            return;
-          }
-        } catch (err) {}
-      }
-
       btn.innerText = "⚡ 自动生成中文";
-      alert("中文释义自动获取失败，请手动输入。");
+      alert("释义获取失败，请手动输入。");
     }
 
     function saveOrUpdateCard() {
@@ -930,7 +1384,6 @@
       if (!card) return;
 
       editingCardId = card.id;
-
       document.getElementById('input-word').value = card.word;
       document.getElementById('input-ipa').value = card.ipa || '';
       document.getElementById('input-meaning').value = card.meaning;
@@ -970,22 +1423,6 @@
       }
     }
 
-    function sendToTrain(text, mode = 'shadow') {
-      if (!text) return;
-      document.getElementById('train-target-text').value = text;
-      switchTab('train');
-      switchTrainMode(mode);
-    }
-
-    function sendEssayToTrain(mode) {
-      const essayResult = document.getElementById('essay-result-box').innerText;
-      if (!essayResult) {
-        alert("暂无批改结果！");
-        return;
-      }
-      sendToTrain(essayResult, mode);
-    }
-
     function resetForm() {
       document.getElementById('input-word').value = "";
       document.getElementById('input-ipa').value = "";
@@ -1020,9 +1457,9 @@
             <div class="item-meaning">${c.meaning}</div>
             ${c.sentence ? `<div style="font-size:12px; color:#94a3b8; font-style:italic;">例: ${c.sentence}</div>` : ''}
             <div class="item-actions">
-              <button class="btn-small" onclick="sendToTrain('${c.word}', 'shadow')">🗣️ 练单词</button>
-              ${c.sentence ? `<button class="btn-small" onclick="sendToTrain('${c.sentence.replace(/'/g, "\\'")}', 'shadow')">🗣️ 练例句</button>` : ''}
-              <button class="btn-small" onclick="sendToTrain('${trainTarget.replace(/'/g, "\\'")}', 'dict')">🎧 练听写</button>
+              <button class="btn-small" onclick="quickTrainCard('${c.word}', 'shadow')">🗣️ 练单词</button>
+              ${c.sentence ? `<button class="btn-small" onclick="quickTrainCard('${c.sentence.replace(/'/g, "\\'")}', 'shadow')">🗣️ 练例句</button>` : ''}
+              <button class="btn-small" onclick="quickTrainCard('${trainTarget.replace(/'/g, "\\'")}', 'dict')">🎧 练听写</button>
               <button class="btn-small" style="color:#38bdf8;" onclick="startEditCard('${c.id}')">✏️ 修改</button>
               <button class="btn-small" style="color:#f87171;" onclick="deleteCard('${c.id}')">🗑️ 删除</button>
             </div>
@@ -1031,210 +1468,12 @@
       }).join('');
     }
 
-    function toggleApiSettings() {
-      const p = document.getElementById('api-config-panel');
-      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    function quickTrainCard(text, mode) {
+      switchTab('news');
+      activateTrainWorkspace(text, mode);
     }
 
-    function saveApiConfig() {
-      localStorage.setItem('llm_base_url', document.getElementById('llm-base-url').value.trim());
-      localStorage.setItem('llm_model', document.getElementById('llm-model').value.trim());
-      localStorage.setItem('llm_api_key', document.getElementById('llm-api-key').value.trim());
-      alert("✅ 大模型 API 配置已保存！");
-      toggleApiSettings();
-    }
-
-    /* 助教查词答疑与一键入库 */
-    async function askAiForExplanation() {
-      const query = document.getElementById('ai-ask-input').value.trim();
-      const apiKey = localStorage.getItem('llm_api_key');
-      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-
-      const resultWrapper = document.getElementById('ai-ask-result-wrapper');
-      const chatBox = document.getElementById('ai-ask-chat-box');
-      const previewZone = document.getElementById('card-preview-zone');
-
-      if (!query) { alert("请先输入要提问或查询的内容！"); return; }
-      if (!apiKey) { alert("请先点击右上角【⚙️ API 配置】填入 API Key！"); toggleApiSettings(); return; }
-
-      resultWrapper.style.display = 'block';
-      previewZone.style.display = 'none';
-      chatBox.innerText = "🤖 助教正在分析解析词汇与用法...";
-
-      const systemPrompt = `你是一位精通双语教学的名师。用户会输入一个单词、词组、习语或句子。
-请按以下规范输出：
-1. 给出标准音标(/IPA/)、核心中文释义与词性。
-2. 给出地道实用的原比例句与翻译。
-3. 讲解核心用法、搭配辨析或词根记忆法。
-4. 【极其重要】：在回答的最末尾，另起一行输出一段且仅有一段被 <<<JSON 和 JSON>>> 包裹的卡片数据，格式必须严格如下：
-<<<JSON
-{
-  "word": "提取的目标词汇或短语",
-  "ipa": "/音标/",
-  "meaning": "核心中文释义",
-  "sentence": "刚才生成的最地道例句"
-}
-JSON>>>
-确保内容生动、精简且专业。`;
-
-      try {
-        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${apiKey}`
-          },
-          body: JSON.stringify({
-            model: model,
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: query }
-            ],
-            temperature: 0.3
-          })
-        });
-
-        const data = await response.json();
-        if (data.choices && data.choices[0]) {
-          const rawContent = data.choices[0].message.content;
-          
-          const jsonMatch = rawContent.match(/<<<JSON([\s\S]*?)JSON>>>/);
-          let cleanDisplay = rawContent.replace(/<<<JSON[\s\S]*?JSON>>>/, '').trim();
-          chatBox.innerText = cleanDisplay;
-
-          if (jsonMatch && jsonMatch[1]) {
-            try {
-              pendingAiCard = JSON.parse(jsonMatch[1].trim());
-              document.getElementById('prev-word').innerText = pendingAiCard.word || query;
-              document.getElementById('prev-ipa').innerText = pendingAiCard.ipa || '';
-              document.getElementById('prev-meaning').innerText = pendingAiCard.meaning || '';
-              document.getElementById('prev-sentence').innerText = pendingAiCard.sentence ? `例: ${pendingAiCard.sentence}` : '';
-              previewZone.style.display = 'block';
-            } catch(e) {
-              previewZone.style.display = 'none';
-            }
-          }
-        } else if (data.error) {
-          chatBox.innerText = `❌ API 报错: ${data.error.message}`;
-        }
-      } catch (err) {
-        chatBox.innerText = `❌ 请求失败: ${err.message}`;
-      }
-    }
-
-    function saveAiCardToDeck() {
-      if (!pendingAiCard) return;
-
-      const exists = cards.some(c => c.word.toLowerCase() === pendingAiCard.word.toLowerCase());
-      if (exists) {
-        if (!confirm(`词库中已存在 "${pendingAiCard.word}"，是否仍要重复加入？`)) return;
-      }
-
-      const newCard = {
-        id: "card_" + Date.now(),
-        word: pendingAiCard.word,
-        ipa: pendingAiCard.ipa || '',
-        meaning: pendingAiCard.meaning || '',
-        sentence: pendingAiCard.sentence || '',
-        category: "English",
-        userAudio: null,
-        streak: 0,
-        nextReviewTime: Date.now() - 1000
-      };
-
-      cards.unshift(newCard);
-      saveToStorage();
-      alert(`🎉 成功加入生词库！已为您自动安排艾宾浩斯复习。`);
-      document.getElementById('card-preview-zone').style.display = 'none';
-    }
-
-    async function runDomesticLlmCheck() {
-      const text = document.getElementById('essay-input').value.trim();
-      const apiKey = localStorage.getItem('llm_api_key');
-      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-
-      const resultWrapper = document.getElementById('essay-result-wrapper');
-      const resultBox = document.getElementById('essay-result-box');
-
-      if (!text) { alert("请先输入需要批改的内容！"); return; }
-      if (!apiKey) { alert("请先点击右上角【⚙️ API 配置】填入 API Key！"); toggleApiSettings(); return; }
-
-      resultWrapper.style.display = 'block';
-      resultBox.innerText = "🤖 正在连接大模型进行语法诊断与地道润色...";
-
-      try {
-        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${apiKey}`
-          },
-          body: JSON.stringify({
-            model: model,
-            messages: [
-              {
-                role: "system",
-                content: "你是一位双语教学名师。请批改用户的英文习作：1. 诊断拼写、时态和主谓一致错误；2. 标注难词的音标(/IPA/)与释义；3. 给出地道润色版示范短文(供用户跟读练习)；4. 条理清晰。"
-              },
-              { role: "user", content: text }
-            ],
-            temperature: 0.3
-          })
-        });
-
-        const data = await response.json();
-        if (data.choices && data.choices[0]) {
-          resultBox.innerText = data.choices[0].message.content;
-        } else if (data.error) {
-          resultBox.innerText = `❌ API 报错: ${data.error.message}`;
-        }
-      } catch (err) {
-        resultBox.innerText = `❌ 请求失败: ${err.message}`;
-      }
-    }
-
-    /* 每日科技短讯抓取与渲染逻辑 */
-    async function loadDailyNews() {
-      const container = document.getElementById('news-container');
-      if (!container) return;
-      container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:10px;">🔄 正在读取今日科技精选...</div>`;
-
-      try {
-        const res = await fetch(`./news.json?t=${Date.now()}`);
-        if (!res.ok) throw new Error("news.json 尚在生成中");
-        
-        const data = await res.json();
-        if (!data.articles || data.articles.length === 0) {
-          container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:10px;">今日暂无短讯推送</div>`;
-          return;
-        }
-
-        container.innerHTML = data.articles.map(art => {
-          const safeText = art.summary.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-          return `
-            <div class="item-card" style="margin-bottom:10px;">
-              <div style="font-weight:bold; color:#38bdf8; font-size:14px; line-height:1.4;">${art.title}</div>
-              <div style="font-size:13px; color:#cbd5e1; margin:6px 0; line-height:1.5;">${art.summary}</div>
-              <div class="item-actions">
-                <button class="btn-small" onclick="sendToTrain('${safeText}', 'shadow')">🗣️ 练这段跟读</button>
-                <button class="btn-small" onclick="sendToTrain('${safeText}', 'dict')">🎧 练这段听写</button>
-                ${art.url ? `<a href="${art.url}" target="_blank" style="font-size:11px; color:#94a3b8; text-decoration:none; padding:4px 6px; display:inline-flex; align-items:center;">🔗 原文</a>` : ''}
-              </div>
-            </div>
-          `;
-        }).join('');
-      } catch (err) {
-        container.innerHTML = `
-          <div style="font-size:12px; color:var(--text-dim); text-align:center; padding:12px; border:1px dashed var(--border); border-radius:10px;">
-            📰 每日科技短讯等待 GitHub Action 首次生成中...<br>
-            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">(Action 任务每天清晨自动更新 news.json)</span>
-          </div>
-        `;
-      }
-    }
-
+    /* 备份与恢复 */
     function exportData() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(cards, null, 2));
       const downloadAnchor = document.createElement('a');
@@ -1260,7 +1499,7 @@ JSON>>>
         try {
           const imported = JSON.parse(e.target.result);
           if (!Array.isArray(imported)) {
-            alert("导入失败：文件格式不符合要求（必须是卡片列表 JSON 文件）");
+            alert("导入失败：文件必须是卡片列表 JSON 文件！");
             return;
           }
 
@@ -1270,7 +1509,7 @@ JSON>>>
             return;
           }
 
-          const isMerge = confirm(`检测到 ${validCards.length} 条有效词卡！\n\n点击【确定】：【追加合并】(保留当前已有数据，自动跳过重复词)\n点击【取消】：【完全覆盖】(清空当前数据，仅保留导入内容)`);
+          const isMerge = confirm(`检测到 ${validCards.length} 条有效词卡！\n\n【确定】：追加合并 (跳过重复)\n【取消】：完全覆盖 (清空现有)`);
 
           if (isMerge) {
             let addedCount = 0;
@@ -1282,17 +1521,17 @@ JSON>>>
                 addedCount++;
               }
             });
-            alert(`✅ 合并完成！新增导入 ${addedCount} 张卡片（重复词已自动跳过）。`);
+            alert(`✅ 合并完成！新增 ${addedCount} 张卡片。`);
           } else {
             cards = validCards;
-            alert(`✅ 覆盖完成！当前词库已替换为 ${cards.length} 张卡片。`);
+            alert(`✅ 覆盖完成！现有 ${cards.length} 张卡片。`);
           }
 
           saveToStorage();
           renderCardList();
           pickNextCard();
         } catch (err) {
-          alert("解析文件失败，请确保上传的是有效的 JSON 备份文件: " + err.message);
+          alert("解析文件失败: " + err.message);
         }
       };
       reader.readAsText(file);
