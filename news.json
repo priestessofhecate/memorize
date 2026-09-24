@@ -1,30 +1,52 @@
 {
-  "updatedAt": "2026-09-24 09:36:54",
+  "updated_at": "2026-09-24 10:59 UTC",
   "articles": [
     {
-      "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
-      "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/",
-      "summary": "EvilTokens provided an end-to-end platform that makes mass compromises faster and easier."
+      "id": "art_1",
+      "title": "Gemini 4 is almost ready, says new Google DeepMind chief",
+      "essence": "Google is reportedly nearing the launch of its long awaited Gemini 4 model, after dawdling behind rival developers on flagship AI releases. Speaking with The Information during his first media appearance as the leader of Google's DeepMind division, Koray Kavukcuoglu said that Gemini 4 is currently in its refinement stage, and that the company is […]",
+      "full_body": "Google is reportedly nearing the launch of its long awaited Gemini 4 model, after dawdling behind rival developers on flagship AI releases. Speaking with The Information during his first media appearance as the leader of Google's DeepMind division, Koray Kavukcuoglu said that Gemini 4 is currently in its refinement stage, and that the company is […]",
+      "sentences": [
+        "Google is reportedly nearing the launch of its long awaited Gemini 4 model, after dawdling behind rival developers on flagship AI releases.",
+        "Speaking with The Information during his first media appearance as the leader of Google's DeepMind division, Koray Kavukcuoglu said that Gemini 4 is currently in its refinement stage, and that the company is […]"
+      ],
+      "url": "https://www.theverge.com/tech/999802/google-deepmind-gemini-4-timeline-koray-kavukcuoglu"
     },
     {
-      "title": "IT mistake erases 11 years of viewing history for hospitals’ maternity records",
-      "url": "https://arstechnica.com/information-technology/2026/09/it-mistake-erases-11-years-of-viewing-history-for-hospitals-maternity-records/",
-      "summary": "The English hospitals recovered patient care data only."
+      "id": "art_2",
+      "title": "Meta is making a standalone Muse AI gadget",
+      "essence": "Meta is building a dedicated hardware device for its new Muse AI agent. The product, called Muse Charm, was briefly shown off by Meta CEO Mark Zuckerberg at the end of tonight's Meta Connect presentation.",
+      "full_body": "Meta is building a dedicated hardware device for its new Muse AI agent. The product, called Muse Charm, was briefly shown off by Meta CEO Mark Zuckerberg at the end of tonight's Meta Connect presentation. It looks almost like a chunky smartwatch without the strap - just a big screen, plus a little lanyard for […]",
+      "sentences": [
+        "Meta is building a dedicated hardware device for its new Muse AI agent.",
+        "The product, called Muse Charm, was briefly shown off by Meta CEO Mark Zuckerberg at the end of tonight's Meta Connect presentation.",
+        "It looks almost like a chunky smartwatch without the strap - just a big screen, plus a little lanyard for […]"
+      ],
+      "url": "https://www.theverge.com/tech/999750/muse-charm-meta-ai-hardware"
     },
     {
-      "title": "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day",
-      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
-      "summary": "A simple ClickFix attack is only one way to completely hijack the new agent."
+      "id": "art_3",
+      "title": "Meta Connect 2026: The 7 biggest announcements",
+      "essence": "Meta announced a slate of new wearables during its annual Meta Connect showcase on Wednesday. The star of the event was the new Meta VR Glasses, which pack virtual reality tech into a lightweight smart glasses-style frame with a tethered puck.",
+      "full_body": "Meta announced a slate of new wearables during its annual Meta Connect showcase on Wednesday. The star of the event was the new Meta VR Glasses, which pack virtual reality tech into a lightweight smart glasses-style frame with a tethered puck. Meta also announced new pairs of screen-free smart glasses, along with some new AI […]",
+      "sentences": [
+        "Meta announced a slate of new wearables during its annual Meta Connect showcase on Wednesday.",
+        "The star of the event was the new Meta VR Glasses, which pack virtual reality tech into a lightweight smart glasses-style frame with a tethered puck.",
+        "Meta also announced new pairs of screen-free smart glasses, along with some new AI […]"
+      ],
+      "url": "https://www.theverge.com/tech/999593/meta-connect-2026-everything-announced"
     },
     {
-      "title": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
-      "url": "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/",
-      "summary": "Google’s threat intelligence group said it had a mole inside TeamPCP's inner circle."
-    },
-    {
-      "title": "LLMs respond differently to harmful prompts when AI watermarking is used",
-      "url": "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/",
-      "summary": "SynthID can cause models to follow harmful instructions they would otherwise refuse."
+      "id": "art_4",
+      "title": "Meta’s next VR device isn’t a headset — it’s glasses",
+      "essence": "Meta is launching new VR hardware: a pair of glasses. The new Meta VR Glasses sit on your ears like a typical pair of glasses instead of being strapped over your head, but they still have immersive displays for watching movies, playing games, and getting work done.",
+      "full_body": "Meta is launching new VR hardware: a pair of glasses. The new Meta VR Glasses sit on your ears like a typical pair of glasses instead of being strapped over your head, but they still have immersive displays for watching movies, playing games, and getting work done. Imagine a pair of hefty black sunglasses with […]",
+      "sentences": [
+        "Meta is launching new VR hardware: a pair of glasses.",
+        "The new Meta VR Glasses sit on your ears like a typical pair of glasses instead of being strapped over your head, but they still have immersive displays for watching movies, playing games, and getting work done.",
+        "Imagine a pair of hefty black sunglasses with […]"
+      ],
+      "url": "https://www.theverge.com/tech/999517/meta-vr-glasses-connect-2026-hands-on"
     }
   ]
 }
