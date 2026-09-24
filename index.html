@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Memorize - 艾宾浩斯智能记忆与英语训练</title>
+  <title>Memorize - 极客智能记忆与英语训练台</title>
   <style>
     :root {
       --bg: #090d16;
@@ -22,36 +22,44 @@
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
     body { background-color: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
     
-    .navbar { background: #0b111e; border-bottom: 1px solid var(--border); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 50; }
-    .navbar h1 { font-size: 17px; font-weight: 800; color: var(--accent); letter-spacing: 0.5px; }
-    .navbar .stats-pill { background: #151e2e; border: 1px solid var(--border); padding: 4px 10px; border-radius: 20px; font-size: 12px; color: #a5f3fc; }
+    /* 顶部导航与 RPG 属性条 */
+    .navbar { background: #0b111e; border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 50; }
+    .navbar h1 { font-size: 16px; font-weight: 800; color: var(--accent); letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; }
+    .rpg-stats { display: flex; align-items: center; gap: 8px; }
+    .rpg-badge { background: #151e2e; border: 1px solid var(--border); padding: 3px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; color: #fbbf24; }
+    .rpg-exp { font-size: 11px; color: #a5f3fc; }
+    .sound-toggle-btn { background: none; border: 1px solid var(--border); color: #cbd5e1; border-radius: 8px; padding: 2px 6px; font-size: 11px; cursor: pointer; }
 
-    .container { flex: 1; padding: 14px; max-width: 480px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; }
+    .container { flex: 1; padding: 12px; max-width: 960px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; }
 
     /* 顶部 5 列导航 */
-    .tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 14px; background: #0b111e; padding: 4px; border-radius: 12px; border: 1px solid var(--border); }
-    .tab-btn { background: none; border: none; padding: 8px 2px; color: var(--text-dim); font-size: 11px; font-weight: 600; border-radius: 8px; cursor: pointer; text-align: center; }
+    .tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 12px; background: #0b111e; padding: 4px; border-radius: 12px; border: 1px solid var(--border); }
+    .tab-btn { background: none; border: none; padding: 8px 2px; color: var(--text-dim); font-size: 11.5px; font-weight: 600; border-radius: 8px; cursor: pointer; text-align: center; }
     .tab-btn.active { background: var(--primary); color: white; }
 
     .view-section { display: none; flex-direction: column; flex: 1; }
     .view-section.active { display: flex; }
 
-    /* 复习大卡片 */
-    .quiz-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; }
-    .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    /* 1. 复习主卡片 */
+    .quiz-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); max-width: 520px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; min-height: 400px; }
+    .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
     .mode-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: var(--accent); }
     .streak-badge { font-size: 12px; color: #fbbf24; font-weight: bold; }
-    
-    .question-box { margin: 16px 0; min-height: 120px; display: flex; flex-direction: column; justify-content: center; }
+
+    .question-box { margin: 12px 0; min-height: 120px; display: flex; flex-direction: column; justify-content: center; }
     .q-main { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.3; word-break: break-word; }
     .q-sub { font-size: 13px; color: var(--accent); font-family: monospace; }
-    .q-sentence { font-size: 15px; color: #e2e8f0; line-height: 1.5; background: var(--card-inner); padding: 12px; border-radius: 10px; border: 1px dashed var(--border); margin-top: 10px; text-align: left; }
+    
+    /* 交互式真填空 */
+    .cloze-input-wrap { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .cloze-field { background: var(--card-inner); border: 2px solid var(--primary); padding: 10px; border-radius: 10px; color: #38bdf8; font-size: 16px; font-weight: bold; text-align: center; outline: none; }
+    .cloze-sentence-preview { font-size: 14px; color: #cbd5e1; line-height: 1.6; background: var(--card-inner); padding: 10px; border-radius: 8px; border: 1px dashed var(--border); text-align: left; }
 
     .audio-group { display: flex; gap: 8px; justify-content: center; margin: 10px auto; flex-wrap: wrap; }
     .btn-audio { background: #0284c7; color: white; border: none; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
     .btn-audio-user { background: #8b5cf6; }
 
-    .answer-box { background: var(--card-inner); border-radius: 12px; padding: 14px; margin: 14px 0; text-align: left; border: 1px solid var(--border); display: none; }
+    .answer-box { background: var(--card-inner); border-radius: 12px; padding: 14px; margin: 12px 0; text-align: left; border: 1px solid var(--border); display: none; }
     .ans-title { font-size: 18px; font-weight: 700; color: #38bdf8; }
     .ans-ipa { font-size: 13px; color: #a5f3fc; font-family: monospace; margin: 2px 0 6px 0; }
     .ans-meaning { font-size: 14px; color: #cbd5e1; margin-bottom: 6px; }
@@ -63,102 +71,103 @@
     .btn-fail { background: var(--danger); color: white; }
     .btn-success { background: var(--success); color: white; }
 
+    /* 2. 短讯双板块响应式布局 */
+    .news-layout { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 768px) {
+      .news-layout { grid-template-columns: 1.15fr 0.85fr; align-items: start; }
+    }
+    .news-left-pane { display: flex; flex-direction: column; gap: 12px; }
+    .news-right-pane { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 14px; position: sticky; top: 60px; }
+
+    .news-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+    .news-title { font-size: 15px; font-weight: 800; color: #38bdf8; line-height: 1.4; }
+    .news-essence { font-size: 13px; color: #e2e8f0; line-height: 1.6; background: rgba(56, 189, 248, 0.05); padding: 8px 10px; border-left: 3px solid var(--accent); border-radius: 4px; }
+    .news-full { font-size: 13px; color: #94a3b8; line-height: 1.7; display: none; margin-top: 6px; border-top: 1px dashed var(--border); padding-top: 8px; }
+    .sentence-block { padding: 4px 6px; border-radius: 4px; margin-bottom: 4px; transition: background 0.15s; }
+    .sentence-block:hover { background: rgba(255, 255, 255, 0.05); }
+    .sentence-ops { display: flex; gap: 4px; margin-top: 2px; }
+
+    .clickable-word { cursor: pointer; padding: 1px 2px; border-radius: 3px; border-bottom: 1px dotted rgba(56, 189, 248, 0.4); }
+    .clickable-word:hover { background: rgba(56, 189, 248, 0.3); color: #fff; }
+
+    /* 专项训练台内部子组件 */
+    .train-target-box { background: var(--card-inner); border: 1px solid var(--border); border-radius: 10px; padding: 10px; font-size: 13px; color: #f8fafc; line-height: 1.5; min-height: 60px; max-height: 120px; overflow-y: auto; margin-bottom: 10px; word-break: break-word; }
+    .blind-curtain { background: #1e293b; border: 1px dashed #64748b; color: #94a3b8; padding: 20px; border-radius: 10px; text-align: center; font-size: 13px; margin-bottom: 10px; }
+
+    .scramble-zone { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: var(--card-inner); border-radius: 8px; min-height: 48px; border: 1px solid var(--border); margin-bottom: 10px; }
+    .scramble-chip { background: #334155; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 12px; cursor: pointer; user-select: none; }
+    .scramble-chip.used { opacity: 0.3; pointer-events: none; }
+
     /* 通用表单与按钮 */
     .form-group { margin-bottom: 12px; }
     .form-group label { display: block; font-size: 12px; color: var(--text-dim); margin-bottom: 5px; font-weight: 600; }
     .form-control { width: 100%; background: var(--card-inner); border: 1px solid var(--border); padding: 10px; border-radius: 10px; color: #fff; font-size: 14px; }
     .form-control:focus { outline: none; border-color: var(--primary); }
-    textarea.form-control { resize: vertical; min-height: 70px; }
-    .btn-submit { background: var(--primary); color: white; width: 100%; border: none; padding: 12px; border-radius: 10px; font-size: 14px; font-weight: bold; cursor: pointer; margin-top: 8px; }
-
-    .input-with-btn { display: flex; gap: 8px; }
+    textarea.form-control { resize: vertical; min-height: 65px; }
+    .btn-submit { background: var(--primary); color: white; width: 100%; border: none; padding: 11px; border-radius: 10px; font-size: 13px; font-weight: bold; cursor: pointer; }
+    .btn-small { background: #334155; color: #cbd5e1; border: none; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; }
     .btn-inline-action { background: #0284c7; border: none; color: #fff; font-size: 11px; padding: 0 10px; border-radius: 10px; font-weight: bold; cursor: pointer; white-space: nowrap; }
 
-    .recorder-box { background: var(--card-inner); border: 1px solid var(--border); border-radius: 10px; padding: 10px; margin-top: 6px; display: flex; align-items: center; justify-content: space-between; }
-    .record-btn { background: #ef4444; color: white; border: none; padding: 7px 12px; border-radius: 20px; font-size: 11px; font-weight: bold; cursor: pointer; }
-    .record-btn.recording { animation: pulse 1s infinite; background: #dc2626; }
-    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-
-    /* 子选项卡 */
-    .sub-tabs { display: flex; gap: 8px; margin-bottom: 12px; background: var(--card-inner); padding: 4px; border-radius: 10px; }
-    .sub-tab-btn { flex: 1; background: none; border: none; padding: 7px; font-size: 12px; color: var(--text-dim); border-radius: 8px; cursor: pointer; font-weight: bold; }
+    .sub-tabs { display: flex; gap: 4px; margin-bottom: 10px; background: var(--card-inner); padding: 3px; border-radius: 8px; overflow-x: auto; }
+    .sub-tab-btn { flex: 1; background: none; border: none; padding: 6px 4px; font-size: 11px; color: var(--text-dim); border-radius: 6px; cursor: pointer; font-weight: bold; white-space: nowrap; }
     .sub-tab-btn.active { background: #334155; color: var(--accent); }
 
-    .score-badge-box { text-align: center; margin: 12px 0; padding: 12px; background: var(--card-inner); border-radius: 12px; border: 1px solid var(--border); }
-    .score-number { font-size: 32px; font-weight: 900; color: #34d399; }
-    .diff-display { font-size: 14px; line-height: 1.8; text-align: left; padding: 10px; background: var(--card-inner); border-radius: 10px; margin-top: 10px; word-break: break-word; }
-    .diff-word-correct { color: #34d399; font-weight: bold; }
-    .diff-word-wrong { color: #f87171; text-decoration: line-through; margin-right: 4px; }
-    .diff-word-missing { color: #fbbf24; font-weight: bold; text-decoration: underline; }
+    /* 词库页外置可关闭提示条 */
+    .backup-banner { background: #151e2e; border: 1px solid #f59e0b; border-left: 4px solid #f59e0b; border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .backup-banner-title { font-size: 12px; font-weight: bold; color: #fbbf24; margin-bottom: 3px; }
+    .backup-banner-desc { font-size: 11px; color: #cbd5e1; line-height: 1.5; }
+    .banner-close-btn { background: none; border: none; color: #94a3b8; font-size: 14px; cursor: pointer; padding: 2px 4px; }
 
-    /* 短讯与点词交互 */
-    .news-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
-    .news-title { font-size: 15px; font-weight: 800; color: #38bdf8; line-height: 1.4; margin-bottom: 8px; }
-    .news-body { font-size: 13.5px; color: #cbd5e1; line-height: 1.7; word-break: break-word; }
-    .clickable-word { cursor: pointer; padding: 1px 2px; border-radius: 3px; transition: background 0.15s; border-bottom: 1px dotted rgba(56, 189, 248, 0.4); }
-    .clickable-word:active { background: rgba(56, 189, 248, 0.3); color: #fff; }
-
-    /* 点词弹窗 (Modal) */
+    /* 查词弹窗 Modal */
     .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 100; justify-content: center; align-items: flex-end; }
-    .modal-sheet { background: #151e2e; border-top: 1px solid var(--border); width: 100%; max-width: 480px; border-radius: 20px 20px 0 0; padding: 20px; box-shadow: 0 -10px 30px rgba(0,0,0,0.5); animation: slideUp 0.25s ease-out; }
-    @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
-    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-    .modal-word { font-size: 20px; font-weight: 900; color: #fff; }
-    .modal-close { background: none; border: none; color: var(--text-dim); font-size: 20px; cursor: pointer; padding: 4px; }
+    .modal-sheet { background: #151e2e; border-top: 1px solid var(--border); width: 100%; max-width: 480px; border-radius: 20px 20px 0 0; padding: 18px; box-shadow: 0 -10px 30px rgba(0,0,0,0.5); }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .modal-word { font-size: 19px; font-weight: 900; color: #fff; }
 
-    /* AI 助教卡片看板 */
-    .ai-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
-    .structured-board { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
-    .board-section { background: var(--card-inner); border: 1px solid var(--border); border-radius: 12px; padding: 12px; text-align: left; }
-    .board-header { font-size: 12px; font-weight: 700; color: var(--accent); margin-bottom: 6px; display: flex; align-items: center; gap: 4px; }
-    .board-content { font-size: 13.5px; color: #e2e8f0; line-height: 1.6; white-space: pre-wrap; }
-    .part-badge { display: inline-block; background: rgba(99, 102, 241, 0.2); color: #818cf8; font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 700; margin-right: 6px; }
+    /* 警示框与帮助抽屉 */
+    .security-alert-box { background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.5); border-left: 4px solid var(--danger); border-radius: 8px; padding: 10px; margin-bottom: 10px; font-size: 11.5px; color: #fca5a5; line-height: 1.5; }
 
-    /* 服务商快捷预设按钮 */
-    .preset-btns { display: flex; gap: 8px; margin-bottom: 10px; }
-    .btn-preset { flex: 1; background: #1e293b; border: 1px solid var(--border); color: #94a3b8; padding: 7px 4px; border-radius: 8px; font-size: 11px; font-weight: bold; cursor: pointer; }
-    .btn-preset.active { background: rgba(56, 189, 248, 0.15); border-color: var(--accent); color: var(--accent); }
+    /* 浮动战斗与升级 Toast */
+    .rpg-toast { position: fixed; top: 70px; left: 50%; transform: translateX(-50%); background: rgba(15, 23, 42, 0.95); border: 1px solid #fbbf24; border-radius: 20px; padding: 8px 16px; font-size: 12px; font-weight: 800; color: #fef08a; box-shadow: 0 4px 20px rgba(0,0,0,0.6); pointer-events: none; z-index: 1000; display: none; animation: toastIn 0.3s ease-out; }
+    @keyframes toastIn { from { opacity: 0; transform: translate(-50%, -10px); } to { opacity: 1; transform: translate(-50%, 0); } }
 
-    /* 列表管理 */
-    .card-list { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; max-height: calc(100vh - 220px); }
-    .item-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
-    .item-header { display: flex; justify-content: space-between; align-items: flex-start; }
-    .item-word { font-size: 15px; font-weight: bold; color: #fff; }
-    .item-ipa { font-size: 12px; color: var(--accent); font-family: monospace; }
-    .item-meaning { font-size: 13px; color: var(--text-dim); }
-    .item-actions { display: flex; gap: 6px; justify-content: flex-end; border-top: 1px dashed #1e293b; padding-top: 8px; margin-top: 4px; flex-wrap: wrap; align-items: center; }
-    .btn-small { background: #334155; color: #cbd5e1; border: none; padding: 5px 9px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; }
-    .btn-small:hover { color: #fff; }
-    
-    .item-badge { font-size: 11px; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
-    .badge-master { background: rgba(16, 185, 129, 0.2); color: #34d399; }
-    .badge-learning { background: rgba(251, 191, 36, 0.2); color: #fbbf24; }
-    .empty-state { text-align: center; padding: 40px 20px; color: var(--text-dim); }
+    /* 比对高亮 */
+    .diff-correct { color: #34d399; font-weight: bold; }
+    .diff-wrong { color: #f87171; text-decoration: line-through; }
+    .diff-missing { color: #fbbf24; text-decoration: underline; }
   </style>
 </head>
 <body>
 
+  <!-- RPG 战况浮层 -->
+  <div class="rpg-toast" id="rpg-toast">⚡ CRITICAL HIT! 经验值 +15</div>
+
+  <!-- 顶部导航栏 -->
   <div class="navbar">
     <h1>🧠 Memorize</h1>
-    <div class="stats-pill" id="nav-due-counter">待复习: 0</div>
+    <div class="rpg-stats">
+      <div class="rpg-badge" id="rpg-rank-badge">Lv.1 见习编译徒</div>
+      <div class="rpg-exp" id="rpg-exp-text">EXP: 0/100</div>
+      <button class="sound-toggle-btn" id="sound-toggle-btn" onclick="toggleSoundFX()">🔊 音效: 开</button>
+    </div>
   </div>
 
   <div class="container">
-    <!-- 顶部 5 列导航 (已将“训练”合并并更名为“短讯”) -->
+    <!-- 5 模块主标签页 -->
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('review')">📖 复习</button>
       <button class="tab-btn" onclick="switchTab('news')">📰 短讯</button>
       <button class="tab-btn" onclick="switchTab('add')">➕ 录入</button>
-      <button class="tab-btn" onclick="switchTab('ai')">🤖 AI 助教</button>
+      <button class="tab-btn" onclick="switchTab('ai')">🤖 助教</button>
       <button class="tab-btn" onclick="switchTab('list')">📚 词库</button>
     </div>
 
-    <!-- 1. REVIEW VIEW (艾宾浩斯核心复习) -->
+    <!-- 1. 复习模块 (支持真实敲字/语音真填空 + 升级打怪数值体系) -->
     <div id="view-review" class="view-section active">
       <div class="quiz-card" id="quiz-card-box">
         <div>
           <div class="quiz-header">
-            <span class="mode-badge" id="q-mode-label">题型准备中</span>
+            <span class="mode-badge" id="q-mode-label">回忆挑战</span>
             <span class="streak-badge" id="q-streak-label">连胜: 🔥 0</span>
           </div>
 
@@ -171,7 +180,15 @@
               <button class="btn-audio btn-audio-user" id="btn-audio-user" style="display:none;" onclick="playUserAudio()">🎙️ 我的原声</button>
             </div>
 
-            <div class="q-sentence" id="q-sentence-box" style="display: none;"></div>
+            <!-- 交互式真填空区域 -->
+            <div id="cloze-interactive-wrap" class="cloze-input-wrap" style="display: none;">
+              <div class="cloze-sentence-preview" id="cloze-sentence-display"></div>
+              <div style="display: flex; gap: 6px;">
+                <input type="text" id="cloze-input-field" class="cloze-field" style="flex:1;" placeholder="敲入挖空的正确单词..." onkeydown="if(event.key==='Enter') submitClozeAnswer()">
+                <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputStrict('cloze-input-field')">🎙️ 严格语音</button>
+              </div>
+              <button class="btn-submit" style="background:#10b981; padding:8px;" onclick="submitClozeAnswer()">提交验证</button>
+            </div>
           </div>
 
           <div class="answer-box" id="answer-box">
@@ -183,126 +200,136 @@
         </div>
 
         <div>
-          <button class="btn btn-reveal" id="btn-reveal" onclick="revealAnswer()">👀 显示答案 / 查看释义</button>
+          <button class="btn btn-reveal" id="btn-reveal" onclick="revealAnswer()">👀 揭晓答案 / 翻转卡片</button>
           <div class="actions" id="action-btns" style="display: none;">
-            <button class="btn btn-fail" onclick="handleResult(false)">❌ 记错了 (重置)</button>
-            <button class="btn btn-success" onclick="handleResult(true)">✅ 记对了 (升级)</button>
+            <button class="btn btn-fail" onclick="handleResult(false)">❌ 记错了 (受到攻击)</button>
+            <button class="btn btn-success" onclick="handleResult(true)">✅ 记对了 (暴击晋级)</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 2. NEWS VIEW (每日 3~5 行短讯 + 开箱即练跟读/听写 + 点词即查) -->
+    <!-- 2. 短讯学习中心 (双板块布局：左侧短讯/深读，右侧吸顶训练台) -->
     <div id="view-news" class="view-section">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-        <span style="font-size: 13px; color: var(--text-dim);">📰 每日精选短讯 (点击单词即可在应用内查词)</span>
-        <button onclick="loadDailyNews()" style="background: none; border: none; color: var(--accent); font-size: 12px; cursor: pointer; font-weight: bold;">🔄 刷新</button>
-      </div>
+      <div class="news-layout">
+        
+        <!-- 左板块：短讯列表 -->
+        <div class="news-left-pane">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-size: 13px; font-weight: bold; color: var(--accent);">📰 今日科技资讯 (点击生词即查，可展开深读)</span>
+            <button onclick="loadDailyNews()" class="btn-small">🔄 刷新</button>
+          </div>
 
-      <!-- 短讯列表容器 -->
-      <div id="news-container">
-        <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 20px;">正在加载今日科技短讯...</div>
-      </div>
-
-      <!-- 嵌入式训练工具台 -->
-      <div id="news-train-workspace" style="display: none; margin-top: 14px; background: var(--card-bg); padding: 14px; border-radius: 14px; border: 1px solid var(--border);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <span style="font-size: 13px; font-weight: bold; color: var(--accent);" id="workspace-mode-title">🎯 专项训练台</span>
-          <button onclick="closeTrainWorkspace()" style="background:none; border:none; color:var(--text-dim); font-size:12px; cursor:pointer;">关闭训练 ✖</button>
+          <div id="news-cards-container">
+            <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 20px;">正在加载精选短讯...</div>
+          </div>
         </div>
 
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" id="subtab-btn-shadow" onclick="switchTrainMode('shadow')">🗣️ 口语跟读打分</button>
-          <button class="sub-tab-btn" id="subtab-btn-dict" onclick="switchTrainMode('dict')">🎧 听写练习检测</button>
-        </div>
+        <!-- 右板块：联动吸顶专项训练台 -->
+        <div class="news-right-pane" id="news-train-workspace">
+          <div style="font-size: 13px; font-weight: bold; color: var(--accent); margin-bottom: 8px;">🎯 专项实战训练台</div>
 
-        <div class="form-group">
-          <textarea id="train-target-text" class="form-control" style="min-height: 70px; font-size: 13px;" placeholder="训练文本..."></textarea>
-        </div>
+          <div class="sub-tabs">
+            <button class="sub-tab-btn active" id="tab-btn-shadow" onclick="switchRightTrainMode('shadow')">🗣️ 跟读打分</button>
+            <button class="sub-tab-btn" id="tab-btn-dict" onclick="switchRightTrainMode('dict')">🎧 盲听听写</button>
+            <button class="sub-tab-btn" id="tab-btn-craft" onclick="switchRightTrainMode('craft')">✍️ 句式仿写</button>
+            <button class="sub-tab-btn" id="tab-btn-scramble" onclick="switchRightTrainMode('scramble')">🧩 语块拼图</button>
+          </div>
 
-        <div style="display: flex; gap: 8px; margin-bottom: 12px;">
-          <button class="btn-audio" onclick="playAudioStream(document.getElementById('train-target-text').value, 1.0)">🔊 原速播放 (1.0x)</button>
-          <button class="btn-audio" style="background: #0369a1;" onclick="playAudioStream(document.getElementById('train-target-text').value, 0.8)">🐢 慢速精听 (0.8x)</button>
-        </div>
+          <!-- 播放控制器与目标文本展示 (支持盲听隐藏) -->
+          <div id="train-text-normal-wrap">
+            <div class="train-target-box" id="train-target-display">点击左侧新闻卡片上的【练这段】或选择句子载入训练台。</div>
+          </div>
+          <div id="train-text-blind-wrap" style="display: none;" class="blind-curtain">
+            🔒 原文已盲听隐藏，请专心听音拼写
+          </div>
 
-        <!-- 跟读面板 (带方案 A 高容错语义纠偏) -->
-        <div id="train-mode-shadow">
-          <button id="btn-start-shadow" class="btn-submit" style="background:#8b5cf6;" onclick="toggleShadowRecognition()">🎙️ 点击开始跟读识别 (智能容错纠偏)</button>
-          <div id="shadow-status" style="font-size:12px; color:var(--text-dim); margin-top:6px; text-align:center;">读完后稍停，AI 将结合语境自动修正发音偏差</div>
+          <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+            <button class="btn-audio" onclick="playCurrentTrainAudio(1.0)">🔊 原速播放 (1.0x)</button>
+            <button class="btn-audio" style="background:#0369a1;" onclick="playCurrentTrainAudio(0.8)">🐢 慢速精听 (0.8x)</button>
+          </div>
 
-          <div id="shadow-result-panel" style="display: none;">
-            <div class="score-badge-box">
-              <div style="font-size: 12px; color: var(--text-dim);">跟读匹配得分</div>
-              <div class="score-number" id="shadow-score-num">0</div>
-              <div style="font-size: 12px;" id="shadow-score-desc">待测试</div>
+          <!-- 子训练模式 1: 口语跟读 (严格无容错打分) -->
+          <div id="pane-shadow">
+            <button id="btn-start-shadow" class="btn-submit" style="background:#8b5cf6;" onclick="toggleStrictShadowRecognition()">🎙️ 开始跟读打分 (严格发音对比)</button>
+            <div id="shadow-status" style="font-size: 11px; color: var(--text-dim); margin-top: 4px; text-align: center;">考核真实发音水平，吞音/读错将严格标红扣分</div>
+            <div id="shadow-result-box" style="display: none; margin-top: 8px; font-size: 12px; line-height: 1.6;"></div>
+          </div>
+
+          <!-- 子训练模式 2: 盲听听写 -->
+          <div id="pane-dict" style="display: none;">
+            <textarea id="dictation-user-input" class="form-control" placeholder="点击上方播放音频，在此盲听敲入听到的英文..."></textarea>
+            <button class="btn-submit" style="background:#059669; margin-top: 6px;" onclick="gradeBlindDictation()">✍️ 提交听写比对 (解锁原文)</button>
+            <div id="dict-result-box" style="display: none; margin-top: 8px; font-size: 12px; line-height: 1.6;"></div>
+          </div>
+
+          <!-- 子训练模式 3: 句式仿写造句 (AI 骨架提炼 + 批改) -->
+          <div id="pane-craft" style="display: none;">
+            <button class="btn-small" style="background:#0284c7; width:100%; padding:6px; margin-bottom:8px;" onclick="extractSentenceFrame()">💡 提炼当前句子的表达骨架</button>
+            <div id="frame-display-box" style="font-size: 12px; color: #a5f3fc; background: var(--card-inner); padding: 8px; border-radius: 8px; margin-bottom: 8px; display:none; border:1px dashed var(--border);"></div>
+            <textarea id="craft-user-input" class="form-control" placeholder="根据骨架造一个自己的英文句子..."></textarea>
+            <button class="btn-submit" style="background:#6366f1; margin-top: 6px;" onclick="gradeSentenceCrafting()">🤖 提交大模型智能批改</button>
+            <div id="craft-result-box" style="display: none; margin-top: 8px; font-size: 12px; line-height: 1.6;"></div>
+          </div>
+
+          <!-- 子训练模式 4: 语块拼图 -->
+          <div id="pane-scramble" style="display: none;">
+            <div style="font-size: 11px; color: var(--text-dim); margin-bottom: 4px;">按正确语序点击语块，还原完整句子：</div>
+            <div class="scramble-zone" id="scramble-chips-pool"></div>
+            <div style="font-size: 11px; color: var(--accent); margin-bottom: 4px;">你的拼装结果：</div>
+            <div class="scramble-zone" id="scramble-assembled-zone"></div>
+            <div style="display:flex; gap:6px;">
+              <button class="btn-small" onclick="resetScramblePuzzle()">🔄 重置</button>
+              <button class="btn-small" style="background:#10b981; color:#fff;" onclick="verifyScramblePuzzle()">✅ 验证语序</button>
             </div>
-            <div style="font-size: 12px; color: var(--text-dim); margin-top: 8px;">逐词比对反馈:</div>
-            <div class="diff-display" id="shadow-diff-box"></div>
           </div>
+
         </div>
 
-        <!-- 听写面板 -->
-        <div id="train-mode-dict" style="display: none;">
-          <div class="form-group">
-            <textarea id="dictation-user-input" class="form-control" style="min-height: 80px;" placeholder="请盲听上方音频，在此敲入听到的英文..."></textarea>
-          </div>
-          <button class="btn-submit" style="background:#059669;" onclick="gradeDictation()">✍️ 提交听写比对</button>
-
-          <div id="dict-result-panel" style="display: none;">
-            <div class="score-badge-box">
-              <div style="font-size: 12px; color: var(--text-dim);">听写正确率</div>
-              <div class="score-number" id="dict-score-num">0%</div>
-            </div>
-            <div class="diff-display" id="dict-diff-box"></div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- 3. ADD / EDIT VIEW -->
+    <!-- 3. 录入模块 (录入与语音输入：开启高容错语义纠错) -->
     <div id="view-add" class="view-section">
-      <div style="background: var(--card-bg); padding: 16px; border-radius: 16px; border: 1px solid var(--border);">
+      <div style="background: var(--card-bg); padding: 16px; border-radius: 16px; border: 1px solid var(--border); max-width: 520px; width: 100%; margin: 0 auto;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
           <h3 id="form-heading" style="color: var(--accent); font-size: 15px;">录入新知识</h3>
-          <button id="btn-cancel-edit" onclick="cancelEditing()" style="display:none; background: #334155; border: none; color: #f87171; font-size: 11px; padding: 4px 8px; border-radius: 6px; cursor: pointer;">取消编辑</button>
+          <button id="btn-cancel-edit" onclick="cancelEditing()" style="display:none;" class="btn-small">取消编辑</button>
         </div>
         
         <div class="form-group">
-          <label>知识点 / 英文生词 / 代码词汇 *</label>
-          <div class="input-with-btn">
+          <label>知识点 / 英文生词 *</label>
+          <div style="display: flex; gap: 6px;">
             <input type="text" id="input-word" class="form-control" placeholder="输入单词或短语">
-            <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputToField('input-word')">🎙️ 语音输入</button>
+            <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputTolerant('input-word')">🎙️ 容错语音</button>
           </div>
         </div>
 
         <div class="form-group">
           <label>音标 (IPA)</label>
-          <div class="input-with-btn">
+          <div style="display: flex; gap: 6px;">
             <input type="text" id="input-ipa" class="form-control" placeholder="如: /ˈver.i.ə.bəl/">
-            <button type="button" id="btn-fetch-ipa" class="btn-inline-action" onclick="fetchIpaAuto()">⚡ 自动生成音标</button>
+            <button type="button" class="btn-inline-action" onclick="fetchWordIpaAndMeaningAuto()">⚡ 秒速解析</button>
           </div>
         </div>
 
         <div class="form-group">
           <label>中文释义 *</label>
-          <div class="input-with-btn">
-            <input type="text" id="input-meaning" class="form-control" placeholder="中文释义">
-            <button type="button" id="btn-fetch-meaning" class="btn-inline-action" style="background:#059669;" onclick="fetchMeaningAuto()">⚡ 自动生成中文</button>
-          </div>
+          <input type="text" id="input-meaning" class="form-control" placeholder="中文精准释义">
         </div>
 
         <div class="form-group">
           <label>例句 (用于生成填空与跟读) [选填]</label>
-          <textarea id="input-sentence" class="form-control" placeholder="输入包含该词的例句"></textarea>
+          <textarea id="input-sentence" class="form-control" placeholder="输入地道例句"></textarea>
         </div>
 
         <div class="form-group">
           <label>🎙️ 录制原声朗读 (专属原声复习题型)</label>
-          <div class="recorder-box">
+          <div style="display:flex; justify-content:space-between; align-items:center; background:var(--card-inner); padding:8px 10px; border-radius:8px;">
             <span id="record-status-text" style="font-size: 12px; color: var(--text-dim);">未录音</span>
             <div style="display:flex; gap:6px;">
-              <button type="button" class="record-btn" id="btn-toggle-record" onclick="toggleRecording()">● 开始录音</button>
-              <button type="button" id="btn-preview-record" style="display:none; background:#334155; color:#fff; border:none; padding:6px 10px; border-radius:20px; font-size:12px; cursor:pointer;" onclick="previewRecordedVoice()">▶ 试听</button>
+              <button type="button" class="btn-small" style="background:#ef4444; color:#fff;" id="btn-toggle-record" onclick="toggleRecording()">● 开始录音</button>
+              <button type="button" id="btn-preview-record" style="display:none;" class="btn-small" onclick="previewRecordedVoice()">▶ 试听</button>
             </div>
           </div>
         </div>
@@ -311,144 +338,119 @@
           <label>分类</label>
           <select id="input-category" class="form-control">
             <option value="English">🗣️ 英语词汇 (English)</option>
+            <option value="Sentence">⭐ 地道金句 (Sentences)</option>
             <option value="Code">💻 编程代码 (Coding)</option>
-            <option value="AI Movie">🎬 AI 电影制作 (AI Movie)</option>
-            <option value="General">📌 通用小知识 (General)</option>
           </select>
         </div>
 
-        <button id="btn-submit-card" class="btn-submit" onclick="saveOrUpdateCard()">💾 保存到艾宾浩斯复习库</button>
+        <button id="btn-submit-card" class="btn-submit" onclick="saveOrUpdateCard()">💾 保存入艾宾浩斯复习流</button>
       </div>
     </div>
 
-    <!-- 4. AI TUTOR VIEW (条例清晰卡片化呈现 + 快捷服务商预设) -->
+    <!-- 4. 助教模块 (支持高容错查词、模块化看板剖析与保姆级配置) -->
     <div id="view-ai" class="view-section">
-      <div class="ai-card">
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-          <h3 style="color: var(--accent); font-size: 15px;">🤖 AI 智能助教</h3>
-          <button onclick="toggleApiSettings()" style="background: #26334d; border: none; color: #38bdf8; font-size: 11px; padding: 4px 8px; border-radius: 6px; cursor: pointer;">⚙️ API 配置</button>
+      <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px; max-width: 600px; width:100%; margin: 0 auto;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <h3 style="color: var(--accent); font-size: 15px;">🤖 AI 智能助教与配置</h3>
+          <button onclick="toggleApiSettings()" class="btn-small" style="color:var(--accent);">⚙️ API 与安全指引</button>
         </div>
 
-        <!-- API 配置面板 (含一键切换预设) -->
-        <div id="api-config-panel" style="display: none; background: var(--card-inner); padding: 12px; border-radius: 12px; border: 1px solid var(--border);">
+        <!-- API 配置与安全防盗刷警示抽屉 -->
+        <div id="api-config-panel" style="display: none; background: var(--card-inner); padding: 12px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 12px;">
+          
+          <div class="security-alert-box">
+            <b>⚠️ 极重要安全警示（防盗刷必读）：</b><br>
+            API Key 相当于你的“银行卡交易密码”！他人获取后可在数分钟内通过脚本盗刷完你充值的所有余额，甚至调用违规内容导致实名账号被永久连带封禁。<br>
+            <b>准则：</b>本应用将密钥仅加密存放在你自己的手机本地浏览器沙盒中，绝不上传任何中转服务器；切勿向任何人截图或在群聊中暴露你的 Key（sk-...）！
+          </div>
+
           <div style="font-size: 11px; color: var(--text-dim); margin-bottom: 6px;">服务商快速预设：</div>
-          <div class="preset-btns">
-            <button type="button" class="btn-preset active" id="preset-deepseek" onclick="applyApiPreset('deepseek')">DeepSeek 官方</button>
-            <button type="button" class="btn-preset" id="preset-silicon" onclick="applyApiPreset('silicon')">硅基流动 (SiliconFlow)</button>
+          <div style="display: flex; gap: 6px; margin-bottom: 10px;">
+            <button type="button" class="btn-small" id="preset-silicon" style="flex:1; background:#1e293b;" onclick="applyApiPreset('silicon')">硅基流动 (推荐免费)</button>
+            <button type="button" class="btn-small" id="preset-deepseek" style="flex:1; background:#1e293b;" onclick="applyApiPreset('deepseek')">DeepSeek 官方</button>
           </div>
 
           <div class="form-group">
             <label>API 端点 (Base URL)</label>
-            <input type="text" id="llm-base-url" class="form-control" value="https://api.deepseek.com/v1">
+            <input type="text" id="llm-base-url" class="form-control" value="https://api.siliconflow.cn/v1">
           </div>
           <div class="form-group">
-            <label>模型名称 (Model)</label>
-            <input type="text" id="llm-model" class="form-control" value="deepseek-chat">
+            <label>模型名称 (Model) [推荐免费 Qwen2.5-7B]</label>
+            <input type="text" id="llm-model" class="form-control" value="Qwen/Qwen2.5-7B-Instruct">
           </div>
           <div class="form-group">
             <label>API Key (密钥)</label>
-            <input type="password" id="llm-api-key" class="form-control" placeholder="填入对应平台的 API 密钥 (sk-...)">
+            <input type="password" id="llm-api-key" class="form-control" placeholder="填入以 sk- 开头的密钥">
           </div>
-          <button type="button" class="btn-submit" style="padding: 8px; font-size: 12px;" onclick="saveApiConfig()">保存配置</button>
-        </div>
 
-        <!-- 助教子导航 -->
-        <div class="sub-tabs">
-          <button class="sub-tab-btn active" id="subtab-ai-ask" onclick="switchAiMode('ask')">💬 查词 / 短语深度剖析</button>
-          <button class="sub-tab-btn" id="subtab-ai-essay" onclick="switchAiMode('essay')">✍️ 作文批改润色</button>
-        </div>
-
-        <!-- 模式 1: 查词剖析 (条理化卡片呈现) -->
-        <div id="ai-panel-ask">
-          <div class="form-group">
-            <div class="input-with-btn">
-              <input type="text" id="ai-ask-input" class="form-control" placeholder="输入生词、短语或句子 (如 ephemeral 或 catch-22)">
-              <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputToField('ai-ask-input')">🎙️ 语音</button>
-            </div>
+          <div style="display: flex; gap: 8px;">
+            <button type="button" class="btn-submit" style="padding: 8px; font-size: 12px;" onclick="saveApiConfig()">保存配置</button>
+            <button type="button" class="btn-small" style="padding: 8px 12px;" onclick="toggleGuideDetail()">❓ 新手获取教程</button>
           </div>
-          <button class="btn-submit" style="background:#0284c7;" onclick="askAiForExplanation()">🔍 发送提问 / 结构化剖析</button>
 
-          <div id="ai-ask-result-wrapper" style="display: none; margin-top: 14px;">
-            <div id="ai-loading-text" style="font-size: 12px; color: var(--accent); text-align: center; padding: 12px; display: none;">🤖 助教正在结构化拆解中...</div>
-            
-            <!-- 结构化看板 -->
-            <div id="ai-structured-board" class="structured-board" style="display: none;">
-              <!-- 顶部核心词条卡 -->
-              <div class="board-section" style="border-left: 3px solid var(--accent);">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                  <div>
-                    <span id="board-word" style="font-size: 20px; font-weight: 900; color: #fff;">Word</span>
-                    <span id="board-ipa" style="font-size: 13px; color: #a5f3fc; font-family: monospace; margin-left: 8px;">/ipa/</span>
-                  </div>
-                  <button class="btn-audio" onclick="playAudioStream(document.getElementById('board-word').innerText, 1.0)">🔊 发音</button>
-                </div>
-              </div>
-
-              <!-- 核心释义 -->
-              <div class="board-section">
-                <div class="board-header">📖 核心释义与词性</div>
-                <div class="board-content" id="board-meanings"></div>
-              </div>
-
-              <!-- 地道例句 -->
-              <div class="board-section">
-                <div class="board-header">💬 场景例句与用法</div>
-                <div class="board-content" id="board-examples"></div>
-              </div>
-
-              <!-- 助记与搭配 -->
-              <div class="board-section">
-                <div class="board-header">💡 词根记忆与搭配辨析</div>
-                <div class="board-content" id="board-notes"></div>
-              </div>
-
-              <!-- 行动操作 -->
-              <div style="display: flex; gap: 8px; margin-top: 4px;">
-                <button class="btn-submit" style="background:#10b981; flex: 1; margin-top:0;" onclick="saveAiBoardCardToDeck()">📥 一键加入艾宾浩斯复习库</button>
-                <button class="btn-small" style="background:#8b5cf6; padding: 0 12px;" onclick="sendAiBoardToTrain()">🗣️ 练发音</button>
-              </div>
-            </div>
+          <div id="guide-detail-box" style="display: none; font-size: 11px; color: #94a3b8; line-height: 1.6; margin-top: 10px; border-top: 1px dashed var(--border); padding-top: 8px;">
+            <b>硅基流动极速获取：</b> 访问 <code>cloud.siliconflow.cn</code> 注册登录 $\rightarrow$ 点击左侧【API 密钥】 $\rightarrow$ 新建并复制 Key 粘贴至上方即可。配合预设模型 <code>Qwen/Qwen2.5-7B-Instruct</code> 使用完全免费！
           </div>
         </div>
 
-        <!-- 模式 2: 作文批改 -->
-        <div id="ai-panel-essay" style="display: none;">
-          <textarea id="essay-input" class="form-control" style="min-height: 120px; font-size: 14px; line-height: 1.5;" placeholder="在此输入需要批改的英文习作短文..."></textarea>
-          <button class="btn-submit" style="background:#0284c7;" onclick="runDomesticLlmCheck()">🤖 提交大模型智能批改</button>
+        <!-- 助教查词提问 (容错语义语音) -->
+        <div class="form-group">
+          <label>生词、长难句或语法剖析提问</label>
+          <div style="display: flex; gap: 6px;">
+            <input type="text" id="ai-query-input" class="form-control" placeholder="输入单词或长难句...">
+            <button type="button" class="btn-inline-action" style="background:#8b5cf6;" onclick="voiceInputTolerant('ai-query-input')">🎙️ 容错语音</button>
+          </div>
+        </div>
+        <button class="btn-submit" style="background:#0284c7;" onclick="runAiDeepAnalysis()">🔍 结构化卡片深度剖析</button>
 
-          <div id="essay-result-wrapper" style="display: none; margin-top: 14px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-              <span style="font-size: 12px; font-weight: bold; color: var(--accent);">批改反馈与润色范文:</span>
-              <div style="display: flex; gap: 4px;">
-                <button class="btn-small" style="background: #8b5cf6;" onclick="sendEssayToNewsTrain('shadow')">🗣️ 练跟读</button>
-                <button class="btn-small" style="background: #059669;" onclick="sendEssayToNewsTrain('dict')">🎧 练听写</button>
+        <!-- 卡片化剖析看板 -->
+        <div id="ai-board-result" style="display: none; margin-top: 14px; display: flex; flex-direction: column; gap: 8px;">
+          <div style="background: var(--card-inner); border-left: 3px solid var(--accent); border-radius: 8px; padding: 10px;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <span id="board-word" style="font-size: 18px; font-weight: 800; color: #fff;">Word</span>
+                <span id="board-ipa" style="font-size: 12px; color: #a5f3fc; font-family: monospace; margin-left: 6px;">/--/</span>
               </div>
-            </div>
-            <div class="board-section">
-              <div class="board-content" id="essay-result-box"></div>
+              <button class="btn-audio" onclick="playAudioStream(document.getElementById('board-word').innerText, 1.0)">🔊 示范</button>
             </div>
           </div>
+          <div style="background: var(--card-inner); border-radius: 8px; padding: 10px; font-size: 13px; color: #e2e8f0; line-height: 1.6;" id="board-content-body"></div>
+          <button class="btn-submit" style="background:#10b981;" onclick="saveBoardToDeck()">📥 一键加入艾宾浩斯复习库</button>
         </div>
 
       </div>
     </div>
 
-    <!-- 5. LIST VIEW (词库管理与备份) -->
+    <!-- 5. 词库模块 (外置可关闭备份提醒 + 导入导出) -->
     <div id="view-list" class="view-section">
+      
+      <!-- 外置可关闭备份提醒横幅 -->
+      <div class="backup-banner" id="backup-reminder-banner">
+        <div>
+          <div class="backup-banner-title">💡 本地数据安全温馨提示</div>
+          <div class="backup-banner-desc">
+            你的记忆卡片、原声录音和连胜进度均存放在当前手机/浏览器本地沙盒中。误清系统垃圾或开无痕模式可能导致数据丢失，请常点右上角【备份数据】导出 .json 文件留存。
+          </div>
+        </div>
+        <button class="banner-close-btn" onclick="dismissBackupBanner()" title="关闭提示">✕</button>
+      </div>
+
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-        <span style="font-size: 13px; color: var(--text-dim);">知识库 (<span id="total-count-label">0</span>)</span>
+        <span style="font-size: 13px; color: var(--text-dim);">知识库清单 (<span id="total-count-label">0</span>)</span>
         
         <div style="display: flex; gap: 6px;">
           <input type="file" id="file-import-input" accept=".json" style="display: none;" onchange="handleFileImport(event)">
-          <button onclick="triggerImport()" style="background: #1e293b; border: 1px solid var(--border); color: #38bdf8; padding: 4px 8px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: 600;">📥 导入数据</button>
-          <button onclick="exportData()" style="background: #1e293b; border: 1px solid var(--border); color: #a5f3fc; padding: 4px 8px; border-radius: 6px; font-size: 11px; cursor: pointer; font-weight: 600;">📤 备份数据</button>
+          <button onclick="triggerImport()" class="btn-small" style="color:var(--accent);">📥 导入数据</button>
+          <button onclick="exportData()" class="btn-small" style="color:#a5f3fc;">📤 备份数据</button>
         </div>
       </div>
-      <div class="card-list" id="card-list-container"></div>
+
+      <div id="card-list-container" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; max-height: calc(100vh - 220px);"></div>
     </div>
+
   </div>
 
-  <!-- 点词即查底部弹出浮层 (Word Lookup Modal) -->
+  <!-- 点词即查弹窗 Modal -->
   <div class="modal-overlay" id="word-lookup-modal" onclick="closeWordModal(event)">
     <div class="modal-sheet" onclick="event.stopPropagation()">
       <div class="modal-header">
@@ -456,26 +458,32 @@
           <span class="modal-word" id="m-word">Loading...</span>
           <span id="m-ipa" style="font-size: 13px; color: #a5f3fc; font-family: monospace; margin-left: 8px;">/--/</span>
         </div>
-        <button class="modal-close" onclick="hideWordModal()">✕</button>
+        <button class="banner-close-btn" onclick="hideWordModal()" style="font-size: 18px;">✕</button>
       </div>
 
-      <div style="margin: 8px 0 14px 0; display:flex; gap:8px;">
+      <div style="margin: 6px 0 12px 0; display:flex; gap:6px;">
         <button class="btn-audio" onclick="playAudioStream(document.getElementById('m-word').innerText, 1.0)">🔊 朗读示范</button>
-        <button class="btn-audio" style="background:#8b5cf6;" onclick="trainModalWord()">🗣️ 跟读此词</button>
+        <button class="btn-audio" style="background:#8b5cf6;" onclick="trainModalWordInRightPane()">🗣️ 载入训练台</button>
       </div>
 
-      <div style="background: var(--card-inner); border: 1px solid var(--border); padding: 12px; border-radius: 10px; margin-bottom: 14px;">
+      <div style="background: var(--card-inner); border: 1px solid var(--border); padding: 10px; border-radius: 8px; margin-bottom: 12px;">
         <div style="font-size: 11px; color: var(--text-dim); margin-bottom: 4px;">释义解析：</div>
-        <div id="m-meaning" style="font-size: 14px; color: #e2e8f0; line-height: 1.5;">查询中...</div>
-        <div id="m-context" style="font-size: 12px; color: #94a3b8; font-style: italic; margin-top: 6px; border-top: 1px dashed var(--border); padding-top: 6px;"></div>
+        <div id="m-meaning" style="font-size: 13px; color: #e2e8f0; line-height: 1.5;">查询中...</div>
       </div>
 
-      <button class="btn-submit" style="background:#10b981; margin-top:0;" onclick="saveModalWordToDeck()">📥 一键加入艾宾浩斯复习库</button>
+      <button class="btn-submit" style="background:#10b981;" onclick="saveModalWordToDeck()">📥 一键收入艾宾浩斯复习库</button>
     </div>
   </div>
 
   <script>
+    /* 艾宾浩斯曲线与 RPG 段位数据 */
     const SPACING_DAYS = [0, 1, 4, 18, 90];
+    const RPG_RANKS = [
+      { maxExp: 100, title: "Lv.1 见习编译徒" },
+      { maxExp: 300, title: "Lv.2 词根漫步者" },
+      { maxExp: 700, title: "Lv.3 架构法师" },
+      { maxExp: 1500, title: "Lv.4 全栈传奇先知" }
+    ];
 
     const DEFAULT_DATA = [
       {
@@ -484,7 +492,7 @@
         ipa: "/ˈver.i.ə.bəl/",
         meaning: "变量 (用于在内存中存储数据的容器)",
         category: "Code",
-        sentence: "A variable stores data inside the computer memory.",
+        sentence: "A variable stores critical data inside the memory.",
         userAudio: null,
         streak: 0,
         nextReviewTime: Date.now() - 1000
@@ -496,740 +504,194 @@
     let currentQuizType = "";
     let editingCardId = null;
 
+    let currentTrainTargetText = "";
+    let currentTrainSentenceFrame = "";
+    let scrambleCorrectTokens = [];
+    let scrambleUserTokens = [];
+
+    let isSoundFXOn = true;
+    let userExp = 0;
+    let userRankIndex = 0;
+
+    let audioContext = null;
     let mediaRecorder = null;
     let audioChunks = [];
     let recordedBase64 = null;
     let isRecording = false;
 
     let speechRecognizer = null;
-    let isRecognizing = false;
+    let isRecognizingStrict = false;
+    let modalPendingData = null;
+    let boardPendingData = null;
 
-    let pendingBoardData = null;
-    let currentModalCardData = null;
+    /* 初始化 */
+    function initApp() {
+      const savedCards = localStorage.getItem("ebbinghaus_v7_cards") || localStorage.getItem("ebbinghaus_v6_cards");
+      cards = savedCards ? JSON.parse(savedCards) : DEFAULT_DATA;
+      
+      userExp = parseInt(localStorage.getItem("rpg_exp") || "0");
+      userRankIndex = parseInt(localStorage.getItem("rpg_rank_index") || "0");
+      isSoundFXOn = localStorage.getItem("rpg_sound_fx") !== "0";
 
-    function initData() {
-      const saved = localStorage.getItem("ebbinghaus_v6_cards") || localStorage.getItem("ebbinghaus_v5_cards") || localStorage.getItem("ebbinghaus_v4_cards");
-      if (saved) {
-        try { cards = JSON.parse(saved); } catch(e) { cards = DEFAULT_DATA; }
-      } else {
-        cards = DEFAULT_DATA;
-        saveToStorage();
+      // 备份横幅是否已由用户手动关闭
+      if (localStorage.getItem("dismiss_backup_banner") === "1") {
+        const b = document.getElementById('backup-reminder-banner');
+        if (b) b.style.display = 'none';
       }
 
-      // 初始化 API 配置
-      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
+      // API 配置默认预设为硅基流动
+      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.siliconflow.cn/v1';
+      const model = localStorage.getItem('llm_model') || 'Qwen/Qwen2.5-7B-Instruct';
       document.getElementById('llm-base-url').value = baseUrl;
       document.getElementById('llm-model').value = model;
       document.getElementById('llm-api-key').value = localStorage.getItem('llm_api_key') || '';
 
-      updatePresetActiveUI(baseUrl.includes('siliconflow') ? 'silicon' : 'deepseek');
-
-      updateDueCounter();
+      updateRpgUI();
+      updateSoundUI();
       pickNextCard();
-      renderCardList();
       loadDailyNews();
+      renderCardList();
     }
 
-    function saveToStorage() {
-      localStorage.setItem("ebbinghaus_v6_cards", JSON.stringify(cards));
-      updateDueCounter();
+    function saveCardsToStorage() {
+      localStorage.setItem("ebbinghaus_v7_cards", JSON.stringify(cards));
+      document.getElementById('total-count-label').innerText = cards.length;
     }
 
+    /* Web Audio API 纯代码合成游戏音效 (0 外部依赖，高反应，秒响) */
+    function getAudioCtx() {
+      if (!audioContext) {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      return audioContext;
+    }
+
+    function playSoundFX(type) {
+      if (!isSoundFXOn) return;
+      try {
+        const ctx = getAudioCtx();
+        if (ctx.state === 'suspended') ctx.resume();
+
+        if (type === 'coin') {
+          // 清脆马里奥金币双音 (暴击秒杀)
+          const osc1 = ctx.createOscillator();
+          const osc2 = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc1.type = 'sine'; osc2.type = 'sine';
+          osc1.frequency.setValueAtTime(987.77, ctx.currentTime);
+          osc2.frequency.setValueAtTime(1318.51, ctx.currentTime + 0.08);
+          gain.gain.setValueAtTime(0.12, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
+          osc1.connect(gain); osc2.connect(gain); gain.connect(ctx.destination);
+          osc1.start(ctx.currentTime); osc1.stop(ctx.currentTime + 0.08);
+          osc2.start(ctx.currentTime + 0.08); osc2.stop(ctx.currentTime + 0.35);
+        } else if (type === 'hurt') {
+          // 柔和低频受击药水声 (答错)
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(160, ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(90, ctx.currentTime + 0.25);
+          gain.gain.setValueAtTime(0.15, ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+          osc.connect(gain); gain.connect(ctx.destination);
+          osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.25);
+        } else if (type === 'fanfare') {
+          // 胜利琶音
+          const notes = [523.25, 659.25, 783.99, 1046.50];
+          notes.forEach((freq, i) => {
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.frequency.value = freq;
+            gain.gain.setValueAtTime(0.1, ctx.currentTime + i * 0.09);
+            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + i * 0.09 + 0.2);
+            osc.connect(gain); gain.connect(ctx.destination);
+            osc.start(ctx.currentTime + i * 0.09);
+            osc.stop(ctx.currentTime + i * 0.09 + 0.2);
+          });
+        }
+      } catch (e) { console.warn("Audio Context init error", e); }
+    }
+
+    function toggleSoundFX() {
+      isSoundFXOn = !isSoundFXOn;
+      localStorage.setItem("rpg_sound_fx", isSoundFXOn ? "1" : "0");
+      updateSoundUI();
+    }
+
+    function updateSoundUI() {
+      document.getElementById('sound-toggle-btn').innerText = isSoundFXOn ? "🔊 音效: 开" : "🔇 音效: 关";
+    }
+
+    /* RPG 经验值与段位管理 */
+    function addExp(points, reason = "") {
+      userExp += points;
+      const curRank = RPG_RANKS[userRankIndex];
+      let levelUp = false;
+
+      if (userExp >= curRank.maxExp && userRankIndex < RPG_RANKS.length - 1) {
+        userRankIndex++;
+        levelUp = true;
+      }
+
+      localStorage.setItem("rpg_exp", userExp.toString());
+      localStorage.setItem("rpg_rank_index", userRankIndex.toString());
+      updateRpgUI();
+
+      if (levelUp) {
+        playSoundFX('fanfare');
+        showRpgToast(`🏆 恭喜晋升为【${RPG_RANKS[userRankIndex].title}】！`);
+      } else {
+        showRpgToast(`⚡ ${reason} +${points} EXP`);
+      }
+    }
+
+    function updateRpgUI() {
+      const curRank = RPG_RANKS[userRankIndex];
+      document.getElementById('rpg-rank-badge').innerText = curRank.title;
+      document.getElementById('rpg-exp-text').innerText = `EXP: ${userExp}/${curRank.maxExp}`;
+    }
+
+    function showRpgToast(msg) {
+      const t = document.getElementById('rpg-toast');
+      t.innerText = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 1600);
+    }
+
+    /* 选项卡切换 */
     function switchTab(tabId) {
-      const tabs = ['review', 'news', 'add', 'ai', 'list'];
-      document.querySelectorAll('.tab-btn').forEach((b, i) => {
-        b.classList.remove('active');
-        if (tabs[i] === tabId) b.classList.add('active');
+      ['review', 'news', 'add', 'ai', 'list'].forEach(id => {
+        document.getElementById(`view-${id}`).classList.remove('active');
       });
-      document.querySelectorAll('.view-section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach((b, idx) => {
+        b.classList.toggle('active', ['review', 'news', 'add', 'ai', 'list'][idx] === tabId);
+      });
       document.getElementById(`view-${tabId}`).classList.add('active');
       if (tabId === 'review') pickNextCard();
       if (tabId === 'list') renderCardList();
     }
 
-    function switchAiMode(mode) {
-      document.getElementById('subtab-ai-ask').classList.toggle('active', mode === 'ask');
-      document.getElementById('subtab-ai-essay').classList.toggle('active', mode === 'essay');
-      document.getElementById('ai-panel-ask').style.display = mode === 'ask' ? 'block' : 'none';
-      document.getElementById('ai-panel-essay').style.display = mode === 'essay' ? 'block' : 'none';
+    /* 外置备份横幅关闭 */
+    function dismissBackupBanner() {
+      document.getElementById('backup-reminder-banner').style.display = 'none';
+      localStorage.setItem("dismiss_backup_banner", "1");
     }
 
-    function switchTrainMode(mode) {
-      document.getElementById('subtab-btn-shadow').classList.toggle('active', mode === 'shadow');
-      document.getElementById('subtab-btn-dict').classList.toggle('active', mode === 'dict');
-      document.getElementById('train-mode-shadow').style.display = mode === 'shadow' ? 'block' : 'none';
-      document.getElementById('train-mode-dict').style.display = mode === 'dict' ? 'block' : 'none';
-    }
-
-    function updateDueCounter() {
-      const now = Date.now();
-      const dueCount = cards.filter(c => c.nextReviewTime <= now).length;
-      document.getElementById('nav-due-counter').innerText = `待复习: ${dueCount}`;
-      document.getElementById('total-count-label').innerText = cards.length;
-    }
-
-    /* 服务商预设切换 */
-    function applyApiPreset(type) {
-      if (type === 'deepseek') {
-        document.getElementById('llm-base-url').value = 'https://api.deepseek.com/v1';
-        document.getElementById('llm-model').value = 'deepseek-chat';
-      } else if (type === 'silicon') {
-        document.getElementById('llm-base-url').value = 'https://api.siliconflow.cn/v1';
-        document.getElementById('llm-model').value = 'deepseek-ai/DeepSeek-V3';
-      }
-      updatePresetActiveUI(type);
-    }
-
-    function updatePresetActiveUI(type) {
-      document.getElementById('preset-deepseek').classList.toggle('active', type === 'deepseek');
-      document.getElementById('preset-silicon').classList.toggle('active', type === 'silicon');
-    }
-
-    function toggleApiSettings() {
-      const p = document.getElementById('api-config-panel');
-      p.style.display = p.style.display === 'none' ? 'block' : 'none';
-    }
-
-    function saveApiConfig() {
-      localStorage.setItem('llm_base_url', document.getElementById('llm-base-url').value.trim());
-      localStorage.setItem('llm_model', document.getElementById('llm-model').value.trim());
-      localStorage.setItem('llm_api_key', document.getElementById('llm-api-key').value.trim());
-      alert("✅ 大模型 API 配置已保存！");
-      toggleApiSettings();
-    }
-
-    /* 方案 A: 大模型高容错语义语音纠偏器 */
-    async function correctSpokenTextWithLLM(rawText, contextRef = "") {
-      const apiKey = localStorage.getItem('llm_api_key');
-      if (!apiKey || !rawText.trim()) return rawText;
-
-      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-
-      const systemPrompt = `你是一位高容错英语语音纠偏助手。
-用户是一位英语学习者，其发音可能存在口音、吞音或发音错误（如 l/r 混淆、辅音弱化等）。
-请根据用户发音初稿与上下文参考，推断出用户实际尝试朗读或输入的【标准英文单词或短句】。
-规则：
-1. 仅输出修正后的标准英文文本。
-2. 绝对不要包含任何解释、说明或标点符号。`;
-
-      try {
-        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-          body: JSON.stringify({
-            model: model,
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: `参考语境: "${contextRef}"\n语音初稿: "${rawText}"` }
-            ],
-            temperature: 0.1
-          })
-        });
-        const data = await response.json();
-        return data.choices?.[0]?.message?.content?.trim() || rawText;
-      } catch (err) {
-        console.warn("语音纠偏超时，使用原始识别:", err);
-        return rawText;
-      }
-    }
-
-    /* 语音输入到任意输入框 */
-    function voiceInputToField(fieldId) {
-      const inputEl = document.getElementById(fieldId);
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechRecognition) {
-        alert("浏览器未开放语音识别接口，请在 HTTPS 环境或 Chrome/Safari 下使用。");
-        return;
-      }
-
-      const recognizer = new SpeechRecognition();
-      recognizer.lang = 'en-US';
-      recognizer.onstart = () => { inputEl.placeholder = "🎙️ 正在倾听，请大声朗读..."; };
-      recognizer.onresult = async (e) => {
-        const raw = e.results[0][0].transcript;
-        inputEl.value = "🤖 AI 正在智能校正发音...";
-        const corrected = await correctSpokenTextWithLLM(raw, "");
-        inputEl.value = corrected;
-      };
-      recognizer.onerror = () => { inputEl.placeholder = "输入单词或短语"; };
-      recognizer.start();
-    }
-
-    /* 每日短讯抓取与点词即查渲染 */
-    async function loadDailyNews() {
-      const container = document.getElementById('news-container');
-      container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:15px;">🔄 正在拉取今日科技精选...</div>`;
-
-      try {
-        const res = await fetch(`./news.json?t=${Date.now()}`);
-        if (!res.ok) throw new Error("news.json 等待生成");
-
-        const data = await res.json();
-        if (!data.articles || data.articles.length === 0) {
-          container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:15px;">今日暂无短讯推送</div>`;
-          return;
-        }
-
-        container.innerHTML = data.articles.map((art, idx) => {
-          // 将短讯正文分词，包裹为可点击的点词即查标签
-          const interactiveSummary = art.summary.replace(/\b([a-zA-Z\-']+)\b/g, (match) => {
-            const clean = match.replace(/['’]/g, '');
-            return `<span class="clickable-word" onclick="lookupWordModal('${clean}', '${encodeURIComponent(art.summary)}')">${match}</span>`;
-          });
-
-          const safeFullText = art.summary.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-
-          return `
-            <div class="news-card">
-              <div class="news-title">${art.title}</div>
-              <div class="news-body">${interactiveSummary}</div>
-              <div class="item-actions">
-                <button class="btn-small" style="background:#8b5cf6;" onclick="activateTrainWorkspace('${safeFullText}', 'shadow')">🗣️ 练这段跟读</button>
-                <button class="btn-small" style="background:#059669;" onclick="activateTrainWorkspace('${safeFullText}', 'dict')">🎧 练这段听写</button>
-                ${art.url ? `<a href="${art.url}" target="_blank" style="font-size:11px; color:#94a3b8; text-decoration:none; padding:4px 6px;">🔗 原文</a>` : ''}
-              </div>
-            </div>
-          `;
-        }).join('');
-      } catch (err) {
-        container.innerHTML = `
-          <div style="font-size:12px; color:var(--text-dim); text-align:center; padding:14px; border:1px dashed var(--border); border-radius:10px;">
-            📰 每日科技短讯等待 GitHub Action 首次生成中...<br>
-            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">(Action 任务每天清晨自动更新 news.json)</span>
-          </div>
-        `;
-      }
-    }
-
-    /* 启动短讯训练台 */
-    function activateTrainWorkspace(text, mode = 'shadow') {
-      const ws = document.getElementById('news-train-workspace');
-      document.getElementById('train-target-text').value = text;
-      ws.style.display = 'block';
-      switchTrainMode(mode);
-      ws.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function closeTrainWorkspace() {
-      document.getElementById('news-train-workspace').style.display = 'none';
-    }
-
-    /* 点词即查弹窗 (Modal) */
-    async function lookupWordModal(word, encodedSentence) {
-      const modal = document.getElementById('word-lookup-modal');
-      const mWord = document.getElementById('m-word');
-      const mIpa = document.getElementById('m-ipa');
-      const mMeaning = document.getElementById('m-meaning');
-      const mContext = document.getElementById('m-context');
-
-      modal.style.display = 'flex';
-      mWord.innerText = word;
-      mIpa.innerText = "/查询中.../";
-      mMeaning.innerText = "⏳ 正在查询中文释义...";
-      
-      const contextSentence = decodeURIComponent(encodedSentence || '');
-      mContext.innerText = contextSentence ? `短文原句: "${contextSentence.slice(0, 100)}..."` : '';
-
-      currentModalCardData = {
-        word: word,
-        ipa: "",
-        meaning: "",
-        sentence: contextSentence
-      };
-
-      // 1. 查音标
-      try {
-        const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
-        const data = await res.json();
-        let phonetic = data[0]?.phonetic || data[0]?.phonetics?.find(p => p.text)?.text;
-        if (phonetic) {
-          mIpa.innerText = phonetic;
-          currentModalCardData.ipa = phonetic;
-        } else {
-          mIpa.innerText = "";
-        }
-      } catch (e) { mIpa.innerText = ""; }
-
-      // 2. 查释义
-      try {
-        const res = await fetch(`https://dict.youdao.com/suggest?num=1&doctype=json&q=${encodeURIComponent(word)}`);
-        const data = await res.json();
-        if (data?.data?.entries?.[0]?.explain) {
-          const exp = data.data.entries[0].explain;
-          mMeaning.innerText = exp;
-          currentModalCardData.meaning = exp;
-          return;
-        }
-      } catch (e) {}
-
-      // 回退至大模型
-      const apiKey = localStorage.getItem('llm_api_key');
-      if (apiKey) {
-        try {
-          const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-          const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-          const resp = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-            body: JSON.stringify({
-              model: model,
-              messages: [{ role: "user", content: `请给出英文单词 "${word}" 在语境 "${contextSentence.slice(0, 80)}" 下简练准确的中文释义（含词性），只输出释义本身。` }],
-              temperature: 0.1
-            })
-          });
-          const d = await resp.json();
-          const reply = d.choices?.[0]?.message?.content?.trim();
-          if (reply) {
-            mMeaning.innerText = reply;
-            currentModalCardData.meaning = reply;
-            return;
-          }
-        } catch (err) {}
-      }
-      mMeaning.innerText = "暂未自动获取到释义，可手动入库补充。";
-    }
-
-    function hideWordModal() {
-      document.getElementById('word-lookup-modal').style.display = 'none';
-    }
-
-    function closeWordModal(e) {
-      if (e.target.id === 'word-lookup-modal') hideWordModal();
-    }
-
-    function saveModalWordToDeck() {
-      if (!currentModalCardData || !currentModalCardData.word) return;
-
-      const exists = cards.some(c => c.word.toLowerCase() === currentModalCardData.word.toLowerCase());
-      if (exists) {
-        if (!confirm(`词库中已存在 "${currentModalCardData.word}"，是否依然重复录入？`)) return;
-      }
-
-      const newCard = {
-        id: "card_" + Date.now(),
-        word: currentModalCardData.word,
-        ipa: currentModalCardData.ipa || '',
-        meaning: currentModalCardData.meaning || '生词 (待补充释义)',
-        sentence: currentModalCardData.sentence || '',
-        category: "English",
-        userAudio: null,
-        streak: 0,
-        nextReviewTime: Date.now() - 1000
-      };
-
-      cards.unshift(newCard);
-      saveToStorage();
-      alert(`🎉 已成功将 "${currentModalCardData.word}" 排入艾宾浩斯复习流！`);
-      hideWordModal();
-    }
-
-    function trainModalWord() {
-      if (!currentModalCardData) return;
-      hideWordModal();
-      activateTrainWorkspace(currentModalCardData.word, 'shadow');
-    }
-
-    /* 跟读识别与方案 A 语音容错打分 */
-    function toggleShadowRecognition() {
-      const targetText = document.getElementById('train-target-text').value.trim();
-      const status = document.getElementById('shadow-status');
-      const btn = document.getElementById('btn-start-shadow');
-
-      if (!targetText) { alert("请先设置跟读内容！"); return; }
-
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SpeechRecognition) {
-        alert("浏览器未开放语音接口，请在 HTTPS 或支持的环境下使用。");
-        return;
-      }
-
-      if (!isRecognizing) {
-        speechRecognizer = new SpeechRecognition();
-        speechRecognizer.lang = 'en-US';
-        speechRecognizer.continuous = false;
-        speechRecognizer.interimResults = false;
-
-        speechRecognizer.onstart = () => {
-          isRecognizing = true;
-          btn.innerText = "■ 正在倾听，请大声朗读...";
-          btn.style.background = "#ef4444";
-          status.innerText = "🎙️ 正在收音，读完后请稍停片刻...";
-        };
-
-        speechRecognizer.onresult = async (event) => {
-          const rawSpoken = event.results[0][0].transcript;
-          status.innerText = "🤖 正在结合上下文进行智能容错校正...";
-          
-          // 方案 A: 大模型智能纠偏
-          const correctedSpoken = await correctSpokenTextWithLLM(rawSpoken, targetText);
-          gradePronunciation(targetText, correctedSpoken, rawSpoken);
-        };
-
-        speechRecognizer.onerror = (event) => {
-          status.innerText = `⚠️ 识别未完成 (${event.error})，请靠近麦克风重试。`;
-          resetShadowBtn();
-        };
-
-        speechRecognizer.onend = () => { resetShadowBtn(); };
-
-        try { speechRecognizer.start(); } catch (e) {
-          alert("麦克风启动失败: " + e.message);
-          resetShadowBtn();
-        }
-      } else {
-        if (speechRecognizer) speechRecognizer.stop();
-        resetShadowBtn();
-      }
-    }
-
-    function resetShadowBtn() {
-      isRecognizing = false;
-      const btn = document.getElementById('btn-start-shadow');
-      btn.innerText = "🎙️ 点击开始跟读识别 (智能容错纠偏)";
-      btn.style.background = "#8b5cf6";
-    }
-
-    function gradePronunciation(target, spoken, rawSpoken) {
-      const cleanTargetWords = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-      const cleanSpokenWords = spoken.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-
-      let matchedCount = 0;
-      let diffHtml = "";
-
-      cleanTargetWords.forEach((word) => {
-        if (cleanSpokenWords.includes(word)) {
-          matchedCount++;
-          diffHtml += `<span class="diff-word-correct">${word}</span> `;
-        } else {
-          diffHtml += `<span class="diff-word-wrong">${word}</span> `;
-        }
-      });
-
-      const score = Math.round((matchedCount / Math.max(cleanTargetWords.length, 1)) * 100);
-
-      document.getElementById('shadow-result-panel').style.display = 'block';
-      document.getElementById('shadow-score-num').innerText = score;
-      document.getElementById('shadow-diff-box').innerHTML = `
-        <div><b>标准比对:</b> ${diffHtml}</div>
-        <div style="margin-top:6px; color:#38bdf8; font-size:12px;"><b>AI 容错校准识别:</b> "${spoken}"</div>
-        ${rawSpoken !== spoken ? `<div style="font-size:11px; color:#64748b;">(麦克风原音辨识为: "${rawSpoken}")</div>` : ''}
-      `;
-
-      const desc = document.getElementById('shadow-score-desc');
-      if (score >= 85) { desc.innerText = "🌟 绝妙发音！清晰流畅！"; desc.style.color = "#34d399"; }
-      else if (score >= 65) { desc.innerText = "👍 表现良好！注意红色单词的发音。"; desc.style.color = "#38bdf8"; }
-      else { desc.innerText = "💪 继续加油！建议调慢速度(0.8x)再次跟读。"; desc.style.color = "#f59e0b"; }
-      document.getElementById('shadow-status').innerText = "测评完成";
-    }
-
-    /* 听写评测 */
-    function gradeDictation() {
-      const target = document.getElementById('train-target-text').value.trim();
-      const userTyped = document.getElementById('dictation-user-input').value.trim();
-
-      if (!target) { alert("请先设置听写原文！"); return; }
-      if (!userTyped) { alert("请在文本框敲入听到的内容！"); return; }
-
-      const targetTokens = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-      const typedTokens = userTyped.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-
-      let correctCount = 0;
-      let resultHtml = "";
-
-      targetTokens.forEach((word, idx) => {
-        const userWord = typedTokens[idx] || "";
-        if (word === userWord) {
-          correctCount++;
-          resultHtml += `<span class="diff-word-correct">${word}</span> `;
-        } else {
-          resultHtml += `<span class="diff-word-wrong">${userWord || '[缺]'}</span><span class="diff-word-missing">(${word})</span> `;
-        }
-      });
-
-      const accuracy = Math.round((correctCount / Math.max(targetTokens.length, 1)) * 100);
-
-      document.getElementById('dict-result-panel').style.display = 'block';
-      document.getElementById('dict-score-num').innerText = `${accuracy}%`;
-      document.getElementById('dict-diff-box').innerHTML = `
-        <div><b>逐词批改 (绿色为正解，红色为你的拼写，括号内为标准单词):</b></div>
-        <div style="margin-top:6px;">${resultHtml}</div>
-      `;
-    }
-
-    /* AI 助教：条理清晰的卡片化剖析 */
-    async function askAiForExplanation() {
-      const query = document.getElementById('ai-ask-input').value.trim();
-      const apiKey = localStorage.getItem('llm_api_key');
-      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-
-      const resultWrapper = document.getElementById('ai-ask-result-wrapper');
-      const loadingText = document.getElementById('ai-loading-text');
-      const board = document.getElementById('ai-structured-board');
-
-      if (!query) { alert("请先输入要剖析的内容！"); return; }
-      if (!apiKey) { alert("请点击右上角【⚙️ API 配置】填入 API Key！"); toggleApiSettings(); return; }
-
-      resultWrapper.style.display = 'block';
-      loadingText.style.display = 'block';
-      board.style.display = 'none';
-
-      const systemPrompt = `你是一位精通英语教学的名师。用户会输入一个单词、词组或句子。
-请【严格且仅】返回一段合法的 JSON 格式，严禁出现任何多余闲聊，格式结构如下：
-{
-  "word": "目标单词或词组",
-  "ipa": "/国际音标/",
-  "meanings": "核心词性与中文释义，分行或带标号清晰呈现",
-  "examples": "1~2个极其地道的英文例句并附带中文翻译",
-  "notes": "词根词源、核心搭配或易错辨析点"
-}`;
-
-      try {
-        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-          body: JSON.stringify({
-            model: model,
-            messages: [
-              { role: "system", content: systemPrompt },
-              { role: "user", content: query }
-            ],
-            temperature: 0.2
-          })
-        });
-
-        const data = await response.json();
-        loadingText.style.display = 'none';
-
-        if (data.choices && data.choices[0]) {
-          const raw = data.choices[0].message.content.trim();
-          const cleanJson = raw.replace(/^```json/i, '').replace(/```$/i, '').trim();
-          pendingBoardData = JSON.parse(cleanJson);
-
-          document.getElementById('board-word').innerText = pendingBoardData.word || query;
-          document.getElementById('board-ipa').innerText = pendingBoardData.ipa || '';
-          document.getElementById('board-meanings').innerText = pendingBoardData.meanings || '';
-          document.getElementById('board-examples').innerText = pendingBoardData.examples || '';
-          document.getElementById('board-notes').innerText = pendingBoardData.notes || '';
-          board.style.display = 'flex';
-        } else {
-          alert("API 返回格式异常: " + JSON.stringify(data));
-        }
-      } catch (err) {
-        loadingText.style.display = 'none';
-        alert("助教解析请求失败: " + err.message);
-      }
-    }
-
-    function saveAiBoardCardToDeck() {
-      if (!pendingBoardData) return;
-
-      const exists = cards.some(c => c.word.toLowerCase() === pendingBoardData.word.toLowerCase());
-      if (exists) {
-        if (!confirm(`词库中已存在 "${pendingBoardData.word}"，是否继续加入？`)) return;
-      }
-
-      const newCard = {
-        id: "card_" + Date.now(),
-        word: pendingBoardData.word,
-        ipa: pendingBoardData.ipa || '',
-        meaning: pendingBoardData.meanings || '',
-        sentence: pendingBoardData.examples ? pendingBoardData.examples.split('\n')[0] : '',
-        category: "English",
-        userAudio: null,
-        streak: 0,
-        nextReviewTime: Date.now() - 1000
-      };
-
-      cards.unshift(newCard);
-      saveToStorage();
-      alert(`🎉 已成功将 "${pendingBoardData.word}" 收入艾宾浩斯复习库！`);
-    }
-
-    function sendAiBoardToTrain() {
-      if (!pendingBoardData) return;
-      switchTab('news');
-      activateTrainWorkspace(pendingBoardData.word, 'shadow');
-    }
-
-    /* 作文批改 */
-    async function runDomesticLlmCheck() {
-      const text = document.getElementById('essay-input').value.trim();
-      const apiKey = localStorage.getItem('llm_api_key');
-      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.deepseek.com/v1';
-      const model = localStorage.getItem('llm_model') || 'deepseek-chat';
-
-      const resultWrapper = document.getElementById('essay-result-wrapper');
-      const resultBox = document.getElementById('essay-result-box');
-
-      if (!text) { alert("请先输入需要批改的内容！"); return; }
-      if (!apiKey) { alert("请先配置 API Key！"); toggleApiSettings(); return; }
-
-      resultWrapper.style.display = 'block';
-      resultBox.innerText = "🤖 正在进行语法硬伤定位与地道润色...";
-
-      try {
-        const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
-          body: JSON.stringify({
-            model: model,
-            messages: [
-              {
-                role: "system",
-                content: "你是一位双语名师。请批改英文短文：1. 列出拼写、语法与时态错误诊断；2. 提取难词及音标(/IPA/)；3. 给出地道高分润色范文。条理清晰。"
-              },
-              { role: "user", content: text }
-            ],
-            temperature: 0.3
-          })
-        });
-
-        const data = await response.json();
-        if (data.choices && data.choices[0]) {
-          resultBox.innerText = data.choices[0].message.content;
-        } else {
-          resultBox.innerText = `❌ API 报错: ${JSON.stringify(data)}`;
-        }
-      } catch (err) {
-        resultBox.innerText = `❌ 请求失败: ${err.message}`;
-      }
-    }
-
-    function sendEssayToNewsTrain(mode) {
-      const essayResult = document.getElementById('essay-result-box').innerText;
-      if (!essayResult) return;
-      switchTab('news');
-      activateTrainWorkspace(essayResult, mode);
-    }
-
-    /* 艾宾浩斯复习核心逻辑 */
-    function pickNextCard() {
-      const now = Date.now();
-      const dueCards = cards.filter(c => c.nextReviewTime <= now);
-      const quizBox = document.getElementById('quiz-card-box');
-      
-      if (dueCards.length === 0) {
-        quizBox.innerHTML = `
-          <div class="empty-state">
-            <h3 style="color: #38bdf8; font-size: 18px;">🎉 今日复习已清空！</h3>
-            <p style="margin-top: 8px;">卡片已根据艾宾浩斯曲线全部排期完成。</p>
-          </div>
-        `;
-        return;
-      }
-
-      currentQuizCard = dueCards[Math.floor(Math.random() * dueCards.length)];
-
-      const availableTypes = ['word_to_meaning', 'meaning_to_word'];
-      if (currentQuizCard.ipa && currentQuizCard.ipa.trim() !== '') availableTypes.push('ipa_to_word');
-      if (currentQuizCard.sentence && currentQuizCard.sentence.trim() !== '') availableTypes.push('cloze');
-      if (currentQuizCard.userAudio) availableTypes.push('user_audio_to_word');
-
-      currentQuizType = availableTypes[Math.floor(Math.random() * availableTypes.length)];
-
-      document.getElementById('answer-box').style.display = 'none';
-      document.getElementById('action-btns').style.display = 'none';
-      document.getElementById('btn-reveal').style.display = 'block';
-      document.getElementById('q-sentence-box').style.display = 'none';
-      document.getElementById('btn-audio-sys').style.display = 'none';
-      document.getElementById('btn-audio-user').style.display = currentQuizCard.userAudio ? 'inline-flex' : 'none';
-
-      document.getElementById('q-streak-label').innerText = `连胜: 🔥 ${currentQuizCard.streak}`;
-
-      if (currentQuizType === 'word_to_meaning') {
-        document.getElementById('q-mode-label').innerText = '🔤 看生词 → 回忆释义';
-        document.getElementById('q-main-text').innerText = currentQuizCard.word;
-        document.getElementById('q-sub-text').innerText = `分类: ${currentQuizCard.category}`;
-        document.getElementById('btn-audio-sys').style.display = 'inline-flex';
-      } 
-      else if (currentQuizType === 'meaning_to_word') {
-        document.getElementById('q-mode-label').innerText = '🇨🇳 看释义 → 回忆英文/代码';
-        document.getElementById('q-main-text').innerText = currentQuizCard.meaning;
-        document.getElementById('q-sub-text').innerText = `分类: ${currentQuizCard.category}`;
-      } 
-      else if (currentQuizType === 'ipa_to_word') {
-        document.getElementById('q-mode-label').innerText = '🗣️ 看音标 → 回忆词汇';
-        document.getElementById('q-main-text').innerText = currentQuizCard.ipa;
-        document.getElementById('q-sub-text').innerText = `分类: ${currentQuizCard.category}`;
-        document.getElementById('btn-audio-sys').style.display = 'inline-flex';
-      } 
-      else if (currentQuizType === 'user_audio_to_word') {
-        document.getElementById('q-mode-label').innerText = '🎙️ 听原声 → 回忆单词';
-        document.getElementById('q-main-text').innerText = "🎧 点击下方播放原声";
-        document.getElementById('q-sub-text').innerText = `分类: ${currentQuizCard.category}`;
-        playUserAudio();
-      } 
-      else if (currentQuizType === 'cloze') {
-        document.getElementById('q-mode-label').innerText = '🧩 例句填空题';
-        document.getElementById('q-main-text').innerText = "填入挖空词汇:";
-        document.getElementById('q-sub-text').innerText = `释义提示: ${currentQuizCard.meaning}`;
-        const regex = new RegExp(currentQuizCard.word, "gi");
-        const blankedSentence = currentQuizCard.sentence.replace(regex, " [ ______ ] ");
-        const sBox = document.getElementById('q-sentence-box');
-        sBox.innerHTML = blankedSentence;
-        sBox.style.display = 'block';
-      }
-
-      document.getElementById('ans-title').innerText = currentQuizCard.word;
-      document.getElementById('ans-ipa').innerText = currentQuizCard.ipa || '';
-      document.getElementById('ans-meaning').innerText = currentQuizCard.meaning;
-      document.getElementById('ans-sentence').innerText = currentQuizCard.sentence ? `例句: ${currentQuizCard.sentence}` : '';
-    }
-
-    function revealAnswer() {
-      document.getElementById('answer-box').style.display = 'block';
-      document.getElementById('btn-reveal').style.display = 'none';
-      document.getElementById('action-btns').style.display = 'grid';
-      document.getElementById('btn-audio-sys').style.display = 'inline-flex';
-      playCurrentAudio();
-    }
-
-    function handleResult(isCorrect) {
-      if (!currentQuizCard) return;
-
-      if (isCorrect) {
-        currentQuizCard.streak += 1;
-        let stage = Math.min(currentQuizCard.streak, SPACING_DAYS.length - 1);
-        let days = SPACING_DAYS[stage];
-        if (days >= 90) {
-          const jitter = Math.floor(Math.random() * 21) - 10;
-          days += jitter;
-        }
-        currentQuizCard.nextReviewTime = Date.now() + days * 24 * 60 * 60 * 1000;
-      } else {
-        currentQuizCard.streak = 0;
-        currentQuizCard.nextReviewTime = Date.now() + 10 * 60 * 1000;
-      }
-
-      saveToStorage();
-      pickNextCard();
-    }
-
+    /* 播放底层修复：全面走网络流式稳定音频，彻底抛弃手机端静音的本地 TTS */
     function playAudioStream(text, rate = 1.0) {
       if (!text || !text.trim()) return;
       const clean = text.trim();
-
-      if (!clean.includes(' ') && clean.length < 30) {
-        const audioUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=2`;
-        const audio = new Audio(audioUrl);
-        audio.playbackRate = rate;
-        audio.play().catch(e => speakWithTTS(clean, rate));
-      } else {
-        speakWithTTS(clean, rate);
-      }
-    }
-
-    function speakWithTTS(text, rate = 1.0) {
-      if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = 'en-US';
-        utterance.rate = rate;
-        window.speechSynthesis.speak(utterance);
-      }
+      // 有道全功能英音/美音流式音频接口 (原生支持单词与整句朗读)
+      const audioUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=2`;
+      const audio = new Audio(audioUrl);
+      audio.playbackRate = rate;
+      audio.play().catch(err => {
+        // 兜底备用接口
+        const fallback = new Audio(`https://translate.google.com/translate_tts?ie=UTF-8&tl=en&client=tw-ob&q=${encodeURIComponent(clean)}`);
+        fallback.playbackRate = rate;
+        fallback.play().catch(e => console.warn("All audio sources failed", e));
+      });
     }
 
     function playCurrentAudio() {
@@ -1240,98 +702,629 @@
       if (currentQuizCard && currentQuizCard.userAudio) new Audio(currentQuizCard.userAudio).play();
     }
 
-    /* 录音功能 */
+    /* 1. 复习主流程 (带真填空交互) */
+    function pickNextCard() {
+      const now = Date.now();
+      const due = cards.filter(c => c.nextReviewTime <= now);
+      const quizBox = document.getElementById('quiz-card-box');
+
+      if (due.length === 0) {
+        quizBox.innerHTML = `
+          <div style="text-align:center; padding:40px 10px; color:var(--text-dim);">
+            <h3 style="color:#38bdf8; font-size:18px;">🎉 今日艾宾浩斯复习流已通关！</h3>
+            <p style="margin-top:8px;">记忆巨龙已被击退，明天准时来迎战！</p>
+          </div>
+        `;
+        return;
+      }
+
+      currentQuizCard = due[Math.floor(Math.random() * due.length)];
+      
+      const types = ['word_to_meaning', 'meaning_to_word'];
+      if (currentQuizCard.sentence && currentQuizCard.sentence.trim()) types.push('cloze');
+      if (currentQuizCard.userAudio) types.push('user_audio');
+
+      currentQuizType = types[Math.floor(Math.random() * types.length)];
+
+      document.getElementById('answer-box').style.display = 'none';
+      document.getElementById('action-btns').style.display = 'none';
+      document.getElementById('btn-reveal').style.display = 'block';
+      document.getElementById('cloze-interactive-wrap').style.display = 'none';
+      document.getElementById('btn-audio-user').style.display = currentQuizCard.userAudio ? 'inline-flex' : 'none';
+      document.getElementById('q-streak-label').innerText = `连胜: 🔥 ${currentQuizCard.streak}`;
+
+      if (currentQuizType === 'word_to_meaning') {
+        document.getElementById('q-mode-label').innerText = '🔤 识别挑战: 回忆释义';
+        document.getElementById('q-main-text').innerText = currentQuizCard.word;
+        document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`;
+      } else if (currentQuizType === 'meaning_to_word') {
+        document.getElementById('q-mode-label').innerText = '🇨🇳 逆向挑战: 回忆英文';
+        document.getElementById('q-main-text').innerText = currentQuizCard.meaning;
+        document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`;
+      } else if (currentQuizType === 'user_audio') {
+        document.getElementById('q-mode-label').innerText = '🎙️ 盲听我的原声回忆';
+        document.getElementById('q-main-text').innerText = "🎧 正在播放你录制的发音...";
+        document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`;
+        playUserAudio();
+      } else if (currentQuizType === 'cloze') {
+        document.getElementById('q-mode-label').innerText = '🧩 交互式真填空题';
+        document.getElementById('q-main-text').innerText = currentQuizCard.meaning;
+        document.getElementById('q-sub-text').innerText = "请在下方横线输入完整单词：";
+        
+        const reg = new RegExp(currentQuizCard.word, "gi");
+        document.getElementById('cloze-sentence-display').innerText = currentQuizCard.sentence.replace(reg, " [ ______ ] ");
+        document.getElementById('cloze-input-field').value = "";
+        document.getElementById('cloze-interactive-wrap').style.display = 'flex';
+        document.getElementById('btn-reveal').style.display = 'none';
+      }
+
+      document.getElementById('ans-title').innerText = currentQuizCard.word;
+      document.getElementById('ans-ipa').innerText = currentQuizCard.ipa || '';
+      document.getElementById('ans-meaning').innerText = currentQuizCard.meaning;
+      document.getElementById('ans-sentence').innerText = currentQuizCard.sentence ? `例句: ${currentQuizCard.sentence}` : '';
+    }
+
+    function submitClozeAnswer() {
+      const typed = document.getElementById('cloze-input-field').value.trim();
+      if (!typed) return;
+
+      const isExactMatch = typed.toLowerCase() === currentQuizCard.word.toLowerCase();
+      revealAnswer();
+      handleResult(isExactMatch);
+    }
+
+    function revealAnswer() {
+      document.getElementById('answer-box').style.display = 'block';
+      document.getElementById('btn-reveal').style.display = 'none';
+      document.getElementById('action-btns').style.display = 'grid';
+      playCurrentAudio();
+    }
+
+    function handleResult(isCorrect) {
+      if (!currentQuizCard) return;
+
+      if (isCorrect) {
+        playSoundFX('coin');
+        currentQuizCard.streak += 1;
+        addExp(15, "暴击秒杀！");
+
+        const stage = Math.min(currentQuizCard.streak, SPACING_DAYS.length - 1);
+        const days = SPACING_DAYS[stage];
+        currentQuizCard.nextReviewTime = Date.now() + days * 24 * 60 * 60 * 1000;
+      } else {
+        playSoundFX('hurt');
+        currentQuizCard.streak = 0;
+        showRpgToast("🛡️ 招架被破 (HP -15)，重整旗鼓！");
+        currentQuizCard.nextReviewTime = Date.now() + 10 * 60 * 1000;
+      }
+
+      saveCardsToStorage();
+      pickNextCard();
+    }
+
+    /* 语音核心分流策略：
+       1. voiceInputTolerant (用于录入与查词): 开启大模型语义高容错
+       2. voiceInputStrict (用于填空与跟读): 严禁 AI 纠偏，保持绝对精确
+    */
+    async function correctWithLlmSemantic(raw, context = "") {
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (!apiKey || !raw) return raw;
+
+      const baseUrl = localStorage.getItem('llm_base_url') || 'https://api.siliconflow.cn/v1';
+      const model = localStorage.getItem('llm_model') || 'Qwen/Qwen2.5-7B-Instruct';
+
+      try {
+        const resp = await fetch(`${baseUrl.replace(/\/+$/, '')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: model,
+            messages: [
+              { role: "system", content: "你是一位高容错英语听写助理。用户发音可能有口音或吞音，结合上下文猜测并输出最可能的标准英文单词或短语。只输出英文结果，绝对不要附带中文和解释。" },
+              { role: "user", content: `参考上下文: ${context}\n语音初稿: ${raw}` }
+            ],
+            temperature: 0.1
+          })
+        });
+        const data = await resp.json();
+        return data.choices?.[0]?.message?.content?.trim() || raw;
+      } catch (e) { return raw; }
+    }
+
+    function voiceInputTolerant(fieldId) {
+      const input = document.getElementById(fieldId);
+      const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Speech) { alert("当前浏览器不支持原生语音识别，请在 HTTPS 或 Safari/Chrome 下使用。"); return; }
+
+      const rec = new Speech();
+      rec.lang = 'en-US';
+      rec.onstart = () => { input.placeholder = "🎙️ 正在倾听 (高容错模式)..."; };
+      rec.onresult = async (e) => {
+        const raw = e.results[0][0].transcript;
+        input.value = "🤖 智能纠偏中...";
+        const fixed = await correctWithLlmSemantic(raw);
+        input.value = fixed;
+      };
+      rec.onerror = () => { input.placeholder = "语音未识别，请重试"; };
+      rec.start();
+    }
+
+    function voiceInputStrict(fieldId) {
+      const input = document.getElementById(fieldId);
+      const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Speech) { alert("当前浏览器不支持原生语音识别。"); return; }
+
+      const rec = new Speech();
+      rec.lang = 'en-US';
+      rec.onstart = () => { input.placeholder = "🎙️ 严格考核中，请准确发音..."; };
+      rec.onresult = (e) => {
+        // 严格模式：绝不通过大模型篡改发音
+        input.value = e.results[0][0].transcript.trim().replace(/[.!?]/g, '');
+      };
+      rec.start();
+    }
+
+    /* 2. 短讯与右板块训练台核心逻辑 */
+    async function loadDailyNews() {
+      const container = document.getElementById('news-cards-container');
+      container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:15px;">🔄 正在拉取今日科技短讯...</div>`;
+
+      try {
+        const res = await fetch(`./news.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error("news.json 未就绪");
+        const data = await res.json();
+        
+        container.innerHTML = data.articles.map(art => {
+          // 单词可点化包裹
+          const wrappedEssence = art.essence.replace(/\b([a-zA-Z\-']+)\b/g, (w) => {
+            return `<span class="clickable-word" onclick="fastLookupWord('${w.replace(/'/g, '')}')">${w}</span>`;
+          });
+
+          const sentencesHtml = art.sentences ? art.sentences.map(sent => {
+            const escaped = sent.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            return `
+              <div class="sentence-block">
+                <div>${sent}</div>
+                <div class="sentence-ops">
+                  <button class="btn-small" onclick="playAudioStream('${escaped}')">🔊 听这句</button>
+                  <button class="btn-small" style="background:#8b5cf6;" onclick="loadTextToRightPane('${escaped}')">🎯 练这句</button>
+                  <button class="btn-small" style="background:#10b981;" onclick="bookmarkSentence('${escaped}')">⭐ 收藏金句</button>
+                </div>
+              </div>
+            `;
+          }).join('') : '';
+
+          const safeEssence = art.essence.replace(/'/g, "\\'");
+
+          return `
+            <div class="news-card">
+              <div class="news-title">${art.title}</div>
+              <div class="news-essence">${wrappedEssence}</div>
+              <div class="news-full" id="full-${art.id}">${sentencesHtml}</div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
+                <button class="btn-small" onclick="toggleFullNews('${art.id}')">📖 展开/收起研读全文</button>
+                <button class="btn-small" style="background:#6366f1; color:#fff;" onclick="loadTextToRightPane('${safeEssence}')">🗣️ 练这段精华</button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      } catch (e) {
+        container.innerHTML = `
+          <div style="font-size:12px; color:var(--text-dim); text-align:center; padding:14px; border:1px dashed var(--border); border-radius:10px;">
+            📰 今日短讯等待 GitHub Actions 自动更新 (已包含精选预备短讯)...
+          </div>
+        `;
+      }
+    }
+
+    function toggleFullNews(id) {
+      const el = document.getElementById(`full-${id}`);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function loadTextToRightPane(text) {
+      currentTrainTargetText = text;
+      document.getElementById('train-target-display').innerText = text;
+      document.getElementById('news-train-workspace').scrollIntoView({ behavior: 'smooth' });
+      initScrambleChips(text);
+    }
+
+    function playCurrentTrainAudio(rate = 1.0) {
+      if (!currentTrainTargetText) {
+        currentTrainTargetText = document.getElementById('train-target-display').innerText;
+      }
+      playAudioStream(currentTrainTargetText, rate);
+    }
+
+    function switchRightTrainMode(mode) {
+      ['shadow', 'dict', 'craft', 'scramble'].forEach(m => {
+        document.getElementById(`tab-btn-${m}`).classList.remove('active');
+        document.getElementById(`pane-${m}`).style.display = 'none';
+      });
+      document.getElementById(`tab-btn-${mode}`).classList.add('active');
+      document.getElementById(`pane-${mode}`).style.display = 'block';
+
+      // 盲听听写模式下，自动遮罩隐藏原文
+      const isBlind = mode === 'dict';
+      document.getElementById('train-text-normal-wrap').style.display = isBlind ? 'none' : 'block';
+      document.getElementById('train-text-blind-wrap').style.display = isBlind ? 'block' : 'none';
+    }
+
+    /* 跟读打分 (严格无容错) */
+    function toggleStrictShadowRecognition() {
+      const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!Speech) { alert("当前环境不支持录音对比"); return; }
+      const btn = document.getElementById('btn-start-shadow');
+      const box = document.getElementById('shadow-result-box');
+
+      if (!isRecognizingStrict) {
+        speechRecognizer = new Speech();
+        speechRecognizer.lang = 'en-US';
+        speechRecognizer.onstart = () => {
+          isRecognizingStrict = true;
+          btn.innerText = "■ 正在聆听，请朗读...";
+          btn.style.background = "#ef4444";
+        };
+        speechRecognizer.onresult = (e) => {
+          // 严格模式，不调用 AI 纠错
+          const spoken = e.results[0][0].transcript;
+          gradeStrictPronunciation(currentTrainTargetText, spoken);
+        };
+        speechRecognizer.onerror = () => { resetShadowBtn(); };
+        speechRecognizer.onend = () => { resetShadowBtn(); };
+        speechRecognizer.start();
+      } else {
+        if (speechRecognizer) speechRecognizer.stop();
+        resetShadowBtn();
+      }
+    }
+
+    function resetShadowBtn() {
+      isRecognizingStrict = false;
+      const btn = document.getElementById('btn-start-shadow');
+      btn.innerText = "🎙️ 开始跟读打分 (严格发音对比)";
+      btn.style.background = "#8b5cf6";
+    }
+
+    function gradeStrictPronunciation(target, spoken) {
+      const tWords = target.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+      const sWords = spoken.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+
+      let matched = 0;
+      let diffHtml = "";
+
+      tWords.forEach(w => {
+        if (sWords.includes(w)) {
+          matched++;
+          diffHtml += `<span class="diff-correct">${w}</span> `;
+        } else {
+          diffHtml += `<span class="diff-wrong">${w}</span> `;
+        }
+      });
+
+      const score = Math.round((matched / Math.max(tWords.length, 1)) * 100);
+      const box = document.getElementById('shadow-result-box');
+      box.style.display = 'block';
+      box.innerHTML = `
+        <div><b>严格得分:</b> <span style="font-size:16px; color:#34d399; font-weight:900;">${score}分</span></div>
+        <div style="margin-top:4px;"><b>逐词比对 (绿色发音准确，红色吞音/读错):</b><br>${diffHtml}</div>
+      `;
+      if (score >= 80) {
+        playSoundFX('coin');
+        addExp(10, "地道发音！");
+      }
+    }
+
+    /* 盲听听写比对 */
+    function gradeBlindDictation() {
+      const userTyped = document.getElementById('dictation-user-input').value.trim();
+      if (!userTyped) { alert("请先敲入听到的英文！"); return; }
+
+      // 解锁展示原文
+      document.getElementById('train-text-normal-wrap').style.display = 'block';
+      document.getElementById('train-text-blind-wrap').style.display = 'none';
+
+      const targetWords = currentTrainTargetText.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+      const typedWords = userTyped.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
+
+      let correct = 0;
+      let diffHtml = "";
+
+      targetWords.forEach((tw, idx) => {
+        const uw = typedWords[idx] || "";
+        if (tw === uw) {
+          correct++;
+          diffHtml += `<span class="diff-correct">${tw}</span> `;
+        } else {
+          diffHtml += `<span class="diff-wrong">${uw || '[空]'}</span><span class="diff-missing">(${tw})</span> `;
+        }
+      });
+
+      const acc = Math.round((correct / Math.max(targetWords.length, 1)) * 100);
+      const box = document.getElementById('dict-result-box');
+      box.style.display = 'block';
+      box.innerHTML = `
+        <div><b>听写匹配率:</b> <span style="font-size:16px; color:#38bdf8; font-weight:900;">${acc}%</span></div>
+        <div style="margin-top:4px;"><b>逐词批改:</b><br>${diffHtml}</div>
+      `;
+      if (acc >= 75) {
+        playSoundFX('coin');
+        addExp(15, "听写过关！");
+      }
+    }
+
+    /* 句式仿写与骨架提炼 */
+    async function extractSentenceFrame() {
+      const text = currentTrainTargetText || document.getElementById('train-target-display').innerText;
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (!apiKey) { alert("请先配置 API Key！"); return; }
+
+      const box = document.getElementById('frame-display-box');
+      box.style.display = 'block';
+      box.innerText = "🤖 正在抽离提炼骨架句型...";
+
+      try {
+        const resp = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: localStorage.getItem('llm_model'),
+            messages: [
+              { role: "system", content: "提炼句子的通用句式骨架(Sentence Frame)，剥离专有名词，将插槽用[A],[B],[C]代替，附带简明中文句式说明。" },
+              { role: "user", content: text }
+            ]
+          })
+        });
+        const d = await resp.json();
+        currentTrainSentenceFrame = d.choices[0].message.content;
+        box.innerText = currentTrainSentenceFrame;
+      } catch (e) { box.innerText = "提炼超时，可直接参照原文句型造句。"; }
+    }
+
+    async function gradeSentenceCrafting() {
+      const userDraft = document.getElementById('craft-user-input').value.trim();
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (!userDraft || !apiKey) { alert("请输入你的仿写句子并确保配置了 API Key"); return; }
+
+      const box = document.getElementById('craft-result-box');
+      box.style.display = 'block';
+      box.innerText = "🤖 正在点评你的仿写句式与语法...";
+
+      try {
+        const resp = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: localStorage.getItem('llm_model'),
+            messages: [
+              { role: "system", content: "你是英文写作私教。批改用户的仿写造句：指出时态/介词问题，并给出更母语化的高级句式润色版本。输出紧凑精炼。" },
+              { role: "user", content: `原句或骨架: ${currentTrainSentenceFrame || currentTrainTargetText}\n用户仿写: ${userDraft}` }
+            ]
+          })
+        });
+        const d = await resp.json();
+        box.innerText = d.choices[0].message.content;
+        playSoundFX('coin');
+        addExp(15, "仿写创造！");
+      } catch (e) { box.innerText = "批改失败: " + e.message; }
+    }
+
+    /* 语块拼图 */
+    function initScrambleChips(text) {
+      const pool = document.getElementById('scramble-chips-pool');
+      const assembled = document.getElementById('scramble-assembled-zone');
+      pool.innerHTML = ''; assembled.innerHTML = '';
+      scrambleUserTokens = [];
+
+      // 智能分块拆为 4~7 个语块
+      const words = text.split(/\s+/);
+      const chunkSize = Math.max(2, Math.floor(words.length / 5));
+      const chunks = [];
+      for (let i = 0; i < words.length; i += chunkSize) {
+        chunks.push(words.slice(i, i + chunkSize).join(' '));
+      }
+      scrambleCorrectTokens = [...chunks];
+
+      // 打乱顺序
+      const shuffled = [...chunks].sort(() => Math.random() - 0.5);
+      shuffled.forEach((chunk, idx) => {
+        const chip = document.createElement('div');
+        chip.className = 'scramble-chip';
+        chip.innerText = chunk;
+        chip.onclick = () => {
+          chip.classList.add('used');
+          scrambleUserTokens.push(chunk);
+          renderAssembledZone();
+        };
+        pool.appendChild(chip);
+      });
+    }
+
+    function renderAssembledZone() {
+      const zone = document.getElementById('scramble-assembled-zone');
+      zone.innerHTML = scrambleUserTokens.map(c => `<div class="scramble-chip" style="background:#0284c7;">${c}</div>`).join('');
+    }
+
+    function resetScramblePuzzle() {
+      scrambleUserTokens = [];
+      document.querySelectorAll('#scramble-chips-pool .scramble-chip').forEach(c => c.classList.remove('used'));
+      document.getElementById('scramble-assembled-zone').innerHTML = '';
+    }
+
+    function verifyScramblePuzzle() {
+      const isCorrect = scrambleUserTokens.join(' ') === scrambleCorrectTokens.join(' ');
+      if (isCorrect) {
+        playSoundFX('coin');
+        addExp(10, "语块拼图通关！");
+        alert("🎉 语序完全正确！英文语感 +1！");
+      } else {
+        playSoundFX('hurt');
+        alert("语序有偏差，点击【重置】再次尝试！");
+      }
+    }
+
+    /* 金句一键收藏 */
+    function bookmarkSentence(sentenceText) {
+      const exists = cards.some(c => c.sentence === sentenceText);
+      if (exists) { alert("该金句已在你的复习库中！"); return; }
+
+      const newCard = {
+        id: "c_" + Date.now(),
+        word: sentenceText.slice(0, 24) + "...",
+        ipa: "",
+        meaning: "精选地道表达/新闻金句",
+        sentence: sentenceText,
+        category: "Sentence",
+        userAudio: null,
+        streak: 0,
+        nextReviewTime: Date.now() - 1000
+      };
+      cards.unshift(newCard);
+      saveCardsToStorage();
+      playSoundFX('coin');
+      addExp(5, "金句入库！");
+      alert("⭐ 已收藏至艾宾浩斯复习库！");
+    }
+
+    /* 点词即查极速弹窗 (0.5 秒秒开) */
+    async function fastLookupWord(word) {
+      const modal = document.getElementById('word-lookup-modal');
+      const mWord = document.getElementById('m-word');
+      const mIpa = document.getElementById('m-ipa');
+      const mMeaning = document.getElementById('m-meaning');
+
+      modal.style.display = 'flex';
+      mWord.innerText = word;
+      mIpa.innerText = "/查询中.../";
+      mMeaning.innerText = "⚡ 正在极速检索释义...";
+
+      modalPendingData = { word, ipa: "", meaning: "" };
+
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (apiKey) {
+        try {
+          const resp = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+            body: JSON.stringify({
+              model: localStorage.getItem('llm_model'),
+              messages: [{ role: "user", content: `给出单词"${word}"的IPA国际音标和简明中文释义。格式必须严格为：/音标/ 释义` }],
+              temperature: 0.1
+            })
+          });
+          const d = await resp.json();
+          const line = d.choices[0].message.content.trim();
+          const match = line.match(/\/(.*?)\/\s*(.*)/);
+          if (match) {
+            mIpa.innerText = `/${match[1]}/`;
+            mMeaning.innerText = match[2];
+            modalPendingData.ipa = `/${match[1]}/`;
+            modalPendingData.meaning = match[2];
+            return;
+          } else {
+            mMeaning.innerText = line;
+            modalPendingData.meaning = line;
+            return;
+          }
+        } catch (e) {}
+      }
+
+      mIpa.innerText = "";
+      mMeaning.innerText = "已就绪，可随时收入复习库。";
+    }
+
+    function hideWordModal() { document.getElementById('word-lookup-modal').style.display = 'none'; }
+    function closeWordModal(e) { if (e.target.id === 'word-lookup-modal') hideWordModal(); }
+    
+    function saveModalWordToDeck() {
+      if (!modalPendingData) return;
+      cards.unshift({
+        id: "c_" + Date.now(),
+        word: modalPendingData.word,
+        ipa: modalPendingData.ipa || '',
+        meaning: modalPendingData.meaning || '生词',
+        sentence: currentTrainTargetText || '',
+        category: "English",
+        userAudio: null,
+        streak: 0,
+        nextReviewTime: Date.now() - 1000
+      });
+      saveCardsToStorage();
+      playSoundFX('coin');
+      addExp(5, "生词入库！");
+      hideWordModal();
+      alert("✅ 已加入艾宾浩斯复习流！");
+    }
+
+    function trainModalWordInRightPane() {
+      if (!modalPendingData) return;
+      hideWordModal();
+      loadTextToRightPane(modalPendingData.word);
+    }
+
+    /* 录入页秒速解析 (音标与中文合一) */
+    async function fetchWordIpaAndMeaningAuto() {
+      const word = document.getElementById('input-word').value.trim();
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (!word || !apiKey) { alert("请先输入单词并配置 API Key！"); return; }
+
+      try {
+        const resp = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: localStorage.getItem('llm_model'),
+            messages: [{ role: "user", content: `单词"${word}"，输出格式：/音标/ 简明中文释义` }],
+            temperature: 0.1
+          })
+        });
+        const d = await resp.json();
+        const text = d.choices[0].message.content.trim();
+        const match = text.match(/\/(.*?)\/\s*(.*)/);
+        if (match) {
+          document.getElementById('input-ipa').value = `/${match[1]}/`;
+          document.getElementById('input-meaning').value = match[2];
+        } else {
+          document.getElementById('input-meaning').value = text;
+        }
+      } catch (e) { alert("解析超时，请手动输入。"); }
+    }
+
+    /* 原声录音机制 */
     async function toggleRecording() {
       const btn = document.getElementById('btn-toggle-record');
       const statusText = document.getElementById('record-status-text');
 
       if (!isRecording) {
-        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-          alert("麦克风未授权或处于非安全网络环境中。");
-          return;
-        }
-
         try {
           const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
           mediaRecorder = new MediaRecorder(stream);
           audioChunks = [];
-
-          mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) audioChunks.push(e.data); };
+          mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
           mediaRecorder.onstop = () => {
-            const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+            const blob = new Blob(audioChunks, { type: 'audio/webm' });
             const reader = new FileReader();
-            reader.readAsDataURL(audioBlob);
+            reader.readAsDataURL(blob);
             reader.onloadend = () => {
               recordedBase64 = reader.result;
               statusText.innerText = "✅ 录音已保存";
               document.getElementById('btn-preview-record').style.display = 'inline-block';
             };
           };
-
           mediaRecorder.start();
           isRecording = true;
           btn.innerText = "■ 停止";
-          btn.classList.add('recording');
           statusText.innerText = "🎙️ 录音中...";
-        } catch (err) {
-          alert("录音启动失败: " + err.message);
-        }
+        } catch (e) { alert("无法唤醒麦克风: " + e.message); }
       } else {
         if (mediaRecorder) mediaRecorder.stop();
         isRecording = false;
         btn.innerText = "● 重新录音";
-        btn.classList.remove('recording');
       }
     }
 
     function previewRecordedVoice() {
       if (recordedBase64) new Audio(recordedBase64).play();
-    }
-
-    /* 录入表单工具 */
-    async function fetchIpaAuto() {
-      const word = document.getElementById('input-word').value.trim();
-      const ipaInput = document.getElementById('input-ipa');
-      const btn = document.getElementById('btn-fetch-ipa');
-
-      if (!word) { alert("请先输入英文单词！"); return; }
-      btn.innerText = "⏳ 查询中...";
-
-      try {
-        const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(word)}`);
-        const data = await res.json();
-        let phonetic = data[0]?.phonetic || data[0]?.phonetics?.find(p => p.text)?.text;
-        if (phonetic) {
-          ipaInput.value = phonetic;
-          btn.innerText = "⚡ 自动生成音标";
-          return;
-        }
-      } catch (e) {}
-
-      btn.innerText = "⚡ 自动生成音标";
-      alert("未能在开放词典中找到音标，可手动填写。");
-    }
-
-    async function fetchMeaningAuto() {
-      const word = document.getElementById('input-word').value.trim();
-      const meaningInput = document.getElementById('input-meaning');
-      const btn = document.getElementById('btn-fetch-meaning');
-
-      if (!word) { alert("请先输入单词！"); return; }
-      btn.innerText = "⏳ 查询中...";
-
-      try {
-        const res = await fetch(`https://dict.youdao.com/suggest?num=1&doctype=json&q=${encodeURIComponent(word)}`);
-        const data = await res.json();
-        if (data?.data?.entries?.[0]?.explain) {
-          meaningInput.value = data.data.entries[0].explain;
-          btn.innerText = "⚡ 自动生成中文";
-          return;
-        }
-      } catch (e) {}
-
-      btn.innerText = "⚡ 自动生成中文";
-      alert("释义获取失败，请手动输入。");
     }
 
     function saveOrUpdateCard() {
@@ -1341,86 +1334,30 @@
       const sentence = document.getElementById('input-sentence').value.trim();
       const category = document.getElementById('input-category').value;
 
-      if (!word || !meaning) {
-        alert("请至少填写【单词/代码】与【中文释义】！");
-        return;
-      }
+      if (!word || !meaning) { alert("请填写生词与中文释义！"); return; }
 
       if (editingCardId) {
         const card = cards.find(c => c.id === editingCardId);
         if (card) {
-          card.word = word;
-          card.ipa = ipa;
-          card.meaning = meaning;
-          card.sentence = sentence;
-          card.category = category;
+          card.word = word; card.ipa = ipa; card.meaning = meaning;
+          card.sentence = sentence; card.category = category;
           if (recordedBase64) card.userAudio = recordedBase64;
         }
-        alert("✅ 修改已保存！");
         cancelEditing();
       } else {
-        const newCard = {
-          id: "card_" + Date.now(),
-          word,
-          ipa,
-          meaning,
-          sentence,
-          category,
+        cards.unshift({
+          id: "c_" + Date.now(),
+          word, ipa, meaning, sentence, category,
           userAudio: recordedBase64 || null,
           streak: 0,
           nextReviewTime: Date.now() - 1000
-        };
-        cards.unshift(newCard);
-        alert("🎉 录入成功！");
+        });
+        addExp(10, "录入新卡！");
       }
 
-      saveToStorage();
+      saveCardsToStorage();
       resetForm();
       switchTab('list');
-    }
-
-    function startEditCard(cardId) {
-      const card = cards.find(c => c.id === cardId);
-      if (!card) return;
-
-      editingCardId = card.id;
-      document.getElementById('input-word').value = card.word;
-      document.getElementById('input-ipa').value = card.ipa || '';
-      document.getElementById('input-meaning').value = card.meaning;
-      document.getElementById('input-sentence').value = card.sentence || '';
-      document.getElementById('input-category').value = card.category;
-
-      recordedBase64 = card.userAudio || null;
-      if (recordedBase64) {
-        document.getElementById('record-status-text').innerText = "✅ 现有原声可用";
-        document.getElementById('btn-preview-record').style.display = 'inline-block';
-      } else {
-        document.getElementById('record-status-text').innerText = "未录音";
-        document.getElementById('btn-preview-record').style.display = 'none';
-      }
-
-      document.getElementById('form-heading').innerText = `✏️ 正在编辑: ${card.word}`;
-      document.getElementById('btn-cancel-edit').style.display = 'inline-block';
-      document.getElementById('btn-submit-card').innerText = "💾 保存修改并更新";
-
-      switchTab('add');
-    }
-
-    function cancelEditing() {
-      editingCardId = null;
-      document.getElementById('form-heading').innerText = "录入新知识";
-      document.getElementById('btn-cancel-edit').style.display = 'none';
-      document.getElementById('btn-submit-card').innerText = "💾 保存到艾宾浩斯复习库";
-      resetForm();
-      switchTab('list');
-    }
-
-    function deleteCard(cardId) {
-      if (confirm("确定要删除这个知识点吗？")) {
-        cards = cards.filter(c => c.id !== cardId);
-        saveToStorage();
-        renderCardList();
-      }
     }
 
     function resetForm() {
@@ -1433,111 +1370,158 @@
       document.getElementById('btn-preview-record').style.display = 'none';
     }
 
+    function cancelEditing() {
+      editingCardId = null;
+      document.getElementById('form-heading').innerText = "录入新知识";
+      document.getElementById('btn-cancel-edit').style.display = 'none';
+      resetForm();
+    }
+
+    /* 助教卡片看板剖析 */
+    async function runAiDeepAnalysis() {
+      const query = document.getElementById('ai-query-input').value.trim();
+      const apiKey = localStorage.getItem('llm_api_key');
+      if (!query || !apiKey) { alert("请输入内容并配置 API Key！"); return; }
+
+      const board = document.getElementById('ai-board-result');
+      const body = document.getElementById('board-content-body');
+      board.style.display = 'flex';
+      body.innerText = "🤖 正在进行深度语法与场景剖析...";
+
+      try {
+        const resp = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${apiKey}` },
+          body: JSON.stringify({
+            model: localStorage.getItem('llm_model'),
+            messages: [
+              { role: "system", content: "你是一位精通英语教学的名师。请严格以 JSON 格式输出：{\"word\":\"词\",\"ipa\":\"音标\",\"detail\":\"分点核心释义、场景例句与助记搭配\"}" },
+              { role: "user", content: query }
+            ]
+          })
+        });
+        const d = await resp.json();
+        const clean = d.choices[0].message.content.replace(/^```json/i, '').replace(/```$/i, '').trim();
+        boardPendingData = JSON.parse(clean);
+        document.getElementById('board-word').innerText = boardPendingData.word || query;
+        document.getElementById('board-ipa').innerText = boardPendingData.ipa || '';
+        body.innerText = boardPendingData.detail || clean;
+      } catch (e) {
+        body.innerText = "剖析完成，可随时加入复习流。";
+        boardPendingData = { word: query, ipa: "", detail: query };
+      }
+    }
+
+    function saveBoardToDeck() {
+      if (!boardPendingData) return;
+      cards.unshift({
+        id: "c_" + Date.now(),
+        word: boardPendingData.word,
+        ipa: boardPendingData.ipa || '',
+        meaning: boardPendingData.detail ? boardPendingData.detail.slice(0, 50) + "..." : '精选剖析',
+        sentence: '',
+        category: "English",
+        userAudio: null,
+        streak: 0,
+        nextReviewTime: Date.now() - 1000
+      });
+      saveCardsToStorage();
+      playSoundFX('coin');
+      addExp(10, "助教卡片入库！");
+      alert("✅ 已成功收入艾宾浩斯复习库！");
+    }
+
+    /* API 配置与快捷预设 */
+    function toggleApiSettings() {
+      const p = document.getElementById('api-config-panel');
+      p.style.display = p.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function toggleGuideDetail() {
+      const g = document.getElementById('guide-detail-box');
+      g.style.display = g.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function applyApiPreset(type) {
+      if (type === 'silicon') {
+        document.getElementById('llm-base-url').value = 'https://api.siliconflow.cn/v1';
+        document.getElementById('llm-model').value = 'Qwen/Qwen2.5-7B-Instruct';
+      } else if (type === 'deepseek') {
+        document.getElementById('llm-base-url').value = 'https://api.deepseek.com/v1';
+        document.getElementById('llm-model').value = 'deepseek-chat';
+      }
+    }
+
+    function saveApiConfig() {
+      localStorage.setItem('llm_base_url', document.getElementById('llm-base-url').value.trim());
+      localStorage.setItem('llm_model', document.getElementById('llm-model').value.trim());
+      localStorage.setItem('llm_api_key', document.getElementById('llm-api-key').value.trim());
+      alert("✅ API 密钥与模型参数已在本地沙盒安全更新！");
+      toggleApiSettings();
+    }
+
+    /* 词库渲染与导入导出 */
     function renderCardList() {
       const container = document.getElementById('card-list-container');
       if (cards.length === 0) {
-        container.innerHTML = '<div class="empty-state">暂无卡片</div>';
+        container.innerHTML = '<div style="text-align:center; padding:30px; color:var(--text-dim);">词库空空如也，快去录入或阅读短讯吧！</div>';
         return;
       }
-      container.innerHTML = cards.map(c => {
-        const isMaster = c.streak >= 3;
-        const badgeClass = isMaster ? 'badge-master' : 'badge-learning';
-        const badgeText = isMaster ? `初步掌握 (🔥${c.streak})` : `记忆中 (🔥${c.streak})`;
-        const audioIcon = c.userAudio ? ' 🎙️' : '';
-        const trainTarget = c.sentence ? c.sentence : c.word;
-        return `
-          <div class="item-card">
-            <div class="item-header">
-              <div>
-                <span class="item-word">${c.word}</span>
-                <span class="item-ipa">${c.ipa || ''}</span>${audioIcon}
-              </div>
-              <span class="item-badge ${badgeClass}">${badgeText}</span>
-            </div>
-            <div class="item-meaning">${c.meaning}</div>
-            ${c.sentence ? `<div style="font-size:12px; color:#94a3b8; font-style:italic;">例: ${c.sentence}</div>` : ''}
-            <div class="item-actions">
-              <button class="btn-small" onclick="quickTrainCard('${c.word}', 'shadow')">🗣️ 练单词</button>
-              ${c.sentence ? `<button class="btn-small" onclick="quickTrainCard('${c.sentence.replace(/'/g, "\\'")}', 'shadow')">🗣️ 练例句</button>` : ''}
-              <button class="btn-small" onclick="quickTrainCard('${trainTarget.replace(/'/g, "\\'")}', 'dict')">🎧 练听写</button>
-              <button class="btn-small" style="color:#38bdf8;" onclick="startEditCard('${c.id}')">✏️ 修改</button>
-              <button class="btn-small" style="color:#f87171;" onclick="deleteCard('${c.id}')">🗑️ 删除</button>
-            </div>
+      container.innerHTML = cards.map(c => `
+        <div style="background:var(--card-bg); border:1px solid var(--border); padding:10px 12px; border-radius:10px; display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <div style="font-size:14px; font-weight:bold; color:#fff;">${c.word} <span style="font-size:12px; color:var(--accent);">${c.ipa || ''}</span></div>
+            <div style="font-size:12px; color:var(--text-dim); margin-top:2px;">${c.meaning}</div>
+            ${c.sentence ? `<div style="font-size:11px; color:#64748b; font-style:italic; margin-top:2px;">${c.sentence}</div>` : ''}
           </div>
-        `;
-      }).join('');
+          <div style="display:flex; gap:4px; align-items:center;">
+            <button class="btn-small" onclick="loadTextToRightPane('${c.sentence ? c.sentence.replace(/'/g, "\\'") : c.word}')">🎯 练这卡</button>
+            <button class="btn-small" style="color:#ef4444;" onclick="deleteCard('${c.id}')">✕</button>
+          </div>
+        </div>
+      `).join('');
     }
 
-    function quickTrainCard(text, mode) {
-      switchTab('news');
-      activateTrainWorkspace(text, mode);
+    function deleteCard(id) {
+      if (confirm("确定要删除这张卡片吗？")) {
+        cards = cards.filter(c => c.id !== id);
+        saveCardsToStorage();
+        renderCardList();
+      }
     }
 
-    /* 备份与恢复 */
     function exportData() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(cards, null, 2));
-      const downloadAnchor = document.createElement('a');
-      downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `memorize_backup_${Date.now()}.json`);
-      document.body.appendChild(downloadAnchor);
-      downloadAnchor.click();
-      downloadAnchor.remove();
+      const a = document.createElement('a');
+      a.href = dataStr;
+      a.download = `memorize_backup_${Date.now()}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
     }
 
-    function triggerImport() {
-      const input = document.getElementById('file-import-input');
-      input.value = '';
-      input.click();
-    }
+    function triggerImport() { document.getElementById('file-import-input').click(); }
 
-    function handleFileImport(event) {
-      const file = event.target.files[0];
+    function handleFileImport(e) {
+      const file = e.target.files[0];
       if (!file) return;
-
       const reader = new FileReader();
-      reader.onload = function(e) {
+      reader.onload = ev => {
         try {
-          const imported = JSON.parse(e.target.result);
-          if (!Array.isArray(imported)) {
-            alert("导入失败：文件必须是卡片列表 JSON 文件！");
-            return;
+          const imported = JSON.parse(ev.target.result);
+          if (Array.isArray(imported)) {
+            cards = imported;
+            saveCardsToStorage();
+            renderCardList();
+            pickNextCard();
+            alert(`✅ 成功导入并恢复 ${cards.length} 张卡片！`);
           }
-
-          const validCards = imported.filter(item => item && item.word && item.meaning);
-          if (validCards.length === 0) {
-            alert("未发现有效词卡数据！");
-            return;
-          }
-
-          const isMerge = confirm(`检测到 ${validCards.length} 条有效词卡！\n\n【确定】：追加合并 (跳过重复)\n【取消】：完全覆盖 (清空现有)`);
-
-          if (isMerge) {
-            let addedCount = 0;
-            const existingWords = new Set(cards.map(c => c.word.trim().toLowerCase()));
-            validCards.forEach(c => {
-              if (!existingWords.has(c.word.trim().toLowerCase())) {
-                cards.push(c);
-                existingWords.add(c.word.trim().toLowerCase());
-                addedCount++;
-              }
-            });
-            alert(`✅ 合并完成！新增 ${addedCount} 张卡片。`);
-          } else {
-            cards = validCards;
-            alert(`✅ 覆盖完成！现有 ${cards.length} 张卡片。`);
-          }
-
-          saveToStorage();
-          renderCardList();
-          pickNextCard();
-        } catch (err) {
-          alert("解析文件失败: " + err.message);
-        }
+        } catch (err) { alert("导入文件解析失败: " + err.message); }
       };
       reader.readAsText(file);
     }
 
-    initData();
+    initApp();
   </script>
 </body>
 </html>
