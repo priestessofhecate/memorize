@@ -1,30 +1,30 @@
 {
-  "updatedAt": "2026-09-24 08:57:31",
+  "updatedAt": "2026-09-24 09:36:54",
   "articles": [
     {
-      "title": "Meta takes down a critical video about meta AI Glasses after filming at Meta",
-      "url": "https://www.reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai/",
-      "summary": "Article URL: https://www.reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai/\nComments URL: https://news.ycombinator.com/item?id=49827794\nPoints: 16\n# Comments: 1"
+      "title": "Microsoft disrupts AI-assisted platform that compromised 12,000 accounts",
+      "url": "https://arstechnica.com/security/2026/09/microsoft-disrupts-ai-assisted-platform-that-compromised-12000/",
+      "summary": "EvilTokens provided an end-to-end platform that makes mass compromises faster and easier."
     },
     {
-      "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
-      "url": "https://transluce.org/agent-activity",
-      "summary": "Article URL: https://transluce.org/agent-activity\nComments URL: https://news.ycombinator.com/item?id=49826565\nPoints: 90\n# Comments: 58"
+      "title": "IT mistake erases 11 years of viewing history for hospitals’ maternity records",
+      "url": "https://arstechnica.com/information-technology/2026/09/it-mistake-erases-11-years-of-viewing-history-for-hospitals-maternity-records/",
+      "summary": "The English hospitals recovered patient care data only."
     },
     {
-      "title": "Six-year-old breaks women's world Rubik's Cube record [video]",
-      "url": "https://www.youtube.com/watch?v=UCMRgvyTm08",
-      "summary": "Article URL: https://www.youtube.com/watch?v=UCMRgvyTm08\nComments URL: https://news.ycombinator.com/item?id=49826482\nPoints: 45\n# Comments: 25"
+      "title": "Muse, Meta's extraordinarily privileged AI assistant, has a serious 0-day",
+      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day/",
+      "summary": "A simple ClickFix attack is only one way to completely hijack the new agent."
     },
     {
-      "title": "Contrastive Language Models",
-      "url": "https://contrastive-lm.notion.site/",
-      "summary": "Article URL: https://contrastive-lm.notion.site/\nComments URL: https://news.ycombinator.com/item?id=49826221\nPoints: 54\n# Comments: 11"
+      "title": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
+      "url": "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/",
+      "summary": "Google’s threat intelligence group said it had a mole inside TeamPCP's inner circle."
     },
     {
-      "title": "Ideas on modernizing the open-source desktop",
-      "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
-      "summary": "Article URL: https://lwn.net/SubscriberLink/1095425/2d9f411252325784/\nComments URL: https://news.ycombinator.com/item?id=49825642\nPoints: 109\n# Comments: 69"
+      "title": "LLMs respond differently to harmful prompts when AI watermarking is used",
+      "url": "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/",
+      "summary": "SynthID can cause models to follow harmful instructions they would otherwise refuse."
     }
   ]
 }
