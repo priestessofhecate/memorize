@@ -5,7 +5,7 @@ import re
 import html
 from datetime import datetime
 
-# 精选外媒科技 RSS 源
+# 稳定可靠的外媒科技 RSS 源
 RSS_FEEDS = [
     "https://feeds.arstechnica.com/arstechnica/technology-lab",
     "https://www.theverge.com/rss/index.xml",
@@ -15,7 +15,7 @@ RSS_FEEDS = [
 def clean_html(raw_html):
     if not raw_html:
         return ""
-    # 去除 HTML 标签、多余转义符及媒体特有占位符
+    # 过滤 HTML 标签、实体字符及媒体广告提示
     text = re.sub(r'<[^>]+>', '', raw_html)
     text = html.unescape(text)
     text = re.sub(r'Enlarge\s*/\s*', '', text)
@@ -25,14 +25,14 @@ def clean_html(raw_html):
     return text
 
 def split_into_sentences(text):
-    # 按标准英文标点断句，保留完整句子
+    # 标准英文标点断句，确保语义自洽完整
     sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z0-9"\'])', text)
-    clean_sents = [s.strip() for s in sentences if len(s.strip()) > 15 and not s.strip().startswith("Photo:")]
+    clean_sents = [s.strip() for s in sentences if len(s.strip()) > 18 and not s.strip().startswith("Photo:")]
     return clean_sents
 
 def extract_news():
     articles = []
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) MemorizeNewsBot/2.0'}
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) MemorizeNewsBot/3.0'}
 
     for feed_url in RSS_FEEDS:
         try:
@@ -41,24 +41,20 @@ def extract_news():
                 xml_data = response.read()
             
             root = ET.fromstring(xml_data)
-            
-            # 支持 RSS 2.0 与 Atom 格式
-            items = root.findall('.//item')
-            if not items:
-                items = root.findall('.//{http://www.w3.org/2005/Atom}entry')
+            items = root.findall('.//item') or root.findall('.//{http://www.w3.org/2005/Atom}entry')
 
             for item in items[:4]:
-                # 1. 原汁原味标题
+                # 1. 原汁原味新闻标题
                 title_elem = item.find('title') if item.find('title') is not None else item.find('{http://www.w3.org/2005/Atom}title')
                 title = clean_html(title_elem.text if title_elem is not None else "Tech Brief")
 
-                # 2. 链接
+                # 2. 原文链接
                 link = ""
                 link_elem = item.find('link') if item.find('link') is not None else item.find('{http://www.w3.org/2005/Atom}link')
                 if link_elem is not None:
                     link = link_elem.text or link_elem.attrib.get('href', '')
 
-                # 3. 正文提炼与完整段落拆解
+                # 3. 正文清洗与分级切分
                 desc_elem = item.find('description') or item.find('{http://www.w3.org/2005/Atom}content') or item.find('{http://www.w3.org/2005/Atom}summary')
                 raw_desc = desc_elem.text if desc_elem is not None else ""
                 clean_body = clean_html(raw_desc)
@@ -73,7 +69,7 @@ def extract_news():
                 # 外层提取 1~2 句完整核心导语（TL;DR）
                 essence = " ".join(all_sentences[:2])
                 
-                # 内层保留 3~5 句完整资讯段落
+                # 内层保留完整新闻段落 (3~6 句)
                 full_body_sents = all_sentences[:6]
                 full_body = " ".join(full_body_sents)
 
@@ -94,7 +90,6 @@ def extract_news():
         if len(articles) >= 6:
             break
 
-    # 输出规范化的 news.json
     output_data = {
         "updated_at": datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
         "articles": articles
