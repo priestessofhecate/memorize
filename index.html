@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Ebbinghaus Master Ultimate</title>
+  <title>Memorize - Ebbinghaus & AI Assistant</title>
   <style>
     :root {
       --bg: #090d16;
@@ -37,7 +37,7 @@
     .view-section.active { display: flex; }
 
     /* Review Card */
-    .quiz-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .quiz-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); flex-shrink: 0; display: flex; flex-direction: column; justify-content: space-between; min-height: 380px; }
     .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
     .mode-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: var(--accent); }
     .streak-badge { font-size: 12px; color: #fbbf24; font-weight: bold; }
@@ -79,7 +79,7 @@
     .record-btn.recording { animation: pulse 1s infinite; background: #dc2626; }
     @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
-    /* Sub-tabs for Training & AI Tutor */
+    /* Sub-tabs */
     .sub-tabs { display: flex; gap: 8px; margin-bottom: 12px; background: var(--card-inner); padding: 4px; border-radius: 10px; }
     .sub-tab-btn { flex: 1; background: none; border: none; padding: 7px; font-size: 12px; color: var(--text-dim); border-radius: 8px; cursor: pointer; font-weight: bold; }
     .sub-tab-btn.active { background: #334155; color: var(--accent); }
@@ -104,7 +104,7 @@
     .item-word { font-size: 15px; font-weight: bold; color: #fff; }
     .item-ipa { font-size: 12px; color: var(--accent); font-family: monospace; }
     .item-meaning { font-size: 13px; color: var(--text-dim); }
-    .item-actions { display: flex; gap: 6px; justify-content: flex-end; border-top: 1px dashed #1e293b; padding-top: 8px; margin-top: 4px; flex-wrap: wrap; }
+    .item-actions { display: flex; gap: 6px; justify-content: flex-end; border-top: 1px dashed #1e293b; padding-top: 8px; margin-top: 4px; flex-wrap: wrap; align-items: center; }
     .btn-small { background: #334155; color: #cbd5e1; border: none; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; }
     .btn-small:hover { color: #fff; }
     
@@ -117,7 +117,7 @@
 <body>
 
   <div class="navbar">
-    <h1>🧠 Ebbinghaus Master</h1>
+    <h1>🧠 Memorize</h1>
     <div class="stats-pill" id="nav-due-counter">待复习: 0</div>
   </div>
 
@@ -133,6 +133,7 @@
 
     <!-- 1. REVIEW VIEW -->
     <div id="view-review" class="view-section active">
+      <!-- 核心复习卡片 -->
       <div class="quiz-card" id="quiz-card-box">
         <div>
           <div class="quiz-header">
@@ -168,31 +169,17 @@
           </div>
         </div>
       </div>
-      async function loadDailyNews() {
-  try {
-    // 加上时间戳参数防止浏览器强缓存
-    const res = await fetch(`./news.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error("新闻文件尚未生成");
-    
-    const data = await res.json();
-    console.log("今日新闻列表：", data.articles);
 
-    // 渲染到界面中，并赋予“一键导入跟读”与“一键查词”功能
-    const container = document.getElementById('news-container');
-    container.innerHTML = data.articles.map(art => `
-      <div class="item-card" style="margin-bottom:10px;">
-        <div style="font-weight:bold; color:#38bdf8;">${art.title}</div>
-        <div style="font-size:13px; color:#cbd5e1; margin:6px 0;">${art.summary}</div>
-        <div class="item-actions">
-          <button class="btn-small" onclick="sendToTrain('${art.summary.replace(/'/g, "\\'")}', 'shadow')">🗣️ 练这段跟读</button>
-          <a href="${art.url}" target="_blank" style="font-size:11px; color:#94a3b8; text-decoration:none;">🔗 阅读全文</a>
+      <!-- 📰 今日科技精选短讯 (位于卡片下方，防被清空) -->
+      <div style="margin-top: 18px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <h3 style="color: var(--accent); font-size: 14px;">📰 今日科技精选短讯</h3>
+          <button onclick="loadDailyNews()" style="background: none; border: none; color: var(--text-dim); font-size: 11px; cursor: pointer;">🔄 刷新短讯</button>
+        </div>
+        <div id="news-container">
+          <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 12px;">正在加载今日短讯...</div>
         </div>
       </div>
-    `).join('');
-  } catch (err) {
-    console.warn("未能加载每日新闻:", err.message);
-  }
-}
     </div>
 
     <!-- 2. TRAINING VIEW (跟读打分 & 听写) -->
@@ -204,8 +191,8 @@
         </div>
 
         <div class="form-group">
-          <label>目标跟读/听写文本 (支持单词、例句或整篇短文):</label>
-          <textarea id="train-target-text" class="form-control" style="min-height: 80px;" placeholder="在此输入或从词库/AI助教一键导入跟读内容..."></textarea>
+          <label>目标跟读/听写文本 (支持单词、例句或从短讯/作文一键导入):</label>
+          <textarea id="train-target-text" class="form-control" style="min-height: 80px;" placeholder="在此输入或从外部一键导入内容..."></textarea>
         </div>
 
         <div style="display: flex; gap: 8px; margin-bottom: 14px;">
@@ -260,7 +247,7 @@
         
         <div class="form-group">
           <label>知识点 / 英文生词 / 代码词汇 *</label>
-          <input type="text" id="input-word" class="form-control" placeholder="输入单词或代码">
+          <input type="text" id="input-word" class="form-control" placeholder="输入单词或短语">
         </div>
 
         <div class="form-group">
@@ -309,7 +296,7 @@
       </div>
     </div>
 
-    <!-- 4. AI TUTOR VIEW (全新升级：查词问答 + 作文批改) -->
+    <!-- 4. AI TUTOR VIEW -->
     <div id="view-ai" class="view-section">
       <div class="ai-card">
         <div style="display: flex; justify-content: space-between; align-items: center;">
@@ -351,7 +338,6 @@
             <div style="font-size: 12px; color: var(--accent); font-weight: bold; margin-bottom: 6px;">💡 助教解析与学习笔记:</div>
             <div class="ai-chat-output" id="ai-ask-chat-box"></div>
             
-            <!-- 一键入库卡片预览与操作 -->
             <div id="card-preview-zone" class="card-preview-box" style="display:none;">
               <div class="card-preview-title">📌 提取卡片预览</div>
               <div style="font-size: 14px; font-weight: bold; color: #fff;" id="prev-word"></div>
@@ -429,7 +415,7 @@
     let speechRecognizer = null;
     let isRecognizing = false;
 
-    let pendingAiCard = null; // 临时缓存从 AI 解析出的生词卡
+    let pendingAiCard = null;
 
     function initData() {
       const saved = localStorage.getItem("ebbinghaus_v6_cards") || localStorage.getItem("ebbinghaus_v5_cards") || localStorage.getItem("ebbinghaus_v4_cards");
@@ -447,6 +433,9 @@
       updateDueCounter();
       pickNextCard();
       renderCardList();
+      
+      // 启动时自动拉取今日科技短讯
+      loadDailyNews();
     }
 
     function saveToStorage() {
@@ -636,7 +625,7 @@
 
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SpeechRecognition) {
-        alert("当前环境未开放 Web Speech API 接口，请使用 Chrome 或添加至桌面运行。");
+        alert("当前环境未开放 Web Speech API 接口，请使用 Chrome 或在 HTTPS 环境下运行。");
         return;
       }
 
@@ -757,7 +746,7 @@
 
       if (!isRecording) {
         if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-          alert("打包环境未开放录音权限！打包时请勾选 Record Audio。");
+          alert("麦克风未授权或当前处于非安全网络环境中。");
           return;
         }
 
@@ -784,7 +773,7 @@
           btn.classList.add('recording');
           statusText.innerText = "🎙️ 录音中...";
         } catch (err) {
-          alert("录音失败: " + err.message);
+          alert("录音启动失败: " + err.message);
         }
       } else {
         if (mediaRecorder) mediaRecorder.stop();
@@ -1055,7 +1044,7 @@
       toggleApiSettings();
     }
 
-    /* 核心功能：AI 查词答疑与一键入库 */
+    /* 助教查词答疑与一键入库 */
     async function askAiForExplanation() {
       const query = document.getElementById('ai-ask-input').value.trim();
       const apiKey = localStorage.getItem('llm_api_key');
@@ -1110,7 +1099,6 @@ JSON>>>
         if (data.choices && data.choices[0]) {
           const rawContent = data.choices[0].message.content;
           
-          // 提取 JSON 卡片块
           const jsonMatch = rawContent.match(/<<<JSON([\s\S]*?)JSON>>>/);
           let cleanDisplay = rawContent.replace(/<<<JSON[\s\S]*?JSON>>>/, '').trim();
           chatBox.innerText = cleanDisplay;
@@ -1138,7 +1126,6 @@ JSON>>>
     function saveAiCardToDeck() {
       if (!pendingAiCard) return;
 
-      // 检查是否已有重复词
       const exists = cards.some(c => c.word.toLowerCase() === pendingAiCard.word.toLowerCase());
       if (exists) {
         if (!confirm(`词库中已存在 "${pendingAiCard.word}"，是否仍要重复加入？`)) return;
@@ -1208,11 +1195,51 @@ JSON>>>
       }
     }
 
+    /* 每日科技短讯抓取与渲染逻辑 */
+    async function loadDailyNews() {
+      const container = document.getElementById('news-container');
+      if (!container) return;
+      container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:10px;">🔄 正在读取今日科技精选...</div>`;
+
+      try {
+        const res = await fetch(`./news.json?t=${Date.now()}`);
+        if (!res.ok) throw new Error("news.json 尚在生成中");
+        
+        const data = await res.json();
+        if (!data.articles || data.articles.length === 0) {
+          container.innerHTML = `<div style="font-size:12px; color:var(--text-dim); text-align:center; padding:10px;">今日暂无短讯推送</div>`;
+          return;
+        }
+
+        container.innerHTML = data.articles.map(art => {
+          const safeText = art.summary.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+          return `
+            <div class="item-card" style="margin-bottom:10px;">
+              <div style="font-weight:bold; color:#38bdf8; font-size:14px; line-height:1.4;">${art.title}</div>
+              <div style="font-size:13px; color:#cbd5e1; margin:6px 0; line-height:1.5;">${art.summary}</div>
+              <div class="item-actions">
+                <button class="btn-small" onclick="sendToTrain('${safeText}', 'shadow')">🗣️ 练这段跟读</button>
+                <button class="btn-small" onclick="sendToTrain('${safeText}', 'dict')">🎧 练这段听写</button>
+                ${art.url ? `<a href="${art.url}" target="_blank" style="font-size:11px; color:#94a3b8; text-decoration:none; padding:4px 6px; display:inline-flex; align-items:center;">🔗 原文</a>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+      } catch (err) {
+        container.innerHTML = `
+          <div style="font-size:12px; color:var(--text-dim); text-align:center; padding:12px; border:1px dashed var(--border); border-radius:10px;">
+            📰 每日科技短讯等待 GitHub Action 首次生成中...<br>
+            <span style="font-size:11px; color:#64748b; margin-top:4px; display:block;">(Action 任务每天清晨自动更新 news.json)</span>
+          </div>
+        `;
+      }
+    }
+
     function exportData() {
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(cards, null, 2));
       const downloadAnchor = document.createElement('a');
       downloadAnchor.setAttribute("href", dataStr);
-      downloadAnchor.setAttribute("download", `ebbinghaus_backup_${Date.now()}.json`);
+      downloadAnchor.setAttribute("download", `memorize_backup_${Date.now()}.json`);
       document.body.appendChild(downloadAnchor);
       downloadAnchor.click();
       downloadAnchor.remove();
