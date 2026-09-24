@@ -3,53 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- 核心黑科技：隐藏 Referrer，破解有道词典等网络接口的防盗链 (403 Forbidden) 拦截 -->
-  <meta name="referrer" content="no-referrer">
-  
-  <title>Memorize - 极客智能外语训练台</title>
+  <title>Memorize - 极客智能外语训练台 (AI 满血版)</title>
   <style>
     :root {
       --bg: #090d16; --card-bg: #151e2e; --card-inner: #0b111e;
       --primary: #6366f1; --primary-hover: #4f46e5;
       --success: #10b981; --danger: #ef4444; --warning: #f59e0b;
-      --accent: #38bdf8; --text: #f8fafc; --text-dim: #94a3b8;
-      --border: #26334d;
+      --accent: #38bdf8; --text: #f8fafc; --text-dim: #94a3b8; --border: #26334d;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
     body { background-color: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
     
-    /* 顶部导航与修真化形等级条 */
     .navbar { background: #0b111e; border-bottom: 1px solid var(--border); padding: 10px 16px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 50; }
-    .navbar h1 { font-size: 16px; font-weight: 800; color: var(--accent); letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px; }
+    .navbar h1 { font-size: 16px; font-weight: 800; color: var(--accent); display: flex; align-items: center; gap: 6px; }
     .rpg-stats { display: flex; align-items: center; gap: 8px; }
     .rpg-badge { background: #151e2e; border: 1px solid var(--border); padding: 3px 8px; border-radius: 12px; font-size: 13px; font-weight: 800; color: #fbbf24; display: flex; align-items: center; gap: 4px; cursor: pointer; }
     .rpg-exp { font-size: 11px; color: #a5f3fc; }
     .sound-toggle-btn { background: none; border: 1px solid var(--border); color: #cbd5e1; border-radius: 8px; padding: 3px 6px; font-size: 11px; cursor: pointer; }
 
     .container { flex: 1; padding: 12px; max-width: 960px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; }
-
-    /* 全新 4 模块主标签页 */
     .tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 12px; background: #0b111e; padding: 4px; border-radius: 12px; border: 1px solid var(--border); }
     .tab-btn { background: none; border: none; padding: 10px 4px; color: var(--text-dim); font-size: 13px; font-weight: 700; border-radius: 8px; cursor: pointer; text-align: center; }
     .tab-btn.active { background: var(--primary); color: white; }
-
     .view-section { display: none; flex-direction: column; flex: 1; }
     .view-section.active { display: flex; }
 
-    /* 复习卡片与真填空 */
+    /* 复习卡片 */
     .quiz-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 18px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.4); max-width: 520px; width: 100%; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; min-height: 410px; }
     .quiz-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
     .mode-badge { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; background: rgba(56, 189, 248, 0.15); color: var(--accent); }
     .streak-badge { font-size: 12px; color: #fbbf24; font-weight: bold; }
-
     .question-box { margin: 12px 0; min-height: 120px; display: flex; flex-direction: column; justify-content: center; }
     .q-main { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 6px; line-height: 1.3; word-break: break-word; }
     .q-sub { font-size: 13px; color: var(--accent); }
-    
     .cloze-input-wrap { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
     .cloze-field { background: var(--card-inner); border: 2px solid var(--primary); padding: 10px; border-radius: 10px; color: #38bdf8; font-size: 16px; font-weight: bold; text-align: center; outline: none; }
     .cloze-sentence-preview { font-size: 14px; color: #cbd5e1; line-height: 1.6; background: var(--card-inner); padding: 10px; border-radius: 8px; border: 1px dashed var(--border); text-align: left; }
-
     .audio-group { display: flex; gap: 8px; justify-content: center; margin: 10px auto; flex-wrap: wrap; }
     .btn-audio { background: #0284c7; color: white; border: none; padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
     .btn-audio-user { background: #8b5cf6; }
@@ -66,7 +55,7 @@
     .btn-fail { background: var(--danger); color: white; }
     .btn-success { background: var(--success); color: white; }
 
-    /* 短讯双板块布局 */
+    /* 短讯与交互 */
     .news-layout { display: grid; grid-template-columns: 1fr; gap: 14px; }
     @media (min-width: 768px) { .news-layout { grid-template-columns: 1.15fr 0.85fr; align-items: start; } }
     .news-left-pane { display: flex; flex-direction: column; gap: 12px; }
@@ -77,16 +66,18 @@
     .news-full { font-size: 13px; color: #94a3b8; line-height: 1.7; display: none; margin-top: 6px; border-top: 1px dashed var(--border); padding-top: 8px; }
     .sentence-block { padding: 6px; border-radius: 6px; margin-bottom: 4px; transition: background 0.15s; background: rgba(11, 17, 30, 0.4); }
     .sentence-ops { display: flex; gap: 4px; margin-top: 4px; }
-    .clickable-word { cursor: pointer; padding: 1px 2px; border-radius: 3px; border-bottom: 1px dotted rgba(56, 189, 248, 0.4); }
+    /* 核心防系统的长按选词干扰 */
+    .clickable-word { cursor: pointer; padding: 1px 2px; border-radius: 3px; border-bottom: 1px dotted rgba(56, 189, 248, 0.4); user-select: none; -webkit-touch-callout: none; }
+    .clickable-word:active { background: rgba(56, 189, 248, 0.3); }
 
-    /* 专项训练台子组件 */
+    /* 训练台 */
     .train-target-box { background: var(--card-inner); border: 1px solid var(--border); border-radius: 10px; padding: 10px; font-size: 13px; color: #f8fafc; line-height: 1.5; min-height: 60px; max-height: 120px; overflow-y: auto; margin-bottom: 10px; word-break: break-word; }
     .blind-curtain { background: #1e293b; border: 1px dashed #64748b; color: #94a3b8; padding: 20px; border-radius: 10px; text-align: center; font-size: 13px; margin-bottom: 10px; }
     .scramble-zone { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: var(--card-inner); border-radius: 8px; min-height: 48px; border: 1px solid var(--border); margin-bottom: 10px; }
     .scramble-chip { background: #334155; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 12px; cursor: pointer; user-select: none; }
     .scramble-chip.used { opacity: 0.3; pointer-events: none; }
 
-    /* 表单与通用样式 */
+    /* 表单控件 */
     .form-group { margin-bottom: 12px; }
     .form-group label { display: block; font-size: 12px; color: var(--text-dim); margin-bottom: 5px; font-weight: 600; }
     .form-control { width: 100%; background: var(--card-inner); border: 1px solid var(--border); padding: 10px; border-radius: 10px; color: #fff; font-size: 14px; }
@@ -95,49 +86,37 @@
     .btn-submit { background: var(--primary); color: white; width: 100%; border: none; padding: 11px; border-radius: 10px; font-size: 13px; font-weight: bold; cursor: pointer; }
     .btn-small { background: #334155; color: #cbd5e1; border: none; padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; cursor: pointer; }
     .btn-inline-action { background: #0284c7; border: none; color: #fff; font-size: 11px; padding: 0 10px; border-radius: 10px; font-weight: bold; cursor: pointer; white-space: nowrap; }
-
+    
     .sub-tabs { display: flex; gap: 4px; margin-bottom: 10px; background: var(--card-inner); padding: 3px; border-radius: 8px; overflow-x: auto; }
     .sub-tab-btn { flex: 1; background: none; border: none; padding: 6px 4px; font-size: 11px; color: var(--text-dim); border-radius: 6px; cursor: pointer; font-weight: bold; white-space: nowrap; text-align: center; }
     .sub-tab-btn.active { background: #334155; color: var(--accent); }
 
-    /* 录音拾音动态可视化波形与计时 */
     .record-monitor-bar { display: flex; align-items: center; gap: 8px; background: var(--card-inner); padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); margin-top: 4px; }
     .vocal-waves { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
     .wave-bar { width: 3px; height: 3px; background: #38bdf8; border-radius: 2px; transition: height 0.08s ease; }
     .record-timer { font-size: 12px; font-family: monospace; font-weight: bold; color: #fbbf24; }
+    .security-alert-box { background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.5); border-left: 4px solid var(--danger); border-radius: 8px; padding: 10px; margin-bottom: 10px; font-size: 11.5px; color: #fca5a5; line-height: 1.5; }
 
-    /* 词库外置可关闭提示条 */
-    .backup-banner { background: #151e2e; border: 1px solid #f59e0b; border-left: 4px solid #f59e0b; border-radius: 10px; padding: 10px 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-    .backup-banner-title { font-size: 12px; font-weight: bold; color: #fbbf24; margin-bottom: 3px; }
-    .backup-banner-desc { font-size: 11px; color: #cbd5e1; line-height: 1.5; }
-    .banner-close-btn { background: none; border: none; color: #94a3b8; font-size: 14px; cursor: pointer; padding: 2px 4px; }
-
-    /* 弹窗 Modal */
     .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 100; justify-content: center; align-items: flex-end; }
     .modal-sheet { background: #151e2e; border-top: 1px solid var(--border); width: 100%; max-width: 480px; border-radius: 20px 20px 0 0; padding: 18px; box-shadow: 0 -10px 30px rgba(0,0,0,0.5); }
     .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
     .modal-word { font-size: 19px; font-weight: 900; color: #fff; }
 
-    /* 安全警示 */
-    .security-alert-box { background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.5); border-left: 4px solid var(--danger); border-radius: 8px; padding: 10px; margin-bottom: 10px; font-size: 11.5px; color: #fca5a5; line-height: 1.5; }
-
-    /* 浮动战斗 Toast */
     .rpg-toast { position: fixed; top: 70px; left: 50%; transform: translateX(-50%); background: rgba(15, 23, 42, 0.95); border: 1px solid #fbbf24; border-radius: 20px; padding: 8px 16px; font-size: 12px; font-weight: 800; color: #fef08a; box-shadow: 0 4px 20px rgba(0,0,0,0.6); pointer-events: none; z-index: 1000; display: none; animation: toastIn 0.3s ease-out; }
     @keyframes toastIn { from { opacity: 0; transform: translate(-50%, -10px); } to { opacity: 1; transform: translate(-50%, 0); } }
-
     .diff-correct { color: #34d399; font-weight: bold; }
     .diff-wrong { color: #f87171; text-decoration: line-through; }
     .diff-missing { color: #fbbf24; text-decoration: underline; }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false;"> <!-- 禁止系统默认长按菜单干扰 -->
 
-  <div class="rpg-toast" id="rpg-toast">⚡ CRITICAL HIT! 经验值 +15</div>
+  <div class="rpg-toast" id="rpg-toast">⚡ EXP +15</div>
 
   <div class="navbar">
     <h1>🧠 Memorize</h1>
     <div class="rpg-stats">
-      <div class="rpg-badge" id="rpg-rank-badge" onclick="showRankDetailPopup()">
+      <div class="rpg-badge" onclick="showRankDetailPopup()">
         <span>Lv.</span><span id="rank-pattern-slot">🥚</span>
       </div>
       <div class="rpg-exp" id="rpg-exp-text">EXP: 0/100</div>
@@ -146,7 +125,6 @@
   </div>
 
   <div class="container">
-    <!-- 合并为 4 大模块 -->
     <div class="tabs">
       <button class="tab-btn active" onclick="switchTab('review')">📖 复习</button>
       <button class="tab-btn" onclick="switchTab('news')">📰 短讯</button>
@@ -167,15 +145,15 @@
             <div class="q-sub" id="q-sub-text"></div>
             
             <div class="audio-group">
-              <button class="btn-audio" id="btn-audio-sys" onclick="playCurrentAudio()">🔊 示范朗读</button>
+              <button class="btn-audio" onclick="playCurrentAudio()">🔊 示范朗读</button>
               <button class="btn-audio btn-audio-user" id="btn-audio-user" style="display:none;" onclick="playUserAudio()">🎙️ 我的原声</button>
             </div>
 
             <div id="cloze-interactive-wrap" class="cloze-input-wrap" style="display: none;">
               <div class="cloze-sentence-preview" id="cloze-sentence-display"></div>
               <div style="display: flex; gap: 6px;">
-                <input type="text" id="cloze-input-field" class="cloze-field" style="flex:1;" placeholder="敲入挖空的正确单词..." onkeydown="if(event.key==='Enter') submitClozeAnswer()">
-                <button type="button" class="btn-inline-action" style="background:#8b5cf6;" id="btn-cloze-strict-voice" onclick="toggleStrictVoiceInput('cloze-input-field', 'btn-cloze-strict-voice')">🎙️ 严格语音</button>
+                <input type="text" id="cloze-input-field" class="cloze-field" style="flex:1;" placeholder="敲入挖空的单词..." onkeydown="if(event.key==='Enter') submitClozeAnswer()">
+                <button type="button" class="btn-inline-action" style="background:#8b5cf6;" id="btn-cloze-strict-voice" onclick="toggleClozeVoiceInput()">🎙️ AI 语音填空</button>
               </div>
               <button class="btn-submit" style="background:#10b981; padding:9px;" onclick="submitClozeAnswer()">提交验证</button>
             </div>
@@ -190,28 +168,26 @@
         <div>
           <button class="btn btn-reveal" id="btn-reveal" onclick="revealAnswer()">👀 揭晓答案</button>
           <div class="actions" id="action-btns" style="display: none;">
-            <button class="btn btn-fail" onclick="handleResult(false)">❌ 记错了 (受到攻击)</button>
-            <button class="btn btn-success" onclick="handleResult(true)">✅ 记对了 (暴击斩杀)</button>
+            <button class="btn btn-fail" onclick="handleResult(false)">❌ 记错了</button>
+            <button class="btn btn-success" onclick="handleResult(true)">✅ 记对了</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 2. 短讯与训练台模块 -->
+    <!-- 2. 短讯模块 -->
     <div id="view-news" class="view-section">
       <div class="news-layout">
-        <!-- 左侧 -->
         <div class="news-left-pane">
           <div style="display: flex; justify-content: space-between; align-items: center;">
-            <span style="font-size: 13px; font-weight: bold; color: var(--accent);">📰 今日科技资讯</span>
+            <span style="font-size: 13px; font-weight: bold; color: var(--accent);">📰 科技资讯 <span style="font-size:11px; color:#cbd5e1;">(💡 单词短按查词，长按练句)</span></span>
             <button onclick="loadDailyNews()" class="btn-small">🔄 刷新</button>
           </div>
           <div id="news-cards-container">
-            <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 20px;">正在加载精选短讯...</div>
+            <div style="font-size: 12px; color: var(--text-dim); text-align: center; padding: 20px;">正在加载...</div>
           </div>
         </div>
 
-        <!-- 右侧训练台 -->
         <div class="news-right-pane" id="news-train-workspace">
           <div style="font-size: 13px; font-weight: bold; color: var(--accent); margin-bottom: 8px;">🎯 专项实战训练台</div>
           <div class="sub-tabs">
@@ -221,30 +197,25 @@
             <button class="sub-tab-btn" id="tab-btn-scramble" onclick="switchRightTrainMode('scramble')">🧩 拼图</button>
           </div>
 
-          <div id="train-text-normal-wrap">
-            <div class="train-target-box" id="train-target-display">点击左侧短讯的【练这段/这句】载入。</div>
-          </div>
-          <div id="train-text-blind-wrap" style="display: none;" class="blind-curtain">
-            🔒 原文已隐藏，请专心听音拼写
-          </div>
+          <div id="train-text-normal-wrap"><div class="train-target-box" id="train-target-display">点击左侧文本载入。</div></div>
+          <div id="train-text-blind-wrap" style="display: none;" class="blind-curtain">🔒 原文已隐藏，请专心听音</div>
 
           <div style="display: flex; gap: 8px; margin-bottom: 10px;">
-            <button class="btn-audio" onclick="playCurrentTrainAudio(1.0)">🔊 原速 (1.0x)</button>
-            <button class="btn-audio" style="background:#0369a1;" onclick="playCurrentTrainAudio(0.8)">🐢 慢速 (0.8x)</button>
+            <button class="btn-audio" onclick="playCurrentTrainAudio(1.0)">🔊 AI 拟真原速</button>
+            <button class="btn-audio" style="background:#0369a1;" onclick="playCurrentTrainAudio(0.8)">🐢 AI 慢速精听</button>
           </div>
 
-          <!-- 子模式 1: 跟读 -->
+          <!-- 无限制跟读 -->
           <div id="pane-shadow">
-            <button id="btn-start-shadow" class="btn-submit" style="background:#8b5cf6;" onclick="toggleStrictShadowRecognition()">🎙️ 开始跟读 (再按停止)</button>
+            <button id="btn-start-shadow" class="btn-submit" style="background:#8b5cf6;" onclick="toggleShadowRecording()">🎙️ 开始跟读 (无时长限制，读完点停止)</button>
             <div id="shadow-result-box" style="display: none; margin-top: 8px; font-size: 12px; line-height: 1.6;"></div>
           </div>
-          <!-- 子模式 2: 盲听听写 -->
+          <!-- 盲听听写 -->
           <div id="pane-dict" style="display: none;">
-            <textarea id="dictation-user-input" class="form-control" placeholder="盲听上方音频，敲入听到的完整英文..."></textarea>
+            <textarea id="dictation-user-input" class="form-control" placeholder="盲听上方音频，输入听到的英文..."></textarea>
             <button class="btn-submit" style="background:#059669; margin-top: 6px;" onclick="gradeBlindDictation()">✍️ 提交比对 (解锁原文)</button>
             <div id="dict-result-box" style="display: none; margin-top: 8px; font-size: 12px; line-height: 1.6;"></div>
           </div>
-          <!-- 子模式 3: 仿写 -->
           <div id="pane-craft" style="display: none;">
             <button class="btn-small" style="background:#0284c7; width:100%; padding:6px; margin-bottom:8px;" onclick="extractSentenceFrame()">💡 提炼句式骨架</button>
             <div id="frame-display-box" style="font-size: 12px; color: #a5f3fc; background: var(--card-inner); padding: 8px; border-radius: 8px; margin-bottom: 8px; display:none; border:1px dashed var(--border);"></div>
@@ -252,10 +223,8 @@
             <button class="btn-submit" style="background:#6366f1; margin-top: 6px;" onclick="gradeSentenceCrafting()">🤖 提交大模型批改</button>
             <div id="craft-result-box" style="display: none; margin-top: 8px; font-size: 12px; line-height: 1.6;"></div>
           </div>
-          <!-- 子模式 4: 拼图 -->
           <div id="pane-scramble" style="display: none;">
             <div class="scramble-zone" id="scramble-chips-pool"></div>
-            <div style="font-size: 11px; color: var(--accent); margin-bottom: 4px;">拼装结果：</div>
             <div class="scramble-zone" id="scramble-assembled-zone"></div>
             <div style="display:flex; gap:6px;">
               <button class="btn-small" onclick="resetScramblePuzzle()">🔄 重置</button>
@@ -266,57 +235,53 @@
       </div>
     </div>
 
-    <!-- 3. 全新合并：助教智录工坊 (含配置抽屉) -->
+    <!-- 3. 助教智录工坊 -->
     <div id="view-ai" class="view-section">
       <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 16px; max-width: 620px; width:100%; margin: 0 auto;">
         
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-          <h3 style="color: var(--accent); font-size: 15px;">🤖 助教与智录工坊</h3>
-          <button onclick="toggleApiSettings()" class="btn-small" style="color:var(--accent);">⚙️ 模型配置与安全</button>
+          <h3 style="color: var(--accent); font-size: 15px;">🤖 助教智录工坊</h3>
+          <button onclick="toggleApiSettings()" class="btn-small" style="color:var(--accent);">⚙️ API 模型配置</button>
         </div>
 
-        <!-- API 配置抽屉 -->
+        <!-- 纯 AI 模型全参数配置抽屉 -->
         <div id="api-config-panel" style="display: none; background: var(--card-inner); padding: 12px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 12px;">
-          <div class="security-alert-box">
-            <b>⚠️ 极重要安全警示：</b> Key 仅保存在本地沙盒，请勿截图外传！
-          </div>
-          <div style="display: flex; gap: 6px; margin-bottom: 10px;">
-            <button type="button" class="btn-small" style="flex:1; background:#1e293b;" onclick="applyApiPreset('silicon')">硅基流动 (推荐免费)</button>
-            <button type="button" class="btn-small" style="flex:1; background:#1e293b;" onclick="applyApiPreset('deepseek')">DeepSeek 官方</button>
-          </div>
+          <div class="security-alert-box"><b>⚠️ 安全警示：</b> Key 仅保存在本地沙盒，打死都不要发给别人！</div>
           <div class="form-group">
             <label>API 端点 (Base URL)</label>
             <input type="text" id="llm-base-url" class="form-control" value="https://api.siliconflow.cn/v1">
           </div>
           <div class="form-group">
-            <label>模型名称 (Model)</label>
-            <select id="llm-model-select" class="form-control" onchange="handleModelSelectChange()">
-              <optgroup label="硅基流动 (SiliconFlow) 推荐">
-                <option value="Qwen/Qwen2.5-7B-Instruct">Qwen/Qwen2.5-7B-Instruct (免费·秒开)</option>
-                <option value="THUDM/glm-4-9b-chat">THUDM/glm-4-9b-chat (免费·中文地道)</option>
-                <option value="deepseek-ai/DeepSeek-V3">deepseek-ai/DeepSeek-V3 (全能批改)</option>
-              </optgroup>
-              <optgroup label="DeepSeek 官方">
-                <option value="deepseek-chat">deepseek-chat (V3 通用)</option>
-              </optgroup>
-              <option value="__custom__">✍️ 自定义模型...</option>
-            </select>
-            <input type="text" id="llm-model-custom" class="form-control" style="display:none; margin-top:6px;" placeholder="自定义模型名">
-          </div>
-          <div class="form-group">
             <label>API Key (密钥)</label>
             <input type="password" id="llm-api-key" class="form-control" placeholder="sk-...">
           </div>
-          <button type="button" class="btn-submit" style="padding: 8px; font-size: 12px;" onclick="saveApiConfig()">保存配置</button>
+          <div class="form-group">
+            <label>🧠 文本大模型 (查词/批改/提炼)</label>
+            <select id="llm-model-select" class="form-control" onchange="handleModelSelectChange()">
+              <option value="Qwen/Qwen2.5-7B-Instruct">Qwen/Qwen2.5-7B-Instruct (免费)</option>
+              <option value="THUDM/glm-4-9b-chat">THUDM/glm-4-9b-chat (免费)</option>
+              <option value="deepseek-ai/DeepSeek-V3">deepseek-ai/DeepSeek-V3</option>
+              <option value="__custom__">✍️ 自定义模型...</option>
+            </select>
+            <input type="text" id="llm-model-custom" class="form-control" style="display:none; margin-top:6px;">
+          </div>
+          <div class="form-group">
+            <label>🎙️ 语音听写大模型 (ASR)</label>
+            <input type="text" id="asr-model" class="form-control" value="FunAudioLLM/SenseVoiceSmall">
+          </div>
+          <div class="form-group">
+            <label>🔊 拟真语音合成大模型 (TTS)</label>
+            <input type="text" id="tts-model" class="form-control" value="FunAudioLLM/CosyVoice-300M-SFT">
+          </div>
+          <button type="button" class="btn-submit" style="padding: 8px; font-size: 12px;" onclick="saveApiConfig()">保存全套配置</button>
         </div>
 
-        <!-- 助教二级子标签 -->
         <div class="sub-tabs">
-          <button class="sub-tab-btn active" id="btn-sub-ai-lookup" onclick="switchAiSubTab('lookup')">💬 查词与卡片工坊</button>
+          <button class="sub-tab-btn active" id="btn-sub-ai-lookup" onclick="switchAiSubTab('lookup')">💬 查词与卡片录制</button>
           <button class="sub-tab-btn" id="btn-sub-ai-essay" onclick="switchAiSubTab('essay')">✍️ 作文批改与润色</button>
         </div>
 
-        <!-- 子板块 1: 查词与智录集成 -->
+        <!-- 查词卡片工坊 -->
         <div id="ai-subpane-lookup">
           <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
             <label style="font-size: 12px; color: var(--text-dim); font-weight: 600;">输入生词或短语进行剖析录入 *</label>
@@ -324,28 +289,27 @@
           </div>
           <div style="display: flex; gap: 6px; margin-bottom: 12px;">
             <input type="text" id="input-word" class="form-control" placeholder="输入生词...">
-            <button type="button" class="btn-inline-action" style="background:#8b5cf6;" id="btn-ai-query-voice" onclick="toggleTolerantVoiceInput('input-word', 'btn-ai-query-voice')">🎙️ 语音</button>
-            <button type="button" class="btn-inline-action" style="background:#0284c7;" onclick="runAiDeepAnalysisAndFill()">⚡ 剖析</button>
+            <button type="button" class="btn-inline-action" style="background:#8b5cf6;" id="btn-ai-query-voice" onclick="toggleTolerantVoiceInput('input-word', 'btn-ai-query-voice')">🎙️ 语音输入</button>
+            <button type="button" class="btn-inline-action" style="background:#0284c7;" onclick="runAiDeepAnalysisAndFill()">⚡ 智能剖析</button>
           </div>
-
           <div class="form-group">
             <label>音标 (IPA)</label>
-            <input type="text" id="input-ipa" class="form-control" placeholder="智能填充，可手动修改">
+            <input type="text" id="input-ipa" class="form-control" placeholder="智能填充...">
           </div>
           <div class="form-group">
             <label>深度释义与助记 *</label>
-            <textarea id="input-meaning" class="form-control" placeholder="智能填充，可手动修改..."></textarea>
+            <textarea id="input-meaning" class="form-control" placeholder="智能填充..."></textarea>
           </div>
           <div class="form-group">
             <label>场景例句 [选填]</label>
-            <textarea id="input-sentence" class="form-control" placeholder="智能填充，可手动修改..."></textarea>
+            <textarea id="input-sentence" class="form-control" placeholder="智能填充..."></textarea>
           </div>
 
           <div class="form-group">
-            <label>🎙️ 附加我的原声 (原声听写题)</label>
+            <label>🎙️ 附加我的原声 (支持原声盲听复习)</label>
             <div class="record-monitor-bar">
               <div style="display: flex; align-items: center; gap: 6px;">
-                <button type="button" class="btn-small" style="background:#ef4444; color:#fff;" id="btn-toggle-record" onclick="toggleUserRecording()">● 开始录音</button>
+                <button type="button" class="btn-small" style="background:#ef4444; color:#fff;" id="btn-toggle-record" onclick="toggleCardVoiceRecording()">● 开始录音</button>
                 <span class="record-timer" id="record-live-timer">00:00</span>
               </div>
               <div class="vocal-waves" id="record-vocal-waves">
@@ -355,75 +319,55 @@
               <button type="button" id="btn-preview-record" style="display:none;" class="btn-small" onclick="previewRecordedVoice()">▶ 试听</button>
             </div>
           </div>
-
           <div class="form-group">
             <label>分类</label>
             <select id="input-category" class="form-control">
-              <option value="English">🗣️ 英语词汇 (English)</option>
-              <option value="Sentence">⭐ 地道金句 (Sentences)</option>
-              <option value="Code">💻 编程代码 (Coding)</option>
+              <option value="English">🗣️ 英语词汇</option>
+              <option value="Sentence">⭐ 地道金句</option>
             </select>
           </div>
-          
           <div style="display: flex; gap: 8px; margin-top: 12px;">
-             <button class="btn-audio" style="flex:1;" onclick="playAudioStream(document.getElementById('input-word').value, 1.0)">🔊 试听拼读</button>
+             <button class="btn-audio" style="flex:1;" onclick="playAudioStream(document.getElementById('input-word').value, 1.0)">🔊 试听发音</button>
              <button id="btn-submit-card" class="btn-submit" style="flex:2; background:#10b981;" onclick="saveOrUpdateCard()">💾 存入复习流</button>
           </div>
         </div>
 
-        <!-- 子板块 2: 作文批改 -->
         <div id="ai-subpane-essay" style="display: none;">
-          <div class="form-group">
-            <label>输入你的英文习作</label>
-            <textarea id="essay-user-input" class="form-control" style="min-height: 90px;" placeholder="在此输入短文..."></textarea>
-          </div>
+          <textarea id="essay-user-input" class="form-control" style="min-height: 90px; margin-bottom: 8px;" placeholder="在此输入短文..."></textarea>
           <button class="btn-submit" style="background:#8b5cf6;" onclick="runEssayCorrection()">✍️ 诊断与润色</button>
-
           <div id="essay-result-box" style="display: none; margin-top: 12px; background: var(--card-inner); border: 1px solid var(--border); border-radius: 10px; padding: 12px; font-size: 13px; line-height: 1.6;">
-            <div style="font-weight: bold; color: #f87171; margin-bottom: 4px;">🔍 诊断：</div>
-            <div id="essay-diagnosis" style="color: #cbd5e1; margin-bottom: 8px; white-space: pre-wrap;"></div>
-            <div style="font-weight: bold; color: #34d399; margin-bottom: 4px;">🌟 地道范文：</div>
-            <div id="essay-polished" style="color: #a5f3fc; background: rgba(56, 189, 248, 0.08); padding: 8px; border-radius: 6px; margin-bottom: 10px; font-weight: 500;"></div>
+            <div style="font-weight: bold; color: #f87171; margin-bottom: 4px;">🔍 诊断：</div><div id="essay-diagnosis" style="color: #cbd5e1; margin-bottom: 8px; white-space: pre-wrap;"></div>
+            <div style="font-weight: bold; color: #34d399; margin-bottom: 4px;">🌟 地道范文：</div><div id="essay-polished" style="color: #a5f3fc; background: rgba(56, 189, 248, 0.08); padding: 8px; border-radius: 6px; margin-bottom: 10px;"></div>
             <button class="btn-submit" style="background:#0284c7;" onclick="sendEssayToRightTraining()">🎯 推送至右侧训练台</button>
           </div>
         </div>
-
       </div>
     </div>
 
-    <!-- 4. 词库模块 -->
+    <!-- 4. 词库 -->
     <div id="view-list" class="view-section">
-      <div class="backup-banner" id="backup-reminder-banner">
-        <div>
-          <div class="backup-banner-title">💡 本地数据安全提示</div>
-          <div class="backup-banner-desc">数据存放在浏览器本地，请常点右上角【备份】导出 .json 留存。</div>
-        </div>
-        <button class="banner-close-btn" onclick="dismissBackupBanner()">✕</button>
-      </div>
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
         <span style="font-size: 13px; color: var(--text-dim);">知识库 (<span id="total-count-label">0</span>)</span>
         <div style="display: flex; gap: 6px;">
           <input type="file" id="file-import-input" accept=".json" style="display: none;" onchange="handleFileImport(event)">
-          <button onclick="triggerImport()" class="btn-small" style="color:var(--accent);">📥 导入</button>
+          <button onclick="triggerImport()" class="btn-small">📥 导入</button>
           <button onclick="exportData()" class="btn-small" style="color:#a5f3fc;">📤 备份</button>
         </div>
       </div>
-      <div id="card-list-container" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; max-height: calc(100vh - 220px);"></div>
+      <div id="card-list-container" style="display: flex; flex-direction: column; gap: 8px; overflow-y: auto; max-height: calc(100vh - 120px);"></div>
     </div>
   </div>
 
-  <!-- 点词即查弹窗 -->
   <div class="modal-overlay" id="word-lookup-modal" onclick="closeWordModal(event)">
     <div class="modal-sheet" onclick="event.stopPropagation()">
       <div class="modal-header">
         <div>
-          <span class="modal-word" id="m-word">Loading...</span>
-          <span id="m-ipa" style="font-size: 13px; color: #a5f3fc; font-family: monospace; margin-left: 8px;">/--/</span>
+          <span class="modal-word" id="m-word">Loading...</span><span id="m-ipa" style="font-size: 13px; color: #a5f3fc; font-family: monospace; margin-left: 8px;">/--/</span>
         </div>
-        <button class="banner-close-btn" onclick="hideWordModal()" style="font-size: 18px;">✕</button>
+        <button class="btn-small" style="background:none;" onclick="hideWordModal()" style="font-size: 18px;">✕</button>
       </div>
       <div style="margin: 6px 0 12px 0; display:flex; gap:6px;">
-        <button class="btn-audio" onclick="playAudioStream(document.getElementById('m-word').innerText, 1.0)">🔊 朗读示范</button>
+        <button class="btn-audio" onclick="playAudioStream(document.getElementById('m-word').innerText, 1.0)">🔊 试听发音</button>
         <button class="btn-audio" style="background:#8b5cf6;" onclick="trainModalWordInRightPane()">🗣️ 载入训练台</button>
       </div>
       <div style="background: var(--card-inner); border: 1px solid var(--border); padding: 10px; border-radius: 8px; margin-bottom: 12px;">
@@ -435,19 +379,10 @@
 
   <script>
     const SPACING_DAYS = [0, 1, 4, 18, 90];
-    const MOTHER_GODDESS_SVG = `
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; filter: drop-shadow(0 0 4px rgba(251,191,36,0.6));">
-        <circle cx="12" cy="4" r="2" fill="#fbbf24" />
-        <path d="M5 8c0 3 4 4 7 4s7-1 7-4" />
-        <path d="M12 10v3" />
-        <path d="M9.5 13h5l2.5 8H7l2.5-8z" fill="rgba(251,191,36,0.2)" />
-      </svg>
-    `;
+    const MOTHER_GODDESS_SVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; filter: drop-shadow(0 0 4px rgba(251,191,36,0.6));"><circle cx="12" cy="4" r="2" fill="#fbbf24" /><path d="M5 8c0 3 4 4 7 4s7-1 7-4" /><path d="M12 10v3" /><path d="M9.5 13h5l2.5 8H7l2.5-8z" fill="rgba(251,191,36,0.2)" /></svg>`;
     const RPG_RANKS = [
-      { maxExp: 100, pattern: "🥚", title: "Lv.1 沉睡灵卵", desc: "积蓄破壳灵气" },
-      { maxExp: 300, pattern: "🐣", title: "Lv.2 破壳初醒", desc: "掌握高频基础" },
-      { maxExp: 700, pattern: "🐍", title: "Lv.3 通灵小蛇", desc: "穿梭自如" },
-      { maxExp: 1500, pattern: "🧜‍♀️", title: "Lv.4 半蛇半人", desc: "骨骼蜕变" },
+      { maxExp: 100, pattern: "🥚", title: "Lv.1 沉睡灵卵", desc: "积蓄破壳灵气" }, { maxExp: 300, pattern: "🐣", title: "Lv.2 破壳初醒", desc: "掌握高频基础" },
+      { maxExp: 700, pattern: "🐍", title: "Lv.3 通灵小蛇", desc: "穿梭自如" }, { maxExp: 1500, pattern: "🧜‍♀️", title: "Lv.4 半蛇半人", desc: "骨骼蜕变" },
       { maxExp: 99999, isSvg: true, pattern: MOTHER_GODDESS_SVG, title: "Lv.5 地母神女", desc: "羽化圆满" }
     ];
 
@@ -457,364 +392,316 @@
     let scrambleCorrectTokens = [], scrambleUserTokens = [];
     let isSoundFXOn = true, userExp = 0, userRankIndex = 0;
     
-    let audioContext = null, userMediaStream = null, userMediaRecorder = null;
-    let userAudioChunks = [], userRecordedBase64 = null, isUserRecording = false;
-    let recordTimerInterval = null, recordStartTime = 0, vocalVolumeInterval = null, maxRecordedVolume = 0;
-    
-    let activeRecognizer = null, activeRecognizerBtnId = null, recognizerWatchdogTimer = null;
+    // 全局录音核心 (AI 听写与原声复习共用)
+    let globalMediaStream = null, globalMediaRecorder = null, globalAudioChunks = [];
+    let isGenericRecording = false; 
+
+    // 卡片专属录音变量
+    let userRecordedBase64 = null;
+    let vocalVolumeInterval = null, recordTimerInterval = null, recordStartTime = 0;
+
     let modalPendingData = null;
 
     function initApp() {
-      const savedCards = localStorage.getItem("ebbinghaus_v8_cards") || localStorage.getItem("ebbinghaus_v7_cards");
+      const savedCards = localStorage.getItem("ebbinghaus_v9_cards") || localStorage.getItem("ebbinghaus_v8_cards");
       cards = savedCards ? JSON.parse(savedCards) : [{ id: "d1", word: "Variable", ipa: "/ˈver.i.ə.bəl/", meaning: "变量", category: "Code", sentence: "A variable stores critical data.", userAudio: null, streak: 0, nextReviewTime: Date.now() - 1000 }];
-      userExp = parseInt(localStorage.getItem("rpg_exp") || "0");
-      userRankIndex = parseInt(localStorage.getItem("rpg_rank_index") || "0");
-      isSoundFXOn = localStorage.getItem("rpg_sound_fx") !== "0";
+      userExp = parseInt(localStorage.getItem("rpg_exp") || "0"); userRankIndex = parseInt(localStorage.getItem("rpg_rank_index") || "0"); isSoundFXOn = localStorage.getItem("rpg_sound_fx") !== "0";
 
-      if (localStorage.getItem("dismiss_backup_banner") === "1") document.getElementById('backup-reminder-banner').style.display = 'none';
       document.getElementById('llm-base-url').value = localStorage.getItem('llm_base_url') || 'https://api.siliconflow.cn/v1';
       document.getElementById('llm-api-key').value = localStorage.getItem('llm_api_key') || '';
+      document.getElementById('asr-model').value = localStorage.getItem('asr_model') || 'FunAudioLLM/SenseVoiceSmall';
+      document.getElementById('tts-model').value = localStorage.getItem('tts_model') || 'FunAudioLLM/CosyVoice-300M-SFT';
       initModelDropdown(localStorage.getItem('llm_model') || 'Qwen/Qwen2.5-7B-Instruct');
       
       updateRpgUI(); updateSoundUI(); pickNextCard(); loadDailyNews(); renderCardList();
     }
+    function saveCardsToStorage() { localStorage.setItem("ebbinghaus_v9_cards", JSON.stringify(cards)); document.getElementById('total-count-label').innerText = cards.length; }
 
-    function saveCardsToStorage() { localStorage.setItem("ebbinghaus_v8_cards", JSON.stringify(cards)); document.getElementById('total-count-label').innerText = cards.length; }
-
-    /* Web Audio 音效 */
-    function getAudioCtx() { if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)(); return audioContext; }
+    /* Web Audio 纯代码音效 */
+    let audioContext = null; function getAudioCtx() { if (!audioContext) audioContext = new (window.AudioContext || window.webkitAudioContext)(); return audioContext; }
     function playSoundFX(type) {
       if (!isSoundFXOn) return;
       try {
         const ctx = getAudioCtx(); if (ctx.state === 'suspended') ctx.resume();
-        if (type === 'coin') {
-          const o1 = ctx.createOscillator(), o2 = ctx.createOscillator(), g = ctx.createGain();
-          o1.type = 'sine'; o2.type = 'sine';
-          o1.frequency.setValueAtTime(987.77, ctx.currentTime); o2.frequency.setValueAtTime(1318.51, ctx.currentTime + 0.08);
-          g.gain.setValueAtTime(0.12, ctx.currentTime); g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35);
-          o1.connect(g); o2.connect(g); g.connect(ctx.destination);
-          o1.start(ctx.currentTime); o1.stop(ctx.currentTime + 0.08); o2.start(ctx.currentTime + 0.08); o2.stop(ctx.currentTime + 0.35);
-        } else if (type === 'hurt') {
-          const o = ctx.createOscillator(), g = ctx.createGain(); o.type = 'triangle';
-          o.frequency.setValueAtTime(160, ctx.currentTime); o.frequency.exponentialRampToValueAtTime(90, ctx.currentTime + 0.25);
-          g.gain.setValueAtTime(0.15, ctx.currentTime); g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
-          o.connect(g); g.connect(ctx.destination); o.start(ctx.currentTime); o.stop(ctx.currentTime + 0.25);
-        }
+        if (type === 'coin') { const o1=ctx.createOscillator(), o2=ctx.createOscillator(), g=ctx.createGain(); o1.type='sine'; o2.type='sine'; o1.frequency.setValueAtTime(987.77, ctx.currentTime); o2.frequency.setValueAtTime(1318.51, ctx.currentTime + 0.08); g.gain.setValueAtTime(0.12, ctx.currentTime); g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.35); o1.connect(g); o2.connect(g); g.connect(ctx.destination); o1.start(ctx.currentTime); o1.stop(ctx.currentTime + 0.08); o2.start(ctx.currentTime + 0.08); o2.stop(ctx.currentTime + 0.35); } 
+        else if (type === 'hurt') { const o=ctx.createOscillator(), g=ctx.createGain(); o.type='triangle'; o.frequency.setValueAtTime(160, ctx.currentTime); o.frequency.exponentialRampToValueAtTime(90, ctx.currentTime + 0.25); g.gain.setValueAtTime(0.15, ctx.currentTime); g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25); o.connect(g); g.connect(ctx.destination); o.start(ctx.currentTime); o.stop(ctx.currentTime + 0.25); }
       } catch (e) {}
     }
     function toggleSoundFX() { isSoundFXOn = !isSoundFXOn; localStorage.setItem("rpg_sound_fx", isSoundFXOn ? "1" : "0"); updateSoundUI(); }
     function updateSoundUI() { document.getElementById('sound-toggle-btn').innerText = isSoundFXOn ? "🔊 音效: 开" : "🔇 音效: 关"; }
 
-    /* RPG 系统 */
     function addExp(pts, rsn="") {
       userExp += pts; let up = false;
       if (userExp >= RPG_RANKS[userRankIndex].maxExp && userRankIndex < RPG_RANKS.length - 1) { userRankIndex++; up = true; }
       localStorage.setItem("rpg_exp", userExp); localStorage.setItem("rpg_rank_index", userRankIndex);
       updateRpgUI(); showRpgToast(up ? `🏆 晋升【${RPG_RANKS[userRankIndex].title}】！` : `⚡ ${rsn} +${pts} EXP`);
     }
-    function updateRpgUI() {
-      const r = RPG_RANKS[userRankIndex], slot = document.getElementById('rank-pattern-slot');
-      r.isSvg ? slot.innerHTML = r.pattern : slot.innerText = r.pattern;
-      document.getElementById('rpg-exp-text').innerText = `EXP: ${userExp}/${r.maxExp}`;
-    }
+    function updateRpgUI() { const r = RPG_RANKS[userRankIndex], slot = document.getElementById('rank-pattern-slot'); r.isSvg ? slot.innerHTML = r.pattern : slot.innerText = r.pattern; document.getElementById('rpg-exp-text').innerText = `EXP: ${userExp}/${r.maxExp}`; }
     function showRankDetailPopup() { const r = RPG_RANKS[userRankIndex]; alert(`【${r.title}】\n${r.desc}\nEXP: ${userExp}/${r.maxExp}`); }
     function showRpgToast(m) { const t = document.getElementById('rpg-toast'); t.innerText = m; t.style.display = 'block'; setTimeout(() => t.style.display = 'none', 1600); }
 
-    /* UI 切换 */
     function switchTab(tabId) {
       ['review', 'news', 'ai', 'list'].forEach(id => document.getElementById(`view-${id}`).classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach((b, idx) => b.classList.toggle('active', ['review', 'news', 'ai', 'list'][idx] === tabId));
       document.getElementById(`view-${tabId}`).classList.add('active');
       if (tabId === 'review') pickNextCard(); if (tabId === 'list') renderCardList();
     }
-    function dismissBackupBanner() { document.getElementById('backup-reminder-banner').style.display = 'none'; localStorage.setItem("dismiss_backup_banner", "1"); }
 
-    /* 音频播放 (防盗链有道 + 本地离线兜底) */
-    function playAudioStream(text, rate = 1.0) {
+    /* 核心 1：完全基于 AI 的 TTS (语音合成) */
+    async function playAudioStream(text, rate = 1.0) {
       if (!text || !text.trim()) return;
-      const clean = text.trim();
-      
-      // 取消之前的本地合成语音防止卡死
+      const k = localStorage.getItem('llm_api_key');
+      if (k) {
+        try {
+          const ttsModel = localStorage.getItem('tts_model') || 'FunAudioLLM/CosyVoice-300M-SFT';
+          const r = await fetch(`${localStorage.getItem('llm_base_url')}/audio/speech`, {
+            method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` },
+            body: JSON.stringify({ model: ttsModel, input: text.trim(), voice: "alex" })
+          });
+          if (r.ok) {
+             const blob = await r.blob();
+             const audio = new Audio(URL.createObjectURL(blob));
+             audio.playbackRate = rate; audio.play();
+             return; // AI 播放成功，直接返回
+          }
+        } catch(e) { console.warn("AI TTS 失败，降级本地"); }
+      }
+      // 断网或无 Key 时降级系统本地 TTS
       window.speechSynthesis.cancel(); 
-      
-      const audioUrl = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(clean)}&type=2`;
-      const audio = new Audio(audioUrl);
-      audio.playbackRate = rate;
-      
-      audio.play().catch(err => {
-        console.warn("网络发音拦截或失败，自动降级为离线本地 TTS:", err);
-        const u = new SpeechSynthesisUtterance(clean);
-        u.lang = 'en-US';
-        u.rate = rate === 1.0 ? 0.9 : rate; // 略微调慢原生速度使之更清晰
-        window.speechSynthesis.speak(u);
-      });
+      const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = rate === 1.0 ? 0.9 : rate;
+      window.speechSynthesis.speak(u);
     }
-
     function playCurrentAudio() { if (currentQuizCard && currentQuizCard.word) playAudioStream(currentQuizCard.word, 1.0); }
     function playUserAudio() { if (currentQuizCard && currentQuizCard.userAudio) new Audio(currentQuizCard.userAudio).play(); }
 
-    /* 复习流程 */
-    function pickNextCard() {
-      const now = Date.now(), due = cards.filter(c => c.nextReviewTime <= now), qb = document.getElementById('quiz-card-box');
-      if (!due.length) { qb.innerHTML = `<div style="text-align:center; padding:40px 10px; color:var(--text-dim);"><h3 style="color:#38bdf8;">🎉 今日复习流已通关！</h3></div>`; return; }
-      
-      currentQuizCard = due[Math.floor(Math.random() * due.length)];
-      const types = ['word_to_meaning', 'meaning_to_word'];
-      if (currentQuizCard.sentence) types.push('cloze');
-      if (currentQuizCard.userAudio) types.push('user_audio');
-      currentQuizType = types[Math.floor(Math.random() * types.length)];
-
-      document.getElementById('answer-box').style.display = 'none'; document.getElementById('action-btns').style.display = 'none'; document.getElementById('btn-reveal').style.display = 'block'; document.getElementById('cloze-interactive-wrap').style.display = 'none';
-      document.getElementById('btn-audio-user').style.display = currentQuizCard.userAudio ? 'inline-flex' : 'none';
-      document.getElementById('q-streak-label').innerText = `连胜: 🔥 ${currentQuizCard.streak}`;
-
-      if (currentQuizType === 'word_to_meaning') {
-        document.getElementById('q-mode-label').innerText = '🔤 回忆释义'; document.getElementById('q-main-text').innerText = currentQuizCard.word; document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`;
-      } else if (currentQuizType === 'meaning_to_word') {
-        document.getElementById('q-mode-label').innerText = '🇨🇳 回忆英文'; document.getElementById('q-main-text').innerText = currentQuizCard.meaning; document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`;
-      } else if (currentQuizType === 'user_audio') {
-        document.getElementById('q-mode-label').innerText = '🎙️ 原声回忆'; document.getElementById('q-main-text').innerText = "🎧 正在播放..."; playUserAudio();
-      } else if (currentQuizType === 'cloze') {
-        document.getElementById('q-mode-label').innerText = '🧩 真填空题'; document.getElementById('q-main-text').innerText = currentQuizCard.meaning; document.getElementById('q-sub-text').innerText = "补全单词：";
-        document.getElementById('cloze-sentence-display').innerText = currentQuizCard.sentence.replace(new RegExp(currentQuizCard.word, "gi"), " [ ______ ] ");
-        document.getElementById('cloze-input-field').value = ""; document.getElementById('cloze-interactive-wrap').style.display = 'flex'; document.getElementById('btn-reveal').style.display = 'none';
-      }
-      document.getElementById('ans-title').innerText = currentQuizCard.word; document.getElementById('ans-ipa').innerText = currentQuizCard.ipa || ''; document.getElementById('ans-meaning').innerText = currentQuizCard.meaning; document.getElementById('ans-sentence').innerText = currentQuizCard.sentence ? `例句: ${currentQuizCard.sentence}` : '';
-    }
-    function submitClozeAnswer() {
-      const typed = document.getElementById('cloze-input-field').value.trim(); if (!typed) return;
-      revealAnswer(); handleResult(typed.toLowerCase() === currentQuizCard.word.toLowerCase());
-    }
-    function revealAnswer() { document.getElementById('answer-box').style.display = 'block'; document.getElementById('btn-reveal').style.display = 'none'; document.getElementById('action-btns').style.display = 'grid'; playCurrentAudio(); }
-    function handleResult(isCorrect) {
-      if (!currentQuizCard) return;
-      if (isCorrect) { playSoundFX('coin'); currentQuizCard.streak++; addExp(15, "暴击秒杀！"); currentQuizCard.nextReviewTime = Date.now() + SPACING_DAYS[Math.min(currentQuizCard.streak, 4)] * 86400000; }
-      else { playSoundFX('hurt'); currentQuizCard.streak = 0; showRpgToast("🛡️ 被破防 (HP-15)"); currentQuizCard.nextReviewTime = Date.now() + 600000; }
-      saveCardsToStorage(); pickNextCard();
-    }
-
-    /* 语音识别中枢 (带 5 秒看门狗与输入法替代指引) */
-    function stopActiveVoiceRecognizer() {
-      if (recognizerWatchdogTimer) { clearTimeout(recognizerWatchdogTimer); recognizerWatchdogTimer = null; }
-      if (activeRecognizer) { try { activeRecognizer.abort(); } catch (e) {} activeRecognizer = null; }
-      if (activeRecognizerBtnId) {
-        const b = document.getElementById(activeRecognizerBtnId);
-        if (b) { b.style.background = "#8b5cf6"; b.innerText = activeRecognizerBtnId.includes('strict') ? "🎙️ 严格语音" : (activeRecognizerBtnId.includes('shadow') ? "🎙️ 开始跟读" : "🎙️ 语音"); }
-        activeRecognizerBtnId = null;
-      }
-    }
-    function toggleTolerantVoiceInput(inputId, btnId) {
-      if (activeRecognizer && activeRecognizerBtnId === btnId) { stopActiveVoiceRecognizer(); return; }
-      stopActiveVoiceRecognizer();
-      const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!Speech) { alert("当前浏览器不支持原生语音，请直接使用手机键盘自带的【麦克风图标】语音输入！"); return; }
-      const input = document.getElementById(inputId), btn = document.getElementById(btnId);
-      const rec = new Speech(); rec.lang = 'en-US'; activeRecognizer = rec; activeRecognizerBtnId = btnId;
-      btn.innerText = "■ 取消"; btn.style.background = "#ef4444"; input.placeholder = "🎙️ 倾听中...";
-
-      recognizerWatchdogTimer = setTimeout(() => {
-        stopActiveVoiceRecognizer();
-        input.placeholder = "连接超时，请点击输入框使用【手机键盘上的语音键】！";
-        alert("⚠️ 网页原生语音连通失败 (网络受限)。\n💡 完美解决法：请直接点击输入框，调出手机输入法，点击键盘上的【麦克风🎤】即可流畅语音输入！");
-      }, 5000);
-
-      rec.onresult = async (e) => {
-        clearTimeout(recognizerWatchdogTimer);
-        const raw = e.results[0][0].transcript; input.value = "🤖 纠偏中...";
-        input.value = await correctWithLlmSemantic(raw); stopActiveVoiceRecognizer();
-      };
-      rec.onerror = () => stopActiveVoiceRecognizer(); rec.onend = () => stopActiveVoiceRecognizer(); rec.start();
-    }
-    function toggleStrictVoiceInput(inputId, btnId) {
-      if (activeRecognizer && activeRecognizerBtnId === btnId) { stopActiveVoiceRecognizer(); return; }
-      stopActiveVoiceRecognizer();
-      const Speech = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!Speech) { alert("不支持网页语音，请用键盘语音键！"); return; }
-      const input = document.getElementById(inputId), btn = document.getElementById(btnId);
-      const rec = new Speech(); rec.lang = 'en-US'; activeRecognizer = rec; activeRecognizerBtnId = btnId;
-      btn.innerText = "■ 取消"; btn.style.background = "#ef4444"; input.placeholder = "考核中...";
-
-      recognizerWatchdogTimer = setTimeout(() => {
-        stopActiveVoiceRecognizer(); input.placeholder = "连接失败，请手敲";
-        alert("网络受限，请使用手机键盘麦克风输入或直接手敲字母。");
-      }, 5000);
-
-      rec.onresult = (e) => { clearTimeout(recognizerWatchdogTimer); input.value = e.results[0][0].transcript.trim().replace(/[.!?]/g, ''); stopActiveVoiceRecognizer(); };
-      rec.onerror = () => stopActiveVoiceRecognizer(); rec.onend = () => stopActiveVoiceRecognizer(); rec.start();
-    }
-    async function correctWithLlmSemantic(raw) {
-      const key = localStorage.getItem('llm_api_key'); if (!key || !raw) return raw;
-      try {
-        const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${key}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "高容错听写纠正，仅输出修复后的英文单词或短语。" }, { role: "user", content: raw }] }) });
-        const d = await r.json(); return d.choices?.[0]?.message?.content?.trim() || raw;
-      } catch (e) { return raw; }
-    }
-
-    /* 原声录制 (不受墙影响) */
-    async function toggleUserRecording() {
-      const btn = document.getElementById('btn-toggle-record'), tLbl = document.getElementById('record-live-timer'), sTxt = document.getElementById('record-status-text');
-      if (!isUserRecording) {
+    /* 核心 2：纯代码无限制录音底座 */
+    function startGenericRecording() {
+      return new Promise(async (resolve, reject) => {
         try {
-          userMediaStream = await navigator.mediaDevices.getUserMedia({ audio: true }); userMediaRecorder = new MediaRecorder(userMediaStream);
-          userAudioChunks = []; maxRecordedVolume = 0;
-          const ctx = getAudioCtx(); if (ctx.state === 'suspended') ctx.resume();
-          const src = ctx.createMediaStreamSource(userMediaStream), an = ctx.createAnalyser(); an.fftSize = 64; src.connect(an);
-          const da = new Uint8Array(an.frequencyBinCount);
-          vocalVolumeInterval = setInterval(() => {
-            an.getByteFrequencyData(da); let sum = 0; for(let i=0; i<da.length; i++) sum+=da[i]; const avg = sum/da.length;
-            if (avg > maxRecordedVolume) maxRecordedVolume = avg;
-            for(let i=1; i<=5; i++) { const b = document.getElementById(`wb-${i}`); if(b) b.style.height = `${Math.max(3, Math.min(16, (da[i*2] || avg)/16))}px`; }
-          }, 80);
-          recordStartTime = Date.now();
-          recordTimerInterval = setInterval(() => { const sec = Math.floor((Date.now()-recordStartTime)/1000); tLbl.innerText = `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`; }, 500);
-          userMediaRecorder.ondataavailable = e => { if (e.data.size > 0) userAudioChunks.push(e.data); };
-          userMediaRecorder.onstop = () => {
-            clearInterval(vocalVolumeInterval); clearInterval(recordTimerInterval);
-            for(let i=1; i<=5; i++) document.getElementById(`wb-${i}`).style.height = "3px";
-            if (maxRecordedVolume < 2) { alert("⚠️ 零分贝无声音，请检查麦克风权限！"); sTxt.innerText = "录音失败"; userRecordedBase64 = null; document.getElementById('btn-preview-record').style.display = 'none'; return; }
-            const blb = new Blob(userAudioChunks, { type: 'audio/webm' }), rd = new FileReader();
-            rd.readAsDataURL(blb); rd.onloadend = () => { userRecordedBase64 = rd.result; sTxt.innerText = `✅ 已录制 ${Math.round((Date.now()-recordStartTime)/1000)}秒`; document.getElementById('btn-preview-record').style.display = 'inline-block'; };
-          };
-          userMediaRecorder.start(); isUserRecording = true; btn.innerText = "■ 停止并保存"; sTxt.innerText = "🎙️ 正在拾音...";
-        } catch (e) { alert("麦克风唤醒失败"); }
+          globalAudioChunks = [];
+          globalMediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          globalMediaRecorder = new MediaRecorder(globalMediaStream);
+          globalMediaRecorder.ondataavailable = e => { if(e.data.size>0) globalAudioChunks.push(e.data); };
+          globalMediaRecorder.start();
+          resolve();
+        } catch (e) { alert("麦克风启动失败，请检查浏览器权限！"); reject(e); }
+      });
+    }
+    function stopGenericRecording() {
+      return new Promise(resolve => {
+        globalMediaRecorder.onstop = () => {
+          const blob = new Blob(globalAudioChunks, { type: 'audio/webm' });
+          globalMediaStream.getTracks().forEach(t => t.stop());
+          resolve(blob);
+        };
+        globalMediaRecorder.stop();
+      });
+    }
+    /* AI ASR 听写请求 */
+    async function transcribeAudio(audioBlob) {
+      const k = localStorage.getItem('llm_api_key'); if(!k) return null;
+      const formData = new FormData();
+      formData.append('file', audioBlob, 'record.webm');
+      formData.append('model', localStorage.getItem('asr_model') || 'FunAudioLLM/SenseVoiceSmall');
+      try {
+        const res = await fetch(`${localStorage.getItem('llm_base_url')}/audio/transcriptions`, {
+            method: 'POST', headers: { 'Authorization': `Bearer ${k}` }, body: formData
+        });
+        const data = await res.json();
+        return data.text || "";
+      } catch(e) { return null; }
+    }
+    /* AI 文本语义纠偏 */
+    async function correctWithLlmSemantic(raw) {
+      const k = localStorage.getItem('llm_api_key'); if (!k || !raw) return raw;
+      try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "你是一位高容错听写纠正助手。用户读出的可能中英混杂，结合语境纠正并只输出最终文本。" }, { role: "user", content: raw }] }) }); const d = await r.json(); return d.choices?.[0]?.message?.content?.trim() || raw; } catch (e) { return raw; }
+    }
+
+    /* 业务语音接入点：无限制跟读打分 */
+    let isShadowRecording = false;
+    async function toggleShadowRecording() {
+       const btn = document.getElementById('btn-start-shadow');
+       if (!isShadowRecording) {
+           await startGenericRecording();
+           isShadowRecording = true;
+           btn.innerText = "■ 正在录制... (读完请点击这里结束并打分)"; btn.style.background = "#ef4444";
+       } else {
+           const blob = await stopGenericRecording();
+           isShadowRecording = false;
+           btn.innerText = "🤖 正在提交 AI 听写比对..."; btn.style.background = "#334155";
+           const text = await transcribeAudio(blob);
+           if(text) gradeStrictPronunciation(currentTrainTargetText, text);
+           else alert("AI 听写失败，请检查 API Key 配置。");
+           btn.innerText = "🎙️ 开始跟读 (无时长限制，读完点停止)"; btn.style.background = "#8b5cf6";
+       }
+    }
+    /* 业务语音接入点：查词容错输入 */
+    let isTolerantRecording = false;
+    async function toggleTolerantVoiceInput(inputId, btnId) {
+        const btn = document.getElementById(btnId), input = document.getElementById(inputId);
+        if (!isTolerantRecording) {
+            await startGenericRecording(); isTolerantRecording = true;
+            btn.innerText = "■ 停止输入"; btn.style.background = "#ef4444"; input.placeholder = "🎙️ 请说话...";
+        } else {
+            const blob = await stopGenericRecording(); isTolerantRecording = false;
+            btn.innerText = "🤖 听写中..."; btn.style.background = "#334155"; input.placeholder = "AI 处理中...";
+            const text = await transcribeAudio(blob);
+            if(text) { input.value = "🤖 语义纠偏中..."; input.value = await correctWithLlmSemantic(text); }
+            else input.placeholder = "录音失败";
+            btn.innerText = "🎙️ 语音输入"; btn.style.background = "#8b5cf6";
+        }
+    }
+    /* 业务语音接入点：真填空严格 AI 听写 */
+    let isClozeRecording = false;
+    async function toggleClozeVoiceInput() {
+        const btn = document.getElementById('btn-cloze-strict-voice'), input = document.getElementById('cloze-input-field');
+        if (!isClozeRecording) {
+            await startGenericRecording(); isClozeRecording = true;
+            btn.innerText = "■ 停止输入"; btn.style.background = "#ef4444"; input.placeholder = "🎙️ 发音填空...";
+        } else {
+            const blob = await stopGenericRecording(); isClozeRecording = false;
+            btn.innerText = "🤖 听写中"; btn.style.background = "#334155";
+            const text = await transcribeAudio(blob);
+            if(text) input.value = text.replace(/[.!?]/g, '').trim();
+            btn.innerText = "🎙️ AI 语音填空"; btn.style.background = "#8b5cf6";
+        }
+    }
+
+    /* 业务语音接入点：卡片专属原声录制 (带波形与持久化) */
+    async function toggleCardVoiceRecording() {
+      const btn = document.getElementById('btn-toggle-record'), tLbl = document.getElementById('record-live-timer'), sTxt = document.getElementById('record-status-text');
+      if (!isGenericRecording) {
+        await startGenericRecording(); isGenericRecording = true;
+        const ctx = getAudioCtx(); if (ctx.state === 'suspended') ctx.resume();
+        const src = ctx.createMediaStreamSource(globalMediaStream), an = ctx.createAnalyser(); an.fftSize = 64; src.connect(an);
+        const da = new Uint8Array(an.frequencyBinCount);
+        vocalVolumeInterval = setInterval(() => {
+          an.getByteFrequencyData(da); let sum = 0; for(let i=0; i<da.length; i++) sum+=da[i]; const avg = sum/da.length;
+          for(let i=1; i<=5; i++) { const b = document.getElementById(`wb-${i}`); if(b) b.style.height = `${Math.max(3, Math.min(16, (da[i*2] || avg)/16))}px`; }
+        }, 80);
+        recordStartTime = Date.now();
+        recordTimerInterval = setInterval(() => { const sec = Math.floor((Date.now()-recordStartTime)/1000); tLbl.innerText = `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`; }, 500);
+        btn.innerText = "■ 停止并保存"; sTxt.innerText = "🎙️ 正在拾音...";
       } else {
-        if (userMediaRecorder) userMediaRecorder.stop(); if (userMediaStream) userMediaStream.getTracks().forEach(t => t.stop());
-        isUserRecording = false; btn.innerText = "● 重新录音";
+        const blob = await stopGenericRecording(); isGenericRecording = false;
+        clearInterval(vocalVolumeInterval); clearInterval(recordTimerInterval);
+        for(let i=1; i<=5; i++) document.getElementById(`wb-${i}`).style.height = "3px";
+        const rd = new FileReader(); rd.readAsDataURL(blob);
+        rd.onloadend = () => { userRecordedBase64 = rd.result; sTxt.innerText = `✅ 已录制 ${Math.round((Date.now()-recordStartTime)/1000)}秒`; document.getElementById('btn-preview-record').style.display = 'inline-block'; };
+        btn.innerText = "● 重新录音";
       }
     }
     function previewRecordedVoice() { if (userRecordedBase64) new Audio(userRecordedBase64).play(); }
 
-    /* 短讯与训练台 */
+    /* 高级触控：短讯区域长按检测逻辑 */
+    let pressTimer = null, isLongPress = false;
+    function onWordDown(e, w, s) {
+        isLongPress = false;
+        pressTimer = setTimeout(() => {
+            isLongPress = true;
+            if (navigator.vibrate) navigator.vibrate(50); // 震动反馈
+            loadTextToRightPane(s); // 长按自动载入整句
+        }, 500);
+    }
+    function onWordUp(e, w) {
+        if (pressTimer) clearTimeout(pressTimer);
+        if (!isLongPress) fastLookupWord(w); // 短按查词
+    }
+    function onWordLeave(e) { if (pressTimer) clearTimeout(pressTimer); }
+
     async function loadDailyNews() {
       const c = document.getElementById('news-cards-container');
       try {
-        const res = await fetch(`./news.json?t=${Date.now()}`); if (!res.ok) throw new Error("");
+        const res = await fetch(`./news.json?t=${Date.now()}`); if (!res.ok) throw new Error();
         const data = await res.json();
         c.innerHTML = data.articles.map(a => {
-          const we = a.essence.replace(/\b([a-zA-Z\-']+)\b/g, w => `<span class="clickable-word" onclick="fastLookupWord('${w.replace(/'/g, '')}')">${w}</span>`);
-          const sh = a.sentences ? a.sentences.map(s => { const es = s.replace(/'/g, "\\'").replace(/"/g, '&quot;'); return `<div class="sentence-block"><div>${s}</div><div class="sentence-ops"><button class="btn-small" onclick="playAudioStream('${es}')">🔊 听这句</button><button class="btn-small" style="background:#8b5cf6;" onclick="loadTextToRightPane('${es}')">🎯 练这句</button><button class="btn-small" style="background:#10b981;" onclick="bookmarkSentence('${es}')">⭐ 收藏</button></div></div>`; }).join('') : '';
-          return `<div class="news-card"><div class="news-title">${a.title}</div><div class="news-essence">${we}</div><div class="news-full" id="full-${a.id}">${sh}</div><div style="display:flex;justify-content:space-between;margin-top:4px;"><button class="btn-small" onclick="document.getElementById('full-${a.id}').style.display=document.getElementById('full-${a.id}').style.display==='block'?'none':'block'">📖 展开原文</button><button class="btn-small" style="background:#6366f1; color:#fff;" onclick="loadTextToRightPane('${a.essence.replace(/'/g, "\\'")}')">🗣️ 练这段精华</button></div></div>`;
+          const we = a.essence.replace(/\b([a-zA-Z\-']+)\b/g, w => {
+             const ew = w.replace(/'/g, ""), es = a.essence.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+             return `<span class="clickable-word" onpointerdown="onWordDown(event, '${ew}', '${es}')" onpointerup="onWordUp(event, '${ew}')" onpointerleave="onWordLeave(event)">${w}</span>`;
+          });
+          const sh = a.sentences ? a.sentences.map(s => {
+             const es = s.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+             const wh = s.replace(/\b([a-zA-Z\-']+)\b/g, w => {
+                const ew = w.replace(/'/g, "");
+                return `<span class="clickable-word" onpointerdown="onWordDown(event, '${ew}', '${es}')" onpointerup="onWordUp(event, '${ew}')" onpointerleave="onWordLeave(event)">${w}</span>`;
+             });
+             return `<div class="sentence-block"><div>${wh}</div><div class="sentence-ops"><button class="btn-small" onclick="playAudioStream('${es}')">🔊 AI 发音</button><button class="btn-small" style="background:#8b5cf6;" onclick="loadTextToRightPane('${es}')">🎯 练这句</button></div></div>`;
+          }).join('') : '';
+          return `<div class="news-card"><div class="news-title">${a.title}</div><div class="news-essence">${we}</div><div class="news-full" id="full-${a.id}">${sh}</div><div style="display:flex;justify-content:space-between;margin-top:4px;"><button class="btn-small" onclick="document.getElementById('full-${a.id}').style.display=document.getElementById('full-${a.id}').style.display==='block'?'none':'block'">📖 展开阅读全文</button><button class="btn-small" style="background:#6366f1; color:#fff;" onclick="loadTextToRightPane('${a.essence.replace(/'/g, "\\'")}')">🗣️ 练精华导语</button></div></div>`;
         }).join('');
-      } catch (e) { c.innerHTML = `<div style="text-align:center; padding:14px;">等待自动更新...</div>`; }
-    }
-    function loadTextToRightPane(t) { currentTrainTargetText = t; document.getElementById('train-target-display').innerText = t; document.getElementById('news-train-workspace').scrollIntoView({ behavior: 'smooth' }); initScrambleChips(t); }
-    function playCurrentTrainAudio(rate=1.0) { if (!currentTrainTargetText) currentTrainTargetText = document.getElementById('train-target-display').innerText; playAudioStream(currentTrainTargetText, rate); }
-    function switchRightTrainMode(mode) {
-      ['shadow', 'dict', 'craft', 'scramble'].forEach(m => { document.getElementById(`tab-btn-${m}`).classList.remove('active'); document.getElementById(`pane-${m}`).style.display = 'none'; });
-      document.getElementById(`tab-btn-${mode}`).classList.add('active'); document.getElementById(`pane-${mode}`).style.display = 'block';
-      const isBlind = mode === 'dict'; document.getElementById('train-text-normal-wrap').style.display = isBlind ? 'none' : 'block'; document.getElementById('train-text-blind-wrap').style.display = isBlind ? 'block' : 'none';
+      } catch (e) { c.innerHTML = `<div style="text-align:center; padding:14px;">等待最新资讯同步...</div>`; }
     }
     
-    function toggleStrictShadowRecognition() {
-      if (activeRecognizer && activeRecognizerBtnId === 'btn-start-shadow') { stopActiveVoiceRecognizer(); return; }
-      stopActiveVoiceRecognizer();
-      const Speech = window.SpeechRecognition || window.webkitSpeechRecognition; if (!Speech) { alert("此功能依赖网页录音比对"); return; }
-      const b = document.getElementById('btn-start-shadow'), rec = new Speech(); rec.lang = 'en-US'; activeRecognizer = rec; activeRecognizerBtnId = 'btn-start-shadow';
-      b.innerText = "■ 倾听中, 点击停止"; b.style.background = "#ef4444";
-      recognizerWatchdogTimer = setTimeout(() => { stopActiveVoiceRecognizer(); alert("录音超时被墙，暂不支持网页打分，请直接盲听手写。"); }, 8000);
-      rec.onresult = (e) => { clearTimeout(recognizerWatchdogTimer); gradeStrictPronunciation(currentTrainTargetText, e.results[0][0].transcript); stopActiveVoiceRecognizer(); };
-      rec.onerror = () => stopActiveVoiceRecognizer(); rec.onend = () => stopActiveVoiceRecognizer(); rec.start();
+    /* 复习与打分逻辑 */
+    function pickNextCard() {
+      const now = Date.now(), due = cards.filter(c => c.nextReviewTime <= now), qb = document.getElementById('quiz-card-box');
+      if (!due.length) { qb.innerHTML = `<div style="text-align:center; padding:40px 10px; color:var(--text-dim);"><h3 style="color:#38bdf8;">🎉 今日复习流已通关！</h3></div>`; return; }
+      currentQuizCard = due[Math.floor(Math.random() * due.length)];
+      const types = ['word_to_meaning', 'meaning_to_word']; if (currentQuizCard.sentence) types.push('cloze'); if (currentQuizCard.userAudio) types.push('user_audio');
+      currentQuizType = types[Math.floor(Math.random() * types.length)];
+      document.getElementById('answer-box').style.display = 'none'; document.getElementById('action-btns').style.display = 'none'; document.getElementById('btn-reveal').style.display = 'block'; document.getElementById('cloze-interactive-wrap').style.display = 'none'; document.getElementById('btn-audio-user').style.display = currentQuizCard.userAudio ? 'inline-flex' : 'none'; document.getElementById('q-streak-label').innerText = `连胜: 🔥 ${currentQuizCard.streak}`;
+      if (currentQuizType === 'word_to_meaning') { document.getElementById('q-mode-label').innerText = '🔤 回忆释义'; document.getElementById('q-main-text').innerText = currentQuizCard.word; document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`; } else if (currentQuizType === 'meaning_to_word') { document.getElementById('q-mode-label').innerText = '🇨🇳 回忆英文'; document.getElementById('q-main-text').innerText = currentQuizCard.meaning; document.getElementById('q-sub-text').innerText = `[${currentQuizCard.category}]`; } else if (currentQuizType === 'user_audio') { document.getElementById('q-mode-label').innerText = '🎙️ 盲听原声'; document.getElementById('q-main-text').innerText = "🎧 正在播放..."; playUserAudio(); } else if (currentQuizType === 'cloze') { document.getElementById('q-mode-label').innerText = '🧩 真填空题'; document.getElementById('q-main-text').innerText = currentQuizCard.meaning; document.getElementById('q-sub-text').innerText = "补全单词："; document.getElementById('cloze-sentence-display').innerText = currentQuizCard.sentence.replace(new RegExp(currentQuizCard.word, "gi"), " [ ______ ] "); document.getElementById('cloze-input-field').value = ""; document.getElementById('cloze-interactive-wrap').style.display = 'flex'; document.getElementById('btn-reveal').style.display = 'none'; }
+      document.getElementById('ans-title').innerText = currentQuizCard.word; document.getElementById('ans-ipa').innerText = currentQuizCard.ipa || ''; document.getElementById('ans-meaning').innerText = currentQuizCard.meaning; document.getElementById('ans-sentence').innerText = currentQuizCard.sentence ? `例句: ${currentQuizCard.sentence}` : '';
     }
+    function submitClozeAnswer() { const typed = document.getElementById('cloze-input-field').value.trim(); if (!typed) return; revealAnswer(); handleResult(typed.toLowerCase() === currentQuizCard.word.toLowerCase()); }
+    function revealAnswer() { document.getElementById('answer-box').style.display = 'block'; document.getElementById('btn-reveal').style.display = 'none'; document.getElementById('action-btns').style.display = 'grid'; playCurrentAudio(); }
+    function handleResult(isCorrect) { if (!currentQuizCard) return; if (isCorrect) { playSoundFX('coin'); currentQuizCard.streak++; addExp(15, "暴击斩杀！"); currentQuizCard.nextReviewTime = Date.now() + SPACING_DAYS[Math.min(currentQuizCard.streak, 4)] * 86400000; } else { playSoundFX('hurt'); currentQuizCard.streak = 0; showRpgToast("🛡️ 被破防 (HP-15)"); currentQuizCard.nextReviewTime = Date.now() + 600000; } saveCardsToStorage(); pickNextCard(); }
+
+    function loadTextToRightPane(t) { currentTrainTargetText = t; document.getElementById('train-target-display').innerText = t; document.getElementById('news-train-workspace').scrollIntoView({ behavior: 'smooth' }); initScrambleChips(t); }
+    function playCurrentTrainAudio(rate=1.0) { if (!currentTrainTargetText) currentTrainTargetText = document.getElementById('train-target-display').innerText; playAudioStream(currentTrainTargetText, rate); }
+    function switchRightTrainMode(mode) { ['shadow', 'dict', 'craft', 'scramble'].forEach(m => { document.getElementById(`tab-btn-${m}`).classList.remove('active'); document.getElementById(`pane-${m}`).style.display = 'none'; }); document.getElementById(`tab-btn-${mode}`).classList.add('active'); document.getElementById(`pane-${mode}`).style.display = 'block'; const isBlind = mode === 'dict'; document.getElementById('train-text-normal-wrap').style.display = isBlind ? 'none' : 'block'; document.getElementById('train-text-blind-wrap').style.display = isBlind ? 'block' : 'none'; }
+    
     function gradeStrictPronunciation(t, s) {
       const tw = t.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean), sw = s.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-      let m=0, dh="";
-      tw.forEach(w => { if (sw.includes(w)) { m++; dh+=`<span class="diff-correct">${w}</span> `; } else dh+=`<span class="diff-wrong">${w}</span> `; });
-      const sc = Math.round((m / Math.max(tw.length,1))*100), bx = document.getElementById('shadow-result-box'); bx.style.display='block'; bx.innerHTML = `<div><b>得分:</b> <span style="font-size:16px;color:#34d399;">${sc}</span></div><div>${dh}</div>`;
-      if (sc>=80) { playSoundFX('coin'); addExp(10, "发音过关！"); }
+      let m=0, dh=""; tw.forEach(w => { if (sw.includes(w)) { m++; dh+=`<span class="diff-correct">${w}</span> `; } else dh+=`<span class="diff-wrong">${w}</span> `; });
+      const sc = Math.round((m / Math.max(tw.length,1))*100), bx = document.getElementById('shadow-result-box'); bx.style.display='block'; bx.innerHTML = `<div><b>AI 听写得分:</b> <span style="font-size:16px;color:#34d399;">${sc}</span></div><div>${dh}</div>`;
+      if (sc>=80) { playSoundFX('coin'); addExp(10, "地道发音！"); }
     }
     function gradeBlindDictation() {
       const ut = document.getElementById('dictation-user-input').value.trim(); if(!ut) return;
       document.getElementById('train-text-normal-wrap').style.display = 'block'; document.getElementById('train-text-blind-wrap').style.display = 'none';
       const tw = currentTrainTargetText.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean), uw = ut.toLowerCase().replace(/[^a-z0-9\s']/g, '').split(/\s+/).filter(Boolean);
-      let c=0, dh="";
-      tw.forEach((w,i) => { const x = uw[i]||""; if(w===x){ c++; dh+=`<span class="diff-correct">${w}</span> `; } else dh+=`<span class="diff-wrong">${x||'[空]'}</span><span class="diff-missing">(${w})</span> `; });
-      const ac = Math.round((c/Math.max(tw.length,1))*100), bx = document.getElementById('dict-result-box'); bx.style.display='block'; bx.innerHTML = `<div><b>听写率:</b> <span style="color:#38bdf8;">${ac}%</span></div><div>${dh}</div>`;
+      let c=0, dh=""; tw.forEach((w,i) => { const x = uw[i]||""; if(w===x){ c++; dh+=`<span class="diff-correct">${w}</span> `; } else dh+=`<span class="diff-wrong">${x||'[空]'}</span><span class="diff-missing">(${w})</span> `; });
+      const ac = Math.round((c/Math.max(tw.length,1))*100), bx = document.getElementById('dict-result-box'); bx.style.display='block'; bx.innerHTML = `<div><b>匹配率:</b> <span style="color:#38bdf8;">${ac}%</span></div><div>${dh}</div>`;
       if(ac>=75) { playSoundFX('coin'); addExp(15, "听写过关！"); }
     }
-    async function extractSentenceFrame() {
-      const t = currentTrainTargetText || document.getElementById('train-target-display').innerText, k = localStorage.getItem('llm_api_key'); if(!k) return alert("缺 API Key！");
-      const bx = document.getElementById('frame-display-box'); bx.style.display='block'; bx.innerText = "🤖 提炼骨架中...";
-      try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "提炼句型骨架，插槽用[A]代替" }, { role: "user", content: t }] }) }); const d = await r.json(); currentTrainSentenceFrame = d.choices[0].message.content; bx.innerText = currentTrainSentenceFrame; } catch(e) {}
-    }
-    async function gradeSentenceCrafting() {
-      const u = document.getElementById('craft-user-input').value.trim(), k = localStorage.getItem('llm_api_key'); if(!u||!k) return;
-      const bx = document.getElementById('craft-result-box'); bx.style.display='block'; bx.innerText = "🤖 批改中...";
-      try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "批改仿写造句，输出地道版本。" }, { role: "user", content: `原骨架: ${currentTrainSentenceFrame}\n造句: ${u}` }] }) }); const d = await r.json(); bx.innerText = d.choices[0].message.content; playSoundFX('coin'); addExp(15, "仿写！"); } catch(e) {}
-    }
-    function initScrambleChips(t) {
-      const p=document.getElementById('scramble-chips-pool'), a=document.getElementById('scramble-assembled-zone'); p.innerHTML=''; a.innerHTML=''; scrambleUserTokens=[];
-      const ws=t.split(/\s+/), cs=Math.max(2, Math.floor(ws.length/5)), c=[]; for(let i=0; i<ws.length; i+=cs) c.push(ws.slice(i,i+cs).join(' ')); scrambleCorrectTokens=[...c];
-      [...c].sort(()=>Math.random()-0.5).forEach(x=>{ const hp=document.createElement('div'); hp.className='scramble-chip'; hp.innerText=x; hp.onclick=()=>{ hp.classList.add('used'); scrambleUserTokens.push(x); a.innerHTML=scrambleUserTokens.map(y=>`<div class="scramble-chip" style="background:#0284c7;">${y}</div>`).join(''); }; p.appendChild(hp); });
-    }
+    async function extractSentenceFrame() { const t = currentTrainTargetText || document.getElementById('train-target-display').innerText, k = localStorage.getItem('llm_api_key'); if(!k) return alert("请配置大模型 Key！"); const bx = document.getElementById('frame-display-box'); bx.style.display='block'; bx.innerText = "🤖 提炼骨架中..."; try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "提炼句型骨架，插槽用[A]代替" }, { role: "user", content: t }] }) }); const d = await r.json(); currentTrainSentenceFrame = d.choices[0].message.content; bx.innerText = currentTrainSentenceFrame; } catch(e) {} }
+    async function gradeSentenceCrafting() { const u = document.getElementById('craft-user-input').value.trim(), k = localStorage.getItem('llm_api_key'); if(!u||!k) return; const bx = document.getElementById('craft-result-box'); bx.style.display='block'; bx.innerText = "🤖 批改中..."; try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "批改仿写，输出地道版本。" }, { role: "user", content: `骨架: ${currentTrainSentenceFrame}\n造句: ${u}` }] }) }); const d = await r.json(); bx.innerText = d.choices[0].message.content; playSoundFX('coin'); addExp(15, "绝佳仿写！"); } catch(e) {} }
+    function initScrambleChips(t) { const p=document.getElementById('scramble-chips-pool'), a=document.getElementById('scramble-assembled-zone'); p.innerHTML=''; a.innerHTML=''; scrambleUserTokens=[]; const ws=t.split(/\s+/), cs=Math.max(2, Math.floor(ws.length/5)), c=[]; for(let i=0; i<ws.length; i+=cs) c.push(ws.slice(i,i+cs).join(' ')); scrambleCorrectTokens=[...c]; [...c].sort(()=>Math.random()-0.5).forEach(x=>{ const hp=document.createElement('div'); hp.className='scramble-chip'; hp.innerText=x; hp.onclick=()=>{ hp.classList.add('used'); scrambleUserTokens.push(x); a.innerHTML=scrambleUserTokens.map(y=>`<div class="scramble-chip" style="background:#0284c7;">${y}</div>`).join(''); }; p.appendChild(hp); }); }
     function resetScramblePuzzle() { scrambleUserTokens=[]; document.querySelectorAll('#scramble-chips-pool .scramble-chip').forEach(c=>c.classList.remove('used')); document.getElementById('scramble-assembled-zone').innerHTML=''; }
     function verifyScramblePuzzle() { if(scrambleUserTokens.join(' ')===scrambleCorrectTokens.join(' ')) { playSoundFX('coin'); addExp(10, "拼图过关！"); alert("🎉 语序正确！"); } else { playSoundFX('hurt'); alert("有偏差，重试！"); } }
-    function bookmarkSentence(s) { if(cards.some(c=>c.sentence===s)) return alert("已存在！"); cards.unshift({ id: "c_"+Date.now(), word: s.slice(0,24)+"...", ipa: "", meaning: "精选金句", sentence: s, category: "Sentence", userAudio: null, streak: 0, nextReviewTime: Date.now()-1000 }); saveCardsToStorage(); playSoundFX('coin'); addExp(5, "金句入库！"); alert("⭐ 已收藏！"); }
 
-    /* 合并后的查词与制卡工坊 */
-    function switchAiSubTab(s) { document.getElementById('btn-sub-ai-lookup').classList.toggle('active', s==='lookup'); document.getElementById('btn-sub-ai-essay').classList.toggle('active', s==='essay'); document.getElementById('ai-subpane-lookup').style.display = s==='lookup'?'block':'none'; document.getElementById('ai-subpane-essay').style.display = s==='essay'?'block':'none'; }
-    
-    async function runAiDeepAnalysisAndFill() {
-      const q = document.getElementById('input-word').value.trim(), k = localStorage.getItem('llm_api_key'); if(!q||!k) return alert("填入生词并配好 API Key");
-      document.getElementById('input-ipa').value = "🤖 智能解析中..."; document.getElementById('input-meaning').value = "🤖 正在深度分析释义与考点..."; document.getElementById('input-sentence').value = "🤖 生成地道例句中...";
-      try {
-        const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "请严格以 JSON 输出：{\"ipa\":\"音标\",\"meaning\":\"深度中文释义与助记\",\"sentence\":\"1句带翻译的地道英文例句\"}" }, { role: "user", content: q }] }) });
-        const d = await r.json(), cln = d.choices[0].message.content.replace(/^```json/i, '').replace(/```$/i, '').trim(), obj = JSON.parse(cln);
-        document.getElementById('input-ipa').value = obj.ipa || ""; document.getElementById('input-meaning').value = obj.meaning || ""; document.getElementById('input-sentence').value = obj.sentence || "";
-        playSoundFX('coin');
-      } catch (e) { document.getElementById('input-meaning').value = "解析超时或格式错误，请手动调整。"; }
-    }
-
-    function saveOrUpdateCard() {
-      const w=document.getElementById('input-word').value.trim(), i=document.getElementById('input-ipa').value.trim(), m=document.getElementById('input-meaning').value.trim(), s=document.getElementById('input-sentence').value.trim(), c=document.getElementById('input-category').value;
-      if(!w||!m) return alert("生词和释义必填！");
-      if(editingCardId) { const cd = cards.find(x=>x.id===editingCardId); if(cd) { cd.word=w; cd.ipa=i; cd.meaning=m; cd.sentence=s; cd.category=c; if(userRecordedBase64) cd.userAudio=userRecordedBase64; } cancelEditing(); }
-      else { cards.unshift({ id: "c_"+Date.now(), word:w, ipa:i, meaning:m, sentence:s, category:c, userAudio:userRecordedBase64, streak:0, nextReviewTime:Date.now()-1000 }); addExp(10, "录入新卡！"); }
-      saveCardsToStorage(); resetForm(); switchTab('list'); alert("✅ 卡片已存入复习流！");
-    }
-
-    function resetForm() { document.getElementById('input-word').value=""; document.getElementById('input-ipa').value=""; document.getElementById('input-meaning').value=""; document.getElementById('input-sentence').value=""; userRecordedBase64=null; document.getElementById('record-status-text').innerText="未录音"; document.getElementById('record-live-timer').innerText="00:00"; document.getElementById('btn-preview-record').style.display='none'; }
-    function cancelEditing() { editingCardId = null; document.getElementById('btn-cancel-edit').style.display = 'none'; resetForm(); }
-
-    /* 作文批改 */
-    let lastPolishedEssay = "";
-    async function runEssayCorrection() {
-      const t = document.getElementById('essay-user-input').value.trim(), k = localStorage.getItem('llm_api_key'); if(!t||!k) return;
-      const bx = document.getElementById('essay-result-box'), dg = document.getElementById('essay-diagnosis'), pl = document.getElementById('essay-polished');
-      bx.style.display='block'; dg.innerText="🤖 诊断中..."; pl.innerText="...";
-      try {
-        const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "输出 JSON：{\"diagnosis\":\"指出语法硬伤\",\"polished\":\"地道范文\"}" }, { role: "user", content: t }] }) });
-        const d = await r.json(), cln = d.choices[0].message.content.replace(/^```json/i, '').replace(/```$/i, '').trim(), res = JSON.parse(cln);
-        dg.innerText = res.diagnosis; pl.innerText = res.polished; lastPolishedEssay = res.polished; playSoundFX('coin'); addExp(15, "作文批改！");
-      } catch(e) {}
-    }
-    function sendEssayToRightTraining() { if(lastPolishedEssay) { loadTextToRightPane(lastPolishedEssay); switchTab('news'); alert("🎯 已载入右侧训练台！"); } }
-
-    /* API 配置 */
+    /* API 配置与查词制卡 */
     function initModelDropdown(sm) { const sl = document.getElementById('llm-model-select'), cs = document.getElementById('llm-model-custom'); let f=false; for(let i=0;i<sl.options.length;i++) if(sl.options[i].value===sm){ sl.selectedIndex=i; f=true; break; } if(!f&&sm) { sl.value="__custom__"; cs.style.display="block"; cs.value=sm; } }
     function handleModelSelectChange() { const cs = document.getElementById('llm-model-custom'); if(document.getElementById('llm-model-select').value==='__custom__') { cs.style.display='block'; cs.focus(); } else cs.style.display='none'; }
     function getCurrentModelName() { const v=document.getElementById('llm-model-select').value; return v==='__custom__' ? document.getElementById('llm-model-custom').value.trim() : v; }
-    function applyApiPreset(t) { if(t==='silicon') { document.getElementById('llm-base-url').value='https://api.siliconflow.cn/v1'; document.getElementById('llm-model-select').value='Qwen/Qwen2.5-7B-Instruct'; } else if(t==='deepseek') { document.getElementById('llm-base-url').value='https://api.deepseek.com/v1'; document.getElementById('llm-model-select').value='deepseek-chat'; } document.getElementById('llm-model-custom').style.display='none'; }
     function toggleApiSettings() { const p = document.getElementById('api-config-panel'); p.style.display = p.style.display==='none'?'block':'none'; }
-    function saveApiConfig() { localStorage.setItem('llm_base_url', document.getElementById('llm-base-url').value.trim()); localStorage.setItem('llm_model', getCurrentModelName()); localStorage.setItem('llm_api_key', document.getElementById('llm-api-key').value.trim()); alert("✅ 安全更新！"); toggleApiSettings(); }
+    function saveApiConfig() { localStorage.setItem('llm_base_url', document.getElementById('llm-base-url').value.trim()); localStorage.setItem('llm_model', getCurrentModelName()); localStorage.setItem('llm_api_key', document.getElementById('llm-api-key').value.trim()); localStorage.setItem('asr_model', document.getElementById('asr-model').value.trim()); localStorage.setItem('tts_model', document.getElementById('tts-model').value.trim()); alert("✅ 全套 AI 模型已安全更新！"); toggleApiSettings(); }
+    
+    function switchAiSubTab(s) { document.getElementById('btn-sub-ai-lookup').classList.toggle('active', s==='lookup'); document.getElementById('btn-sub-ai-essay').classList.toggle('active', s==='essay'); document.getElementById('ai-subpane-lookup').style.display = s==='lookup'?'block':'none'; document.getElementById('ai-subpane-essay').style.display = s==='essay'?'block':'none'; }
+    async function runAiDeepAnalysisAndFill() { const q = document.getElementById('input-word').value.trim(), k = localStorage.getItem('llm_api_key'); if(!q||!k) return alert("填入生词并配好 API Key"); document.getElementById('input-ipa').value = "🤖 解析中..."; document.getElementById('input-meaning').value = "🤖 正在深度分析..."; document.getElementById('input-sentence').value = "🤖 生成地道例句中..."; try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "请严格以 JSON 输出：{\"ipa\":\"音标\",\"meaning\":\"深度中文释义与助记\",\"sentence\":\"1句带翻译的地道英文例句\"}" }, { role: "user", content: q }] }) }); const d = await r.json(), cln = d.choices[0].message.content.replace(/^```json/i, '').replace(/```$/i, '').trim(), obj = JSON.parse(cln); document.getElementById('input-ipa').value = obj.ipa || ""; document.getElementById('input-meaning').value = obj.meaning || ""; document.getElementById('input-sentence').value = obj.sentence || ""; playSoundFX('coin'); } catch (e) { document.getElementById('input-meaning').value = "解析超时，请重试。"; } }
+    function saveOrUpdateCard() { const w=document.getElementById('input-word').value.trim(), i=document.getElementById('input-ipa').value.trim(), m=document.getElementById('input-meaning').value.trim(), s=document.getElementById('input-sentence').value.trim(), c=document.getElementById('input-category').value; if(!w||!m) return alert("必填空不全！"); if(editingCardId) { const cd = cards.find(x=>x.id===editingCardId); if(cd) { cd.word=w; cd.ipa=i; cd.meaning=m; cd.sentence=s; cd.category=c; if(userRecordedBase64) cd.userAudio=userRecordedBase64; } cancelEditing(); } else { cards.unshift({ id: "c_"+Date.now(), word:w, ipa:i, meaning:m, sentence:s, category:c, userAudio:userRecordedBase64, streak:0, nextReviewTime:Date.now()-1000 }); addExp(10, "新卡入库！"); } saveCardsToStorage(); resetForm(); switchTab('list'); }
+    function resetForm() { document.getElementById('input-word').value=""; document.getElementById('input-ipa').value=""; document.getElementById('input-meaning').value=""; document.getElementById('input-sentence').value=""; userRecordedBase64=null; document.getElementById('record-status-text').innerText="未录音"; document.getElementById('record-live-timer').innerText="00:00"; document.getElementById('btn-preview-record').style.display='none'; }
+    function cancelEditing() { editingCardId = null; document.getElementById('btn-cancel-edit').style.display = 'none'; resetForm(); }
 
-    /* 词库与弹窗 */
-    function renderCardList() {
-      const c = document.getElementById('card-list-container'); if(cards.length===0) { c.innerHTML = '<div style="text-align:center; padding:30px; color:var(--text-dim);">词库为空</div>'; return; }
-      c.innerHTML = cards.map(x => `<div style="background:var(--card-bg); border:1px solid var(--border); padding:10px; border-radius:10px; display:flex; justify-content:space-between;"><div style="flex:1;"><div style="font-size:14px;font-weight:bold;">${x.word} <span style="font-size:12px;color:var(--accent);">${x.ipa||''}</span></div><div style="font-size:12px;color:var(--text-dim);margin-top:2px;">${x.meaning}</div></div><div style="display:flex;gap:4px;align-items:center;"><button class="btn-small" onclick="loadTextToRightPane('${x.sentence?x.sentence.replace(/'/g,"\\'"):x.word}')">🎯 练这卡</button><button class="btn-small" style="background:#8b5cf6;" onclick="editCard('${x.id}')">✏️</button><button class="btn-small" style="color:#ef4444;" onclick="if(confirm('删除?')){cards=cards.filter(c=>c.id!=='${x.id}');saveCardsToStorage();renderCardList();}">✕</button></div></div>`).join('');
-    }
+    let lastPolishedEssay = "";
+    async function runEssayCorrection() { const t = document.getElementById('essay-user-input').value.trim(), k = localStorage.getItem('llm_api_key'); if(!t||!k) return; const bx = document.getElementById('essay-result-box'), dg = document.getElementById('essay-diagnosis'), pl = document.getElementById('essay-polished'); bx.style.display='block'; dg.innerText="🤖 诊断中..."; pl.innerText="..."; try { const r = await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`, { method: "POST", headers: { "Content-Type": "application/json", "Authorization": `Bearer ${k}` }, body: JSON.stringify({ model: getCurrentModelName(), messages: [{ role: "system", content: "输出 JSON：{\"diagnosis\":\"指出语法硬伤\",\"polished\":\"地道范文\"}" }, { role: "user", content: t }] }) }); const d = await r.json(), cln = d.choices[0].message.content.replace(/^```json/i, '').replace(/```$/i, '').trim(), res = JSON.parse(cln); dg.innerText = res.diagnosis; pl.innerText = res.polished; lastPolishedEssay = res.polished; playSoundFX('coin'); addExp(15, "作文批改！"); } catch(e) {} }
+    function sendEssayToRightTraining() { if(lastPolishedEssay) { loadTextToRightPane(lastPolishedEssay); switchTab('news'); } }
+
+    function renderCardList() { const c = document.getElementById('card-list-container'); if(cards.length===0) { c.innerHTML = '<div style="text-align:center; padding:30px; color:var(--text-dim);">词库为空</div>'; return; } c.innerHTML = cards.map(x => `<div style="background:var(--card-bg); border:1px solid var(--border); padding:10px; border-radius:10px; display:flex; justify-content:space-between;"><div style="flex:1;"><div style="font-size:14px;font-weight:bold;">${x.word} <span style="font-size:12px;color:var(--accent);">${x.ipa||''}</span></div><div style="font-size:12px;color:var(--text-dim);margin-top:2px;">${x.meaning}</div></div><div style="display:flex;gap:4px;align-items:center;"><button class="btn-small" onclick="loadTextToRightPane('${x.sentence?x.sentence.replace(/'/g,"\\'"):x.word}')">🎯</button><button class="btn-small" style="background:#8b5cf6;" onclick="editCard('${x.id}')">✏️</button><button class="btn-small" style="color:#ef4444;" onclick="if(confirm('删除?')){cards=cards.filter(c=>c.id!=='${x.id}');saveCardsToStorage();renderCardList();}">✕</button></div></div>`).join(''); }
     function editCard(id) { const c = cards.find(x=>x.id===id); if(!c) return; editingCardId = id; document.getElementById('input-word').value = c.word; document.getElementById('input-ipa').value = c.ipa||''; document.getElementById('input-meaning').value = c.meaning; document.getElementById('input-sentence').value = c.sentence||''; document.getElementById('input-category').value = c.category; document.getElementById('btn-cancel-edit').style.display = 'inline-block'; switchTab('ai'); switchAiSubTab('lookup'); }
-    function exportData() { const a=document.createElement('a'); a.href="data:text/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(cards,null,2)); a.download=`memorize_backup_${Date.now()}.json`; document.body.appendChild(a); a.click(); a.remove(); }
+    function exportData() { const a=document.createElement('a'); a.href="data:text/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(cards,null,2)); a.download=`memorize_backup.json`; document.body.appendChild(a); a.click(); a.remove(); }
     function triggerImport() { document.getElementById('file-import-input').click(); }
-    function handleFileImport(e) { const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=ev=>{ try{ const imp=JSON.parse(ev.target.result); if(Array.isArray(imp)){ cards=imp; saveCardsToStorage(); renderCardList(); pickNextCard(); alert(`✅ 导入 ${cards.length} 张！`); } }catch(err){} }; r.readAsText(f); }
+    function handleFileImport(e) { const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=ev=>{ try{ const imp=JSON.parse(ev.target.result); if(Array.isArray(imp)){ cards=imp; saveCardsToStorage(); renderCardList(); alert(`✅ 导入完成`); } }catch(err){} }; r.readAsText(f); }
 
     async function fastLookupWord(w) {
       const md=document.getElementById('word-lookup-modal'), mw=document.getElementById('m-word'), mi=document.getElementById('m-ipa'), mm=document.getElementById('m-meaning');
       md.style.display='flex'; mw.innerText=w; mi.innerText="/.../"; mm.innerText="⚡ 检索中..."; modalPendingData={word:w,ipa:"",meaning:""};
-      const k=localStorage.getItem('llm_api_key'); if(k) { try{ const r=await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`,{method:"POST",headers:{"Content-Type":"application/json","Authorization":`Bearer ${k}`},body:JSON.stringify({model:getCurrentModelName(),messages:[{role:"user",content:`单词"${w}"。格式严格为：/音标/ 释义`}]})}); const d=await r.json(), m=d.choices[0].message.content.match(/\/(.*?)\/\s*(.*)/); if(m){ mi.innerText=`/${m[1]}/`; mm.innerText=m[2]; modalPendingData.ipa=`/${m[1]}/`; modalPendingData.meaning=m[2]; return; }else{ mm.innerText=d.choices[0].message.content; modalPendingData.meaning=d.choices[0].message.content; return; } }catch(e){} } mi.innerText=""; mm.innerText="已就绪，可收入。";
+      const k=localStorage.getItem('llm_api_key'); if(k) { try{ const r=await fetch(`${localStorage.getItem('llm_base_url')}/chat/completions`,{method:"POST",headers:{"Content-Type":"application/json","Authorization":`Bearer ${k}`},body:JSON.stringify({model:getCurrentModelName(),messages:[{role:"user",content:`单词"${w}"。格式严格为：/音标/ 释义`}]})}); const d=await r.json(), m=d.choices[0].message.content.match(/\/(.*?)\/\s*(.*)/); if(m){ mi.innerText=`/${m[1]}/`; mm.innerText=m[2]; modalPendingData.ipa=`/${m[1]}/`; modalPendingData.meaning=m[2]; return; }else{ mm.innerText=d.choices[0].message.content; modalPendingData.meaning=d.choices[0].message.content; return; } }catch(e){} } mi.innerText=""; mm.innerText="就绪。";
     }
     function hideWordModal() { document.getElementById('word-lookup-modal').style.display = 'none'; }
     function closeWordModal(e) { if(e.target.id==='word-lookup-modal') hideWordModal(); }
-    function saveModalWordToDeck() { if(!modalPendingData) return; cards.unshift({ id:"c_"+Date.now(), word:modalPendingData.word, ipa:modalPendingData.ipa, meaning:modalPendingData.meaning||'生词', sentence:currentTrainTargetText||'', category:"English", userAudio:null, streak:0, nextReviewTime:Date.now()-1000 }); saveCardsToStorage(); playSoundFX('coin'); addExp(5, "入库！"); hideWordModal(); alert("✅ 已加入！"); }
+    function saveModalWordToDeck() { if(!modalPendingData) return; cards.unshift({ id:"c_"+Date.now(), word:modalPendingData.word, ipa:modalPendingData.ipa, meaning:modalPendingData.meaning||'生词', sentence:currentTrainTargetText||'', category:"English", userAudio:null, streak:0, nextReviewTime:Date.now()-1000 }); saveCardsToStorage(); playSoundFX('coin'); addExp(5, "入库！"); hideWordModal(); }
     function trainModalWordInRightPane() { if(!modalPendingData) return; hideWordModal(); loadTextToRightPane(modalPendingData.word); }
 
     initApp();
