@@ -1,53 +1,51 @@
 {
-  "updated_at": "2026-09-24 22:10 UTC",
+  "updated_at": "2026-09-25 22:10 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Microsoft puts Brad Smith in charge of communications",
-      "essence": "Microsoft is moving its communications group out of marketing and into its Corporate, External, and Legal Affairs (CELA) organization. The surprise change will see Microsoft vice chair and president Brad Smith oversee communications, while the company searches for a replacement for Frank Shaw, chief communications officer, who is departing later this year.",
-      "full_body": "Microsoft is moving its communications group out of marketing and into its Corporate, External, and Legal Affairs (CELA) organization. The surprise change will see Microsoft vice chair and president Brad Smith oversee communications, while the company searches for a replacement for Frank Shaw, chief communications officer, who is departing later this year. Microsoft CEO Satya […]",
+      "title": "Roku’s first OLED TVs are up to $400 off, starting at $699",
+      "essence": "Roku recently launched its first-ever OLED TVs. The $999 starting price was already impressive for the 55-inch Pro Series model that has a 120Hz refresh rate OLED panel (with four HDMI 2.1 ports and support for Dolby Vision and HDR 10 Plus).",
+      "full_body": "Roku recently launched its first-ever OLED TVs. The $999 starting price was already impressive for the 55-inch Pro Series model that has a 120Hz refresh rate OLED panel (with four HDMI 2.1 ports and support for Dolby Vision and HDR 10 Plus). The price is even lower right now at Amazon when you enter the […]",
       "sentences": [
-        "Microsoft is moving its communications group out of marketing and into its Corporate, External, and Legal Affairs (CELA) organization.",
-        "The surprise change will see Microsoft vice chair and president Brad Smith oversee communications, while the company searches for a replacement for Frank Shaw, chief communications officer, who is departing later this year.",
-        "Microsoft CEO Satya […]"
+        "Roku recently launched its first-ever OLED TVs.",
+        "The $999 starting price was already impressive for the 55-inch Pro Series model that has a 120Hz refresh rate OLED panel (with four HDMI 2.1 ports and support for Dolby Vision and HDR 10 Plus).",
+        "The price is even lower right now at Amazon when you enter the […]"
       ],
-      "url": "https://www.theverge.com/news/1000374/microsoft-comms-pr-brad-smith-cela"
+      "url": "https://www.theverge.com/gadgets/1000859/roku-pro-series-oled-nothing-phone-4a-pro-deal-sale"
     },
     {
       "id": "art_2",
-      "title": "Gemini 3.8 Live with Live Avatar gives Google’s AI a face",
-      "essence": "Google's new Gemini 3.8 Live update lets users have conversations with the model while watching an animated AI persona respond in real time. The \"Live Avatar\" will lip-sync and show different facial expressions during conversations, but it's currently only available to Gemini Enterprise customers.",
-      "full_body": "Google's new Gemini 3.8 Live update lets users have conversations with the model while watching an animated AI persona respond in real time. The \"Live Avatar\" will lip-sync and show different facial expressions during conversations, but it's currently only available to Gemini Enterprise customers. As noted by Google, Live Avatar can transition between the 97 […]",
+      "title": "Phones don’t have lights",
+      "essence": "Mark Zuckerberg has a new defense of the Ray-Ban Meta glasses: They're actually doing more to signal they're taking a photo than phones do. He's brought this up in at least two recent interviews, noting that the glasses have a light that comes on to signal when a photo is being taken, while phones do […]",
+      "full_body": "Mark Zuckerberg has a new defense of the Ray-Ban Meta glasses: They're actually doing more to signal they're taking a photo than phones do. He's brought this up in at least two recent interviews, noting that the glasses have a light that comes on to signal when a photo is being taken, while phones do […]",
       "sentences": [
-        "Google's new Gemini 3.8 Live update lets users have conversations with the model while watching an animated AI persona respond in real time.",
-        "The \"Live Avatar\" will lip-sync and show different facial expressions during conversations, but it's currently only available to Gemini Enterprise customers.",
-        "As noted by Google, Live Avatar can transition between the 97 […]"
+        "Mark Zuckerberg has a new defense of the Ray-Ban Meta glasses: They're actually doing more to signal they're taking a photo than phones do.",
+        "He's brought this up in at least two recent interviews, noting that the glasses have a light that comes on to signal when a photo is being taken, while phones do […]"
       ],
-      "url": "https://www.theverge.com/tech/1000328/google-gemini-ai-live-avatar-face"
+      "url": "https://www.theverge.com/podcast/1000751/vergecast-meta-connect-muse-googlebooks"
     },
     {
       "id": "art_3",
-      "title": "Sadly, this $1,549 RTX 5070-equipped gaming PC is a very good deal",
-      "essence": "While PC component prices remain high, you can save a good bit of money on a system by purchasing a prebuilt desktop. Walmart has a well-equipped CyberPowerPC gaming PC on sale for $1,549, almost $600 off its original price of $2,139.",
-      "full_body": "While PC component prices remain high, you can save a good bit of money on a system by purchasing a prebuilt desktop. Walmart has a well-equipped CyberPowerPC gaming PC on sale for $1,549, almost $600 off its original price of $2,139. It’s powered by an Intel Core i7-14700KF processor, and paired with 32GB of 6000MHz […]",
+      "title": "These camera apps give you more control over the iPhone 18 Pro’s aperture",
+      "essence": "One of the questionable limitations of the iPhone 18 Pro's new main camera with a variable aperture is that you're limited to just four settings in the native iOS' camera app in manual mode: f/1.48, f/1.8, f/2.8, and f/4. Those same limitations are also in place when the app is adjusting the iris itself in […]",
+      "full_body": "One of the questionable limitations of the iPhone 18 Pro's new main camera with a variable aperture is that you're limited to just four settings in the native iOS' camera app in manual mode: f/1.48, f/1.8, f/2.8, and f/4. Those same limitations are also in place when the app is adjusting the iris itself in […]",
       "sentences": [
-        "While PC component prices remain high, you can save a good bit of money on a system by purchasing a prebuilt desktop.",
-        "Walmart has a well-equipped CyberPowerPC gaming PC on sale for $1,549, almost $600 off its original price of $2,139.",
-        "It’s powered by an Intel Core i7-14700KF processor, and paired with 32GB of 6000MHz […]"
+        "One of the questionable limitations of the iPhone 18 Pro's new main camera with a variable aperture is that you're limited to just four settings in the native iOS' camera app in manual mode: f/1.48, f/1.8, f/2.8, and f/4.",
+        "Those same limitations are also in place when the app is adjusting the iris itself in […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1000122/cyberpowerpc-gaming-prebuilt-rtx-5070-core-i7-asrock-oled-monitor-deal-sale"
+      "url": "https://www.theverge.com/tech/1000729/moment-pro-blackmagic-camera-ii-ios-app-iphone-18-pro-max-aperature-camera"
     },
     {
       "id": "art_4",
-      "title": "Jensen Huang talks about AI and climate change like a supervillain",
-      "essence": "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first. The Nvidia CEO discussed the future of energy and AI's impact on our planet in the latest episode of The Ezra Klein Show.",
-      "full_body": "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first. The Nvidia CEO discussed the future of energy and AI's impact on our planet in the latest episode of The Ezra Klein Show. But his comments boil down to the […]",
+      "title": "Tesla’s Optimus robot is going through growing pains",
+      "essence": "Hitting its goal of making 20,000 Optimus robots per week is reportedly proving tricky for Tesla. The Information reports that Tesla produced \"several hundred robots a week\" last month, after it repurposed its Model S and Model X production lines for Optimus earlier this year.",
+      "full_body": "Hitting its goal of making 20,000 Optimus robots per week is reportedly proving tricky for Tesla. The Information reports that Tesla produced \"several hundred robots a week\" last month, after it repurposed its Model S and Model X production lines for Optimus earlier this year. However, this strategy is reportedly creating manufacturing snags, like issues […]",
       "sentences": [
-        "As Jensen Huang puts it, AI can help fight climate change - but only if it inflicts \"an enormous amount of pain and suffering\" first.",
-        "The Nvidia CEO discussed the future of energy and AI's impact on our planet in the latest episode of The Ezra Klein Show.",
-        "But his comments boil down to the […]"
+        "Hitting its goal of making 20,000 Optimus robots per week is reportedly proving tricky for Tesla.",
+        "The Information reports that Tesla produced \"several hundred robots a week\" last month, after it repurposed its Model S and Model X production lines for Optimus earlier this year.",
+        "However, this strategy is reportedly creating manufacturing snags, like issues […]"
       ],
-      "url": "https://www.theverge.com/tech/1000140/jensen-huang-nvidia-ai-energy-climate-change-supervillain"
+      "url": "https://www.theverge.com/tech/1000794/tesla-optimus-production-issues-hands"
     }
   ]
 }
