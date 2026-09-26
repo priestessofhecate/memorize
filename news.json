@@ -1,51 +1,53 @@
 {
-  "updated_at": "2026-09-25 22:10 UTC",
+  "updated_at": "2026-09-26 22:10 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Roku’s first OLED TVs are up to $400 off, starting at $699",
-      "essence": "Roku recently launched its first-ever OLED TVs. The $999 starting price was already impressive for the 55-inch Pro Series model that has a 120Hz refresh rate OLED panel (with four HDMI 2.1 ports and support for Dolby Vision and HDR 10 Plus).",
-      "full_body": "Roku recently launched its first-ever OLED TVs. The $999 starting price was already impressive for the 55-inch Pro Series model that has a 120Hz refresh rate OLED panel (with four HDMI 2.1 ports and support for Dolby Vision and HDR 10 Plus). The price is even lower right now at Amazon when you enter the […]",
+      "title": "Apple hit with $5.7 billion in damages over haptic patents",
+      "essence": "Haptics tech company Taction sued Apple in 2021, alleging it infringed two of its patents. Now a federal jury in San Diego has awarded Taction over $5.7 billion in damages.",
+      "full_body": "Haptics tech company Taction sued Apple in 2021, alleging it infringed two of its patents. Now a federal jury in San Diego has awarded Taction over $5.7 billion in damages. According to CNBC, \"The lawsuit centered around U.S. 10,659,885 and 10,820,117, which both involve vibration-based, tactile transducer technology that helps users feel a […]",
       "sentences": [
-        "Roku recently launched its first-ever OLED TVs.",
-        "The $999 starting price was already impressive for the 55-inch Pro Series model that has a 120Hz refresh rate OLED panel (with four HDMI 2.1 ports and support for Dolby Vision and HDR 10 Plus).",
-        "The price is even lower right now at Amazon when you enter the […]"
+        "Haptics tech company Taction sued Apple in 2021, alleging it infringed two of its patents.",
+        "Now a federal jury in San Diego has awarded Taction over $5.7 billion in damages.",
+        "According to CNBC, \"The lawsuit centered around U.S.",
+        "10,659,885 and 10,820,117, which both involve vibration-based, tactile transducer technology that helps users feel a […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1000859/roku-pro-series-oled-nothing-phone-4a-pro-deal-sale"
+      "url": "https://www.theverge.com/tech/1001118/apple-hit-with-5-7-billion-in-damages-over-haptic-patents"
     },
     {
       "id": "art_2",
-      "title": "Phones don’t have lights",
-      "essence": "Mark Zuckerberg has a new defense of the Ray-Ban Meta glasses: They're actually doing more to signal they're taking a photo than phones do. He's brought this up in at least two recent interviews, noting that the glasses have a light that comes on to signal when a photo is being taken, while phones do […]",
-      "full_body": "Mark Zuckerberg has a new defense of the Ray-Ban Meta glasses: They're actually doing more to signal they're taking a photo than phones do. He's brought this up in at least two recent interviews, noting that the glasses have a light that comes on to signal when a photo is being taken, while phones do […]",
+      "title": "Decap is the man behind the drums behind your favorite song",
+      "essence": "I don't think I'm going to hurt anyone's feelings by pointing out that Decap doesn't have the name recognition of Kendrick Lamar, Olivia Rodrigo, or Charli XCX. But his fingerprints are all over tracks from them, as well as many other artists, including Freddie Gibbs, Bad Bunny, Mac Miller, BTS, and even Ludwig Göransson's score […]",
+      "full_body": "I don't think I'm going to hurt anyone's feelings by pointing out that Decap doesn't have the name recognition of Kendrick Lamar, Olivia Rodrigo, or Charli XCX. But his fingerprints are all over tracks from them, as well as many other artists, including Freddie Gibbs, Bad Bunny, Mac Miller, BTS, and even Ludwig Göransson's score […]",
       "sentences": [
-        "Mark Zuckerberg has a new defense of the Ray-Ban Meta glasses: They're actually doing more to signal they're taking a photo than phones do.",
-        "He's brought this up in at least two recent interviews, noting that the glasses have a light that comes on to signal when a photo is being taken, while phones do […]"
+        "I don't think I'm going to hurt anyone's feelings by pointing out that Decap doesn't have the name recognition of Kendrick Lamar, Olivia Rodrigo, or Charli XCX.",
+        "But his fingerprints are all over tracks from them, as well as many other artists, including Freddie Gibbs, Bad Bunny, Mac Miller, BTS, and even Ludwig Göransson's score […]"
       ],
-      "url": "https://www.theverge.com/podcast/1000751/vergecast-meta-connect-muse-googlebooks"
+      "url": "https://www.theverge.com/report/1000994/decap-drums-that-knock-interview"
     },
     {
       "id": "art_3",
-      "title": "These camera apps give you more control over the iPhone 18 Pro’s aperture",
-      "essence": "One of the questionable limitations of the iPhone 18 Pro's new main camera with a variable aperture is that you're limited to just four settings in the native iOS' camera app in manual mode: f/1.48, f/1.8, f/2.8, and f/4. Those same limitations are also in place when the app is adjusting the iris itself in […]",
-      "full_body": "One of the questionable limitations of the iPhone 18 Pro's new main camera with a variable aperture is that you're limited to just four settings in the native iOS' camera app in manual mode: f/1.48, f/1.8, f/2.8, and f/4. Those same limitations are also in place when the app is adjusting the iris itself in […]",
+      "title": "Kids turned the comment section of an NPR podcast into a group chat",
+      "essence": "Middle schoolers, likely blocked from other apps and social networks, apparently turned the Spotify comment section under an episode of NPR's Wild Card into an impromptu group chat. In a new episode of This American Life, host Ira Glass digs into how the kids landed there and why.",
+      "full_body": "Middle schoolers, likely blocked from other apps and social networks, apparently turned the Spotify comment section under an episode of NPR's Wild Card into an impromptu group chat. In a new episode of This American Life, host Ira Glass digs into how the kids landed there and why. But it mostly boils down to kids […]",
       "sentences": [
-        "One of the questionable limitations of the iPhone 18 Pro's new main camera with a variable aperture is that you're limited to just four settings in the native iOS' camera app in manual mode: f/1.48, f/1.8, f/2.8, and f/4.",
-        "Those same limitations are also in place when the app is adjusting the iris itself in […]"
+        "Middle schoolers, likely blocked from other apps and social networks, apparently turned the Spotify comment section under an episode of NPR's Wild Card into an impromptu group chat.",
+        "In a new episode of This American Life, host Ira Glass digs into how the kids landed there and why.",
+        "But it mostly boils down to kids […]"
       ],
-      "url": "https://www.theverge.com/tech/1000729/moment-pro-blackmagic-camera-ii-ios-app-iphone-18-pro-max-aperature-camera"
+      "url": "https://www.theverge.com/entertainment/1001056/this-american-life-npr-kids-group-chat-comment-section"
     },
     {
       "id": "art_4",
-      "title": "Tesla’s Optimus robot is going through growing pains",
-      "essence": "Hitting its goal of making 20,000 Optimus robots per week is reportedly proving tricky for Tesla. The Information reports that Tesla produced \"several hundred robots a week\" last month, after it repurposed its Model S and Model X production lines for Optimus earlier this year.",
-      "full_body": "Hitting its goal of making 20,000 Optimus robots per week is reportedly proving tricky for Tesla. The Information reports that Tesla produced \"several hundred robots a week\" last month, after it repurposed its Model S and Model X production lines for Optimus earlier this year. However, this strategy is reportedly creating manufacturing snags, like issues […]",
+      "title": "OpenAI pauses training of its ‘most capable models’",
+      "essence": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The decision was made after a model being tested within a sandbox exploited a loophole to gain internet access.",
+      "full_body": "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models. The decision was made after a model being tested within a sandbox exploited a loophole to gain internet access. The incident happened on September […]",
       "sentences": [
-        "Hitting its goal of making 20,000 Optimus robots per week is reportedly proving tricky for Tesla.",
-        "The Information reports that Tesla produced \"several hundred robots a week\" last month, after it repurposed its Model S and Model X production lines for Optimus earlier this year.",
-        "However, this strategy is reportedly creating manufacturing snags, like issues […]"
+        "As reports of OpenAI's models breaking containment, hacking sites, and generally getting out of control pile up, the company has made the decision to pause training of its most powerful models.",
+        "The decision was made after a model being tested within a sandbox exploited a loophole to gain internet access.",
+        "The incident happened on September […]"
       ],
-      "url": "https://www.theverge.com/tech/1000794/tesla-optimus-production-issues-hands"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause"
     }
   ]
 }
