@@ -1,53 +1,53 @@
 {
-  "updated_at": "2026-09-27 22:10 UTC",
+  "updated_at": "2026-09-28 22:11 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Out of the Park Baseball lets me enjoy baseball even when the Mets suck",
-      "essence": "If you were to ask me what game or game series I've sunk the most time into, the answer would be easy: Out of the Park Baseball (OOTP). I have spent roughly 2,300 hours, according to Steam, playing various editions of the game.",
-      "full_body": "If you were to ask me what game or game series I've sunk the most time into, the answer would be easy: Out of the Park Baseball (OOTP). I have spent roughly 2,300 hours, according to Steam, playing various editions of the game. OOTP isn't like MLB The Show or Super Mega Baseball.",
+      "title": "AMD is acquiring AI company World Labs in a deal worth more than $8 billion",
+      "essence": "AMD announced today that it's acquiring World Labs, an AI research lab co-founded by the prominent researcher Dr. Fei-Fei Li, in an all-stock deal worth approximately $8.2 billion.",
+      "full_body": "AMD announced today that it's acquiring World Labs, an AI research lab co-founded by the prominent researcher Dr. Fei-Fei Li, in an all-stock deal worth approximately $8.2 billion. World Labs launched in 2024 and was valued at $1 billion in a matter of months. The startup launched its first commercial product, a world generation model […]",
       "sentences": [
-        "If you were to ask me what game or game series I've sunk the most time into, the answer would be easy: Out of the Park Baseball (OOTP).",
-        "I have spent roughly 2,300 hours, according to Steam, playing various editions of the game.",
-        "OOTP isn't like MLB The Show or Super Mega Baseball."
+        "AMD announced today that it's acquiring World Labs, an AI research lab co-founded by the prominent researcher Dr.",
+        "Fei-Fei Li, in an all-stock deal worth approximately $8.2 billion.",
+        "World Labs launched in 2024 and was valued at $1 billion in a matter of months.",
+        "The startup launched its first commercial product, a world generation model […]"
       ],
-      "url": "https://www.theverge.com/games/1001206/out-of-the-park-baseball-cozy-sim-video-game-review"
+      "url": "https://www.theverge.com/tech/1001749/amd-world-labs-ai-acquisition-deal"
     },
     {
       "id": "art_2",
-      "title": "Engram is a sampler that turns broken AI hallucinations into music",
-      "essence": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram. It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds.",
-      "full_body": "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram. It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds. This isn't Suno in a box, though. This isn't a \"push-button, get-song\" device, aimed at creating something that sounds ready for top-40 […]",
+      "title": "Bose starts adding Auracast to its headphones",
+      "essence": "A new firmware update for the $449 Bose QuietComfort Ultra Headphones Gen 2 adds support for Bluetooth LE Audio and Auracast as beta features. The flagship Ultra headphones are the first from Bose to support the audio sharing technology, which the company plans to bring to more devices soon.",
+      "full_body": "A new firmware update for the $449 Bose QuietComfort Ultra Headphones Gen 2 adds support for Bluetooth LE Audio and Auracast as beta features. The flagship Ultra headphones are the first from Bose to support the audio sharing technology, which the company plans to bring to more devices soon. Only a few major manufacturers include […]",
       "sentences": [
-        "Music startup Thoughtful Things has just launched the Kickstarter campaign for its first instrument, Engram.",
-        "It's a sampler and groovebox that uses AI to mangle incoming audio and even hallucinate completely new sounds.",
-        "This isn't Suno in a box, though.",
-        "This isn't a \"push-button, get-song\" device, aimed at creating something that sounds ready for top-40 […]"
+        "A new firmware update for the $449 Bose QuietComfort Ultra Headphones Gen 2 adds support for Bluetooth LE Audio and Auracast as beta features.",
+        "The flagship Ultra headphones are the first from Bose to support the audio sharing technology, which the company plans to bring to more devices soon.",
+        "Only a few major manufacturers include […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001193/engram-sampler-ai-hallucinations-music"
+      "url": "https://www.theverge.com/tech/1001522/bose-headphones-get-auracast-support"
     },
     {
       "id": "art_3",
-      "title": "OpenAI agents tried to ‘bruteforce’ a UN website",
-      "essence": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June. While the incident doesn't quite rise to the level of the Hugging Face hack, or the recent attacks on US government sites, it's yet another concerning example of AI […]",
-      "full_body": "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June. While the incident doesn't quite rise to the level of the Hugging Face hack, or the recent attacks on US government sites, it's yet another concerning example of AI […]",
+      "title": "OpenAI’s AI agents need to catch up",
+      "essence": "OpenAI popularized the modern generative AI chatbot, but as its 2026 DevDay event approaches, it's fallen behind in one of the industry's hottest categories: continuously running, consumer-facing AI agents. On Tuesday, it will likely try to capture the lead in that race.",
+      "full_body": "OpenAI popularized the modern generative AI chatbot, but as its 2026 DevDay event approaches, it's fallen behind in one of the industry's hottest categories: continuously running, consumer-facing AI agents. On Tuesday, it will likely try to capture the lead in that race. Rumors abound that OpenAI will release its own AI agent, dubbed Aeon - […]",
       "sentences": [
-        "Security researcher Rowan Howard-Jones says that OpenAI agents scanned the UN Conference on Trade and Development's (UNCTAD) statistics site over 16,000 times between April and June.",
-        "While the incident doesn't quite rise to the level of the Hugging Face hack, or the recent attacks on US government sites, it's yet another concerning example of AI […]"
+        "OpenAI popularized the modern generative AI chatbot, but as its 2026 DevDay event approaches, it's fallen behind in one of the industry's hottest categories: continuously running, consumer-facing AI agents.",
+        "On Tuesday, it will likely try to capture the lead in that race.",
+        "Rumors abound that OpenAI will release its own AI agent, dubbed Aeon - […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1001178/openai-agents-bruteforce-un-website"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1001590/openai-devday-2026-aeon-ai-agent"
     },
     {
       "id": "art_4",
-      "title": "Why OLPC’s $100 laptop never stood a chance",
-      "essence": "The idea was big, exciting, and inspiring: What if we could get every kid in the world access to a computer? For a bunch of thinkers and executives in Silicon Valley, it felt like the way to fix everything.",
-      "full_body": "The idea was big, exciting, and inspiring: What if we could get every kid in the world access to a computer? For a bunch of thinkers and executives in Silicon Valley, it felt like the way to fix everything. But the One Laptop Per Child initiative, and the XO-1 laptop designed to be given away, […]",
+      "title": "Trump finalizes rule to make cars less fuel efficient",
+      "essence": "The US Department of Transportation finalized its plans today to weaken fuel efficiency standards, calling it \"among the largest deregulatory actions under the second Trump Administration.\" It's a nail in the coffin for Biden-era standards that would have required fleet average fuel economy to reach 50.4 miles per gallon by model year 2031. President Donald […]",
+      "full_body": "The US Department of Transportation finalized its plans today to weaken fuel efficiency standards, calling it \"among the largest deregulatory actions under the second Trump Administration.\" It's a nail in the coffin for Biden-era standards that would have required fleet average fuel economy to reach 50.4 miles per gallon by model year 2031. President Donald […]",
       "sentences": [
-        "The idea was big, exciting, and inspiring: What if we could get every kid in the world access to a computer?",
-        "For a bunch of thinkers and executives in Silicon Valley, it felt like the way to fix everything.",
-        "But the One Laptop Per Child initiative, and the XO-1 laptop designed to be given away, […]"
+        "The US Department of Transportation finalized its plans today to weaken fuel efficiency standards, calling it \"among the largest deregulatory actions under the second Trump Administration.\" It's a nail in the coffin for Biden-era standards that would have required fleet average fuel economy to reach 50.4 miles per gallon by model year 2031.",
+        "President Donald […]"
       ],
-      "url": "https://www.theverge.com/podcast/1000517/why-olpcs-100-laptop-never-stood-a-chance"
+      "url": "https://www.theverge.com/news/1001610/trump-weakens-fuel-efficiency-standards"
     }
   ]
 }
