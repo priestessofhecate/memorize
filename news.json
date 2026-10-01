@@ -1,51 +1,49 @@
 {
-  "updated_at": "2026-09-30 22:11 UTC",
+  "updated_at": "2026-10-01 22:10 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Neon sticks it to A24 by announcing a Creative Commons SCP Foundation movie",
-      "essence": "A24 pissed off one of the internet's largest horror communities when it announced it was working on an SCP Foundation film, but apparently hadn't bothered to contact the SCP Wiki team, nor did it commit to releasing it under a Creative Commons license as required. Seeing an easy PR win, Neon is cashing in by […]",
-      "full_body": "A24 pissed off one of the internet's largest horror communities when it announced it was working on an SCP Foundation film, but apparently hadn't bothered to contact the SCP Wiki team, nor did it commit to releasing it under a Creative Commons license as required. Seeing an easy PR win, Neon is cashing in by […]",
+      "title": "Google’s new Guided Vision feature can help you read the fine print",
+      "essence": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By sharing your camera in Gemini Live, you can have Google's AI help with things like reading small text, describing your surroundings, finding or identifying objects around […]",
+      "full_body": "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at. By sharing your camera in Gemini Live, you can have Google's AI help with things like reading small text, describing your surroundings, finding or identifying objects around […]",
       "sentences": [
-        "A24 pissed off one of the internet's largest horror communities when it announced it was working on an SCP Foundation film, but apparently hadn't bothered to contact the SCP Wiki team, nor did it commit to releasing it under a Creative Commons license as required.",
-        "Seeing an easy PR win, Neon is cashing in by […]"
+        "Guided Vision is launching in Gemini Live on compatible Android devices today to use AI to give real-time audio descriptions of anything you point your phone's camera at.",
+        "By sharing your camera in Gemini Live, you can have Google's AI help with things like reading small text, describing your surroundings, finding or identifying objects around […]"
       ],
-      "url": "https://www.theverge.com/entertainment/1002958/neon-a24-creative-commons-scp-foundation-movie"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1003756/google-gemini-live-guided-vision"
     },
     {
       "id": "art_2",
-      "title": "Google announces Gemini 4 and says it’s so capable that only ‘trusted cyber defenders’ can have it right now",
-      "essence": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu.",
-      "full_body": "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon. The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu. But the company is limiting access at […]",
+      "title": "Android Central ‘will continue’ despite laying off its staff",
+      "essence": "Android Central, a blog focused on the Android ecosystem, laid off its staff yesterday, but owner Future confirms to The Verge that the site will continue publishing. Yesterday, four of the six staffers on Android Central's staff page posted publicly about the layoffs, including Shruti Shekar, Derrek Lee, Harish Jonnalagadda, and Nicholas Sutrich, and former […]",
+      "full_body": "Android Central, a blog focused on the Android ecosystem, laid off its staff yesterday, but owner Future confirms to The Verge that the site will continue publishing. Yesterday, four of the six staffers on Android Central's staff page posted publicly about the layoffs, including Shruti Shekar, Derrek Lee, Harish Jonnalagadda, and Nicholas Sutrich, and former […]",
       "sentences": [
-        "Google today revealed its next AI frontier model, which it's calling Gemini 4 Argon.",
-        "The new model delivers \"frontier performance in complex workflows across real-world software engineering, enterprise knowledge work like legal and finance, and cybersecurity defense,\" according to chief AI architect and Google DeepMind SVP Koray Kavukcuoglu.",
-        "But the company is limiting access at […]"
+        "Android Central, a blog focused on the Android ecosystem, laid off its staff yesterday, but owner Future confirms to The Verge that the site will continue publishing.",
+        "Yesterday, four of the six staffers on Android Central's staff page posted publicly about the layoffs, including Shruti Shekar, Derrek Lee, Harish Jonnalagadda, and Nicholas Sutrich, and former […]"
       ],
-      "url": "https://www.theverge.com/tech/1002980/google-gemini-4-argon"
+      "url": "https://www.theverge.com/tech/1003735/android-central-layoffs"
     },
     {
       "id": "art_3",
-      "title": "The AI Tamagotchis are coming",
-      "essence": "While AI has made plenty of inroads on people's phones and computers, it's largely failed in dedicated devices. But over the next year, two major AI companies, Meta and OpenAI, will attempt to change that.",
-      "full_body": "While AI has made plenty of inroads on people's phones and computers, it's largely failed in dedicated devices. But over the next year, two major AI companies, Meta and OpenAI, will attempt to change that. And they're apparently betting on a similar path: testing appetites for physical hardware with their cutesy software agents.",
+      "title": "Steam Deck 2: Is AMD Gainsborough the chip Valve’s been waiting for?",
+      "essence": "The Steam Deck is four and a half years old, and handheld gamers are eagerly awaiting a Steam Deck 2 - but Valve has consistently said it needs a new chip with a \"generational leap\" in performance and efficiency before building the sequel. There's some reason to believe that chip has now broken cover: AMD […]",
+      "full_body": "The Steam Deck is four and a half years old, and handheld gamers are eagerly awaiting a Steam Deck 2 - but Valve has consistently said it needs a new chip with a \"generational leap\" in performance and efficiency before building the sequel. There's some reason to believe that chip has now broken cover: AMD […]",
       "sentences": [
-        "While AI has made plenty of inroads on people's phones and computers, it's largely failed in dedicated devices.",
-        "But over the next year, two major AI companies, Meta and OpenAI, will attempt to change that.",
-        "And they're apparently betting on a similar path: testing appetites for physical hardware with their cutesy software agents."
+        "The Steam Deck is four and a half years old, and handheld gamers are eagerly awaiting a Steam Deck 2 - but Valve has consistently said it needs a new chip with a \"generational leap\" in performance and efficiency before building the sequel.",
+        "There's some reason to believe that chip has now broken cover: AMD […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices"
+      "url": "https://www.theverge.com/games/1003593/steam-deck-2-is-amd-gainsborough-the-chip-valves-been-waiting-for"
     },
     {
       "id": "art_4",
-      "title": "Reddit says it has to cut back access to ‘Old Reddit’ because of AI bots",
-      "essence": "Reddit is further limiting who can use the \"Old Reddit\" experience as part of its efforts to combat scraping and automated traffic. Reddit recently started forcing users to log in to be able to use Old Reddit, but in the \"next few months,\" the company says that you'll have to be logged in and have […]",
-      "full_body": "Reddit is further limiting who can use the \"Old Reddit\" experience as part of its efforts to combat scraping and automated traffic. Reddit recently started forcing users to log in to be able to use Old Reddit, but in the \"next few months,\" the company says that you'll have to be logged in and have […]",
+      "title": "Judge dismisses antitrust lawsuits over Google’s AI Overviews",
+      "essence": "A federal judge has dismissed a pair of antitrust lawsuits filed by Chegg and Rolling Stone parent company Penske Media Corporation, which accused Google of driving away web traffic with its AI-powered search features, as reported earlier by Reuters. US District Judge Amit Mehta takes Google's side in a ruling on Wednesday, writing that PMC […]",
+      "full_body": "A federal judge has dismissed a pair of antitrust lawsuits filed by Chegg and Rolling Stone parent company Penske Media Corporation, which accused Google of driving away web traffic with its AI-powered search features, as reported earlier by Reuters. US District Judge Amit Mehta takes Google's side in a ruling on Wednesday, writing that PMC […]",
       "sentences": [
-        "Reddit is further limiting who can use the \"Old Reddit\" experience as part of its efforts to combat scraping and automated traffic.",
-        "Reddit recently started forcing users to log in to be able to use Old Reddit, but in the \"next few months,\" the company says that you'll have to be logged in and have […]"
+        "A federal judge has dismissed a pair of antitrust lawsuits filed by Chegg and Rolling Stone parent company Penske Media Corporation, which accused Google of driving away web traffic with its AI-powered search features, as reported earlier by Reuters.",
+        "US District Judge Amit Mehta takes Google's side in a ruling on Wednesday, writing that PMC […]"
       ],
-      "url": "https://www.theverge.com/tech/1002788/old-reddit-ai-scraping"
+      "url": "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
     }
   ]
 }
