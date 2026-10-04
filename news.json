@@ -1,19 +1,30 @@
 {
-  "updated_at": "2026-10-04 02:52 UTC",
+  "updated_at": "2026-10-04 22:11 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Capcom is preparing for a ‘future where we create games together with AI’",
-      "essence": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a presentation with the mouthful of a title: \"The Outlook and Future of the REX Project, Further Evolving the RE Engine for […]",
-      "full_body": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech. During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a presentation with the mouthful of a title: \"The Outlook and Future of the REX Project, Further Evolving the RE Engine for […]",
+      "title": "The new Fitbit Edge leaks",
+      "essence": "We don't know a ton about the Fitbit Edge, but it appears to be a successor to the midrange Charge line. It had leaked previously, but we can clearly see in these images posted by Android Headlines, you can see that Google's rumored fitness tracker sort of splits the difference between the Pixel Watch and […]",
+      "full_body": "We don't know a ton about the Fitbit Edge, but it appears to be a successor to the midrange Charge line. It had leaked previously, but we can clearly see in these images posted by Android Headlines, you can see that Google's rumored fitness tracker sort of splits the difference between the Pixel Watch and […]",
       "sentences": [
-        "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so down on the tech.",
-        "During the Capcom Open Conference RE: 2026 programmer Satoshi Ishida gave a presentation with the mouthful of a title: \"The Outlook and Future of the REX Project, Further Evolving the RE Engine for […]"
+        "We don't know a ton about the Fitbit Edge, but it appears to be a successor to the midrange Charge line.",
+        "It had leaked previously, but we can clearly see in these images posted by Android Headlines, you can see that Google's rumored fitness tracker sort of splits the difference between the Pixel Watch and […]"
       ],
-      "url": "https://www.theverge.com/games/1004418/capcom-ai-game-development"
+      "url": "https://www.theverge.com/gadgets/1004616/the-new-fitbit-edge-leaks"
     },
     {
       "id": "art_2",
+      "title": "Prick’s theatrical industrial punk is perfect for spooky season",
+      "essence": "While deep in the recording process for The Downward Spiral, Trent Reznor lent some of his production talents to old friend Kevin McMahon, from the new wave band Lucky Pierre (which Reznor was briefly a member of). While Reznor is only credited as the producer on four tracks off Prick's self-titled debut record, his fingerprints […]",
+      "full_body": "While deep in the recording process for The Downward Spiral, Trent Reznor lent some of his production talents to old friend Kevin McMahon, from the new wave band Lucky Pierre (which Reznor was briefly a member of). While Reznor is only credited as the producer on four tracks off Prick's self-titled debut record, his fingerprints […]",
+      "sentences": [
+        "While deep in the recording process for The Downward Spiral, Trent Reznor lent some of his production talents to old friend Kevin McMahon, from the new wave band Lucky Pierre (which Reznor was briefly a member of).",
+        "While Reznor is only credited as the producer on four tracks off Prick's self-titled debut record, his fingerprints […]"
+      ],
+      "url": "https://www.theverge.com/entertainment/1004595/prick-industrial-glam-punk-album-review"
+    },
+    {
+      "id": "art_3",
       "title": "The best early October Prime Day deals happening now",
       "essence": "It’s not even October yet and Amazon is already offering some Prime Big Deal Day discounts on its own hardware, along with plenty of other popular products. It’s all to hype up October Prime Day, which starts October 6th at 3AM ET and lasts through 3AM ET on the 8th if you’re on the East […]",
       "full_body": "It’s not even October yet and Amazon is already offering some Prime Big Deal Day discounts on its own hardware, along with plenty of other popular products. It’s all to hype up October Prime Day, which starts October 6th at 3AM ET and lasts through 3AM ET on the 8th if you’re on the East […]",
@@ -24,27 +35,16 @@
       "url": "https://www.theverge.com/gadgets/999447/best-early-amazon-prime-day-big-deals-sale-october"
     },
     {
-      "id": "art_3",
-      "title": "Splice CEO Kakul Srivastava thinks AI emails are killing conversations",
-      "essence": "Kakul Srivastava is the CEO of Splice, the sample platform countless producers rely on for one-shots and melodic loops. Samples pulled from the service have found their way into massive hits like Lisa's \"Money\" and \"Espresso\" by Sabrina Carpenter. (The original samples are here and here, for the curious.) Before that, Kakul held executive roles […]",
-      "full_body": "Kakul Srivastava is the CEO of Splice, the sample platform countless producers rely on for one-shots and melodic loops. Samples pulled from the service have found their way into massive hits like Lisa's \"Money\" and \"Espresso\" by Sabrina Carpenter. (The original samples are here and here, for the curious.) Before that, Kakul held executive roles […]",
-      "sentences": [
-        "Kakul Srivastava is the CEO of Splice, the sample platform countless producers rely on for one-shots and melodic loops.",
-        "Samples pulled from the service have found their way into massive hits like Lisa's \"Money\" and \"Espresso\" by Sabrina Carpenter. (The original samples are here and here, for the curious.) Before that, Kakul held executive roles […]"
-      ],
-      "url": "https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview"
-    },
-    {
       "id": "art_4",
-      "title": "An OpenAI safety employee has quit and is sounding the alarm",
-      "essence": "David Robinson used to write the safety reports that accompanied every major model release at OpenAI. This week, he resigned from his position and is now speaking out in an editorial in The Atlantic.",
-      "full_body": "David Robinson used to write the safety reports that accompanied every major model release at OpenAI. This week, he resigned from his position and is now speaking out in an editorial in The Atlantic. It's understandable if you're feeling a bit cynical about everyone suddenly coming out of the woodwork to warn about how dangerous […]",
+      "title": "NJ’s former Lt Gov is using AI to say he’s innocent of sexual harassment",
+      "essence": "New Jersey's lieutenant governor Dale Caldwell was forced to resign on September 25th after an investigation found he had sexually harassed a staffer and repeatedly violated ethics rules. The now-former Lt. governor has been making the media rounds trying to clear his name.",
+      "full_body": "New Jersey's lieutenant governor Dale Caldwell was forced to resign on September 25th after an investigation found he had sexually harassed a staffer and repeatedly violated ethics rules. The now-former Lt. governor has been making the media rounds trying to clear his name. But he took a particularly odd tactic during an interview on NJ […]",
       "sentences": [
-        "David Robinson used to write the safety reports that accompanied every major model release at OpenAI.",
-        "This week, he resigned from his position and is now speaking out in an editorial in The Atlantic.",
-        "It's understandable if you're feeling a bit cynical about everyone suddenly coming out of the woodwork to warn about how dangerous […]"
+        "New Jersey's lieutenant governor Dale Caldwell was forced to resign on September 25th after an investigation found he had sexually harassed a staffer and repeatedly violated ethics rules.",
+        "The now-former Lt. governor has been making the media rounds trying to clear his name.",
+        "But he took a particularly odd tactic during an interview on NJ […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1004549/well-if-ai-said-it-it-must-be-true"
     }
   ]
 }
