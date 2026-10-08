@@ -1,55 +1,50 @@
 {
-  "updated_at": "2026-10-07 22:10 UTC",
+  "updated_at": "2026-10-08 22:11 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "BMW’s iX4 SUV is a 428-mile defensive weapon against China’s EV takeover",
-      "essence": "While much of the automotive world sits dumbfounded as China gobbles up all its customers, BMW continues to roll out extremely well-crafted, technologically advanced electric vehicles that impress in both drive quality and price. The latest is the BMW iX4, a coupe-shaped SUV that puts a sportier spin on the automaker's iX3.",
-      "full_body": "While much of the automotive world sits dumbfounded as China gobbles up all its customers, BMW continues to roll out extremely well-crafted, technologically advanced electric vehicles that impress in both drive quality and price. The latest is the BMW iX4, a coupe-shaped SUV that puts a sportier spin on the automaker's iX3.",
+      "title": "SpaceX announces plan to become a ‘major mobile carrier’",
+      "essence": "SpaceX has acquired a portfolio of low-band spectrum licenses - a move the company says \"will pave the way\" for its Starlink Mobile service to become a \"major\" US carrier. When the Federal Communications Commission signs off on the deal, SpaceX says it will deploy its new architecture that combines its satellite-to-mobile constellation with a […]",
+      "full_body": "SpaceX has acquired a portfolio of low-band spectrum licenses - a move the company says \"will pave the way\" for its Starlink Mobile service to become a \"major\" US carrier. When the Federal Communications Commission signs off on the deal, SpaceX says it will deploy its new architecture that combines its satellite-to-mobile constellation with a […]",
       "sentences": [
-        "While much of the automotive world sits dumbfounded as China gobbles up all its customers, BMW continues to roll out extremely well-crafted, technologically advanced electric vehicles that impress in both drive quality and price.",
-        "The latest is the BMW iX4, a coupe-shaped SUV that puts a sportier spin on the automaker's iX3."
+        "SpaceX has acquired a portfolio of low-band spectrum licenses - a move the company says \"will pave the way\" for its Starlink Mobile service to become a \"major\" US carrier.",
+        "When the Federal Communications Commission signs off on the deal, SpaceX says it will deploy its new architecture that combines its satellite-to-mobile constellation with a […]"
       ],
-      "url": "https://www.theverge.com/transportation/1006837/bmw-ix4-ev-range-price-specs-tesla-china"
+      "url": "https://www.theverge.com/science/1008467/spacex-announces-plan-to-become-a-major-mobile-carrier"
     },
     {
       "id": "art_2",
-      "title": "Teenage Engineering’s CEO says it’ll stop making synths",
-      "essence": "Teenage Engineering founder and CEO Jesper Kouthoofd told Highsnobiety that it plans to stop making synths. And yes, that includes the iconic OP-1, which put the company on the map.",
-      "full_body": "Teenage Engineering founder and CEO Jesper Kouthoofd told Highsnobiety that it plans to stop making synths. And yes, that includes the iconic OP-1, which put the company on the map. TE isn't just a music gear maker; it's also a sought-after design firm. It's collaborated with Ikea, Nothing, and Playdate, among others. But almost everything […]",
+      "title": "AMD will bring FSR 4 to handhelds by the end of 2026",
+      "essence": "It's already possible to get AMD's framerate-enhancing FSR 4 boost on handhelds as old as the Steam Deck - but in June, AMD reserved the right to disappoint handheld gamers by not officially bringing FSR 4 to older handhelds. Now, AMD consumer chip boss Jack Huynh says he will bring the tech to some handhelds […]",
+      "full_body": "It's already possible to get AMD's framerate-enhancing FSR 4 boost on handhelds as old as the Steam Deck - but in June, AMD reserved the right to disappoint handheld gamers by not officially bringing FSR 4 to older handhelds. Now, AMD consumer chip boss Jack Huynh says he will bring the tech to some handhelds […]",
       "sentences": [
-        "Teenage Engineering founder and CEO Jesper Kouthoofd told Highsnobiety that it plans to stop making synths.",
-        "And yes, that includes the iconic OP-1, which put the company on the map.",
-        "TE isn't just a music gear maker; it's also a sought-after design firm.",
-        "It's collaborated with Ikea, Nothing, and Playdate, among others.",
-        "But almost everything […]"
+        "It's already possible to get AMD's framerate-enhancing FSR 4 boost on handhelds as old as the Steam Deck - but in June, AMD reserved the right to disappoint handheld gamers by not officially bringing FSR 4 to older handhelds.",
+        "Now, AMD consumer chip boss Jack Huynh says he will bring the tech to some handhelds […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1007489/teengage-engineering-stop-making-synths"
+      "url": "https://www.theverge.com/games/1008353/amd-will-bring-fsr-4-to-handhelds-by-the-end-of-2026"
     },
     {
       "id": "art_3",
-      "title": "Android’s physical navigation buttons are back on Googlebooks, but not the way you think",
-      "essence": "A common misconception I've seen with Googlebooks is that the Quick Insert and Google logo keys are new. They're not, as they first debuted a couple of years ago on some Chromebooks.",
-      "full_body": "A common misconception I've seen with Googlebooks is that the Quick Insert and Google logo keys are new. They're not, as they first debuted a couple of years ago on some Chromebooks. But there is something new for Googlebooks that's ripped straight from Android phones circa 2014. On every Googlebook keyboard, the F1, F2, and […]",
+      "title": "Apple will reportedly debut its first touchscreen MacBook in three weeks",
+      "essence": "Apple is set to introduce a new MacBook Pro with a touchscreen and an updated iPad Mini \"on or around\" October 27th, Bloomberg reports. If true, that would put the event just two weeks after the October 13th event Apple announced today, which is rumored to focus on smart home products.",
+      "full_body": "Apple is set to introduce a new MacBook Pro with a touchscreen and an updated iPad Mini \"on or around\" October 27th, Bloomberg reports. If true, that would put the event just two weeks after the October 13th event Apple announced today, which is rumored to focus on smart home products. Bloomberg says that the […]",
       "sentences": [
-        "A common misconception I've seen with Googlebooks is that the Quick Insert and Google logo keys are new.",
-        "They're not, as they first debuted a couple of years ago on some Chromebooks.",
-        "But there is something new for Googlebooks that's ripped straight from Android phones circa 2014.",
-        "On every Googlebook keyboard, the F1, F2, and […]"
+        "Apple is set to introduce a new MacBook Pro with a touchscreen and an updated iPad Mini \"on or around\" October 27th, Bloomberg reports.",
+        "If true, that would put the event just two weeks after the October 13th event Apple announced today, which is rumored to focus on smart home products.",
+        "Bloomberg says that the […]"
       ],
-      "url": "https://www.theverge.com/tech/1007409/androids-physical-navigation-buttons-are-back-on-googlebooks-but-not-the-way-you-think"
+      "url": "https://www.theverge.com/tech/1008422/apple-macbook-pro-touchscreen-ipad-mini-rumor"
     },
     {
       "id": "art_4",
-      "title": "We found some great October Prime Day deals under $50",
-      "essence": "Getting in on the Prime Day action doesn’t have to result in an empty wallet. Just as we found a couple handfuls of goodies that are under $25, there are plenty of deals during Amazon’s October sale that are $50 or less, many of which offer a lot of practical value.",
-      "full_body": "Getting in on the Prime Day action doesn’t have to result in an empty wallet. Just as we found a couple handfuls of goodies that are under $25, there are plenty of deals during Amazon’s October sale that are $50 or less, many of which offer a lot of practical value. Everything from chargers to […]",
+      "title": "California is trying to shut down robot vs. human cage matches",
+      "essence": "The California State Athletic Commission sent a cease-and-desist letter to a startup that hosted a match between a human and a robot last month, as reported by The New York Times. The fight, which took place on September 18th, pitted a human, Frankie LaPenna, against a humanoid robot owned by a tech startup, Rek, that […]",
+      "full_body": "The California State Athletic Commission sent a cease-and-desist letter to a startup that hosted a match between a human and a robot last month, as reported by The New York Times. The fight, which took place on September 18th, pitted a human, Frankie LaPenna, against a humanoid robot owned by a tech startup, Rek, that […]",
       "sentences": [
-        "Getting in on the Prime Day action doesn’t have to result in an empty wallet.",
-        "Just as we found a couple handfuls of goodies that are under $25, there are plenty of deals during Amazon’s October sale that are $50 or less, many of which offer a lot of practical value.",
-        "Everything from chargers to […]"
+        "The California State Athletic Commission sent a cease-and-desist letter to a startup that hosted a match between a human and a robot last month, as reported by The New York Times.",
+        "The fight, which took place on September 18th, pitted a human, Frankie LaPenna, against a humanoid robot owned by a tech startup, Rek, that […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1007110/october-prime-day-budget-deals-under-50"
+      "url": "https://www.theverge.com/tech/1008401/california-shut-down-rek-fighting-robot-company-human"
     }
   ]
 }
