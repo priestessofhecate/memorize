@@ -1,50 +1,50 @@
 {
-  "updated_at": "2026-10-11 22:10 UTC",
+  "updated_at": "2026-10-12 22:10 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "A college in Illinois tried to cancel its Flock contact and it refused",
-      "essence": "In April of 2025, Elgin Community College had six Flock safety cameras installed to \"enhance the safety and security of students.\" But by September of that year, the school's administration grew concerned that Flock was sharing data with Customs and Border Patrol, that camera feeds were not properly secured, and that both law enforcement and […]",
-      "full_body": "In April of 2025, Elgin Community College had six Flock safety cameras installed to \"enhance the safety and security of students.\" But by September of that year, the school's administration grew concerned that Flock was sharing data with Customs and Border Patrol, that camera feeds were not properly secured, and that both law enforcement and […]",
+      "title": "The Social Reckoning is flopping at the box office",
+      "essence": "As important as some of the messages in The Social Reckoning are, the movie has been drastically underperforming at the box office. Per Variety, Aaron's Sorkin's follow up to The Social Network only grossed a measly $5.5 million this past weekend against a budget that's somewhere within the $30-42 million range.",
+      "full_body": "As important as some of the messages in The Social Reckoning are, the movie has been drastically underperforming at the box office. Per Variety, Aaron's Sorkin's follow up to The Social Network only grossed a measly $5.5 million this past weekend against a budget that's somewhere within the $30-42 million range. That would make it […]",
       "sentences": [
-        "In April of 2025, Elgin Community College had six Flock safety cameras installed to \"enhance the safety and security of students.\" But by September of that year, the school's administration grew concerned that Flock was sharing data with Customs and Border Patrol, that camera feeds were not properly secured, and that both law enforcement and […]"
+        "As important as some of the messages in The Social Reckoning are, the movie has been drastically underperforming at the box office.",
+        "Per Variety, Aaron's Sorkin's follow up to The Social Network only grossed a measly $5.5 million this past weekend against a budget that's somewhere within the $30-42 million range.",
+        "That would make it […]"
       ],
-      "url": "https://www.theverge.com/tech/1009411/elgin-community-college-flock-safety-cameras"
+      "url": "https://www.theverge.com/entertainment/1009630/social-reckoning-box-office-other-mommy"
     },
     {
       "id": "art_2",
-      "title": "Silicon Valley is falling in line with Trump’s attempt to rename AI",
-      "essence": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]",
-      "full_body": "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on. While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]",
+      "title": "Meta has some Wonder Full new AI models",
+      "essence": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best.",
+      "full_body": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available […]",
       "sentences": [
-        "When President Donald Trump announced his plans to rebrand artificial intelligence as \"super intelligence,\" you'd be forgiven for being skeptical that it would catch on.",
-        "While most of the broader population is sticking with AI, some of Silicon Valley's most powerful are falling in line and trying to give Trump the great AI rebrand he […]"
+        "Meta is making up for lost time in the AI race.",
+        "After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best.",
+        "The new models, Muse Wonder and Muse Wonder Full, are available […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009406/silicon-valley-is-falling-in-line-with-trumps-attempt-to-rename-ai"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model"
     },
     {
       "id": "art_3",
-      "title": "The new Apple TV could have a built-in mic and a remote with a speaker",
-      "essence": "The latest rumors are that the new Apple TV will have a built-in microphone, while the upgraded remote will get a speaker. The mic would let users control the set-top box using Siri without having to speak into the remote or a connected HomePod device.",
-      "full_body": "The latest rumors are that the new Apple TV will have a built-in microphone, while the upgraded remote will get a speaker. The mic would let users control the set-top box using Siri without having to speak into the remote or a connected HomePod device. That could also let the Apple TV serve as a […]",
+      "title": "Elon Musk has donated over $276 million to Republican midterm efforts",
+      "essence": "Elon Musk has handed out at least $276 million to Republican groups since July, The New York Times reports, making him both the party's top known donor and the biggest established midterm donor. $158 million of that money - one of the largest political donations in American history - has been funneled into the Senate […]",
+      "full_body": "Elon Musk has handed out at least $276 million to Republican groups since July, The New York Times reports, making him both the party's top known donor and the biggest established midterm donor. $158 million of that money - one of the largest political donations in American history - has been funneled into the Senate […]",
       "sentences": [
-        "The latest rumors are that the new Apple TV will have a built-in microphone, while the upgraded remote will get a speaker.",
-        "The mic would let users control the set-top box using Siri without having to speak into the remote or a connected HomePod device.",
-        "That could also let the Apple TV serve as a […]"
+        "Elon Musk has handed out at least $276 million to Republican groups since July, The New York Times reports, making him both the party's top known donor and the biggest established midterm donor. $158 million of that money - one of the largest political donations in American history - has been funneled into the Senate […]"
       ],
-      "url": "https://www.theverge.com/tech/1009397/apple-tv-refresh-built-in-mic-remote-speaker"
+      "url": "https://www.theverge.com/tech/1009604/elon-musk-2026-midterm-republican-donations"
     },
     {
       "id": "art_4",
-      "title": "NASA dumped over 800GB of Artemis II data online",
-      "essence": "If you thought you'd seen all there is to see from the Artemis II mission, you're wrong. This week NASA posted over 800GB worth of science data, images, and videos on the Artemis II: Sights & Sounds of Science site.",
-      "full_body": "If you thought you'd seen all there is to see from the Artemis II mission, you're wrong. This week NASA posted over 800GB worth of science data, images, and videos on the Artemis II: Sights & Sounds of Science site. The archive includes over 11,000 photos and videos, over 8.5 hours of audio, and crew-annotated […]",
+      "title": "The Yandex outage probably didn’t blitz Russian bots",
+      "essence": "Multiple Ukrainian drone strikes over the last week have taken Russian data centers offline and reportedly caused online bot traffic to plummet - but in reality it's probably not the kind of bot activity most people associate with Russia. A chart citing Cloudflare data has been circulating around social media platforms, showing a sharp decline […]",
+      "full_body": "Multiple Ukrainian drone strikes over the last week have taken Russian data centers offline and reportedly caused online bot traffic to plummet - but in reality it's probably not the kind of bot activity most people associate with Russia. A chart citing Cloudflare data has been circulating around social media platforms, showing a sharp decline […]",
       "sentences": [
-        "If you thought you'd seen all there is to see from the Artemis II mission, you're wrong.",
-        "This week NASA posted over 800GB worth of science data, images, and videos on the Artemis II: Sights & Sounds of Science site.",
-        "The archive includes over 11,000 photos and videos, over 8.5 hours of audio, and crew-annotated […]"
+        "Multiple Ukrainian drone strikes over the last week have taken Russian data centers offline and reportedly caused online bot traffic to plummet - but in reality it's probably not the kind of bot activity most people associate with Russia.",
+        "A chart citing Cloudflare data has been circulating around social media platforms, showing a sharp decline […]"
       ],
-      "url": "https://www.theverge.com/science/1009379/nasa-800gb-artemis-ii-data"
+      "url": "https://www.theverge.com/tech/1009594/russian-bots-yandex-outage-drone-strikes-debunk"
     }
   ]
 }
