@@ -1,50 +1,54 @@
 {
-  "updated_at": "2026-10-12 22:10 UTC",
+  "updated_at": "2026-10-13 22:20 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "The Social Reckoning is flopping at the box office",
-      "essence": "As important as some of the messages in The Social Reckoning are, the movie has been drastically underperforming at the box office. Per Variety, Aaron's Sorkin's follow up to The Social Network only grossed a measly $5.5 million this past weekend against a budget that's somewhere within the $30-42 million range.",
-      "full_body": "As important as some of the messages in The Social Reckoning are, the movie has been drastically underperforming at the box office. Per Variety, Aaron's Sorkin's follow up to The Social Network only grossed a measly $5.5 million this past weekend against a budget that's somewhere within the $30-42 million range. That would make it […]",
+      "title": "Apple’s HomeView ad is confusing to everyone except parents",
+      "essence": "Apple's ad introducing its new HomeView smart display is a little unusual. It's fast-paced and unruly, depicting a family of five as they rush through the morning routine.",
+      "full_body": "Apple's ad introducing its new HomeView smart display is a little unusual. It's fast-paced and unruly, depicting a family of five as they rush through the morning routine. There's yelling and mess, misplaced keys and discarded eggshells. Apple's typical vibe is clean, simple, orderly; this commercial is chaos. But the spot has parents - those […]",
       "sentences": [
-        "As important as some of the messages in The Social Reckoning are, the movie has been drastically underperforming at the box office.",
-        "Per Variety, Aaron's Sorkin's follow up to The Social Network only grossed a measly $5.5 million this past weekend against a budget that's somewhere within the $30-42 million range.",
-        "That would make it […]"
+        "Apple's ad introducing its new HomeView smart display is a little unusual.",
+        "It's fast-paced and unruly, depicting a family of five as they rush through the morning routine.",
+        "There's yelling and mess, misplaced keys and discarded eggshells.",
+        "Apple's typical vibe is clean, simple, orderly; this commercial is chaos.",
+        "But the spot has parents - those […]"
       ],
-      "url": "https://www.theverge.com/entertainment/1009630/social-reckoning-box-office-other-mommy"
+      "url": "https://www.theverge.com/tech/1010561/apple-homeview-commercial-reaction"
     },
     {
       "id": "art_2",
-      "title": "Meta has some Wonder Full new AI models",
-      "essence": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best.",
-      "full_body": "Meta is making up for lost time in the AI race. After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best. The new models, Muse Wonder and Muse Wonder Full, are available […]",
+      "title": "OpenAI employee arrested for allegedly planting a bug in a conference room",
+      "essence": "An OpenAI engineer was arrested after the company said it discovered a \"sophisticated recording device\" hidden in one of its offices. The employee was identified as Abdulrahman Alfozan, a 35-year-old Saudi national.",
+      "full_body": "An OpenAI engineer was arrested after the company said it discovered a \"sophisticated recording device\" hidden in one of its offices. The employee was identified as Abdulrahman Alfozan, a 35-year-old Saudi national. Alfozan is charged with using or endeavoring to use a device to intercept oral communications, according to a press release from the Department […]",
       "sentences": [
-        "Meta is making up for lost time in the AI race.",
-        "After launching Muse Spark, the first model from its revamped Superintelligence Labs division, and buzzy AI agent Muse, it's now launching two new models it claims can go toe-to-toe with the industry's best.",
-        "The new models, Muse Wonder and Muse Wonder Full, are available […]"
+        "An OpenAI engineer was arrested after the company said it discovered a \"sophisticated recording device\" hidden in one of its offices.",
+        "The employee was identified as Abdulrahman Alfozan, a 35-year-old Saudi national.",
+        "Alfozan is charged with using or endeavoring to use a device to intercept oral communications, according to a press release from the Department […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1009479/meta-muse-wonder-full-ai-model"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1010642/openai-employee-arrested-recording-device"
     },
     {
       "id": "art_3",
-      "title": "Elon Musk has donated over $276 million to Republican midterm efforts",
-      "essence": "Elon Musk has handed out at least $276 million to Republican groups since July, The New York Times reports, making him both the party's top known donor and the biggest established midterm donor. $158 million of that money - one of the largest political donations in American history - has been funneled into the Senate […]",
-      "full_body": "Elon Musk has handed out at least $276 million to Republican groups since July, The New York Times reports, making him both the party's top known donor and the biggest established midterm donor. $158 million of that money - one of the largest political donations in American history - has been funneled into the Senate […]",
+      "title": "It looks like Apple Music is getting a new icon",
+      "essence": "Apple Music's iconic red app icon has reportedly been replaced with a black-and-white version in the latest iOS 27.2 beta, 9to5Mac reports. The eighth note on the icon also appears to have a slightly sharper angle than the original.",
+      "full_body": "Apple Music's iconic red app icon has reportedly been replaced with a black-and-white version in the latest iOS 27.2 beta, 9to5Mac reports. The eighth note on the icon also appears to have a slightly sharper angle than the original. A new Apple Music logo was also spotted last month on the Apple Music Hall website, […]",
       "sentences": [
-        "Elon Musk has handed out at least $276 million to Republican groups since July, The New York Times reports, making him both the party's top known donor and the biggest established midterm donor. $158 million of that money - one of the largest political donations in American history - has been funneled into the Senate […]"
+        "Apple Music's iconic red app icon has reportedly been replaced with a black-and-white version in the latest iOS 27.2 beta, 9to5Mac reports.",
+        "The eighth note on the icon also appears to have a slightly sharper angle than the original.",
+        "A new Apple Music logo was also spotted last month on the Apple Music Hall website, […]"
       ],
-      "url": "https://www.theverge.com/tech/1009604/elon-musk-2026-midterm-republican-donations"
+      "url": "https://www.theverge.com/tech/1010619/apple-music-new-icon-ios-27-beta"
     },
     {
       "id": "art_4",
-      "title": "The Yandex outage probably didn’t blitz Russian bots",
-      "essence": "Multiple Ukrainian drone strikes over the last week have taken Russian data centers offline and reportedly caused online bot traffic to plummet - but in reality it's probably not the kind of bot activity most people associate with Russia. A chart citing Cloudflare data has been circulating around social media platforms, showing a sharp decline […]",
-      "full_body": "Multiple Ukrainian drone strikes over the last week have taken Russian data centers offline and reportedly caused online bot traffic to plummet - but in reality it's probably not the kind of bot activity most people associate with Russia. A chart citing Cloudflare data has been circulating around social media platforms, showing a sharp decline […]",
+      "title": "Shopify opens its catalog up to more AI agents",
+      "essence": "More AI agents will soon be able to browse and purchase from Shopify listings, marking an expansion of the company's agentic commerce ambitions. Shopify announced Tuesday it will let shoppers configure their AI agents to purchase products on their behalf, giving more agents access to over a billion listings in Shopify's catalog. (The catalog consists […]",
+      "full_body": "More AI agents will soon be able to browse and purchase from Shopify listings, marking an expansion of the company's agentic commerce ambitions. Shopify announced Tuesday it will let shoppers configure their AI agents to purchase products on their behalf, giving more agents access to over a billion listings in Shopify's catalog. (The catalog consists […]",
       "sentences": [
-        "Multiple Ukrainian drone strikes over the last week have taken Russian data centers offline and reportedly caused online bot traffic to plummet - but in reality it's probably not the kind of bot activity most people associate with Russia.",
-        "A chart citing Cloudflare data has been circulating around social media platforms, showing a sharp decline […]"
+        "More AI agents will soon be able to browse and purchase from Shopify listings, marking an expansion of the company's agentic commerce ambitions.",
+        "Shopify announced Tuesday it will let shoppers configure their AI agents to purchase products on their behalf, giving more agents access to over a billion listings in Shopify's catalog. (The catalog consists […]"
       ],
-      "url": "https://www.theverge.com/tech/1009594/russian-bots-yandex-outage-drone-strikes-debunk"
+      "url": "https://www.theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents"
     }
   ]
 }
