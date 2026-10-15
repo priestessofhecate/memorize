@@ -1,54 +1,50 @@
 {
-  "updated_at": "2026-10-14 22:20 UTC",
+  "updated_at": "2026-10-15 22:21 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "The best feature of Apple’s HomeView might be its simplicity",
-      "essence": "I'm just going to come right out and say it. I love the approach Apple has taken with the HomeView.",
-      "full_body": "I'm just going to come right out and say it. I love the approach Apple has taken with the HomeView. I think it's the shared, always-available household interface that my family might finally use. Is Apple's first smart display my dream smart home dashboard? But is it the right product for Apple Home at […]",
+      "title": "The tech backlash is now in theaters",
+      "essence": "Though movies about disruptive tech founders are nothing new, 2026 has been unusually stacked with features that take a much more critical look at how Silicon Valley is reshaping our reality. Aaron Sorkin's The Social Reckoning frames Mark Zuckerberg as a robotic villain whose ambitions are destabilizing society.",
+      "full_body": "Though movies about disruptive tech founders are nothing new, 2026 has been unusually stacked with features that take a much more critical look at how Silicon Valley is reshaping our reality. Aaron Sorkin's The Social Reckoning frames Mark Zuckerberg as a robotic villain whose ambitions are destabilizing society. Nathan Fielder and Lance Oppenheim's You Can […]",
       "sentences": [
-        "I'm just going to come right out and say it.",
-        "I love the approach Apple has taken with the HomeView.",
-        "I think it's the shared, always-available household interface that my family might finally use.",
-        "Is Apple's first smart display my dream smart home dashboard?",
-        "But is it the right product for Apple Home at […]"
+        "Though movies about disruptive tech founders are nothing new, 2026 has been unusually stacked with features that take a much more critical look at how Silicon Valley is reshaping our reality.",
+        "Aaron Sorkin's The Social Reckoning frames Mark Zuckerberg as a robotic villain whose ambitions are destabilizing society.",
+        "Nathan Fielder and Lance Oppenheim's You Can […]"
       ],
-      "url": "https://www.theverge.com/tech/1011431/apple-homeview-smart-display-best-feature"
+      "url": "https://www.theverge.com/entertainment/1012438/hollywood-tech-backlash-you-can-see-everything-musk-the-social-reckoning-artificial"
     },
     {
       "id": "art_2",
-      "title": "Eight states sue OpenAI, saying ChatGPT isn’t safe for kids",
-      "essence": "OpenAI is facing a new wave of lawsuits from eight US states that accuse the company of harming children and misleading customers about the safety of ChatGPT, as reported earlier by Reuters. The lawsuits, filed separately by Iowa, Kansas, Nebraska, West Virginia, Arkansas, Arizona, Idaho, and Montana, allege OpenAI unlawfully put profits over safety when […]",
-      "full_body": "OpenAI is facing a new wave of lawsuits from eight US states that accuse the company of harming children and misleading customers about the safety of ChatGPT, as reported earlier by Reuters. The lawsuits, filed separately by Iowa, Kansas, Nebraska, West Virginia, Arkansas, Arizona, Idaho, and Montana, allege OpenAI unlawfully put profits over safety when […]",
+      "title": "Trump posts AI-edited photo to brag about White House restoration work",
+      "essence": "President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI. The picture, which compares an old White House column to a \"restored\" one, has several discrepancies and was flagged by Google's AI detector as \"made or […]",
+      "full_body": "President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI. The picture, which compares an old White House column to a \"restored\" one, has several discrepancies and was flagged by Google's AI detector as \"made or […]",
       "sentences": [
-        "OpenAI is facing a new wave of lawsuits from eight US states that accuse the company of harming children and misleading customers about the safety of ChatGPT, as reported earlier by Reuters.",
-        "The lawsuits, filed separately by Iowa, Kansas, Nebraska, West Virginia, Arkansas, Arizona, Idaho, and Montana, allege OpenAI unlawfully put profits over safety when […]"
+        "President Donald Trump posted a series of photos on Truth Social showing off renovations to the White House - but one of them appears to be modified with AI.",
+        "The picture, which compares an old White House column to a \"restored\" one, has several discrepancies and was flagged by Google's AI detector as \"made or […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1011500/openai-state-lawsuits-chatgpt-safety"
+      "url": "https://www.theverge.com/policy/1012445/donald-trump-ai-photo-white-house-rennovation-column"
     },
     {
       "id": "art_3",
-      "title": "Microsoft and Japan took down a cybercrime network behind over a billion scam messages",
-      "essence": "We've all gotten a scam text about a nonexistent parking ticket or a fake package delivery, but hopefully you'll start seeing fewer of them. Microsoft says it helped dismantle a marketplace for scammers sending phishing messages like those around the world.",
-      "full_body": "We've all gotten a scam text about a nonexistent parking ticket or a fake package delivery, but hopefully you'll start seeing fewer of them. Microsoft says it helped dismantle a marketplace for scammers sending phishing messages like those around the world. Through an investigation with Japan's National Police Agency, it tracked scam activity back to […]",
+      "title": "Bluesky’s AI tool now lets you make games and apps to share on social",
+      "essence": "Bluesky's Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make \"small\" social apps like games, polls, and dashboards that you can then share with others as their own websites. In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]",
+      "full_body": "Bluesky's Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make \"small\" social apps like games, polls, and dashboards that you can then share with others as their own websites. In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]",
       "sentences": [
-        "We've all gotten a scam text about a nonexistent parking ticket or a fake package delivery, but hopefully you'll start seeing fewer of them.",
-        "Microsoft says it helped dismantle a marketplace for scammers sending phishing messages like those around the world.",
-        "Through an investigation with Japan's National Police Agency, it tracked scam activity back to […]"
+        "Bluesky's Attie AI tool, which initially launched earlier this year as a way to use AI to build your own feeds, now lets you make \"small\" social apps like games, polls, and dashboards that you can then share with others as their own websites.",
+        "In an interview at TechCrunch Disrupt, Bluesky CEO Toni Schneider said […]"
       ],
-      "url": "https://www.theverge.com/tech/1011487/microsoft-scam-messages-marketplace-takedown"
+      "url": "https://www.theverge.com/tech/1012374/bluesky-ai-attie-small-social-games-apps"
     },
     {
       "id": "art_4",
-      "title": "The AI race is back on",
-      "essence": "Last week, Anthropic and OpenAI looked like they had the AI race to themselves, pulling ahead with increasingly powerful models that left their rivals in the dust. Google seemed hopelessly far behind, while Meta, despite spending billions to revive its floundering AI ambitions, had yet to establish itself as a serious contender.",
-      "full_body": "Last week, Anthropic and OpenAI looked like they had the AI race to themselves, pulling ahead with increasingly powerful models that left their rivals in the dust. Google seemed hopelessly far behind, while Meta, despite spending billions to revive its floundering AI ambitions, had yet to establish itself as a serious contender. Even the latest […]",
+      "title": "Withings now charges $100 per year to sync your data to other apps",
+      "essence": "If you're a new user of Withings' fitness-tracking smartwatches or smart scales and want to sync and access your health data through third party apps like Apple Health or Google Health it's now going to cost you. According to a discussion on Withings' support forums spotted by MacRumors, new Withings accounts created from October 13th, […]",
+      "full_body": "If you're a new user of Withings' fitness-tracking smartwatches or smart scales and want to sync and access your health data through third party apps like Apple Health or Google Health it's now going to cost you. According to a discussion on Withings' support forums spotted by MacRumors, new Withings accounts created from October 13th, […]",
       "sentences": [
-        "Last week, Anthropic and OpenAI looked like they had the AI race to themselves, pulling ahead with increasingly powerful models that left their rivals in the dust.",
-        "Google seemed hopelessly far behind, while Meta, despite spending billions to revive its floundering AI ambitions, had yet to establish itself as a serious contender.",
-        "Even the latest […]"
+        "If you're a new user of Withings' fitness-tracking smartwatches or smart scales and want to sync and access your health data through third party apps like Apple Health or Google Health it's now going to cost you.",
+        "According to a discussion on Withings' support forums spotted by MacRumors, new Withings accounts created from October 13th, […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1011311/the-ai-race-is-back-on"
+      "url": "https://www.theverge.com/tech/1012350/withings-plus-subscription-new-users-october-13-2026"
     }
   ]
 }
