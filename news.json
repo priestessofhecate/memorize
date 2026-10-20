@@ -1,53 +1,50 @@
 {
-  "updated_at": "2026-10-19 22:22 UTC",
+  "updated_at": "2026-10-20 22:22 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "The fossil fuel comeback is here",
-      "essence": "The US is building more fossil fuel infrastructure than it has in a decade while renewable energy growth slows down, a new report shows. Electricity demand is also climbing faster than it has in more than a decade with more data centers, factories, and electric vehicles plugging into the grid.",
-      "full_body": "The US is building more fossil fuel infrastructure than it has in a decade while renewable energy growth slows down, a new report shows. Electricity demand is also climbing faster than it has in more than a decade with more data centers, factories, and electric vehicles plugging into the grid. Despite those growing demands, the […]",
+      "title": "Tesla and SpaceX are discussing a possible merger, Musk says",
+      "essence": "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during the latter's third quarter earnings call Tuesday. Musk, who serves as CEO of both companies, said the special committees were formed at the request of shareholders and consist of independent directors (though he did not name them).",
+      "full_body": "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during the latter's third quarter earnings call Tuesday. Musk, who serves as CEO of both companies, said the special committees were formed at the request of shareholders and consist of independent directors (though he did not name them).",
       "sentences": [
-        "The US is building more fossil fuel infrastructure than it has in a decade while renewable energy growth slows down, a new report shows.",
-        "Electricity demand is also climbing faster than it has in more than a decade with more data centers, factories, and electric vehicles plugging into the grid.",
-        "Despite those growing demands, the […]"
+        "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during the latter's third quarter earnings call Tuesday.",
+        "Musk, who serves as CEO of both companies, said the special committees were formed at the request of shareholders and consist of independent directors (though he did not name them)."
       ],
-      "url": "https://www.theverge.com/science/1013954/fossil-fuel-power-infrastructure-data-centers-report"
+      "url": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees"
     },
     {
       "id": "art_2",
-      "title": "CoreWeave’s debt is becoming the whole AI industry’s problem",
-      "essence": "CoreWeave had a bad week last week. Its bonds slipped into distressed territory by a common definition - when investors demand 1,000 basis points more in yield than they'd get from government bonds.",
-      "full_body": "CoreWeave had a bad week last week. Its bonds slipped into distressed territory by a common definition - when investors demand 1,000 basis points more in yield than they'd get from government bonds. Last Tuesady Chamath \"SPAC King\" Palihapitiya noticed the distressed debt, and also asked whether the AI buildout was a private credit bubble. […]",
+      "title": "SpaceX will try catching Starship and its booster for first time, Musk says",
+      "essence": "SpaceX CEO Elon Musk said the company would attempt to catch Starship and its booster next month, with the goal of recovering the entire orbital launch system for the first time. If successful, Musk said, the attempt would mark the first time in history an orbital launch vehicle has been fully recovered.",
+      "full_body": "SpaceX CEO Elon Musk said the company would attempt to catch Starship and its booster next month, with the goal of recovering the entire orbital launch system for the first time. If successful, Musk said, the attempt would mark the first time in history an orbital launch vehicle has been fully recovered.",
       "sentences": [
-        "CoreWeave had a bad week last week.",
-        "Its bonds slipped into distressed territory by a common definition - when investors demand 1,000 basis points more in yield than they'd get from government bonds.",
-        "Last Tuesady Chamath \"SPAC King\" Palihapitiya noticed the distressed debt, and also asked whether the AI buildout was a private credit bubble. […]"
+        "SpaceX CEO Elon Musk said the company would attempt to catch Starship and its booster next month, with the goal of recovering the entire orbital launch system for the first time.",
+        "If successful, Musk said, the attempt would mark the first time in history an orbital launch vehicle has been fully recovered."
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1014045/coreweave-stock-debt-sector-ai"
+      "url": "https://www.theverge.com/science/1014913/spacex-will-try-catching-starship-and-its-booster-for-first-time-musk-says"
     },
     {
       "id": "art_3",
-      "title": "I tried a $99 plug that promises to track your car and send help when needed — without selling your data",
-      "essence": "My 15-year-old daughter just got her learner's permit, so when I was pitched a new gadget tailored to teen drivers, I was intrigued. The Miles Plug is a small device that plugs into your car's OBD-II port and monitors location, driving habits, and vehicle health, along with emergency accident response and roadside assistance.",
-      "full_body": "My 15-year-old daughter just got her learner's permit, so when I was pitched a new gadget tailored to teen drivers, I was intrigued. The Miles Plug is a small device that plugs into your car's OBD-II port and monitors location, driving habits, and vehicle health, along with emergency accident response and roadside assistance.",
+      "title": "Netflix is telling investors not to worry, even though you’re watching less and less",
+      "essence": "Netflix is making monetization a top priority amid reports of falling viewing time. As part of its third-quarter earnings report on Tuesday, Netflix lists improvements to monetization as one of its main focuses going forward, alongside efforts to boost entertainment value and leverage new technology.",
+      "full_body": "Netflix is making monetization a top priority amid reports of falling viewing time. As part of its third-quarter earnings report on Tuesday, Netflix lists improvements to monetization as one of its main focuses going forward, alongside efforts to boost entertainment value and leverage new technology. The streaming giant doesn't say exactly how it plans to […]",
       "sentences": [
-        "My 15-year-old daughter just got her learner's permit, so when I was pitched a new gadget tailored to teen drivers, I was intrigued.",
-        "The Miles Plug is a small device that plugs into your car's OBD-II port and monitors location, driving habits, and vehicle health, along with emergency accident response and roadside assistance."
+        "Netflix is making monetization a top priority amid reports of falling viewing time.",
+        "As part of its third-quarter earnings report on Tuesday, Netflix lists improvements to monetization as one of its main focuses going forward, alongside efforts to boost entertainment value and leverage new technology.",
+        "The streaming giant doesn't say exactly how it plans to […]"
       ],
-      "url": "https://www.theverge.com/tech/1013918/miles-plug-vehicle-tracking-data-privacy-specs-price-launch-date"
+      "url": "https://www.theverge.com/streaming/1014826/netflix-earnings-q3-2026-viewing-time"
     },
     {
       "id": "art_4",
-      "title": "Sony’s best noise-canceling earbuds are nearly $100 off today only",
-      "essence": "For a very limited time, Sony’s latest high-end noise-canceling earbuds are actually cheaper than their last-gen counterpart, the WF-1000XM5. B&H Photo is selling Sony’s latest WF-1000XM6 in black for an all-time low of $238 ($92 off) at checkout.",
-      "full_body": "For a very limited time, Sony’s latest high-end noise-canceling earbuds are actually cheaper than their last-gen counterpart, the WF-1000XM5. B&H Photo is selling Sony’s latest WF-1000XM6 in black for an all-time low of $238 ($92 off) at checkout. Other retailers aren’t currently offering a discount on the XM6. The XM6 are a solid upgrade over […]",
+      "title": "Snap is paying Robert Downey Jr. to do the Iron Man thing",
+      "essence": "Snap has a new brand ambassador for its Specs AR glasses: Iron Man actor Robert Downey Jr. The company has brought on Downey as Specs' \"Chief Customer Experience Officer\" and has published several videos featuring Downey showcasing the capabilities of the new glasses, including as a tool to get help with a putt, practice art, […]",
+      "full_body": "Snap has a new brand ambassador for its Specs AR glasses: Iron Man actor Robert Downey Jr. The company has brought on Downey as Specs' \"Chief Customer Experience Officer\" and has published several videos featuring Downey showcasing the capabilities of the new glasses, including as a tool to get help with a putt, practice art, […]",
       "sentences": [
-        "For a very limited time, Sony’s latest high-end noise-canceling earbuds are actually cheaper than their last-gen counterpart, the WF-1000XM5.",
-        "B&H Photo is selling Sony’s latest WF-1000XM6 in black for an all-time low of $238 ($92 off) at checkout.",
-        "Other retailers aren’t currently offering a discount on the XM6.",
-        "The XM6 are a solid upgrade over […]"
+        "Snap has a new brand ambassador for its Specs AR glasses: Iron Man actor Robert Downey Jr.",
+        "The company has brought on Downey as Specs' \"Chief Customer Experience Officer\" and has published several videos featuring Downey showcasing the capabilities of the new glasses, including as a tool to get help with a putt, practice art, […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1013911/sonys-best-noise-canceling-earbuds-are-nearly-100-off-today-only"
+      "url": "https://www.theverge.com/tech/1014869/snap-specs-robert-downey-jr"
     }
   ]
 }
