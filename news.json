@@ -1,50 +1,52 @@
 {
-  "updated_at": "2026-10-20 22:22 UTC",
+  "updated_at": "2026-10-21 22:22 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Tesla and SpaceX are discussing a possible merger, Musk says",
-      "essence": "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during the latter's third quarter earnings call Tuesday. Musk, who serves as CEO of both companies, said the special committees were formed at the request of shareholders and consist of independent directors (though he did not name them).",
-      "full_body": "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during the latter's third quarter earnings call Tuesday. Musk, who serves as CEO of both companies, said the special committees were formed at the request of shareholders and consist of independent directors (though he did not name them).",
+      "title": "New York’s first microdrama film festival searches for its audience",
+      "essence": "It remains to be seen if people really want to watch vertical content on horizontal TV screens, but many filmmakers and creators were confident that their latest projects would play well at Alza - New York City's first microdrama film festival. Founded by former Tribeca Festival chief operating officer Pete Torres, Alza, which took place […]",
+      "full_body": "It remains to be seen if people really want to watch vertical content on horizontal TV screens, but many filmmakers and creators were confident that their latest projects would play well at Alza - New York City's first microdrama film festival. Founded by former Tribeca Festival chief operating officer Pete Torres, Alza, which took place […]",
       "sentences": [
-        "Tesla and SpaceX have formed special committees to discuss a possible merger, Elon Musk said during the latter's third quarter earnings call Tuesday.",
-        "Musk, who serves as CEO of both companies, said the special committees were formed at the request of shareholders and consist of independent directors (though he did not name them)."
+        "It remains to be seen if people really want to watch vertical content on horizontal TV screens, but many filmmakers and creators were confident that their latest projects would play well at Alza - New York City's first microdrama film festival.",
+        "Founded by former Tribeca Festival chief operating officer Pete Torres, Alza, which took place […]"
       ],
-      "url": "https://www.theverge.com/science/1014984/spacex-tesla-merger-elon-musk-special-committees"
+      "url": "https://www.theverge.com/entertainment/1014494/alza-vertical-film-festival-bill-block-salvador-paskowitz-microdramas-verticals"
     },
     {
       "id": "art_2",
-      "title": "SpaceX will try catching Starship and its booster for first time, Musk says",
-      "essence": "SpaceX CEO Elon Musk said the company would attempt to catch Starship and its booster next month, with the goal of recovering the entire orbital launch system for the first time. If successful, Musk said, the attempt would mark the first time in history an orbital launch vehicle has been fully recovered.",
-      "full_body": "SpaceX CEO Elon Musk said the company would attempt to catch Starship and its booster next month, with the goal of recovering the entire orbital launch system for the first time. If successful, Musk said, the attempt would mark the first time in history an orbital launch vehicle has been fully recovered.",
+      "title": "Meta says it would’ve made over $22 billion if it didn’t have to pay a child safety settlement",
+      "essence": "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general. That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement.",
+      "full_body": "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general. That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement. In August, Meta agreed to pay $17.1 […]",
       "sentences": [
-        "SpaceX CEO Elon Musk said the company would attempt to catch Starship and its booster next month, with the goal of recovering the entire orbital launch system for the first time.",
-        "If successful, Musk said, the attempt would mark the first time in history an orbital launch vehicle has been fully recovered."
+        "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general.",
+        "That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement.",
+        "In August, Meta agreed to pay $17.1 […]"
       ],
-      "url": "https://www.theverge.com/science/1014913/spacex-will-try-catching-starship-and-its-booster-for-first-time-musk-says"
+      "url": "https://www.theverge.com/tech/1015877/meta-q3-2026-earnings-child-safety-settlement"
     },
     {
       "id": "art_3",
-      "title": "Netflix is telling investors not to worry, even though you’re watching less and less",
-      "essence": "Netflix is making monetization a top priority amid reports of falling viewing time. As part of its third-quarter earnings report on Tuesday, Netflix lists improvements to monetization as one of its main focuses going forward, alongside efforts to boost entertainment value and leverage new technology.",
-      "full_body": "Netflix is making monetization a top priority amid reports of falling viewing time. As part of its third-quarter earnings report on Tuesday, Netflix lists improvements to monetization as one of its main focuses going forward, alongside efforts to boost entertainment value and leverage new technology. The streaming giant doesn't say exactly how it plans to […]",
+      "title": "PHP: The three letters that shut down sites all over the internet today",
+      "essence": "Two bugs found with AI are behind major issues today for 4chan, DeviantArt, Wikipedia, and the blog where the bar around the corner posts pictures of people's dogs. The \"critical vulnerabilities\" were discovered in the PHP programming language, which underpins much of the internet, including any site built on WordPress.",
+      "full_body": "Two bugs found with AI are behind major issues today for 4chan, DeviantArt, Wikipedia, and the blog where the bar around the corner posts pictures of people's dogs. The \"critical vulnerabilities\" were discovered in the PHP programming language, which underpins much of the internet, including any site built on WordPress. But it's far bigger than […]",
       "sentences": [
-        "Netflix is making monetization a top priority amid reports of falling viewing time.",
-        "As part of its third-quarter earnings report on Tuesday, Netflix lists improvements to monetization as one of its main focuses going forward, alongside efforts to boost entertainment value and leverage new technology.",
-        "The streaming giant doesn't say exactly how it plans to […]"
+        "Two bugs found with AI are behind major issues today for 4chan, DeviantArt, Wikipedia, and the blog where the bar around the corner posts pictures of people's dogs.",
+        "The \"critical vulnerabilities\" were discovered in the PHP programming language, which underpins much of the internet, including any site built on WordPress.",
+        "But it's far bigger than […]"
       ],
-      "url": "https://www.theverge.com/streaming/1014826/netflix-earnings-q3-2026-viewing-time"
+      "url": "https://www.theverge.com/tech/1015906/php2shell-vulnerability-october-2026"
     },
     {
       "id": "art_4",
-      "title": "Snap is paying Robert Downey Jr. to do the Iron Man thing",
-      "essence": "Snap has a new brand ambassador for its Specs AR glasses: Iron Man actor Robert Downey Jr. The company has brought on Downey as Specs' \"Chief Customer Experience Officer\" and has published several videos featuring Downey showcasing the capabilities of the new glasses, including as a tool to get help with a putt, practice art, […]",
-      "full_body": "Snap has a new brand ambassador for its Specs AR glasses: Iron Man actor Robert Downey Jr. The company has brought on Downey as Specs' \"Chief Customer Experience Officer\" and has published several videos featuring Downey showcasing the capabilities of the new glasses, including as a tool to get help with a putt, practice art, […]",
+      "title": "Flying Roadsters can’t lift Tesla’s flat Q3 revenues",
+      "essence": "As the smoke clears from its outrageous Roadster demo, Tesla reported Q3 earnings on Wednesday - and the cold reality is that revenue has flatlined. Tesla said it earned $1.7 billion in net income on $28.0 billion in revenue in the quarter that ended in September 2026.",
+      "full_body": "As the smoke clears from its outrageous Roadster demo, Tesla reported Q3 earnings on Wednesday - and the cold reality is that revenue has flatlined. Tesla said it earned $1.7 billion in net income on $28.0 billion in revenue in the quarter that ended in September 2026. Revenues were flat, while profits dropped 4 percent […]",
       "sentences": [
-        "Snap has a new brand ambassador for its Specs AR glasses: Iron Man actor Robert Downey Jr.",
-        "The company has brought on Downey as Specs' \"Chief Customer Experience Officer\" and has published several videos featuring Downey showcasing the capabilities of the new glasses, including as a tool to get help with a putt, practice art, […]"
+        "As the smoke clears from its outrageous Roadster demo, Tesla reported Q3 earnings on Wednesday - and the cold reality is that revenue has flatlined.",
+        "Tesla said it earned $1.7 billion in net income on $28.0 billion in revenue in the quarter that ended in September 2026.",
+        "Revenues were flat, while profits dropped 4 percent […]"
       ],
-      "url": "https://www.theverge.com/tech/1014869/snap-specs-robert-downey-jr"
+      "url": "https://www.theverge.com/transportation/1015790/tesla-q3-2026-earnings-revenue-profit-roadster-spacex-merger"
     }
   ]
 }
