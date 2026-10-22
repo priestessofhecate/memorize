@@ -1,52 +1,53 @@
 {
-  "updated_at": "2026-10-21 22:22 UTC",
+  "updated_at": "2026-10-22 22:22 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "New York’s first microdrama film festival searches for its audience",
-      "essence": "It remains to be seen if people really want to watch vertical content on horizontal TV screens, but many filmmakers and creators were confident that their latest projects would play well at Alza - New York City's first microdrama film festival. Founded by former Tribeca Festival chief operating officer Pete Torres, Alza, which took place […]",
-      "full_body": "It remains to be seen if people really want to watch vertical content on horizontal TV screens, but many filmmakers and creators were confident that their latest projects would play well at Alza - New York City's first microdrama film festival. Founded by former Tribeca Festival chief operating officer Pete Torres, Alza, which took place […]",
+      "title": "Canva’s first AI image model plans designs before generating them",
+      "essence": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
+      "full_body": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
       "sentences": [
-        "It remains to be seen if people really want to watch vertical content on horizontal TV screens, but many filmmakers and creators were confident that their latest projects would play well at Alza - New York City's first microdrama film festival.",
-        "Founded by former Tribeca Festival chief operating officer Pete Torres, Alza, which took place […]"
+        "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google.",
+        "The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]"
       ],
-      "url": "https://www.theverge.com/entertainment/1014494/alza-vertical-film-festival-bill-block-salvador-paskowitz-microdramas-verticals"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model"
     },
     {
       "id": "art_2",
-      "title": "Meta says it would’ve made over $22 billion if it didn’t have to pay a child safety settlement",
-      "essence": "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general. That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement.",
-      "full_body": "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general. That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement. In August, Meta agreed to pay $17.1 […]",
+      "title": "PC shipments dropped over 20 percent in Q3 due to RAM price hikes",
+      "essence": "Demand for new PCs took a hit after months of price hikes, with Counterpoint Research reporting global PC shipments fell 21 percent year-over-year in Q3 2026. That's in line with earlier reports from IDC and Omdia.",
+      "full_body": "Demand for new PCs took a hit after months of price hikes, with Counterpoint Research reporting global PC shipments fell 21 percent year-over-year in Q3 2026. That's in line with earlier reports from IDC and Omdia. It's not just PCs, either - that same quarter, smartphone shipments also hit a 14-year low. Counterpoint linked the […]",
       "sentences": [
-        "Meta had to shell out $9.89 billion to pay for a chunk of the child safety settlement it reached with US attorneys general.",
-        "That's according to the company's third-quarter earnings report released on Wednesday, which says Meta's income from operations would have been $22.89 billion without the settlement.",
-        "In August, Meta agreed to pay $17.1 […]"
+        "Demand for new PCs took a hit after months of price hikes, with Counterpoint Research reporting global PC shipments fell 21 percent year-over-year in Q3 2026.",
+        "That's in line with earlier reports from IDC and Omdia.",
+        "It's not just PCs, either - that same quarter, smartphone shipments also hit a 14-year low.",
+        "Counterpoint linked the […]"
       ],
-      "url": "https://www.theverge.com/tech/1015877/meta-q3-2026-earnings-child-safety-settlement"
+      "url": "https://www.theverge.com/gadgets/1017144/global-pc-shipments-dropped-q3-2026-ram"
     },
     {
       "id": "art_3",
-      "title": "PHP: The three letters that shut down sites all over the internet today",
-      "essence": "Two bugs found with AI are behind major issues today for 4chan, DeviantArt, Wikipedia, and the blog where the bar around the corner posts pictures of people's dogs. The \"critical vulnerabilities\" were discovered in the PHP programming language, which underpins much of the internet, including any site built on WordPress.",
-      "full_body": "Two bugs found with AI are behind major issues today for 4chan, DeviantArt, Wikipedia, and the blog where the bar around the corner posts pictures of people's dogs. The \"critical vulnerabilities\" were discovered in the PHP programming language, which underpins much of the internet, including any site built on WordPress. But it's far bigger than […]",
+      "title": "Fall 2026 earnings watch",
+      "essence": "Every company is suddenly an AI company. Compute is an asset.",
+      "full_body": "Every company is suddenly an AI company. Compute is an asset. We’ve been promised robots — again. It’s time again to dig through earnings reports, listen to investor calls, and call out the latest wins and losses from around the tech sector and what it means for where the companies go next.",
       "sentences": [
-        "Two bugs found with AI are behind major issues today for 4chan, DeviantArt, Wikipedia, and the blog where the bar around the corner posts pictures of people's dogs.",
-        "The \"critical vulnerabilities\" were discovered in the PHP programming language, which underpins much of the internet, including any site built on WordPress.",
-        "But it's far bigger than […]"
+        "Every company is suddenly an AI company.",
+        "Compute is an asset.",
+        "We’ve been promised robots — again.",
+        "It’s time again to dig through earnings reports, listen to investor calls, and call out the latest wins and losses from around the tech sector and what it means for where the companies go next."
       ],
-      "url": "https://www.theverge.com/tech/1015906/php2shell-vulnerability-october-2026"
+      "url": "https://www.theverge.com/tech/1016506/fall-2026-earnings-watch"
     },
     {
       "id": "art_4",
-      "title": "Flying Roadsters can’t lift Tesla’s flat Q3 revenues",
-      "essence": "As the smoke clears from its outrageous Roadster demo, Tesla reported Q3 earnings on Wednesday - and the cold reality is that revenue has flatlined. Tesla said it earned $1.7 billion in net income on $28.0 billion in revenue in the quarter that ended in September 2026.",
-      "full_body": "As the smoke clears from its outrageous Roadster demo, Tesla reported Q3 earnings on Wednesday - and the cold reality is that revenue has flatlined. Tesla said it earned $1.7 billion in net income on $28.0 billion in revenue in the quarter that ended in September 2026. Revenues were flat, while profits dropped 4 percent […]",
+      "title": "Meta’s AI could still scrape news sites, legal experts say",
+      "essence": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns. \"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]",
+      "full_body": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns. \"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]",
       "sentences": [
-        "As the smoke clears from its outrageous Roadster demo, Tesla reported Q3 earnings on Wednesday - and the cold reality is that revenue has flatlined.",
-        "Tesla said it earned $1.7 billion in net income on $28.0 billion in revenue in the quarter that ended in September 2026.",
-        "Revenues were flat, while profits dropped 4 percent […]"
+        "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns.",
+        "\"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]"
       ],
-      "url": "https://www.theverge.com/transportation/1015790/tesla-q3-2026-earnings-revenue-profit-roadster-spacex-merger"
+      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns"
     }
   ]
 }
