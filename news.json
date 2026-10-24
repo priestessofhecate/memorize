@@ -1,53 +1,51 @@
 {
-  "updated_at": "2026-10-22 22:22 UTC",
+  "updated_at": "2026-10-24 00:17 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Canva’s first AI image model plans designs before generating them",
-      "essence": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
-      "full_body": "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google. The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]",
+      "title": "Xbox’s first chief operating officer is out after just a few months",
+      "essence": "Xbox's first chief operating officer (COO) is leaving after the new role was created just a few months ago. Helen Chiang is leaving Microsoft today, according to an internal Xbox memo seen by The Verge.",
+      "full_body": "Xbox's first chief operating officer (COO) is leaving after the new role was created just a few months ago. Helen Chiang is leaving Microsoft today, according to an internal Xbox memo seen by The Verge. Chiang has been at Microsoft for 21 years, serving as the head of Minecraft before being promoted to Xbox chief […]",
       "sentences": [
-        "Canva is diving even deeper into AI with the launch of an image generation model that competes directly with those from OpenAI, Microsoft, and Google.",
-        "The model, called Canva Craft, uses a two-stage architecture that allows it to plan a design before generating an image, allowing for \"greater precision, consistency and control,\" according to an […]"
+        "Xbox's first chief operating officer (COO) is leaving after the new role was created just a few months ago.",
+        "Helen Chiang is leaving Microsoft today, according to an internal Xbox memo seen by The Verge.",
+        "Chiang has been at Microsoft for 21 years, serving as the head of Minecraft before being promoted to Xbox chief […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1017151/canva-craft-in-house-ai-model"
+      "url": "https://www.theverge.com/news/1018037/xbox-chief-operating-officer-helen-chiang-departure"
     },
     {
       "id": "art_2",
-      "title": "PC shipments dropped over 20 percent in Q3 due to RAM price hikes",
-      "essence": "Demand for new PCs took a hit after months of price hikes, with Counterpoint Research reporting global PC shipments fell 21 percent year-over-year in Q3 2026. That's in line with earlier reports from IDC and Omdia.",
-      "full_body": "Demand for new PCs took a hit after months of price hikes, with Counterpoint Research reporting global PC shipments fell 21 percent year-over-year in Q3 2026. That's in line with earlier reports from IDC and Omdia. It's not just PCs, either - that same quarter, smartphone shipments also hit a 14-year low. Counterpoint linked the […]",
+      "title": "OpenAI now trains its frontier AI models with no internet access",
+      "essence": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier […]",
+      "full_body": "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents. In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier […]",
       "sentences": [
-        "Demand for new PCs took a hit after months of price hikes, with Counterpoint Research reporting global PC shipments fell 21 percent year-over-year in Q3 2026.",
-        "That's in line with earlier reports from IDC and Omdia.",
-        "It's not just PCs, either - that same quarter, smartphone shipments also hit a 14-year low.",
-        "Counterpoint linked the […]"
+        "OpenAI is now training its most advanced AI models without internet access following a string of rogue hacking incidents.",
+        "In a blog post on Friday, OpenAI says it built an offline testing environment where AI models can interact with indexed and cached web content \"without risk of affecting external systems.\" OpenAI paused training its frontier […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1017144/global-pc-shipments-dropped-q3-2026-ram"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet"
     },
     {
       "id": "art_3",
-      "title": "Fall 2026 earnings watch",
-      "essence": "Every company is suddenly an AI company. Compute is an asset.",
-      "full_body": "Every company is suddenly an AI company. Compute is an asset. We’ve been promised robots — again. It’s time again to dig through earnings reports, listen to investor calls, and call out the latest wins and losses from around the tech sector and what it means for where the companies go next.",
+      "title": "Abandoned Popcorn Time apps had to be disabled to prevent a zombie army",
+      "essence": "Remember Popcorn Time, the app that served as an easy-to-use front end for streaming torrents of movies and TV shows? Development of the MPAA's least-favorite app of the 2010s has been abandoned for years, but the \"Netflix of Piracy\" software is still installed on millions of devices that are just waiting to join a bot […]",
+      "full_body": "Remember Popcorn Time, the app that served as an easy-to-use front end for streaming torrents of movies and TV shows? Development of the MPAA's least-favorite app of the 2010s has been abandoned for years, but the \"Netflix of Piracy\" software is still installed on millions of devices that are just waiting to join a bot […]",
       "sentences": [
-        "Every company is suddenly an AI company.",
-        "Compute is an asset.",
-        "We’ve been promised robots — again.",
-        "It’s time again to dig through earnings reports, listen to investor calls, and call out the latest wins and losses from around the tech sector and what it means for where the companies go next."
+        "Remember Popcorn Time, the app that served as an easy-to-use front end for streaming torrents of movies and TV shows?",
+        "Development of the MPAA's least-favorite app of the 2010s has been abandoned for years, but the \"Netflix of Piracy\" software is still installed on millions of devices that are just waiting to join a bot […]"
       ],
-      "url": "https://www.theverge.com/tech/1016506/fall-2026-earnings-watch"
+      "url": "https://www.theverge.com/tech/1017914/popcorn-time-piracy-botnet-avoided"
     },
     {
       "id": "art_4",
-      "title": "Meta’s AI could still scrape news sites, legal experts say",
-      "essence": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns. \"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]",
-      "full_body": "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns. \"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]",
+      "title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+      "essence": "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny. Take this one, for example, shared by Dessa lead Ragavan Thurairatnam.",
+      "full_body": "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny. Take this one, for example, shared by Dessa lead Ragavan Thurairatnam. The conversation between […]",
       "sentences": [
-        "Meta has tweaked its business terms to remove language suggesting that it could freely train its AI models on news sites, like The Verge - but legal experts say these changes aren't enough to address their concerns.",
-        "\"This does nothing to restrict the 'associated with your products or services' [language] that would let Meta scrape […]"
+        "Jack Dorsey's Block announced an AI model called Dessa that's trained \"from scratch on nothing but human conversation,\" and to show off the model, Block shared chats it has had with humans that can occasionally be a little awkward and uncanny.",
+        "Take this one, for example, shared by Dessa lead Ragavan Thurairatnam.",
+        "The conversation between […]"
       ],
-      "url": "https://www.theverge.com/tech/1017082/meta-terms-update-ai-training-concerns"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech"
     }
   ]
 }
