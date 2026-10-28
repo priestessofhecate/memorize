@@ -1,51 +1,52 @@
 {
-  "updated_at": "2026-10-27 01:10 UTC",
+  "updated_at": "2026-10-28 00:59 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "OpenAI announces three big science discoveries and a new way to work with academics",
-      "essence": "Less than a month after its mass release of hundreds of manuscripts that it said contained solutions to long-standing mathematics questions, OpenAI is back with three more \"major\" discoveries in math, computer science, and physics. What's different this time is the choice to have external experts that OpenAI describes as \"shepherds\" guiding the results in […]",
-      "full_body": "Less than a month after its mass release of hundreds of manuscripts that it said contained solutions to long-standing mathematics questions, OpenAI is back with three more \"major\" discoveries in math, computer science, and physics. What's different this time is the choice to have external experts that OpenAI describes as \"shepherds\" guiding the results in […]",
+      "title": "Here’s why the iPhone Duo’s hinge could be cracking the screen",
+      "essence": "Within hours of the iPhone Duo launch last Friday, people reported that the inner screen on some brand new foldable phones was already broken. The issue was similar across many photos shared on social media: some kind of issue or crack would appear in the middle of the screen above the hinge, with lines appearing […]",
+      "full_body": "Within hours of the iPhone Duo launch last Friday, people reported that the inner screen on some brand new foldable phones was already broken. The issue was similar across many photos shared on social media: some kind of issue or crack would appear in the middle of the screen above the hinge, with lines appearing […]",
       "sentences": [
-        "Less than a month after its mass release of hundreds of manuscripts that it said contained solutions to long-standing mathematics questions, OpenAI is back with three more \"major\" discoveries in math, computer science, and physics.",
-        "What's different this time is the choice to have external experts that OpenAI describes as \"shepherds\" guiding the results in […]"
+        "Within hours of the iPhone Duo launch last Friday, people reported that the inner screen on some brand new foldable phones was already broken.",
+        "The issue was similar across many photos shared on social media: some kind of issue or crack would appear in the middle of the screen above the hinge, with lines appearing […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics"
+      "url": "https://www.theverge.com/tech/1020145/iphone-duo-crackgate-broken-screen-hinge"
     },
     {
       "id": "art_2",
-      "title": "Samsung’s Switch 2-ready MicroSD Express card is on sale for less than $50",
-      "essence": "Running out of space on your Nintendo Switch 2? Thankfully, Samsung’s P9 MicroSD Express card is discounted at multiple retailers, with the 256GB version going for $47.99 (Amazon, B&H Photo) and the 512GB version $99 (Amazon, B&H Photo).",
-      "full_body": "Running out of space on your Nintendo Switch 2? Thankfully, Samsung’s P9 MicroSD Express card is discounted at multiple retailers, with the 256GB version going for $47.99 (Amazon, B&H Photo) and the 512GB version $99 (Amazon, B&H Photo). The smaller card typically sells for around $80, and the larger option usually sells between $150 and […]",
+      "title": "Researchers are getting tired of OpenAI gatekeeping its breakthroughs",
+      "essence": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite its apparent course correction, researchers who spoke to The Verge are growing increasingly tired of the company's antics.",
+      "full_body": "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings. But despite its apparent course correction, researchers who spoke to The Verge are growing increasingly tired of the company's antics. It has been a turbulent few months between OpenAI […]",
       "sentences": [
-        "Running out of space on your Nintendo Switch 2?",
-        "Thankfully, Samsung’s P9 MicroSD Express card is discounted at multiple retailers, with the 256GB version going for $47.99 (Amazon, B&H Photo) and the 512GB version $99 (Amazon, B&H Photo).",
-        "The smaller card typically sells for around $80, and the larger option usually sells between $150 and […]"
+        "On Monday, OpenAI announced impressive breakthroughs in mathematics, computer science, and physics, along with what the company says is an evolving approach to communicating its findings.",
+        "But despite its apparent course correction, researchers who spoke to The Verge are growing increasingly tired of the company's antics.",
+        "It has been a turbulent few months between OpenAI […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1018962/samsung-p9-256gb-microsd-express-card-switch-2-deal-sale"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics"
     },
     {
       "id": "art_3",
-      "title": "Anthropic is burning gas to feed the AI boom",
-      "essence": "As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious. \"Competition for access to electrical supply and data center locations with adequate power availability is intense.\" In documents filed with the US Securities and Exchange Commission Monday, Anthropic acknowledges that data centers are becoming increasingly reliant on \"natural gas\" […]",
-      "full_body": "As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious. \"Competition for access to electrical supply and data center locations with adequate power availability is intense.\" In documents filed with the US Securities and Exchange Commission Monday, Anthropic acknowledges that data centers are becoming increasingly reliant on \"natural gas\" […]",
+      "title": "Elon Musk says Ukraine’s military violated Starlink’s terms of service",
+      "essence": "Elon Musk claims Ukraine violated Starlink's terms of service before the recent slowdown, as reported earlier by Ars Technica. According to Musk, \"Ukraine military violated Starlink terms of service and used it for offensive drone strikes to kill people.",
+      "full_body": "Elon Musk claims Ukraine violated Starlink's terms of service before the recent slowdown, as reported earlier by Ars Technica. According to Musk, \"Ukraine military violated Starlink terms of service and used it for offensive drone strikes to kill people. That loophole was closed last week,\" however Ukrainian officials have denied that happened, or that it […]",
       "sentences": [
-        "As it prepares to go public, Anthropic's S-1 filing makes generative AI's methane dependency glaringly obvious.",
-        "\"Competition for access to electrical supply and data center locations with adequate power availability is intense.\" In documents filed with the US Securities and Exchange Commission Monday, Anthropic acknowledges that data centers are becoming increasingly reliant on \"natural gas\" […]"
+        "Elon Musk claims Ukraine violated Starlink's terms of service before the recent slowdown, as reported earlier by Ars Technica.",
+        "According to Musk, \"Ukraine military violated Starlink terms of service and used it for offensive drone strikes to kill people.",
+        "That loophole was closed last week,\" however Ukrainian officials have denied that happened, or that it […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1018994/anthropic-ipo-ai-data-center-energy-climate-risk"
+      "url": "https://www.theverge.com/science/1019879/elon-musk-starlink-ukraine-terms-of-service"
     },
     {
       "id": "art_4",
-      "title": "iPhone Duo now supports Apple Pencil with iOS 27.2",
-      "essence": "Apple has just released iOS 27.2, bringing Apple Pencil support to the iPhone Duo. The software update also includes an \"Edge Light\" feature for the iPhone Duo that's intended to illuminate your face during video calls.",
-      "full_body": "Apple has just released iOS 27.2, bringing Apple Pencil support to the iPhone Duo. The software update also includes an \"Edge Light\" feature for the iPhone Duo that's intended to illuminate your face during video calls. Apple previously said the iPhone Duo would add support for the Apple Pencil \"later this year.\" The company's first […]",
+      "title": "Trump is making it easier for fossil fuel companies to leak methane",
+      "essence": "In its latest gift to oil and gas companies, the Trump administration is expected to announce plans today to weaken rules that guard against methane leaks. Methane is a smog-forming pollutant and a powerful greenhouse gas that's up to 80 times as potent as carbon dioxide on a 20-year horizon.",
+      "full_body": "In its latest gift to oil and gas companies, the Trump administration is expected to announce plans today to weaken rules that guard against methane leaks. Methane is a smog-forming pollutant and a powerful greenhouse gas that's up to 80 times as potent as carbon dioxide on a 20-year horizon. It's the primary component of […]",
       "sentences": [
-        "Apple has just released iOS 27.2, bringing Apple Pencil support to the iPhone Duo.",
-        "The software update also includes an \"Edge Light\" feature for the iPhone Duo that's intended to illuminate your face during video calls.",
-        "Apple previously said the iPhone Duo would add support for the Apple Pencil \"later this year.\" The company's first […]"
+        "In its latest gift to oil and gas companies, the Trump administration is expected to announce plans today to weaken rules that guard against methane leaks.",
+        "Methane is a smog-forming pollutant and a powerful greenhouse gas that's up to 80 times as potent as carbon dioxide on a 20-year horizon.",
+        "It's the primary component of […]"
       ],
-      "url": "https://www.theverge.com/tech/1018827/ios-27-2-iphone-duo-apple-pencil"
+      "url": "https://www.theverge.com/policy/1019691/gas-leak-methane-rule-rollback-trump"
     }
   ]
 }
