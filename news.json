@@ -1,53 +1,50 @@
 {
-  "updated_at": "2026-11-02 01:17 UTC",
+  "updated_at": "2026-11-03 03:19 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "NASA hopes the commercial space industry can help save Hubble",
-      "essence": "Gravity is a cruel mistress, slowly dragging the famed telescope ever closer to its ultimate demise with every day. Hubble is in no immediate danger of burning up in the Earth's atmosphere, but its time will run out in the early to mid 2030s unless its orbit is boosted.",
-      "full_body": "Gravity is a cruel mistress, slowly dragging the famed telescope ever closer to its ultimate demise with every day. Hubble is in no immediate danger of burning up in the Earth's atmosphere, but its time will run out in the early to mid 2030s unless its orbit is boosted. So NASA is taking proposals from […]",
+      "title": "Apple is ‘not able to predict’ when it’ll have enough iPhone Duos to go around",
+      "essence": "Apple CEO John Ternus doesn't have a timeline for when iPhone Duo supply constraints could lift. During an interview with Reuters, Ternus said the company is \"working hard to get it to as many customers as quickly as possible, but at this ​point, we're not able to predict when supply and demand will be in […]",
+      "full_body": "Apple CEO John Ternus doesn't have a timeline for when iPhone Duo supply constraints could lift. During an interview with Reuters, Ternus said the company is \"working hard to get it to as many customers as quickly as possible, but at this ​point, we're not able to predict when supply and demand will be in […]",
       "sentences": [
-        "Gravity is a cruel mistress, slowly dragging the famed telescope ever closer to its ultimate demise with every day.",
-        "Hubble is in no immediate danger of burning up in the Earth's atmosphere, but its time will run out in the early to mid 2030s unless its orbit is boosted.",
-        "So NASA is taking proposals from […]"
+        "Apple CEO John Ternus doesn't have a timeline for when iPhone Duo supply constraints could lift.",
+        "During an interview with Reuters, Ternus said the company is \"working hard to get it to as many customers as quickly as possible, but at this ​point, we're not able to predict when supply and demand will be in […]"
       ],
-      "url": "https://www.theverge.com/science/1024239/nasa-commercial-space-save-hubble"
+      "url": "https://www.theverge.com/tech/1024915/apple-iphone-duo-supply-chain-constraints"
     },
     {
       "id": "art_2",
-      "title": "Flock keeps ignoring requests to cancel its contracts",
-      "essence": "While more cities are canceling their contracts with Flock Safety, just as many are discovering how difficult that can be in some instances. Plymouth, Minnesota's city council voted to terminate its contract with Flock in September, but failed to respond to the city's request.",
-      "full_body": "While more cities are canceling their contracts with Flock Safety, just as many are discovering how difficult that can be in some instances. Plymouth, Minnesota's city council voted to terminate its contract with Flock in September, but failed to respond to the city's request. For over a month, the cameras remained up, and the city […]",
+      "title": "Apple set an iPhone sales record even without a new standard iPhone",
+      "essence": "Apple had a record-breaking quarter for iPhone sales - despite not releasing a standard model during its latest refresh. In its fourth-quarter earnings report released on Monday, Apple says it earned $57.58 billion in iPhone revenue, a 17 percent jump from the same time last year.",
+      "full_body": "Apple had a record-breaking quarter for iPhone sales - despite not releasing a standard model during its latest refresh. In its fourth-quarter earnings report released on Monday, Apple says it earned $57.58 billion in iPhone revenue, a 17 percent jump from the same time last year. The increase in revenue follows the launch of Apple's […]",
       "sentences": [
-        "While more cities are canceling their contracts with Flock Safety, just as many are discovering how difficult that can be in some instances.",
-        "Plymouth, Minnesota's city council voted to terminate its contract with Flock in September, but failed to respond to the city's request.",
-        "For over a month, the cameras remained up, and the city […]"
+        "Apple had a record-breaking quarter for iPhone sales - despite not releasing a standard model during its latest refresh.",
+        "In its fourth-quarter earnings report released on Monday, Apple says it earned $57.58 billion in iPhone revenue, a 17 percent jump from the same time last year.",
+        "The increase in revenue follows the launch of Apple's […]"
       ],
-      "url": "https://www.theverge.com/tech/1024232/flock-ignoring-cancel-contracts"
+      "url": "https://www.theverge.com/tech/1024748/apple-q4-2026-iphone-sales-earnings"
     },
     {
       "id": "art_3",
-      "title": "Apple’s HomeView could add security camera features",
-      "essence": "Reddit user pdfu found hints hidden in the HomeView 27.2 code that Apple could be adding security camera features to its smart home hub. The strings describe a security camera mode with motion detection, live streaming, and recording options, as well as privacy functions.",
-      "full_body": "Reddit user pdfu found hints hidden in the HomeView 27.2 code that Apple could be adding security camera features to its smart home hub. The strings describe a security camera mode with motion detection, live streaming, and recording options, as well as privacy functions. According to pdfu, there is a setup page that even explicitly […]",
+      "title": "Meta will end Quest 2 OS updates in 2027",
+      "essence": "Meta is planning to release the last OS update for its Quest 2 and Quest Pro VR headsets by March 2027, the company announced today. The last OS update for those devices is planned to be v213, and after that, Meta will continue to ship security patches and critical bug fixes through the end of […]",
+      "full_body": "Meta is planning to release the last OS update for its Quest 2 and Quest Pro VR headsets by March 2027, the company announced today. The last OS update for those devices is planned to be v213, and after that, Meta will continue to ship security patches and critical bug fixes through the end of […]",
       "sentences": [
-        "Reddit user pdfu found hints hidden in the HomeView 27.2 code that Apple could be adding security camera features to its smart home hub.",
-        "The strings describe a security camera mode with motion detection, live streaming, and recording options, as well as privacy functions.",
-        "According to pdfu, there is a setup page that even explicitly […]"
+        "Meta is planning to release the last OS update for its Quest 2 and Quest Pro VR headsets by March 2027, the company announced today.",
+        "The last OS update for those devices is planned to be v213, and after that, Meta will continue to ship security patches and critical bug fixes through the end of […]"
       ],
-      "url": "https://www.theverge.com/tech/1024219/apples-homeview-could-add-security-camera-features"
+      "url": "https://www.theverge.com/tech/1024835/meta-vr-quest-2-pro-os-end-updates"
     },
     {
       "id": "art_4",
-      "title": "A fully playable version of Portal prequel F-Stop leaked",
-      "essence": "Leakers have pieced together a playable version of the canceled Portal prequel F-Stop. Most of the assets came from the massive 12-terabyte leak that dropped this August.",
-      "full_body": "Leakers have pieced together a playable version of the canceled Portal prequel F-Stop. Most of the assets came from the massive 12-terabyte leak that dropped this August. That didn't include the game's source code or map data, but those final pieces apparently hit the Valve Cut Content Discord this week, allowing a nearly complete version […]",
+      "title": "One of Google’s Android partners turned 1.3 million set-top boxes into a botnet",
+      "essence": "Google says one of its Android manufacturing partners secretly built a backdoor in 1.3 million devices and turned them into a botnet. The company says it has now dismantled the backdoor and \"cut ties\" with the manufacturer, the Shenzhen, China-based Videostrong Technology Co., which has been banned from building or selling certified Android devices or […]",
+      "full_body": "Google says one of its Android manufacturing partners secretly built a backdoor in 1.3 million devices and turned them into a botnet. The company says it has now dismantled the backdoor and \"cut ties\" with the manufacturer, the Shenzhen, China-based Videostrong Technology Co., which has been banned from building or selling certified Android devices or […]",
       "sentences": [
-        "Leakers have pieced together a playable version of the canceled Portal prequel F-Stop.",
-        "Most of the assets came from the massive 12-terabyte leak that dropped this August.",
-        "That didn't include the game's source code or map data, but those final pieces apparently hit the Valve Cut Content Discord this week, allowing a nearly complete version […]"
+        "Google says one of its Android manufacturing partners secretly built a backdoor in 1.3 million devices and turned them into a botnet.",
+        "The company says it has now dismantled the backdoor and \"cut ties\" with the manufacturer, the Shenzhen, China-based Videostrong Technology Co., which has been banned from building or selling certified Android devices or […]"
       ],
-      "url": "https://www.theverge.com/games/1024206/playable-portal-prequel-f-stop-leak"
+      "url": "https://www.theverge.com/1024807/google-botnet-android-tv-shut-down"
     }
   ]
 }
