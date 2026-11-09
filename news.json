@@ -1,53 +1,51 @@
 {
-  "updated_at": "2026-11-08 01:06 UTC",
+  "updated_at": "2026-11-09 01:27 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "The UV-tracking Gem made me rethink how sunlight affects my health, not just my appearance",
-      "essence": "With temperatures rising to the 90s in Los Angeles, avoiding the heat wasn't exactly an option while I was at a relative's outdoor party in August. So I sat beneath a patio umbrella with a powerful fan nearby, figuring I was protected from the sun and heat.",
-      "full_body": "With temperatures rising to the 90s in Los Angeles, avoiding the heat wasn't exactly an option while I was at a relative's outdoor party in August. So I sat beneath a patio umbrella with a powerful fan nearby, figuring I was protected from the sun and heat. Half an hour later, I felt exhausted, dizzy, […]",
+      "title": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+      "essence": "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair.",
+      "full_body": "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government. In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair. You can read the full text below.",
       "sentences": [
-        "With temperatures rising to the 90s in Los Angeles, avoiding the heat wasn't exactly an option while I was at a relative's outdoor party in August.",
-        "So I sat beneath a patio umbrella with a powerful fan nearby, figuring I was protected from the sun and heat.",
-        "Half an hour later, I felt exhausted, dizzy, […]"
+        "On Sunday, Nvidia announced it was launching an investigation into CEO Jensen Huang's relationship with Alice Huang, an AI executive and agent of the Chinese government.",
+        "In addition to the Board of Directors announcing the investigation, Huang sent a memo to Nvidia employees acknowledging the affair.",
+        "You can read the full text below."
       ],
-      "url": "https://www.theverge.com/tech/1023230/the90-gem-necklace-hands-on-impressions"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia"
     },
     {
       "id": "art_2",
-      "title": "Costco members can get $5 off the reimagined Ocarina of Time",
-      "essence": "While some retailers were offering preorder discounts on the remastered Legend of Zelda: The Ocarina of Time, it’s not too late to save if you missed out. Costco members can currently get $5 off the digital version online, bringing the price down to $54.99.",
-      "full_body": "While some retailers were offering preorder discounts on the remastered Legend of Zelda: The Ocarina of Time, it’s not too late to save if you missed out. Costco members can currently get $5 off the digital version online, bringing the price down to $54.99. Considering an annual Costco membership runs $65, that discount almost offsets […]",
+      "title": "Soul Glo’s Diaspora Problems is a hardcore record like no other",
+      "essence": "Soul Glo has a new record called NA I'M GON GRAB ALLAT coming out in January, and I, for one, can not wait. While two singles have dropped, it's not enough to truly tide me over, so I've been revisiting Songs to Yeet at the Sun and my favorite album of 2022 - Diaspora Problems. […]",
+      "full_body": "Soul Glo has a new record called NA I'M GON GRAB ALLAT coming out in January, and I, for one, can not wait. While two singles have dropped, it's not enough to truly tide me over, so I've been revisiting Songs to Yeet at the Sun and my favorite album of 2022 - Diaspora Problems. […]",
       "sentences": [
-        "While some retailers were offering preorder discounts on the remastered Legend of Zelda: The Ocarina of Time, it’s not too late to save if you missed out.",
-        "Costco members can currently get $5 off the digital version online, bringing the price down to $54.99.",
-        "Considering an annual Costco membership runs $65, that discount almost offsets […]"
+        "Soul Glo has a new record called NA I'M GON GRAB ALLAT coming out in January, and I, for one, can not wait.",
+        "While two singles have dropped, it's not enough to truly tide me over, so I've been revisiting Songs to Yeet at the Sun and my favorite album of 2022 - Diaspora Problems. […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1028917/legend-of-zelda-ocarina-of-time-remake-switch-2-costco-deal-sale"
+      "url": "https://www.theverge.com/entertainment/1029579/soul-glo-diaspora-problems-hardcore-punk-review"
     },
     {
       "id": "art_3",
-      "title": "Discogs’ Kevin Lewandowski can’t live without his AeroPress",
-      "essence": "Twenty-five years ago, Kevin Lewandowski founded Discogs, arguably the destination online for obsessive vinyl collectors and music nerds of all stripes. It is a marketplace for buying and selling records, obviously, but it's also become so much more.",
-      "full_body": "Twenty-five years ago, Kevin Lewandowski founded Discogs, arguably the destination online for obsessive vinyl collectors and music nerds of all stripes. It is a marketplace for buying and selling records, obviously, but it's also become so much more. It's a shockingly comprehensive database that covers not just albums and singles, but all the various versions […]",
+      "title": "Epic Games Launcher is coming to SteamOS",
+      "essence": "In October, Epic Games said that it was \"investigating\" making Fortnite compatible with Valve's Linux-based SteamOS. At the time, Epic Games Launcher was in preview, but SteamOS was not specifically listed as a supported distro.",
+      "full_body": "In October, Epic Games said that it was \"investigating\" making Fortnite compatible with Valve's Linux-based SteamOS. At the time, Epic Games Launcher was in preview, but SteamOS was not specifically listed as a supported distro. Now, Communications Director Jake Jones has confirmed SteamOS compatibility, along with a handful of other distros, to GamingOnLinux.",
       "sentences": [
-        "Twenty-five years ago, Kevin Lewandowski founded Discogs, arguably the destination online for obsessive vinyl collectors and music nerds of all stripes.",
-        "It is a marketplace for buying and selling records, obviously, but it's also become so much more.",
-        "It's a shockingly comprehensive database that covers not just albums and singles, but all the various versions […]"
+        "In October, Epic Games said that it was \"investigating\" making Fortnite compatible with Valve's Linux-based SteamOS.",
+        "At the time, Epic Games Launcher was in preview, but SteamOS was not specifically listed as a supported distro.",
+        "Now, Communications Director Jake Jones has confirmed SteamOS compatibility, along with a handful of other distros, to GamingOnLinux."
       ],
-      "url": "https://www.theverge.com/tech/1029474/discogs-kevin-lewandowski-aeropress-interview"
+      "url": "https://www.theverge.com/games/1029557/epic-games-launcher-is-coming-to-steamos"
     },
     {
       "id": "art_4",
-      "title": "NYT Cooking’s AI assistant saved my weeknight chicken, but almost ruined my cake",
-      "essence": "Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won't make my husband complain, \"Chicken again?\" Yes, I should meal plan more, but I don't, so this is where I'm at. A nightly battle in which the chicken usually wins.",
-      "full_body": "Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won't make my husband complain, \"Chicken again?\" Yes, I should meal plan more, but I don't, so this is where I'm at. A nightly battle in which the chicken usually wins. Recently, my best […]",
+      "title": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+      "essence": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light […]",
+      "full_body": "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company. A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light […]",
       "sentences": [
-        "Around 7PM each weeknight, I find myself standing in front of the fridge, trying to decide on something for dinner that won't make my husband complain, \"Chicken again?\" Yes, I should meal plan more, but I don't, so this is where I'm at.",
-        "A nightly battle in which the chicken usually wins.",
-        "Recently, my best […]"
+        "Nvidia has announced that it is opening an investigation into CEO Jensen Huang and his relationship with Megaspeed executive Alice Huang, who was reportedly recruited by China's Ministry of State Security to spy on the company.",
+        "A statement posted by the board of directors reads: The NVIDIA Board is initiating an independent investigation in light […]"
       ],
-      "url": "https://www.theverge.com/tech/1029489/nyt-cooking-ai-assistant-review"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy"
     }
   ]
 }
