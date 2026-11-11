@@ -1,51 +1,52 @@
 {
-  "updated_at": "2026-11-10 03:57 UTC",
+  "updated_at": "2026-11-11 01:42 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "David Ellison says AI could be the ‘biggest creative unlock in modern history’",
-      "essence": "During Paramount Skydance's latest earnings call, CEO David Ellison said \"it's hard to imagine\" AI won't have a bigger impact on the film industry than CGI. In response to a question about the company's outlook for AI, Ellison said: \"I think when you zoom out and look at production, AI really has the potential to […]",
-      "full_body": "During Paramount Skydance's latest earnings call, CEO David Ellison said \"it's hard to imagine\" AI won't have a bigger impact on the film industry than CGI. In response to a question about the company's outlook for AI, Ellison said: \"I think when you zoom out and look at production, AI really has the potential to […]",
+      "title": "Microsoft’s DLSS competitor is out for the Xbox Ally X and works in handheld mode",
+      "essence": "Microsoft is now rolling out Automatic Super Resolution (Auto SR), an upscaling technology that competes with Nvidia's DLSS, for the Xbox Ally X, Xbox Ally X20, and select Windows Copilot Plus PCs, the company announced today. Auto SR is also getting some new features alongside this official release.",
+      "full_body": "Microsoft is now rolling out Automatic Super Resolution (Auto SR), an upscaling technology that competes with Nvidia's DLSS, for the Xbox Ally X, Xbox Ally X20, and select Windows Copilot Plus PCs, the company announced today. Auto SR is also getting some new features alongside this official release. In April, Microsoft started testing Auto SR […]",
       "sentences": [
-        "During Paramount Skydance's latest earnings call, CEO David Ellison said \"it's hard to imagine\" AI won't have a bigger impact on the film industry than CGI.",
-        "In response to a question about the company's outlook for AI, Ellison said: \"I think when you zoom out and look at production, AI really has the potential to […]"
+        "Microsoft is now rolling out Automatic Super Resolution (Auto SR), an upscaling technology that competes with Nvidia's DLSS, for the Xbox Ally X, Xbox Ally X20, and select Windows Copilot Plus PCs, the company announced today.",
+        "Auto SR is also getting some new features alongside this official release.",
+        "In April, Microsoft started testing Auto SR […]"
       ],
-      "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai"
+      "url": "https://www.theverge.com/tech/1031446/microsoft-automatic-super-resolution-auto-sr-upscaling"
     },
     {
       "id": "art_2",
-      "title": "What could China get from Jensen Huang?",
-      "essence": "It's difficult to overstate Nvidia's power in today's AI landscape. The company's chips are the bedrock upon which advanced AI technology in the US is being built, and demand has consistently outpaced supply for years.",
-      "full_body": "It's difficult to overstate Nvidia's power in today's AI landscape. The company's chips are the bedrock upon which advanced AI technology in the US is being built, and demand has consistently outpaced supply for years. Nvidia has also been an influential investor in a wide range of up-and-coming AI companies in recent years, with about […]",
+      "title": "The VR Disney Plus app on Meta Quest now has 3D movies",
+      "essence": "Disney is bringing more than 60 3D movies to the Disney Plus app on Meta Quest. The movies will be available to Disney Plus subscribers as part of an updated Disney Plus app that's rolling out today.",
+      "full_body": "Disney is bringing more than 60 3D movies to the Disney Plus app on Meta Quest. The movies will be available to Disney Plus subscribers as part of an updated Disney Plus app that's rolling out today. The 3D movies you can check out include The Avengers and Black Panther, Meta says. But the updated […]",
       "sentences": [
-        "It's difficult to overstate Nvidia's power in today's AI landscape.",
-        "The company's chips are the bedrock upon which advanced AI technology in the US is being built, and demand has consistently outpaced supply for years.",
-        "Nvidia has also been an influential investor in a wide range of up-and-coming AI companies in recent years, with about […]"
+        "Disney is bringing more than 60 3D movies to the Disney Plus app on Meta Quest.",
+        "The movies will be available to Disney Plus subscribers as part of an updated Disney Plus app that's rolling out today.",
+        "The 3D movies you can check out include The Avengers and Black Panther, Meta says.",
+        "But the updated […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang"
+      "url": "https://www.theverge.com/tech/1031256/meta-quest-disney-plus-vr-3d-movies"
     },
     {
       "id": "art_3",
-      "title": "Here’s what Trump said he knew about Jensen Huang",
-      "essence": "President Trump held a White House press briefing earlier today and responded to several questions about his knowledge of Nvidia CEO Jensen Huang's affair with an alleged Chinese spy. Huang said this weekend that he had been \"​​unfaithful\" to his wife, and the company has opened an investigation into Huang.",
-      "full_body": "President Trump held a White House press briefing earlier today and responded to several questions about his knowledge of Nvidia CEO Jensen Huang's affair with an alleged Chinese spy. Huang said this weekend that he had been \"​​unfaithful\" to his wife, and the company has opened an investigation into Huang. Recent articles from The New […]",
+      "title": "Oura is acquiring medical AI chatbot startup Counsel Health",
+      "essence": "Oura announced its quarterly earnings today and said it agreed to acquire Counsel Health for $625 million, after adding the company's AI chatbot to its app earlier this year. Counsel Health calls itself an \"AI-native primary care company,\" using the app to deliver AI-generated responses and insights based on users' health data reported from their […]",
+      "full_body": "Oura announced its quarterly earnings today and said it agreed to acquire Counsel Health for $625 million, after adding the company's AI chatbot to its app earlier this year. Counsel Health calls itself an \"AI-native primary care company,\" using the app to deliver AI-generated responses and insights based on users' health data reported from their […]",
       "sentences": [
-        "President Trump held a White House press briefing earlier today and responded to several questions about his knowledge of Nvidia CEO Jensen Huang's affair with an alleged Chinese spy.",
-        "Huang said this weekend that he had been \"​​unfaithful\" to his wife, and the company has opened an investigation into Huang.",
-        "Recent articles from The New […]"
+        "Oura announced its quarterly earnings today and said it agreed to acquire Counsel Health for $625 million, after adding the company's AI chatbot to its app earlier this year.",
+        "Counsel Health calls itself an \"AI-native primary care company,\" using the app to deliver AI-generated responses and insights based on users' health data reported from their […]"
       ],
-      "url": "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference"
+      "url": "https://www.theverge.com/gadgets/1031284/oura-counsel-health-acquisition"
     },
     {
       "id": "art_4",
-      "title": "Everything we know so far about the Nvidia spy scandal targeting CEO Jensen Huang",
-      "essence": "The leather-jacketed CEO of Nvidia, Jensen Huang, has acknowledged an affair with Megaspeed exec Alice Huang, spurring an investigation by his company and intense discussions worldwide. Recent reporting noted that since last year, US intelligence reports had identified Alice Huang (no relation) as not only the exec for an AI compute company renting access to […]",
-      "full_body": "The leather-jacketed CEO of Nvidia, Jensen Huang, has acknowledged an affair with Megaspeed exec Alice Huang, spurring an investigation by his company and intense discussions worldwide. Recent reporting noted that since last year, US intelligence reports had identified Alice Huang (no relation) as not only the exec for an AI compute company renting access to […]",
+      "title": "Sony cancels live-service shooter Fairgames",
+      "essence": "Sony has canceled Fairgames, a heist game announced in 2023, according to Bloomberg. Fairgames had once been part of Sony's big planned push for PlayStation live service games, but the company ended up canceling some planned live service titles, including in the God of War and The Last of Us franchises, and it shut down […]",
+      "full_body": "Sony has canceled Fairgames, a heist game announced in 2023, according to Bloomberg. Fairgames had once been part of Sony's big planned push for PlayStation live service games, but the company ended up canceling some planned live service titles, including in the God of War and The Last of Us franchises, and it shut down […]",
       "sentences": [
-        "The leather-jacketed CEO of Nvidia, Jensen Huang, has acknowledged an affair with Megaspeed exec Alice Huang, spurring an investigation by his company and intense discussions worldwide.",
-        "Recent reporting noted that since last year, US intelligence reports had identified Alice Huang (no relation) as not only the exec for an AI compute company renting access to […]"
+        "Sony has canceled Fairgames, a heist game announced in 2023, according to Bloomberg.",
+        "Fairgames had once been part of Sony's big planned push for PlayStation live service games, but the company ended up canceling some planned live service titles, including in the God of War and The Last of Us franchises, and it shut down […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
+      "url": "https://www.theverge.com/games/1031242/sony-playstation-fairgames-canceled"
     }
   ]
 }
