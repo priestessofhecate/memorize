@@ -1,50 +1,51 @@
 {
-  "updated_at": "2026-11-12 02:42 UTC",
+  "updated_at": "2026-11-13 02:25 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
-      "essence": "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from the New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports. The second alleged affair was with an executive who […]",
-      "full_body": "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from the New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports. The second alleged affair was with an executive who […]",
+      "title": "Donald Trump really wants Tim Cook to run Nvidia",
+      "essence": "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy. Right now, the company is being led by its CFO on an interim basis.",
+      "full_body": "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy. Right now, the company is being led by its CFO on an interim basis. But President Donald Trump is already throwing around one person he thinks should take over the chipmaking giant: former Apple CEO Tim […]",
       "sentences": [
-        "Nvidia's board is preparing to dismiss CEO Jensen Huang following a report from the New York Times about a second alleged extramarital affair, just days after he admitted to a separate affair with a woman alleged to be a Chinese spy, The Wall Street Journal reports.",
-        "The second alleged affair was with an executive who […]"
+        "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy.",
+        "Right now, the company is being led by its CFO on an interim basis.",
+        "But President Donald Trump is already throwing around one person he thinks should take over the chipmaking giant: former Apple CEO Tim […]"
       ],
-      "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor"
+      "url": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang"
     },
     {
       "id": "art_2",
-      "title": "Hands on with Home Assistant’s new ‘smart home multi-tool’",
-      "essence": "Nabu Casa - the commercial side of the Open Home Foundation, which runs Home Assistant - just launched the Home Assistant Connect Aux-2, a multi-function box designed to help you bring more non-smart devices into your smart home. It's part of Home Assistant's ongoing efforts to become more user-friendly.",
-      "full_body": "Nabu Casa - the commercial side of the Open Home Foundation, which runs Home Assistant - just launched the Home Assistant Connect Aux-2, a multi-function box designed to help you bring more non-smart devices into your smart home. It's part of Home Assistant's ongoing efforts to become more user-friendly. I've been testing […]",
+      "title": "Xbox announces Wolfenstein 3",
+      "essence": "It's been nearly a decade since Bethesda's MachineGames released Wolfenstein II: The New Colossus in 2017, and now Xbox is ready to announce a sequel from the studio. Wolfenstein 3 was officially announced today, just days after Bethesda also confirmed that the next Elder Scrolls game will be called The Elder Scrolls VI: Sentinel.",
+      "full_body": "It's been nearly a decade since Bethesda's MachineGames released Wolfenstein II: The New Colossus in 2017, and now Xbox is ready to announce a sequel from the studio. Wolfenstein 3 was officially announced today, just days after Bethesda also confirmed that the next Elder Scrolls game will be called The Elder Scrolls VI: Sentinel.",
       "sentences": [
-        "Nabu Casa - the commercial side of the Open Home Foundation, which runs Home Assistant - just launched the Home Assistant Connect Aux-2, a multi-function box designed to help you bring more non-smart devices into your smart home.",
-        "It's part of Home Assistant's ongoing efforts to become more user-friendly.",
-        "I've been testing […]"
+        "It's been nearly a decade since Bethesda's MachineGames released Wolfenstein II: The New Colossus in 2017, and now Xbox is ready to announce a sequel from the studio.",
+        "Wolfenstein 3 was officially announced today, just days after Bethesda also confirmed that the next Elder Scrolls game will be called The Elder Scrolls VI: Sentinel."
       ],
-      "url": "https://www.theverge.com/tech/1031601/home-assistant-connect-aux-2-hands-on"
+      "url": "https://www.theverge.com/news/1032431/xbox-bethesda-wolfenstein-3"
     },
     {
       "id": "art_3",
-      "title": "United won’t let your AI agent book your flight",
-      "essence": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash.",
-      "full_body": "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns. The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash. But United is concerned […]",
+      "title": "Whoop launched a social network where every user has a ‘verified heartbeat’",
+      "essence": "Starting Thursday, Whoop members can share their data from its wearables on the app's new Whoop Humans social network. Users can make their metrics, activities, and achievements visible to other Whoop wearers, post Story-like \"Moments\" with photos and captions, and add comments and reactions on other members' posts.",
+      "full_body": "Starting Thursday, Whoop members can share their data from its wearables on the app's new Whoop Humans social network. Users can make their metrics, activities, and achievements visible to other Whoop wearers, post Story-like \"Moments\" with photos and captions, and add comments and reactions on other members' posts. Whoop claims its platform is \"entirely human,\" […]",
       "sentences": [
-        "United says it won't let personal AI assistants book tickets on the airline, citing both privacy and regulatory concerns.",
-        "The company says it hasn't yet seen many people try to use AI agents to book their flights, The Wall Street Journal reports, in line with observations from other businesses like Doordash.",
-        "But United is concerned […]"
+        "Starting Thursday, Whoop members can share their data from its wearables on the app's new Whoop Humans social network.",
+        "Users can make their metrics, activities, and achievements visible to other Whoop wearers, post Story-like \"Moments\" with photos and captions, and add comments and reactions on other members' posts.",
+        "Whoop claims its platform is \"entirely human,\" […]"
       ],
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents"
+      "url": "https://www.theverge.com/gadgets/1032630/whoop-humans-social-network"
     },
     {
       "id": "art_4",
-      "title": "Loot boxes, influencers, and addictive features face an EU crackdown",
-      "essence": "Gaming, social media, and e-commerce platforms are facing a fresh wave of sweeping European Union rules that aim to make \"your online experience fairer.\" The newly proposed Digital Fairness Act (DFA) published by the EU Commission on Wednesday is designed to tackle practices that exploit consumers into spending more of their time and money online, […]",
-      "full_body": "Gaming, social media, and e-commerce platforms are facing a fresh wave of sweeping European Union rules that aim to make \"your online experience fairer.\" The newly proposed Digital Fairness Act (DFA) published by the EU Commission on Wednesday is designed to tackle practices that exploit consumers into spending more of their time and money online, […]",
+      "title": "Humble Bundle redesign removes two-factor verification from settings",
+      "essence": "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku. PC Gamer also points out that there are Humble Bundle support pages discussing two-factor verification, and the writer […]",
+      "full_body": "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku. PC Gamer also points out that there are Humble Bundle support pages discussing two-factor verification, and the writer […]",
       "sentences": [
-        "Gaming, social media, and e-commerce platforms are facing a fresh wave of sweeping European Union rules that aim to make \"your online experience fairer.\" The newly proposed Digital Fairness Act (DFA) published by the EU Commission on Wednesday is designed to tackle practices that exploit consumers into spending more of their time and money online, […]"
+        "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku.",
+        "PC Gamer also points out that there are Humble Bundle support pages discussing two-factor verification, and the writer […]"
       ],
-      "url": "https://www.theverge.com/policy/1031575/digital-fairness-act-eu-dfa-consumer-protection"
+      "url": "https://www.theverge.com/games/1032659/humble-bundle-redesign-two-factor-verification-security-settings"
     }
   ]
 }
