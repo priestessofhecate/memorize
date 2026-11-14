@@ -1,51 +1,50 @@
 {
-  "updated_at": "2026-11-13 02:25 UTC",
+  "updated_at": "2026-11-14 01:58 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Donald Trump really wants Tim Cook to run Nvidia",
-      "essence": "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy. Right now, the company is being led by its CFO on an interim basis.",
-      "full_body": "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy. Right now, the company is being led by its CFO on an interim basis. But President Donald Trump is already throwing around one person he thinks should take over the chipmaking giant: former Apple CEO Tim […]",
+      "title": "FAA lifts nationwide ground stop that blocked takeoffs for hours",
+      "essence": "Takeoffs from airports throughout the US largely stopped on Friday after the FAA issued a national ground stop at 3:44PM ET \"due to extraordinary circumstances and for reasons of safety,\" while planes in the air will be allowed to land. The FAA tweeted just after 5PM ET that, \"There has been a temporary telecommunications outage […]",
+      "full_body": "Takeoffs from airports throughout the US largely stopped on Friday after the FAA issued a national ground stop at 3:44PM ET \"due to extraordinary circumstances and for reasons of safety,\" while planes in the air will be allowed to land. The FAA tweeted just after 5PM ET that, \"There has been a temporary telecommunications outage […]",
       "sentences": [
-        "Jensen Huang resigned this morning as Nvidia's CEO following reports of affairs, including one with an alleged Chinese spy.",
-        "Right now, the company is being led by its CFO on an interim basis.",
-        "But President Donald Trump is already throwing around one person he thinks should take over the chipmaking giant: former Apple CEO Tim […]"
+        "Takeoffs from airports throughout the US largely stopped on Friday after the FAA issued a national ground stop at 3:44PM ET \"due to extraordinary circumstances and for reasons of safety,\" while planes in the air will be allowed to land.",
+        "The FAA tweeted just after 5PM ET that, \"There has been a temporary telecommunications outage […]"
       ],
-      "url": "https://www.theverge.com/tech/1032774/president-donald-trump-tim-cook-nvidia-jensen-huang"
+      "url": "https://www.theverge.com/news/1033489/faa-ground-stop"
     },
     {
       "id": "art_2",
-      "title": "Xbox announces Wolfenstein 3",
-      "essence": "It's been nearly a decade since Bethesda's MachineGames released Wolfenstein II: The New Colossus in 2017, and now Xbox is ready to announce a sequel from the studio. Wolfenstein 3 was officially announced today, just days after Bethesda also confirmed that the next Elder Scrolls game will be called The Elder Scrolls VI: Sentinel.",
-      "full_body": "It's been nearly a decade since Bethesda's MachineGames released Wolfenstein II: The New Colossus in 2017, and now Xbox is ready to announce a sequel from the studio. Wolfenstein 3 was officially announced today, just days after Bethesda also confirmed that the next Elder Scrolls game will be called The Elder Scrolls VI: Sentinel.",
+      "title": "Amazon has a plan to index the world’s online shopping data",
+      "essence": "Amazon has plans to build a vault of data on every product sold anywhere on the internet, even products Amazon doesn't sell, and make the information available through its own site, according to Reuters. The project, called the \"World Product Graph,\" is meant to make it less likely that shoppers leave Amazon to do their […]",
+      "full_body": "Amazon has plans to build a vault of data on every product sold anywhere on the internet, even products Amazon doesn't sell, and make the information available through its own site, according to Reuters. The project, called the \"World Product Graph,\" is meant to make it less likely that shoppers leave Amazon to do their […]",
       "sentences": [
-        "It's been nearly a decade since Bethesda's MachineGames released Wolfenstein II: The New Colossus in 2017, and now Xbox is ready to announce a sequel from the studio.",
-        "Wolfenstein 3 was officially announced today, just days after Bethesda also confirmed that the next Elder Scrolls game will be called The Elder Scrolls VI: Sentinel."
+        "Amazon has plans to build a vault of data on every product sold anywhere on the internet, even products Amazon doesn't sell, and make the information available through its own site, according to Reuters.",
+        "The project, called the \"World Product Graph,\" is meant to make it less likely that shoppers leave Amazon to do their […]"
       ],
-      "url": "https://www.theverge.com/news/1032431/xbox-bethesda-wolfenstein-3"
+      "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search"
     },
     {
       "id": "art_3",
-      "title": "Whoop launched a social network where every user has a ‘verified heartbeat’",
-      "essence": "Starting Thursday, Whoop members can share their data from its wearables on the app's new Whoop Humans social network. Users can make their metrics, activities, and achievements visible to other Whoop wearers, post Story-like \"Moments\" with photos and captions, and add comments and reactions on other members' posts.",
-      "full_body": "Starting Thursday, Whoop members can share their data from its wearables on the app's new Whoop Humans social network. Users can make their metrics, activities, and achievements visible to other Whoop wearers, post Story-like \"Moments\" with photos and captions, and add comments and reactions on other members' posts. Whoop claims its platform is \"entirely human,\" […]",
+      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+      "essence": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card […]",
+      "full_body": "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents. ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card […]",
       "sentences": [
-        "Starting Thursday, Whoop members can share their data from its wearables on the app's new Whoop Humans social network.",
-        "Users can make their metrics, activities, and achievements visible to other Whoop wearers, post Story-like \"Moments\" with photos and captions, and add comments and reactions on other members' posts.",
-        "Whoop claims its platform is \"entirely human,\" […]"
+        "After launching its Dots AI agents platform earlier this year, OpenAI is launching a wallet for the agents.",
+        "ChatGPT Wallet is rolling out starting today for ChatGPT Pro subscribers in the US aged 18 and older using a US billing address and \"eligible US-issued American Express, Chase, Mastercard and Visa cards.\" After adding a card […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1032630/whoop-humans-social-network"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet"
     },
     {
       "id": "art_4",
-      "title": "Humble Bundle redesign removes two-factor verification from settings",
-      "essence": "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku. PC Gamer also points out that there are Humble Bundle support pages discussing two-factor verification, and the writer […]",
-      "full_body": "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku. PC Gamer also points out that there are Humble Bundle support pages discussing two-factor verification, and the writer […]",
+      "title": "CMF’s milk carton-shaped Bluetooth speaker is down to a new low price",
+      "essence": "Bluetooth speakers are often boring boxes in plain colors, but not this one! As part of Nothing’s ongoing early Black Friday promo, you can grab its unique, milk carton-shaped CMF Speaker S from Amazon and Nothing for just $39.",
+      "full_body": "Bluetooth speakers are often boring boxes in plain colors, but not this one! As part of Nothing’s ongoing early Black Friday promo, you can grab its unique, milk carton-shaped CMF Speaker S from Amazon and Nothing for just $39. That’s a solid $20 discount and the lowest price we’ve seen on Nothing’s newfangled wireless speaker, […]",
       "sentences": [
-        "The Humble Bundle storefront for buying games and other software recently got a new look, but on the settings page, it no longer offers a way to add or update two-factor verification methods, as reported by Kotaku.",
-        "PC Gamer also points out that there are Humble Bundle support pages discussing two-factor verification, and the writer […]"
+        "Bluetooth speakers are often boring boxes in plain colors, but not this one!",
+        "As part of Nothing’s ongoing early Black Friday promo, you can grab its unique, milk carton-shaped CMF Speaker S from Amazon and Nothing for just $39.",
+        "That’s a solid $20 discount and the lowest price we’ve seen on Nothing’s newfangled wireless speaker, […]"
       ],
-      "url": "https://www.theverge.com/games/1032659/humble-bundle-redesign-two-factor-verification-security-settings"
+      "url": "https://www.theverge.com/gadgets/1033185/nothing-cmf-speaker-s-m-black-friday-deal-sale"
     }
   ]
 }
