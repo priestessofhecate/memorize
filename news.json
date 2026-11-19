@@ -1,50 +1,52 @@
 {
-  "updated_at": "2026-11-18 03:20 UTC",
+  "updated_at": "2026-11-19 02:56 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Satya Nadella says he’s AGI-pilled now",
-      "essence": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI-pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked at […]",
-      "full_body": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI-pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked at […]",
+      "title": "Elon Musk tries to explain what’s going on with Ukraine and Starlink",
+      "essence": "Elon Musk said Ukrainian president Volodymyr Zelenskyy is lying about disruptions to Starshield in Ukraine and that he's trying to misuse SpaceX's consumer service, Starlink, for military purposes. Musk made the comments at The New York Times' DealBook Summit on Wednesday as he tried to explain the conflict following weeks of back and forth between […]",
+      "full_body": "Elon Musk said Ukrainian president Volodymyr Zelenskyy is lying about disruptions to Starshield in Ukraine and that he's trying to misuse SpaceX's consumer service, Starlink, for military purposes. Musk made the comments at The New York Times' DealBook Summit on Wednesday as he tried to explain the conflict following weeks of back and forth between […]",
       "sentences": [
-        "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it.",
-        "\"I am AGI-pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked at […]"
+        "Elon Musk said Ukrainian president Volodymyr Zelenskyy is lying about disruptions to Starshield in Ukraine and that he's trying to misuse SpaceX's consumer service, Starlink, for military purposes.",
+        "Musk made the comments at The New York Times' DealBook Summit on Wednesday as he tried to explain the conflict following weeks of back and forth between […]"
       ],
-      "url": "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now"
+      "url": "https://www.theverge.com/tech/1037448/elon-musk-ukraine-starlink-starshield-nyt-dealbook"
     },
     {
       "id": "art_2",
-      "title": "Jeff Bezos says he was ‘heavily involved’ in picking the new James Bond",
-      "essence": "Robert Pattinson's casting as James Bond made enough sense given his recent work with director Denis Villeneuve, who's making the franchise's next film over at Amazon. But it turns out that Amazon founder Jeff Bezos played a significant role in making the final decision, too.",
-      "full_body": "Robert Pattinson's casting as James Bond made enough sense given his recent work with director Denis Villeneuve, who's making the franchise's next film over at Amazon. But it turns out that Amazon founder Jeff Bezos played a significant role in making the final decision, too. During Semafor's Silicon Valley and the World conference today, Bezos […]",
+      "title": "The nation’s largest school districts consider ditching Google Search",
+      "essence": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Search.",
+      "full_body": "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times. Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Search. Chris Phillips, Google's vice […]",
       "sentences": [
-        "Robert Pattinson's casting as James Bond made enough sense given his recent work with director Denis Villeneuve, who's making the franchise's next film over at Amazon.",
-        "But it turns out that Amazon founder Jeff Bezos played a significant role in making the final decision, too.",
-        "During Semafor's Silicon Valley and the World conference today, Bezos […]"
+        "New York, Los Angeles, and Chicago schools are considering Google alternatives after the company said it will disable Search for schools that opt out of its AI features, according to The New York Times.",
+        "Starting next year, schools will not have the option to disable Gemini-powered features without also disabling Search.",
+        "Chris Phillips, Google's vice […]"
       ],
-      "url": "https://www.theverge.com/entertainment/1036110/jeff-bezos-james-bond-casting-amazon"
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google"
     },
     {
       "id": "art_3",
-      "title": "Read everything that Nvidia’s board chair had to say about Jensen Huang",
-      "essence": "Nvidia's quarterly earnings call on Tuesday was its first with CFO and interim CEO Colette Kress at the helm alongside the company's first board chair, Harvey C. The leadership change followed Jensen Huang's resignation last week after reports he had multiple affairs - including one with former Megaspeed executive and alleged Chinese asset Alice […]",
-      "full_body": "Nvidia's quarterly earnings call on Tuesday was its first with CFO and interim CEO Colette Kress at the helm alongside the company's first board chair, Harvey C. The leadership change followed Jensen Huang's resignation last week after reports he had multiple affairs - including one with former Megaspeed executive and alleged Chinese asset Alice […]",
+      "title": "Democrats skip a vote on adding Brendan Carr’s adviser to the FCC",
+      "essence": "Senate commerce committee Chair Ted Cruz (R-TX) began a meeting Wednesday meant to confirm President Donald Trump's nominee to the Federal Communications Commission with a lopsided dais. To his right sat all 14 Republican members of the panel, including Senate Majority Leader John Thune (R-SD).",
+      "full_body": "Senate commerce committee Chair Ted Cruz (R-TX) began a meeting Wednesday meant to confirm President Donald Trump's nominee to the Federal Communications Commission with a lopsided dais. To his right sat all 14 Republican members of the panel, including Senate Majority Leader John Thune (R-SD). To his left were about a dozen empty chairs - […]",
       "sentences": [
-        "Nvidia's quarterly earnings call on Tuesday was its first with CFO and interim CEO Colette Kress at the helm alongside the company's first board chair, Harvey C.",
-        "The leadership change followed Jensen Huang's resignation last week after reports he had multiple affairs - including one with former Megaspeed executive and alleged Chinese asset Alice […]"
+        "Senate commerce committee Chair Ted Cruz (R-TX) began a meeting Wednesday meant to confirm President Donald Trump's nominee to the Federal Communications Commission with a lopsided dais.",
+        "To his right sat all 14 Republican members of the panel, including Senate Majority Leader John Thune (R-SD).",
+        "To his left were about a dozen empty chairs - […]"
       ],
-      "url": "https://www.theverge.com/tech/1036160/nvidia-earnings-harvey-c-jones-jensen-huang"
+      "url": "https://www.theverge.com/policy/1037134/democrats-boycott-fcc-nomination-vote-danielle-thumann-severs"
     },
     {
       "id": "art_4",
-      "title": "iFixit’s Apple HomeView teardown reveals a device that will be difficult to repair",
-      "essence": "After finding recent versions of Apple's iPads and HomePods much easier to disassemble for battery replacements or other repairs, iFixit assumed it would be the same story for Apple's new HomeView hub that looks like a seven-inch tablet stuck to a smart speaker. The reality was much different and by the time they got the […]",
-      "full_body": "After finding recent versions of Apple's iPads and HomePods much easier to disassemble for battery replacements or other repairs, iFixit assumed it would be the same story for Apple's new HomeView hub that looks like a seven-inch tablet stuck to a smart speaker. The reality was much different and by the time they got the […]",
+      "title": "Absolute Batman can save DC Studios",
+      "essence": "With James Gunn and Peter Safran out as the co-heads of DC Studios following Skydance's acquisition of Warner Bros. Discovery, it's unclear what will become of the cinematic universe that was building around movies like last year's Superman.",
+      "full_body": "With James Gunn and Peter Safran out as the co-heads of DC Studios following Skydance's acquisition of Warner Bros. Discovery, it's unclear what will become of the cinematic universe that was building around movies like last year's Superman. Though Gunn's Man of Tomorrow feature might still come out, it seems like his larger vision for […]",
       "sentences": [
-        "After finding recent versions of Apple's iPads and HomePods much easier to disassemble for battery replacements or other repairs, iFixit assumed it would be the same story for Apple's new HomeView hub that looks like a seven-inch tablet stuck to a smart speaker.",
-        "The reality was much different and by the time they got the […]"
+        "With James Gunn and Peter Safran out as the co-heads of DC Studios following Skydance's acquisition of Warner Bros.",
+        "Discovery, it's unclear what will become of the cinematic universe that was building around movies like last year's Superman.",
+        "Though Gunn's Man of Tomorrow feature might still come out, it seems like his larger vision for […]"
       ],
-      "url": "https://www.theverge.com/tech/1036045/ifixit-teardown-apple-homeview-smart-home-hub"
+      "url": "https://www.theverge.com/entertainment/1035722/absolute-batman-can-save-dc-studios"
     }
   ]
 }
