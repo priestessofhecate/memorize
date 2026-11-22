@@ -1,51 +1,52 @@
 {
-  "updated_at": "2026-11-21 02:59 UTC",
+  "updated_at": "2026-11-22 01:54 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "YouTube is reportedly preparing to settle social media addiction claims for $3 billion",
-      "essence": "YouTube is preparing to pay $3 billion to thousands of school districts to settle claims that its \"addictive design\" harmed kids, according to Bloomberg. Sources tell the publication that YouTube reached the agreement \"in principle,\" and that the deal would also include new safeguards for teens.",
-      "full_body": "YouTube is preparing to pay $3 billion to thousands of school districts to settle claims that its \"addictive design\" harmed kids, according to Bloomberg. Sources tell the publication that YouTube reached the agreement \"in principle,\" and that the deal would also include new safeguards for teens. The settlement would allow Google to avoid a wave […]",
+      "title": "Amazon is complaining about NYC Council on shipping labels, too",
+      "essence": "Amazon is leaving no venue unexplored in its fight against the New York City Council and the Delivery Protection Act. The company is now putting labels on shipments claiming that the Council could add up to $5 to any Amazon order.",
+      "full_body": "Amazon is leaving no venue unexplored in its fight against the New York City Council and the Delivery Protection Act. The company is now putting labels on shipments claiming that the Council could add up to $5 to any Amazon order. The Delivery Protection Act would effectively ban the sort of third-party arrangements Amazon currently […]",
       "sentences": [
-        "YouTube is preparing to pay $3 billion to thousands of school districts to settle claims that its \"addictive design\" harmed kids, according to Bloomberg.",
-        "Sources tell the publication that YouTube reached the agreement \"in principle,\" and that the deal would also include new safeguards for teens.",
-        "The settlement would allow Google to avoid a wave […]"
+        "Amazon is leaving no venue unexplored in its fight against the New York City Council and the Delivery Protection Act.",
+        "The company is now putting labels on shipments claiming that the Council could add up to $5 to any Amazon order.",
+        "The Delivery Protection Act would effectively ban the sort of third-party arrangements Amazon currently […]"
       ],
-      "url": "https://www.theverge.com/streaming/1039096/youtube-social-media-addiction-school-districts-settlement"
+      "url": "https://www.theverge.com/tech/1039564/amazon-nyc-council-packages-shipping-label"
     },
     {
       "id": "art_2",
-      "title": "Rockstar says GTA VI made $3.79 billion in its first day",
-      "essence": "GTA VI earned $3.79 billion in its first day of sales, which set \"a new record for entertainment across any medium,\" according to an announcement from Rockstar Games. The game also sold 32.5 million preorder copies.",
-      "full_body": "GTA VI earned $3.79 billion in its first day of sales, which set \"a new record for entertainment across any medium,\" according to an announcement from Rockstar Games. The game also sold 32.5 million preorder copies. \"It is with immense gratitude that we enter a new chapter of Rockstar Games with the release of Grand […]",
+      "title": "The UN fails to agree on rules regulating ‘killer robots’",
+      "essence": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the […]",
+      "full_body": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the […]",
       "sentences": [
-        "GTA VI earned $3.79 billion in its first day of sales, which set \"a new record for entertainment across any medium,\" according to an announcement from Rockstar Games.",
-        "The game also sold 32.5 million preorder copies.",
-        "\"It is with immense gratitude that we enter a new chapter of Rockstar Games with the release of Grand […]"
+        "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations.",
+        "According to NPR: Before the negotiations got underway, the […]"
       ],
-      "url": "https://www.theverge.com/games/1036279/gta-vi-sales"
+      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots"
     },
     {
       "id": "art_3",
-      "title": "Eufy’s Omni C28 is 53 percent off ahead of Black Friday",
-      "essence": "Hosting Thanksgiving can be fun, but cleaning up afterwards? Eufy’s Omni C28 robot vacuum / mop hybrid can help, and thanks to an early Black Friday deal, you can pick it up at a new low price of $379.99 ($420 off its original price) at Amazon, Best Buy, or directly from Eufy […]",
-      "full_body": "Hosting Thanksgiving can be fun, but cleaning up afterwards? Eufy’s Omni C28 robot vacuum / mop hybrid can help, and thanks to an early Black Friday deal, you can pick it up at a new low price of $379.99 ($420 off its original price) at Amazon, Best Buy, or directly from Eufy […]",
+      "title": "The FBI and USDA were reportedly hacked",
+      "essence": "Friday, it was reported that both the US Department of Agriculture (USDA) and the FBI were hacked. In reporting on the FBI hack, CNN noted that this is the second such attack on the agency in the last few months, this time targeting the National Crime Information Center (NCIC), which federal, state, and local law […]",
+      "full_body": "Friday, it was reported that both the US Department of Agriculture (USDA) and the FBI were hacked. In reporting on the FBI hack, CNN noted that this is the second such attack on the agency in the last few months, this time targeting the National Crime Information Center (NCIC), which federal, state, and local law […]",
       "sentences": [
-        "Hosting Thanksgiving can be fun, but cleaning up afterwards?",
-        "Eufy’s Omni C28 robot vacuum / mop hybrid can help, and thanks to an early Black Friday deal, you can pick it up at a new low price of $379.99 ($420 off its original price) at Amazon, Best Buy, or directly from Eufy […]"
+        "Friday, it was reported that both the US Department of Agriculture (USDA) and the FBI were hacked.",
+        "In reporting on the FBI hack, CNN noted that this is the second such attack on the agency in the last few months, this time targeting the National Crime Information Center (NCIC), which federal, state, and local law […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1037933/eufy-omni-c28-robot-vacuum-deal-sale"
+      "url": "https://www.theverge.com/tech/1039543/fbi-usda-hacked"
     },
     {
       "id": "art_4",
-      "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
-      "essence": "President Donald Trump promised to put a \"tremendous tax\" on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applications to build them. \"We're not going to allow our companies to build data centers outside of our country,\" Trump said at a […]",
-      "full_body": "President Donald Trump promised to put a \"tremendous tax\" on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applications to build them. \"We're not going to allow our companies to build data centers outside of our country,\" Trump said at a […]",
+      "title": "John Roberts, the voice of Linda Belcher, is just happy to finish a thing",
+      "essence": "You probably know John Roberts best as the voice of Linda Belcher on Bob's Burgers. The show just wrapped up its 16th season and shows no signs of slowing down anytime soon.",
+      "full_body": "You probably know John Roberts best as the voice of Linda Belcher on Bob's Burgers. The show just wrapped up its 16th season and shows no signs of slowing down anytime soon. The show remains a reliable source of laughs, top-notch puns, and frankly wholesome fun. Comedy is just part of Roberts' life, however.",
       "sentences": [
-        "President Donald Trump promised to put a \"tremendous tax\" on companies that build data centers outside of the US, even as states and cities around the country are placing restrictions on new applications to build them.",
-        "\"We're not going to allow our companies to build data centers outside of our country,\" Trump said at a […]"
+        "You probably know John Roberts best as the voice of Linda Belcher on Bob's Burgers.",
+        "The show just wrapped up its 16th season and shows no signs of slowing down anytime soon.",
+        "The show remains a reliable source of laughs, top-notch puns, and frankly wholesome fun.",
+        "Comedy is just part of Roberts' life, however."
       ],
-      "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax"
+      "url": "https://www.theverge.com/report/1038463/john-roberts-linda-belcher-bobs-burgers-interview"
     }
   ]
 }
