@@ -1,52 +1,53 @@
 {
-  "updated_at": "2026-11-22 01:54 UTC",
+  "updated_at": "2026-11-23 02:16 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Amazon is complaining about NYC Council on shipping labels, too",
-      "essence": "Amazon is leaving no venue unexplored in its fight against the New York City Council and the Delivery Protection Act. The company is now putting labels on shipments claiming that the Council could add up to $5 to any Amazon order.",
-      "full_body": "Amazon is leaving no venue unexplored in its fight against the New York City Council and the Delivery Protection Act. The company is now putting labels on shipments claiming that the Council could add up to $5 to any Amazon order. The Delivery Protection Act would effectively ban the sort of third-party arrangements Amazon currently […]",
+      "title": "We haven’t seen the last of the major tech outages",
+      "essence": "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase. But the consensus is that there are more to come.",
+      "full_body": "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase. But the consensus is that there are more to come. Director of National Intelligence Jay Clayton told CNN: \"The American people should be […]",
       "sentences": [
-        "Amazon is leaving no venue unexplored in its fight against the New York City Council and the Delivery Protection Act.",
-        "The company is now putting labels on shipments claiming that the Council could add up to $5 to any Amazon order.",
-        "The Delivery Protection Act would effectively ban the sort of third-party arrangements Amazon currently […]"
+        "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase.",
+        "But the consensus is that there are more to come.",
+        "Director of National Intelligence Jay Clayton told CNN: \"The American people should be […]"
       ],
-      "url": "https://www.theverge.com/tech/1039564/amazon-nyc-council-packages-shipping-label"
+      "url": "https://www.theverge.com/tech/1039851/major-tech-outages"
     },
     {
       "id": "art_2",
-      "title": "The UN fails to agree on rules regulating ‘killer robots’",
-      "essence": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the […]",
-      "full_body": "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations. According to NPR: Before the negotiations got underway, the […]",
+      "title": "Delta flights in and out of Atlanta delayed due to system outage",
+      "essence": "All Delta flights in and out of Atlanta are facing significant delays on Sunday due to a problem with the system that calculates a plane's weight and balance. Hartsfield-Jackson Atlanta International Airport is Delta's largest hub and one of the busiest airports in the world.",
+      "full_body": "All Delta flights in and out of Atlanta are facing significant delays on Sunday due to a problem with the system that calculates a plane's weight and balance. Hartsfield-Jackson Atlanta International Airport is Delta's largest hub and one of the busiest airports in the world. While only Delta is impacted at the moment, disruptions at […]",
       "sentences": [
-        "One of the items on the agenda for UN diplomats meeting in Geneva this week was working towards rules regarding the use of autonomous weapons, or so-called \"killer robots.\" Eventually, representatives left the meetings agreeing to \"start discussing options\" after a largely fruitless week of negotiations.",
-        "According to NPR: Before the negotiations got underway, the […]"
+        "All Delta flights in and out of Atlanta are facing significant delays on Sunday due to a problem with the system that calculates a plane's weight and balance.",
+        "Hartsfield-Jackson Atlanta International Airport is Delta's largest hub and one of the busiest airports in the world.",
+        "While only Delta is impacted at the moment, disruptions at […]"
       ],
-      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots"
+      "url": "https://www.theverge.com/transportation/1039779/delta-flights-delayed-system-outage"
     },
     {
       "id": "art_3",
-      "title": "The FBI and USDA were reportedly hacked",
-      "essence": "Friday, it was reported that both the US Department of Agriculture (USDA) and the FBI were hacked. In reporting on the FBI hack, CNN noted that this is the second such attack on the agency in the last few months, this time targeting the National Crime Information Center (NCIC), which federal, state, and local law […]",
-      "full_body": "Friday, it was reported that both the US Department of Agriculture (USDA) and the FBI were hacked. In reporting on the FBI hack, CNN noted that this is the second such attack on the agency in the last few months, this time targeting the National Crime Information Center (NCIC), which federal, state, and local law […]",
+      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+      "essence": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section.",
+      "full_body": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to […]",
       "sentences": [
-        "Friday, it was reported that both the US Department of Agriculture (USDA) and the FBI were hacked.",
-        "In reporting on the FBI hack, CNN noted that this is the second such attack on the agency in the last few months, this time targeting the National Crime Information Center (NCIC), which federal, state, and local law […]"
+        "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music.",
+        "Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section.",
+        "They found several audio files with Suno metadata that pointed back to […]"
       ],
-      "url": "https://www.theverge.com/tech/1039543/fbi-usda-hacked"
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music"
     },
     {
       "id": "art_4",
-      "title": "John Roberts, the voice of Linda Belcher, is just happy to finish a thing",
-      "essence": "You probably know John Roberts best as the voice of Linda Belcher on Bob's Burgers. The show just wrapped up its 16th season and shows no signs of slowing down anytime soon.",
-      "full_body": "You probably know John Roberts best as the voice of Linda Belcher on Bob's Burgers. The show just wrapped up its 16th season and shows no signs of slowing down anytime soon. The show remains a reliable source of laughs, top-notch puns, and frankly wholesome fun. Comedy is just part of Roberts' life, however.",
+      "title": "Some of our favorite Switch 2 games are cheaper through Black Friday",
+      "essence": "Black Friday is a great time to expand your game library because it’s a chance to catch deals that aren’t normally happening throughout the year. That’s true for Nintendo Switch 2 games, as well.",
+      "full_body": "Black Friday is a great time to expand your game library because it’s a chance to catch deals that aren’t normally happening throughout the year. That’s true for Nintendo Switch 2 games, as well. In addition to a $50 off sale on one of its console bundles, Nintendo is also knocking $20 off some of […]",
       "sentences": [
-        "You probably know John Roberts best as the voice of Linda Belcher on Bob's Burgers.",
-        "The show just wrapped up its 16th season and shows no signs of slowing down anytime soon.",
-        "The show remains a reliable source of laughs, top-notch puns, and frankly wholesome fun.",
-        "Comedy is just part of Roberts' life, however."
+        "Black Friday is a great time to expand your game library because it’s a chance to catch deals that aren’t normally happening throughout the year.",
+        "That’s true for Nintendo Switch 2 games, as well.",
+        "In addition to a $50 off sale on one of its console bundles, Nintendo is also knocking $20 off some of […]"
       ],
-      "url": "https://www.theverge.com/report/1038463/john-roberts-linda-belcher-bobs-burgers-interview"
+      "url": "https://www.theverge.com/gadgets/1037313/nintendo-switch-2-game-black-friday-cyber-monday-deal-sale"
     }
   ]
 }
