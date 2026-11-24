@@ -1,53 +1,52 @@
 {
-  "updated_at": "2026-11-23 02:16 UTC",
+  "updated_at": "2026-11-24 05:44 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "We haven’t seen the last of the major tech outages",
-      "essence": "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase. But the consensus is that there are more to come.",
-      "full_body": "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase. But the consensus is that there are more to come. Director of National Intelligence Jay Clayton told CNN: \"The American people should be […]",
+      "title": "Google alternative Kagi launches an email service",
+      "essence": "Kagi, which already offers a paid alternative to Google Search and its own Orion browser as a rival to Chrome, is taking on another Google service: Gmail. Today, Kagi announced a public beta of Kagi Mail, a new email service that has \"no surveillance, no ads, open standards, and no lock-in.\" With Kagi Mail, you […]",
+      "full_body": "Kagi, which already offers a paid alternative to Google Search and its own Orion browser as a rival to Chrome, is taking on another Google service: Gmail. Today, Kagi announced a public beta of Kagi Mail, a new email service that has \"no surveillance, no ads, open standards, and no lock-in.\" With Kagi Mail, you […]",
       "sentences": [
-        "Over the last week or so, we have seen a nationwide FAA ground stop, a multi-day Outlook outage that brought entire companies to a standstill, and a banking outage at JPMorgan Chase.",
-        "But the consensus is that there are more to come.",
-        "Director of National Intelligence Jay Clayton told CNN: \"The American people should be […]"
+        "Kagi, which already offers a paid alternative to Google Search and its own Orion browser as a rival to Chrome, is taking on another Google service: Gmail.",
+        "Today, Kagi announced a public beta of Kagi Mail, a new email service that has \"no surveillance, no ads, open standards, and no lock-in.\" With Kagi Mail, you […]"
       ],
-      "url": "https://www.theverge.com/tech/1039851/major-tech-outages"
+      "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative"
     },
     {
       "id": "art_2",
-      "title": "Delta flights in and out of Atlanta delayed due to system outage",
-      "essence": "All Delta flights in and out of Atlanta are facing significant delays on Sunday due to a problem with the system that calculates a plane's weight and balance. Hartsfield-Jackson Atlanta International Airport is Delta's largest hub and one of the busiest airports in the world.",
-      "full_body": "All Delta flights in and out of Atlanta are facing significant delays on Sunday due to a problem with the system that calculates a plane's weight and balance. Hartsfield-Jackson Atlanta International Airport is Delta's largest hub and one of the busiest airports in the world. While only Delta is impacted at the moment, disruptions at […]",
+      "title": "The hacker behind early GTA VI leaks has been sentenced — and released",
+      "essence": "Arion Kurtaj, who pleaded guilty last week to hacking Grand Theft Auto VI developer Rockstar Games and other companies, including Uber and Revolut, was sentenced to seven years in prison but released on license, the BBC reports. After hacking Rockstar, Kurtaj leaked 90 videos of GTA VI in 2022, years before the game's public release […]",
+      "full_body": "Arion Kurtaj, who pleaded guilty last week to hacking Grand Theft Auto VI developer Rockstar Games and other companies, including Uber and Revolut, was sentenced to seven years in prison but released on license, the BBC reports. After hacking Rockstar, Kurtaj leaked 90 videos of GTA VI in 2022, years before the game's public release […]",
       "sentences": [
-        "All Delta flights in and out of Atlanta are facing significant delays on Sunday due to a problem with the system that calculates a plane's weight and balance.",
-        "Hartsfield-Jackson Atlanta International Airport is Delta's largest hub and one of the busiest airports in the world.",
-        "While only Delta is impacted at the moment, disruptions at […]"
+        "Arion Kurtaj, who pleaded guilty last week to hacking Grand Theft Auto VI developer Rockstar Games and other companies, including Uber and Revolut, was sentenced to seven years in prison but released on license, the BBC reports.",
+        "After hacking Rockstar, Kurtaj leaked 90 videos of GTA VI in 2022, years before the game's public release […]"
       ],
-      "url": "https://www.theverge.com/transportation/1039779/delta-flights-delayed-system-outage"
+      "url": "https://www.theverge.com/games/1040966/arion-kurtaj-gta-vi-leaks-sentenced-released"
     },
     {
       "id": "art_3",
-      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
-      "essence": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section.",
-      "full_body": "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music. Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section. They found several audio files with Suno metadata that pointed back to […]",
+      "title": "The Verge’s 2026 holiday gift guide",
+      "essence": "Gift-giving isn't just about grabbing something solid under a determined spending limit. It's an expression of love, a way to show someone how well you really know them.",
+      "full_body": "Gift-giving isn't just about grabbing something solid under a determined spending limit. It's an expression of love, a way to show someone how well you really know them. That doesn't mean you have to do it all on your own, though. Sometimes you just need a push in the right direction to get things rolling. […]",
       "sentences": [
-        "The Binding of Isaac: Repentance Plus has spent the last few days getting review-bombed on Steam after it was discovered that a particular segment of the game used AI music.",
-        "Reddit user ShweetsStuff discovered the songs used during a Grand Theft Auto-themed section.",
-        "They found several audio files with Suno metadata that pointed back to […]"
+        "Gift-giving isn't just about grabbing something solid under a determined spending limit.",
+        "It's an expression of love, a way to show someone how well you really know them.",
+        "That doesn't mean you have to do it all on your own, though.",
+        "Sometimes you just need a push in the right direction to get things rolling. […]"
       ],
-      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music"
+      "url": "https://www.theverge.com/gadgets/1026041/holiday-gift-guide-2026"
     },
     {
       "id": "art_4",
-      "title": "Some of our favorite Switch 2 games are cheaper through Black Friday",
-      "essence": "Black Friday is a great time to expand your game library because it’s a chance to catch deals that aren’t normally happening throughout the year. That’s true for Nintendo Switch 2 games, as well.",
-      "full_body": "Black Friday is a great time to expand your game library because it’s a chance to catch deals that aren’t normally happening throughout the year. That’s true for Nintendo Switch 2 games, as well. In addition to a $50 off sale on one of its console bundles, Nintendo is also knocking $20 off some of […]",
+      "title": "Ladybird, the first new browser engine in years, is now available to test",
+      "essence": "Ladybird, an independent web browser with a built-from-scratch engine, is finally available for testing. On Monday, Ladybird developer Andreas Kling announced that the browser is launching in alpha on macOS and Linux following more than four years of development.",
+      "full_body": "Ladybird, an independent web browser with a built-from-scratch engine, is finally available for testing. On Monday, Ladybird developer Andreas Kling announced that the browser is launching in alpha on macOS and Linux following more than four years of development. The release makes Ladybird the first browser in years to arrive with an entirely new engine. […]",
       "sentences": [
-        "Black Friday is a great time to expand your game library because it’s a chance to catch deals that aren’t normally happening throughout the year.",
-        "That’s true for Nintendo Switch 2 games, as well.",
-        "In addition to a $50 off sale on one of its console bundles, Nintendo is also knocking $20 off some of […]"
+        "Ladybird, an independent web browser with a built-from-scratch engine, is finally available for testing.",
+        "On Monday, Ladybird developer Andreas Kling announced that the browser is launching in alpha on macOS and Linux following more than four years of development.",
+        "The release makes Ladybird the first browser in years to arrive with an entirely new engine. […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1037313/nintendo-switch-2-game-black-friday-cyber-monday-deal-sale"
+      "url": "https://www.theverge.com/tech/1040872/ladybird-indie-browser-engine-alpha-testing"
     }
   ]
 }
