@@ -1,52 +1,51 @@
 {
-  "updated_at": "2026-11-24 05:44 UTC",
+  "updated_at": "2026-11-25 04:47 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Google alternative Kagi launches an email service",
-      "essence": "Kagi, which already offers a paid alternative to Google Search and its own Orion browser as a rival to Chrome, is taking on another Google service: Gmail. Today, Kagi announced a public beta of Kagi Mail, a new email service that has \"no surveillance, no ads, open standards, and no lock-in.\" With Kagi Mail, you […]",
-      "full_body": "Kagi, which already offers a paid alternative to Google Search and its own Orion browser as a rival to Chrome, is taking on another Google service: Gmail. Today, Kagi announced a public beta of Kagi Mail, a new email service that has \"no surveillance, no ads, open standards, and no lock-in.\" With Kagi Mail, you […]",
+      "title": "US financial crimes bureau discloses ‘cybersecurity incident’",
+      "essence": "The Financial Crimes Enforcement Network (FinCEN) disclosed on Tuesday that it's investigating a \"cybersecurity incident.\" The bureau, which is part of the Treasury Department, said it's looking into an \"incident that resulted in unauthorized access to a limited subset of its systems.\" It hasn't offered any information about the full scope or source of the […]",
+      "full_body": "The Financial Crimes Enforcement Network (FinCEN) disclosed on Tuesday that it's investigating a \"cybersecurity incident.\" The bureau, which is part of the Treasury Department, said it's looking into an \"incident that resulted in unauthorized access to a limited subset of its systems.\" It hasn't offered any information about the full scope or source of the […]",
       "sentences": [
-        "Kagi, which already offers a paid alternative to Google Search and its own Orion browser as a rival to Chrome, is taking on another Google service: Gmail.",
-        "Today, Kagi announced a public beta of Kagi Mail, a new email service that has \"no surveillance, no ads, open standards, and no lock-in.\" With Kagi Mail, you […]"
+        "The Financial Crimes Enforcement Network (FinCEN) disclosed on Tuesday that it's investigating a \"cybersecurity incident.\" The bureau, which is part of the Treasury Department, said it's looking into an \"incident that resulted in unauthorized access to a limited subset of its systems.\" It hasn't offered any information about the full scope or source of the […]"
       ],
-      "url": "https://www.theverge.com/tech/1041000/kagi-mail-email-google-gmail-alternative"
+      "url": "https://www.theverge.com/policy/1041957/fincen-treasury-cybersecurity-incident"
     },
     {
       "id": "art_2",
-      "title": "The hacker behind early GTA VI leaks has been sentenced — and released",
-      "essence": "Arion Kurtaj, who pleaded guilty last week to hacking Grand Theft Auto VI developer Rockstar Games and other companies, including Uber and Revolut, was sentenced to seven years in prison but released on license, the BBC reports. After hacking Rockstar, Kurtaj leaked 90 videos of GTA VI in 2022, years before the game's public release […]",
-      "full_body": "Arion Kurtaj, who pleaded guilty last week to hacking Grand Theft Auto VI developer Rockstar Games and other companies, including Uber and Revolut, was sentenced to seven years in prison but released on license, the BBC reports. After hacking Rockstar, Kurtaj leaked 90 videos of GTA VI in 2022, years before the game's public release […]",
+      "title": "The Verge’s 2026 gift guide for dads",
+      "essence": "Gone are the days when you could just buy your father a random tie or some leather-clad alcohol vessel or a shaving kit. Dads want - nay, deserve - something memorable.",
+      "full_body": "Gone are the days when you could just buy your father a random tie or some leather-clad alcohol vessel or a shaving kit. Dads want - nay, deserve - something memorable. Luckily for you, it's not that hard to find something special that he'll approve of, and we're here to guide you. We've curated this […]",
       "sentences": [
-        "Arion Kurtaj, who pleaded guilty last week to hacking Grand Theft Auto VI developer Rockstar Games and other companies, including Uber and Revolut, was sentenced to seven years in prison but released on license, the BBC reports.",
-        "After hacking Rockstar, Kurtaj leaked 90 videos of GTA VI in 2022, years before the game's public release […]"
+        "Gone are the days when you could just buy your father a random tie or some leather-clad alcohol vessel or a shaving kit.",
+        "Dads want - nay, deserve - something memorable.",
+        "Luckily for you, it's not that hard to find something special that he'll approve of, and we're here to guide you.",
+        "We've curated this […]"
       ],
-      "url": "https://www.theverge.com/games/1040966/arion-kurtaj-gta-vi-leaks-sentenced-released"
+      "url": "https://www.theverge.com/gadgets/1024777/best-gifts-for-dad-2026"
     },
     {
       "id": "art_3",
-      "title": "The Verge’s 2026 holiday gift guide",
-      "essence": "Gift-giving isn't just about grabbing something solid under a determined spending limit. It's an expression of love, a way to show someone how well you really know them.",
-      "full_body": "Gift-giving isn't just about grabbing something solid under a determined spending limit. It's an expression of love, a way to show someone how well you really know them. That doesn't mean you have to do it all on your own, though. Sometimes you just need a push in the right direction to get things rolling. […]",
+      "title": "Why the US Army is about to blow up nearly 10,000 pounds of unstable explosives in Iowa",
+      "essence": "The US Army is moving ahead with plans to detonate the nation's stockpile of lead azide at an ammunition plant in Middletown, Iowa, at approximately 9:00AM CST on Wednesday. The Verge reached out to experts on what to expect, and will keep this post updated.",
+      "full_body": "The US Army is moving ahead with plans to detonate the nation's stockpile of lead azide at an ammunition plant in Middletown, Iowa, at approximately 9:00AM CST on Wednesday. The Verge reached out to experts on what to expect, and will keep this post updated. What material is the Army planning to detonate?",
       "sentences": [
-        "Gift-giving isn't just about grabbing something solid under a determined spending limit.",
-        "It's an expression of love, a way to show someone how well you really know them.",
-        "That doesn't mean you have to do it all on your own, though.",
-        "Sometimes you just need a push in the right direction to get things rolling. […]"
+        "The US Army is moving ahead with plans to detonate the nation's stockpile of lead azide at an ammunition plant in Middletown, Iowa, at approximately 9:00AM CST on Wednesday.",
+        "The Verge reached out to experts on what to expect, and will keep this post updated.",
+        "What material is the Army planning to detonate?"
       ],
-      "url": "https://www.theverge.com/gadgets/1026041/holiday-gift-guide-2026"
+      "url": "https://www.theverge.com/science/1041819/us-army-detonation-lead-explosives-iowa"
     },
     {
       "id": "art_4",
-      "title": "Ladybird, the first new browser engine in years, is now available to test",
-      "essence": "Ladybird, an independent web browser with a built-from-scratch engine, is finally available for testing. On Monday, Ladybird developer Andreas Kling announced that the browser is launching in alpha on macOS and Linux following more than four years of development.",
-      "full_body": "Ladybird, an independent web browser with a built-from-scratch engine, is finally available for testing. On Monday, Ladybird developer Andreas Kling announced that the browser is launching in alpha on macOS and Linux following more than four years of development. The release makes Ladybird the first browser in years to arrive with an entirely new engine. […]",
+      "title": "Huawei found guilty of stealing trade secrets",
+      "essence": "A jury has found Huawei guilty of stealing US trade secrets, as reported earlier by NBC News and Bloomberg. The verdict, handed down in a federal court in New York, concludes a years-long legal battle that accused the Chinese telecom giant of stealing source code and proprietary technology from several companies, including T-Mobile, Cisco, and […]",
+      "full_body": "A jury has found Huawei guilty of stealing US trade secrets, as reported earlier by NBC News and Bloomberg. The verdict, handed down in a federal court in New York, concludes a years-long legal battle that accused the Chinese telecom giant of stealing source code and proprietary technology from several companies, including T-Mobile, Cisco, and […]",
       "sentences": [
-        "Ladybird, an independent web browser with a built-from-scratch engine, is finally available for testing.",
-        "On Monday, Ladybird developer Andreas Kling announced that the browser is launching in alpha on macOS and Linux following more than four years of development.",
-        "The release makes Ladybird the first browser in years to arrive with an entirely new engine. […]"
+        "A jury has found Huawei guilty of stealing US trade secrets, as reported earlier by NBC News and Bloomberg.",
+        "The verdict, handed down in a federal court in New York, concludes a years-long legal battle that accused the Chinese telecom giant of stealing source code and proprietary technology from several companies, including T-Mobile, Cisco, and […]"
       ],
-      "url": "https://www.theverge.com/tech/1040872/ladybird-indie-browser-engine-alpha-testing"
+      "url": "https://www.theverge.com/tech/1041820/huawei-guilty-trade-secrets-trial"
     }
   ]
 }
