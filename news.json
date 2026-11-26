@@ -1,51 +1,52 @@
 {
-  "updated_at": "2026-11-25 04:47 UTC",
+  "updated_at": "2026-11-26 03:57 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "US financial crimes bureau discloses ‘cybersecurity incident’",
-      "essence": "The Financial Crimes Enforcement Network (FinCEN) disclosed on Tuesday that it's investigating a \"cybersecurity incident.\" The bureau, which is part of the Treasury Department, said it's looking into an \"incident that resulted in unauthorized access to a limited subset of its systems.\" It hasn't offered any information about the full scope or source of the […]",
-      "full_body": "The Financial Crimes Enforcement Network (FinCEN) disclosed on Tuesday that it's investigating a \"cybersecurity incident.\" The bureau, which is part of the Treasury Department, said it's looking into an \"incident that resulted in unauthorized access to a limited subset of its systems.\" It hasn't offered any information about the full scope or source of the […]",
+      "title": "Now Google’s Familiar Faces AI feature works on Walmart’s $35 smart home camera too",
+      "essence": "A couple of Walmart's budget-friendly smart home cameras will be able to recognize people around your house now using Google's familiar face detection feature. A new Google Home update brings Familiar Faces support to the $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired.",
+      "full_body": "A couple of Walmart's budget-friendly smart home cameras will be able to recognize people around your house now using Google's familiar face detection feature. A new Google Home update brings Familiar Faces support to the $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired. However, a Google Home Premium subscription is still required […]",
       "sentences": [
-        "The Financial Crimes Enforcement Network (FinCEN) disclosed on Tuesday that it's investigating a \"cybersecurity incident.\" The bureau, which is part of the Treasury Department, said it's looking into an \"incident that resulted in unauthorized access to a limited subset of its systems.\" It hasn't offered any information about the full scope or source of the […]"
+        "A couple of Walmart's budget-friendly smart home cameras will be able to recognize people around your house now using Google's familiar face detection feature.",
+        "A new Google Home update brings Familiar Faces support to the $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired.",
+        "However, a Google Home Premium subscription is still required […]"
       ],
-      "url": "https://www.theverge.com/policy/1041957/fincen-treasury-cybersecurity-incident"
+      "url": "https://www.theverge.com/tech/1042938/google-home-familiar-faces-onn-cameras"
     },
     {
       "id": "art_2",
-      "title": "The Verge’s 2026 gift guide for dads",
-      "essence": "Gone are the days when you could just buy your father a random tie or some leather-clad alcohol vessel or a shaving kit. Dads want - nay, deserve - something memorable.",
-      "full_body": "Gone are the days when you could just buy your father a random tie or some leather-clad alcohol vessel or a shaving kit. Dads want - nay, deserve - something memorable. Luckily for you, it's not that hard to find something special that he'll approve of, and we're here to guide you. We've curated this […]",
+      "title": "Amazon loses its latest attempt to get out of handling more recall notices",
+      "essence": "Amazon is on the hook to recall more than 400,000 hazardous products after losing its legal battle against the US Consumer Product Safety Commission (CPSC). The US District Court for the District of Maryland ruled in favor of the CPSC, which argued that Amazon is a distributor of goods, not a logistics provider, making it […]",
+      "full_body": "Amazon is on the hook to recall more than 400,000 hazardous products after losing its legal battle against the US Consumer Product Safety Commission (CPSC). The US District Court for the District of Maryland ruled in favor of the CPSC, which argued that Amazon is a distributor of goods, not a logistics provider, making it […]",
       "sentences": [
-        "Gone are the days when you could just buy your father a random tie or some leather-clad alcohol vessel or a shaving kit.",
-        "Dads want - nay, deserve - something memorable.",
-        "Luckily for you, it's not that hard to find something special that he'll approve of, and we're here to guide you.",
-        "We've curated this […]"
+        "Amazon is on the hook to recall more than 400,000 hazardous products after losing its legal battle against the US Consumer Product Safety Commission (CPSC).",
+        "The US District Court for the District of Maryland ruled in favor of the CPSC, which argued that Amazon is a distributor of goods, not a logistics provider, making it […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1024777/best-gifts-for-dad-2026"
+      "url": "https://www.theverge.com/tech/1042870/amazon-recall-order-cpsc"
     },
     {
       "id": "art_3",
-      "title": "Why the US Army is about to blow up nearly 10,000 pounds of unstable explosives in Iowa",
-      "essence": "The US Army is moving ahead with plans to detonate the nation's stockpile of lead azide at an ammunition plant in Middletown, Iowa, at approximately 9:00AM CST on Wednesday. The Verge reached out to experts on what to expect, and will keep this post updated.",
-      "full_body": "The US Army is moving ahead with plans to detonate the nation's stockpile of lead azide at an ammunition plant in Middletown, Iowa, at approximately 9:00AM CST on Wednesday. The Verge reached out to experts on what to expect, and will keep this post updated. What material is the Army planning to detonate?",
+      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
+      "essence": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
+      "full_body": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
       "sentences": [
-        "The US Army is moving ahead with plans to detonate the nation's stockpile of lead azide at an ammunition plant in Middletown, Iowa, at approximately 9:00AM CST on Wednesday.",
-        "The Verge reached out to experts on what to expect, and will keep this post updated.",
-        "What material is the Army planning to detonate?"
+        "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users.",
+        "The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]"
       ],
-      "url": "https://www.theverge.com/science/1041819/us-army-detonation-lead-explosives-iowa"
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent"
     },
     {
       "id": "art_4",
-      "title": "Huawei found guilty of stealing trade secrets",
-      "essence": "A jury has found Huawei guilty of stealing US trade secrets, as reported earlier by NBC News and Bloomberg. The verdict, handed down in a federal court in New York, concludes a years-long legal battle that accused the Chinese telecom giant of stealing source code and proprietary technology from several companies, including T-Mobile, Cisco, and […]",
-      "full_body": "A jury has found Huawei guilty of stealing US trade secrets, as reported earlier by NBC News and Bloomberg. The verdict, handed down in a federal court in New York, concludes a years-long legal battle that accused the Chinese telecom giant of stealing source code and proprietary technology from several companies, including T-Mobile, Cisco, and […]",
+      "title": "The Verge’s 2026 holiday gift guide for travelers",
+      "essence": "Everyone has that traveler in their life. That person who feels more at home on a 14-hour train ride than a quiet Sunday on the couch.",
+      "full_body": "Everyone has that traveler in their life. That person who feels more at home on a 14-hour train ride than a quiet Sunday on the couch. They speak multiple languages, have a gut like a goat, and make friends wherever they go. Whether they're your kindred spirit or the person you live vicariously through, one […]",
       "sentences": [
-        "A jury has found Huawei guilty of stealing US trade secrets, as reported earlier by NBC News and Bloomberg.",
-        "The verdict, handed down in a federal court in New York, concludes a years-long legal battle that accused the Chinese telecom giant of stealing source code and proprietary technology from several companies, including T-Mobile, Cisco, and […]"
+        "Everyone has that traveler in their life.",
+        "That person who feels more at home on a 14-hour train ride than a quiet Sunday on the couch.",
+        "They speak multiple languages, have a gut like a goat, and make friends wherever they go.",
+        "Whether they're your kindred spirit or the person you live vicariously through, one […]"
       ],
-      "url": "https://www.theverge.com/tech/1041820/huawei-guilty-trade-secrets-trial"
+      "url": "https://www.theverge.com/gadgets/1021917/best-gifts-for-travelers-2026"
     }
   ]
 }
