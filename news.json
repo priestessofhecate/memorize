@@ -1,52 +1,52 @@
 {
-  "updated_at": "2026-11-26 03:57 UTC",
+  "updated_at": "2026-11-27 03:56 UTC",
   "articles": [
     {
       "id": "art_1",
-      "title": "Now Google’s Familiar Faces AI feature works on Walmart’s $35 smart home camera too",
-      "essence": "A couple of Walmart's budget-friendly smart home cameras will be able to recognize people around your house now using Google's familiar face detection feature. A new Google Home update brings Familiar Faces support to the $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired.",
-      "full_body": "A couple of Walmart's budget-friendly smart home cameras will be able to recognize people around your house now using Google's familiar face detection feature. A new Google Home update brings Familiar Faces support to the $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired. However, a Google Home Premium subscription is still required […]",
+      "title": "Netflix’s coziest show has made a very quiet return",
+      "essence": "The bigger Netflix gets, the easier it is to miss stuff. This is true of all digital platforms, of course, but it's especially true of Netflix of late, as the streaming service's lineup now also includes a growing library of reality shows, live-programming, and even games.",
+      "full_body": "The bigger Netflix gets, the easier it is to miss stuff. This is true of all digital platforms, of course, but it's especially true of Netflix of late, as the streaming service's lineup now also includes a growing library of reality shows, live-programming, and even games. It makes it easy for some of the best […]",
       "sentences": [
-        "A couple of Walmart's budget-friendly smart home cameras will be able to recognize people around your house now using Google's familiar face detection feature.",
-        "A new Google Home update brings Familiar Faces support to the $35 Onn Outdoor Camera Plug-In and $77 Onn Floodlight Camera Hardwired.",
-        "However, a Google Home Premium subscription is still required […]"
+        "The bigger Netflix gets, the easier it is to miss stuff.",
+        "This is true of all digital platforms, of course, but it's especially true of Netflix of late, as the streaming service's lineup now also includes a growing library of reality shows, live-programming, and even games.",
+        "It makes it easy for some of the best […]"
       ],
-      "url": "https://www.theverge.com/tech/1042938/google-home-familiar-faces-onn-cameras"
+      "url": "https://www.theverge.com/entertainment/1043489/midnight-diner-season3"
     },
     {
       "id": "art_2",
-      "title": "Amazon loses its latest attempt to get out of handling more recall notices",
-      "essence": "Amazon is on the hook to recall more than 400,000 hazardous products after losing its legal battle against the US Consumer Product Safety Commission (CPSC). The US District Court for the District of Maryland ruled in favor of the CPSC, which argued that Amazon is a distributor of goods, not a logistics provider, making it […]",
-      "full_body": "Amazon is on the hook to recall more than 400,000 hazardous products after losing its legal battle against the US Consumer Product Safety Commission (CPSC). The US District Court for the District of Maryland ruled in favor of the CPSC, which argued that Amazon is a distributor of goods, not a logistics provider, making it […]",
+      "title": "The Garmin Forerunner 265S is down to $300, its best price of the year",
+      "essence": "The Forerunner 265S may not be the newest or flashiest Garmin, but it’s one that I’ve always loved most in testing. For runners with smaller wrists, it fits nicely.",
+      "full_body": "The Forerunner 265S may not be the newest or flashiest Garmin, but it’s one that I’ve always loved most in testing. For runners with smaller wrists, it fits nicely. The battery life is pretty good thanks in part to its OLED touchscreen. When I reviewed it a few years ago, I called it the Goldilocks […]",
       "sentences": [
-        "Amazon is on the hook to recall more than 400,000 hazardous products after losing its legal battle against the US Consumer Product Safety Commission (CPSC).",
-        "The US District Court for the District of Maryland ruled in favor of the CPSC, which argued that Amazon is a distributor of goods, not a logistics provider, making it […]"
+        "The Forerunner 265S may not be the newest or flashiest Garmin, but it’s one that I’ve always loved most in testing.",
+        "For runners with smaller wrists, it fits nicely.",
+        "The battery life is pretty good thanks in part to its OLED touchscreen.",
+        "When I reviewed it a few years ago, I called it the Goldilocks […]"
       ],
-      "url": "https://www.theverge.com/tech/1042870/amazon-recall-order-cpsc"
+      "url": "https://www.theverge.com/gadgets/1042483/garmin-forerunner-265s-fitness-tracker-wearable-deal-sale-black-friday"
     },
     {
       "id": "art_3",
-      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
-      "essence": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
-      "full_body": "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users. The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]",
+      "title": "The MacBook Neo is receiving a rare $100 discount for Black Friday",
+      "essence": "If you’re looking for a new laptop or a gift for the student in your life, you can save $100 on the MacBook Neo at several retailers, in both storage sizes and all four colors. The 256GB model is currently discounted to $599.99 at Amazon and Costco, while the 512GB model with Touch ID is […]",
+      "full_body": "If you’re looking for a new laptop or a gift for the student in your life, you can save $100 on the MacBook Neo at several retailers, in both storage sizes and all four colors. The 256GB model is currently discounted to $599.99 at Amazon and Costco, while the 512GB model with Touch ID is […]",
       "sentences": [
-        "Last year, Google filed a patent for a system called My Channel that's designed to create feeds filled with personalized, AI-generated videos and advertisements based on information the company knows about its users.",
-        "The patent has been rejected, but unfortunately, Google might appeal or resubmit an amended version, and we could see this monstrosity come […]"
+        "If you’re looking for a new laptop or a gift for the student in your life, you can save $100 on the MacBook Neo at several retailers, in both storage sizes and all four colors.",
+        "The 256GB model is currently discounted to $599.99 at Amazon and Costco, while the 512GB model with Touch ID is […]"
       ],
-      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent"
+      "url": "https://www.theverge.com/gadgets/1035932/apple-macbook-neo-black-friday-2026-deal-sale"
     },
     {
       "id": "art_4",
-      "title": "The Verge’s 2026 holiday gift guide for travelers",
-      "essence": "Everyone has that traveler in their life. That person who feels more at home on a 14-hour train ride than a quiet Sunday on the couch.",
-      "full_body": "Everyone has that traveler in their life. That person who feels more at home on a 14-hour train ride than a quiet Sunday on the couch. They speak multiple languages, have a gut like a goat, and make friends wherever they go. Whether they're your kindred spirit or the person you live vicariously through, one […]",
+      "title": "Android app developers will soon have to share their address publicly",
+      "essence": "Independent Android app developers are worried about their privacy after Google announced that from next year many of them will be required to share a phone number and address publicly. The policy change is intended to meet European Union regulations under the Digital Services Act, but Google says contact details will be made public worldwide. […]",
+      "full_body": "Independent Android app developers are worried about their privacy after Google announced that from next year many of them will be required to share a phone number and address publicly. The policy change is intended to meet European Union regulations under the Digital Services Act, but Google says contact details will be made public worldwide. […]",
       "sentences": [
-        "Everyone has that traveler in their life.",
-        "That person who feels more at home on a 14-hour train ride than a quiet Sunday on the couch.",
-        "They speak multiple languages, have a gut like a goat, and make friends wherever they go.",
-        "Whether they're your kindred spirit or the person you live vicariously through, one […]"
+        "Independent Android app developers are worried about their privacy after Google announced that from next year many of them will be required to share a phone number and address publicly.",
+        "The policy change is intended to meet European Union regulations under the Digital Services Act, but Google says contact details will be made public worldwide. […]"
       ],
-      "url": "https://www.theverge.com/gadgets/1021917/best-gifts-for-travelers-2026"
+      "url": "https://www.theverge.com/tech/1043228/android-play-store-google-developer-address-eu"
     }
   ]
 }
